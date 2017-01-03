@@ -43,11 +43,11 @@ pfCastbar:SetScript("OnEvent", function()
       pfCastbar:Action(mob, spell)
       return
     end
-    for mob, spell in string.gfind(arg1, pfLocaleSpellEvents[pfLocale]['SPELL_GAINS']) do
-      pfCastbar:Action(mob, spell, true)
-      return
-    end
     -- this part will be used for interruption of spells
+    --for mob, spell in string.gfind(arg1, pfLocaleSpellEvents[pfLocale]['SPELL_GAINS']) do
+    --  pfCastbar:Action(mob, spell, true)
+    --  return
+    --end
     --for mob, spell in string.gfind(arg1, pfLocaleSpellEvents[pfLocale]['SPELL_AFFLICTED']) do
     --  pfCastbar:Action(mob, spell, "afflicted")
     --  return
