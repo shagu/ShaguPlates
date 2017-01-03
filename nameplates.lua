@@ -207,6 +207,10 @@ pfNameplates:SetScript("OnUpdate", function()
       local healthbar = nameplate:GetChildren()
       local border, glow, name, level, levelicon , raidicon = nameplate:GetRegions()
 
+      -- hide default plates
+      border:Hide()
+      glow:Hide()
+
       if pfNameplates_config.onlyplayers == 1 then
         if not pfNameplates.players[name:GetText()] or not pfNameplates.players[name:GetText()]["class"] then
           nameplate:Hide()
@@ -321,10 +325,6 @@ pfNameplates:SetScript("OnUpdate", function()
           nameplate.debuffs[j]:SetTexture(nil)
         end
       end
-
-      -- hide default plates
-      border:Hide()
-      glow:Hide()
 
       -- adjust font
       name:SetFont("Interface\\AddOns\\ShaguPlates\\fonts\\arial.ttf",12,"OUTLINE")
