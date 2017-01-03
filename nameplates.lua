@@ -209,7 +209,11 @@ pfNameplates:SetScript("OnUpdate", function()
 
       -- hide default plates
       border:Hide()
+
+      -- try to avoid flickering as much as possible
       glow:Hide()
+      glow:SetAlpha(0)
+      glow.Show = function() return end
 
       if pfNameplates_config.onlyplayers == 1 then
         if not pfNameplates.players[name:GetText()] or not pfNameplates.players[name:GetText()]["class"] then
