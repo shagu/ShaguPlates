@@ -13,6 +13,8 @@ pfConfigCreate:SetScript("OnEvent", function()
   pfNameplates_config.showhp = pfNameplates_config.showhp or 0
   pfNameplates_config.vertical_pos = pfNameplates_config.vertical_pos or -10
   pfNameplates_config.mouselook = pfNameplates_config.mouselook or 1
+  pfNameplates_config.classcolor_enemy = pfNameplates_config.classcolor_enemy or 1
+  pfNameplates_config.classcolor_friend = pfNameplates_config.classcolor_friend or 1
 end)
 
 -- create frame
@@ -78,6 +80,18 @@ function SlashCmdList.SHAGUPLATES(msg)
       DEFAULT_CHAT_FRAME:AddMessage("mouselook: |cff55ff55enabled")
     else
       DEFAULT_CHAT_FRAME:AddMessage("mouselook: |cffff5555disabled")
+    end
+
+    if pfNameplates_config.classcolor_enemy == 1 then
+      DEFAULT_CHAT_FRAME:AddMessage("classcolor_enemy: |cff55ff55enabled")
+    else
+      DEFAULT_CHAT_FRAME:AddMessage("classcolor_enemy: |cffff5555disabled")
+    end
+
+    if pfNameplates_config.classcolor_friend == 1 then
+      DEFAULT_CHAT_FRAME:AddMessage("classcolor_friend: |cff55ff55enabled")
+    else
+      DEFAULT_CHAT_FRAME:AddMessage("classcolor_friend: |cffff5555disabled")
     end
 
     DEFAULT_CHAT_FRAME:AddMessage("raidiconsize: |cffffcc00" .. pfNameplates_config.raidiconsize)
@@ -173,6 +187,26 @@ function SlashCmdList.SHAGUPLATES(msg)
     else
       DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: mouselook has been |cffff5555disabled")
       pfNameplates_config.mouselook = 0
+    end
+  end
+
+  if commandlist[1] == "classcolor_enemy" and commandlist[2] then
+    if tonumber(commandlist[2]) == 1 then
+      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: classcolor_enemy has been |cff55ff55enabled")
+      pfNameplates_config.classcolor_enemy = 1
+    else
+      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: classcolor_enemy has been |cffff5555disabled")
+      pfNameplates_config.classcolor_enemy = 0
+    end
+  end
+
+  if commandlist[1] == "classcolor_friend" and commandlist[2] then
+    if tonumber(commandlist[2]) == 1 then
+      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: classcolor_friend has been |cff55ff55enabled")
+      pfNameplates_config.classcolor_friend = 1
+    else
+      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: classcolor_friend has been |cffff5555disabled")
+      pfNameplates_config.classcolor_friend = 0
     end
   end
 end
@@ -416,18 +450,28 @@ pfNameplates:SetScript("OnUpdate", function()
         RAID_CLASS_COLORS["SHAMAN"] = { r = 0.14, g = 0.35, b = 1.0, colorStr = "ff0070de" }
       end
 
-      if pfNameplates.players[name:GetText()] and pfNameplates.players[name:GetText()]["class"] and RAID_CLASS_COLORS[pfNameplates.players[name:GetText()]["class"]] then
-        healthbar:SetStatusBarColor(
-          RAID_CLASS_COLORS[pfNameplates.players[name:GetText()]["class"]].r,
-          RAID_CLASS_COLORS[pfNameplates.players[name:GetText()]["class"]].g,
-          RAID_CLASS_COLORS[pfNameplates.players[name:GetText()]["class"]].b,
-          0.9)
-      elseif red > 0.9 and green < 0.2 and blue < 0.2 then
-        healthbar:SetStatusBarColor(.9,.2,.3,0.8)
+      if red > 0.9 and green < 0.2 and blue < 0.2 then
+        if pfNameplates_config.classcolor_enemy == 1 and pfNameplates.players[name:GetText()] and pfNameplates.players[name:GetText()]["class"] and RAID_CLASS_COLORS[pfNameplates.players[name:GetText()]["class"]] then
+          healthbar:SetStatusBarColor(
+            RAID_CLASS_COLORS[pfNameplates.players[name:GetText()]["class"]].r,
+            RAID_CLASS_COLORS[pfNameplates.players[name:GetText()]["class"]].g,
+            RAID_CLASS_COLORS[pfNameplates.players[name:GetText()]["class"]].b,
+            0.9)
+        else
+          healthbar:SetStatusBarColor(.9,.2,.3,0.8)
+        end
       elseif red > 0.9 and green > 0.9 and blue < 0.2 then
         healthbar:SetStatusBarColor(1,1,.3,0.8)
       elseif blue > 0.9 and red == 0 and green == 0 then
-        healthbar:SetStatusBarColor(0.2,0.6,1,0.8)
+        if pfNameplates_config.classcolor_friend == 1 and pfNameplates.players[name:GetText()] and pfNameplates.players[name:GetText()]["class"] and RAID_CLASS_COLORS[pfNameplates.players[name:GetText()]["class"]] then
+          healthbar:SetStatusBarColor(
+            RAID_CLASS_COLORS[pfNameplates.players[name:GetText()]["class"]].r,
+            RAID_CLASS_COLORS[pfNameplates.players[name:GetText()]["class"]].g,
+            RAID_CLASS_COLORS[pfNameplates.players[name:GetText()]["class"]].b,
+            0.9)
+        else
+          healthbar:SetStatusBarColor(0.2,0.6,1,0.8)
+        end
       elseif red == 0 and green > 0.99 and blue == 0 then
         healthbar:SetStatusBarColor(0.6,1,0,0.8)
       end
