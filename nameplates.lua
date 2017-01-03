@@ -273,11 +273,7 @@ pfNameplates:SetScript("OnUpdate", function()
         nameplate:EnableMouse(true)
         if pfNameplates_config.mouselook == 1 then
           nameplate:SetScript("OnMouseDown", function()
-            if arg1 and arg1 == "RightButton" then
-              this:Click("LeftButton")
-              AttackTarget()
-              MouselookStart()
-            end
+            if arg1 and arg1 == "RightButton" then MouselookStart() end
           end)
         end
       end
