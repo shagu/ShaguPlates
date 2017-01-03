@@ -12,6 +12,7 @@ pfConfigCreate:SetScript("OnEvent", function()
   pfNameplates_config.onlyplayers = pfNameplates_config.onlyplayers or 0
   pfNameplates_config.showhp = pfNameplates_config.showhp or 0
   pfNameplates_config.vertical_pos = pfNameplates_config.vertical_pos or -10
+  pfNameplates_config.mouselook = pfNameplates_config.mouselook or 1
 end)
 
 -- create frame
@@ -71,6 +72,12 @@ function SlashCmdList.SHAGUPLATES(msg)
       DEFAULT_CHAT_FRAME:AddMessage("showhp: |cff55ff55enabled")
     else
       DEFAULT_CHAT_FRAME:AddMessage("showhp: |cffff5555disabled")
+    end
+
+    if pfNameplates_config.mouselook == 1 then
+      DEFAULT_CHAT_FRAME:AddMessage("mouselook: |cff55ff55enabled")
+    else
+      DEFAULT_CHAT_FRAME:AddMessage("mouselook: |cffff5555disabled")
     end
 
     DEFAULT_CHAT_FRAME:AddMessage("raidiconsize: |cffffcc00" .. pfNameplates_config.raidiconsize)
@@ -156,6 +163,16 @@ function SlashCmdList.SHAGUPLATES(msg)
     else
       DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: showhp has been |cffff5555disabled")
       pfNameplates_config.showhp = 0
+    end
+  end
+
+  if commandlist[1] == "mouselook" and commandlist[2] then
+    if tonumber(commandlist[2]) == 1 then
+      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: mouselook has been |cff55ff55enabled")
+      pfNameplates_config.mouselook = 1
+    else
+      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: mouselook has been |cffff5555disabled")
+      pfNameplates_config.mouselook = 0
     end
   end
 end
@@ -254,6 +271,15 @@ pfNameplates:SetScript("OnUpdate", function()
         nameplate:EnableMouse(false)
       else
         nameplate:EnableMouse(true)
+        if pfNameplates_config.mouselook == 1 then
+          nameplate:SetScript("OnMouseDown", function()
+            if arg1 and arg1 == "RightButton" then
+              this:Click("LeftButton")
+              AttackTarget()
+              MouselookStart()
+            end
+          end)
+        end
       end
 
       -- healthbar
