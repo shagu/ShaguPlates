@@ -250,6 +250,18 @@ pfNameplates:SetScript("OnEvent", function()
     end
 end)
 
+-- combat tracker
+pfNameplates.combat = CreateFrame("Frame")
+pfNameplates.combat:RegisterEvent("PLAYER_ENTER_COMBAT")
+pfNameplates.combat:RegisterEvent("PLAYER_LEAVE_COMBAT")
+pfNameplates.combat:SetScript("OnEvent", function()
+  if event == "PLAYER_ENTER_COMBAT" then
+    this.inCombat = 1
+  elseif event == "PLAYER_LEAVE_COMBAT" then
+    this.inCombat = nil
+  end
+end)
+
 -- emulate a rightclick detection even if the mouselooking has been started
 pfNameplates.emulateRightClick = CreateFrame("Frame", nil, UIParent)
 pfNameplates.emulateRightClick.time = nil
@@ -270,7 +282,7 @@ pfNameplates.emulateRightClick:SetScript("OnUpdate", function()
   -- run a usual nameplate rightclick action
   if not IsMouselooking() then
     pfNameplates.emulateRightClick.frame:Click("LeftButton")
-    if UnitCanAttack("player", "target") then AttackTarget() end
+    if UnitCanAttack("player", "target") and not pfNameplates.combat.inCombat then AttackTarget() end
     pfNameplates.emulateRightClick:Hide()
     return
   end
