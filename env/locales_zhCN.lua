@@ -1,17 +1,8 @@
-pfLocaleSpellEvents["zhCN"] = { -- TODO
-  ['SPELL_GAINS'] = "(.+) gains (.+).",
-  ['SPELL_CAST'] = "(.+) begins to cast (.+).",
-  ['SPELL_PERFORM'] = "(.+) begins to perform (.+).",
-  ['SPELL_AFFLICTED'] = "(.+) %a+ afflicted by (.+).",
-  ['SPELL_HIT'] = "Your (.+) %a%a?its (.+) for %d+\.",
-  ['OTHER_SPELL_HIT'] = "%a+'s (.+) %a%a?its (.+) for %d+\.",
-}
-
-pfLocaleSpellInterrupts["zhCN"] = { -- TODO
-  ["Shield Bash"] = true;
-  ["Pummel"] = true;
-  ["Kick"] = true;
-  ["Earth Shock"] = true;
+pfLocaleSpellInterrupts["zhCN"] = {
+  ["盾击"] = true;
+  ["拳击"] = true;
+  ["脚踢"] = true;
+  ["地震术"] = true;
 }
 
 pfLocaleSpells["zhCN"] = {

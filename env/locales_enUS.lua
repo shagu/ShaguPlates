@@ -1,12 +1,3 @@
-pfLocaleSpellEvents["enUS"] = {
-  ['SPELL_GAINS'] = "(.+) gains (.+).",
-  ['SPELL_CAST'] = "(.+) begins to cast (.+).",
-  ['SPELL_PERFORM'] = "(.+) begins to perform (.+).",
-  ['SPELL_AFFLICTED'] = "(.+) %a+ afflicted by (.+).",
-  ['SPELL_HIT'] = "Your (.+) %a%a?its (.+) for %d+\.",
-  ['OTHER_SPELL_HIT'] = "%a+'s (.+) %a%a?its (.+) for %d+\.",
-}
-
 pfLocaleSpellInterrupts["enUS"] = {
   ["Shield Bash"] = true;
   ["Pummel"] = true;

@@ -1,4 +1,17 @@
+-- pfUI.castbar.target  -> pfCastbar
+-- pfUI.cache["locale"] -> pfLocale
+
 pfCastbar = CreateFrame("Frame")
+
+pfCastbar.SPELL_CAST = string.gsub(string.gsub(SPELLCASTOTHERSTART,"%d%$",""), "%%s", "(.+)")
+pfCastbar.SPELL_PERFORM = string.gsub(string.gsub(SPELLPERFORMOTHERSTART,"%d%$",""), "%%s", "(.+)")
+pfCastbar.SPELL_GAINS = string.gsub(string.gsub(AURAADDEDOTHERHELPFUL,"%d%$",""), "%%s", "(.+)")
+pfCastbar.SPELL_AFFLICTED = string.gsub(string.gsub(AURAADDEDOTHERHARMFUL,"%d%$",""), "%%s", "(.+)")
+pfCastbar.SPELL_HIT = string.gsub(string.gsub(string.gsub(SPELLLOGSELFOTHER,"%d%$",""),"%%d","%%d+"),"%%s","(.+)")
+pfCastbar.SPELL_CRIT = string.gsub(string.gsub(string.gsub(SPELLLOGCRITSELFOTHER,"%d%$",""),"%%d","%%d+"),"%%s","(.+)")
+pfCastbar.OTHER_SPELL_HIT = string.gsub(string.gsub(string.gsub(SPELLLOGOTHEROTHER,"%d%$",""), "%%s", "(.+)"), "%%d", "%%d+")
+pfCastbar.OTHER_SPELL_CRIT = string.gsub(string.gsub(string.gsub(SPELLLOGOTHEROTHER,"%d%$",""), "%%s", "(.+)"), "%%d", "%%d+")
+
 pfCastbar:RegisterEvent("CHAT_MSG_SPELL_SELF_DAMAGE")
 pfCastbar:RegisterEvent("CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE")
 pfCastbar:RegisterEvent("CHAT_MSG_SPELL_HOSTILEPLAYER_BUFF")
@@ -20,59 +33,67 @@ pfCastbar:RegisterEvent("PLAYER_TARGET_CHANGED")
 
 pfCastbar.casterDB = {}
 
-pfLocaleSpells = {}
-pfLocaleSpellEvents = {}
-pfLocaleSpellInterrupts = {}
-
-pfLocale = GetLocale()
-if pfLocale ~= "enUS" and
-   pfLocale ~= "frFR" and
-   pfLocale ~= "deDE" and
-   pfLocale ~= "zhCN" and
-   pfLocale ~= "ruRU" then
-   pfLocale = "enUS"
-end
-
 pfCastbar:SetScript("OnEvent", function()
-  if (arg1 ~= nil) then
-    for mob, spell in string.gfind(arg1, pfLocaleSpellEvents[pfLocale]['SPELL_CAST']) do
+  if arg1 then
+    -- (.+) begins to cast (.+).
+    for mob, spell in string.gfind(arg1, pfCastbar.SPELL_CAST) do
       pfCastbar:Action(mob, spell)
       return
     end
-    for mob, spell in string.gfind(arg1, pfLocaleSpellEvents[pfLocale]['SPELL_PERFORM']) do
+    -- (.+) begins to perform (.+).
+    for mob, spell in string.gfind(arg1, pfCastbar.SPELL_PERFORM) do
       pfCastbar:Action(mob, spell)
       return
     end
-    -- this part will be used for interruption of spells
-    --for mob, spell in string.gfind(arg1, pfLocaleSpellEvents[pfLocale]['SPELL_GAINS']) do
-    --  pfCastbar:Action(mob, spell, true)
-    --  return
-    --end
-    --for mob, spell in string.gfind(arg1, pfLocaleSpellEvents[pfLocale]['SPELL_AFFLICTED']) do
-    --  pfCastbar:Action(mob, spell, "afflicted")
-    --  return
-    --end
-    --for spell, mob in string.gfind(arg1, pfLocaleSpellEvents[pfLocale]['SPELL_HIT']) do
-    --  -- you hit mob with XX
-    --  -- pfCastbar:Action(mob, spell, "hit")
-    --  return
-    --end
-    --for spell, mob in string.gfind(arg1, pfLocaleSpellEvents[pfLocale]['OTHER_SPELL_HIT']) do
-    --  -- someone hits mob with XX
-    --  -- pfCastbar:Action(mob, spell, "hit")
-    --  return
-    --end
+
+    -- (.+) gains (.+).
+    for mob, spell in string.gfind(arg1, pfCastbar.SPELL_GAINS) do
+      pfCastbar:StopAction(mob, spell)
+      return
+    end
+
+    -- (.+) is afflicted by (.+).
+    for mob, spell in string.gfind(arg1, pfCastbar.SPELL_AFFLICTED) do
+      pfCastbar:StopAction(mob, spell)
+      return
+    end
+
+    -- Your (.+) hits (.+) for %d+.
+    for spell, mob in string.gfind(arg1, pfCastbar.SPELL_HIT) do
+      pfCastbar:StopAction(mob, spell)
+      return
+    end
+
+    -- Your (.+) crits (.+) for %d+.
+    for spell, mob in string.gfind(arg1, pfCastbar.SPELL_CRIT) do
+      pfCastbar:StopAction(mob, spell)
+      return
+    end
+
+    -- (.+)'s (.+) %a hits (.+) for %d+.
+    for _, spell, mob in string.gfind(arg1, pfCastbar.OTHER_SPELL_HIT) do
+      pfCastbar:StopAction(mob, spell)
+      return
+    end
+
+    -- (.+)'s (.+) %a crits (.+) for %d+.
+    for _, spell, mob in string.gfind(arg1, pfCastbar.OTHER_SPELL_CRIT) do
+      pfCastbar:StopAction(mob, spell)
+      return
+    end
   end
 end)
 
-function pfCastbar:Action(mob, spell, gains)
+function pfCastbar:Action(mob, spell)
   if pfLocaleSpells[pfLocale][spell] ~= nil then
-    if gains and pfCastbar.casterDB[mob] and pfCastbar.casterDB[mob]["cast"] == spell then
-      pfCastbar.casterDB[mob] = nil
-      return
-    end
     local casttime = pfLocaleSpells[pfLocale][spell].t / 1000
     local icon = pfLocaleSpells[pfLocale][spell].icon
     pfCastbar.casterDB[mob] = {cast = spell, starttime = GetTime(), casttime = casttime, icon = icon}
+  end
+end
+
+function pfCastbar:StopAction(mob, spell)
+  if pfCastbar.casterDB[mob] and pfLocaleSpellInterrupts[pfLocale][spell] ~= nil then
+    pfCastbar.casterDB[mob] = nil
   end
 end
