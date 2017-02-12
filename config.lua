@@ -1,207 +1,178 @@
 -- config
 pfConfigCreate = CreateFrame("Frame", nil, UIParent)
 pfConfigCreate:RegisterEvent("VARIABLES_LOADED")
+
 pfConfigCreate:SetScript("OnEvent", function()
-  if not pfNameplates_config then pfNameplates_config = { } end
-  pfNameplates_config.clickthrough = pfNameplates_config.clickthrough or 0
-  pfNameplates_config.raidiconsize = pfNameplates_config.raidiconsize or 16
-  pfNameplates_config.showdebuffs = pfNameplates_config.showdebuffs or 1
-  pfNameplates_config.showcastbar = pfNameplates_config.showcastbar or 1
-  pfNameplates_config.showcasttext = pfNameplates_config.showcasttext or 0
-  pfNameplates_config.blueshaman = pfNameplates_config.blueshaman or 1
-  pfNameplates_config.onlyplayers = pfNameplates_config.onlyplayers or 0
-  pfNameplates_config.showhp = pfNameplates_config.showhp or 0
-  pfNameplates_config.vertical_pos = pfNameplates_config.vertical_pos or -10
-  pfNameplates_config.mouselook = pfNameplates_config.mouselook or 1
-  pfNameplates_config.classcolor_enemy = pfNameplates_config.classcolor_enemy or 1
-  pfNameplates_config.classcolor_friend = pfNameplates_config.classcolor_friend or 1
+  if not pfNameplates_config then
+    pfNameplates_config = { }
+    pfNameplates_config["blueshaman"] = "1"
+    pfNameplates_config["clickthrough"] = "0"
+    pfNameplates_config["raidiconsize"] = "16"
+    pfNameplates_config["showdebuffs"] = "0"
+    pfNameplates_config["showcastbar"] = "1"
+    pfNameplates_config["spellname"] = "1"
+    pfNameplates_config["players"] = "0"
+    pfNameplates_config["showhp"] = "0"
+    pfNameplates_config["vpos"] = "0"
+    pfNameplates_config["rightclick"] = "1"
+    pfNameplates_config["clickthreshold"] = ".5"
+    pfNameplates_config["enemyclassc"] = "1"
+    pfNameplates_config["friendclassc"] = "1"
+  end
+
+  if pfNameplates_config.blueshaman == "1" then
+    RAID_CLASS_COLORS["SHAMAN"] = { r = 0.14, g = 0.35, b = 1.0, colorStr = "ff0070de" }
+  end
 end)
 
 SLASH_SHAGUPLATES1 = '/shaguplates'
+SLASH_SHAGUPLATES2 = '/sp'
+
+local backdrop = {
+  bgFile = "Interface\\Tooltips\\UI-Tooltip-Background", tile = true, tileSize = 32,
+  insets = {left = 0, right = 0, top = 0, bottom = 0},
+}
+
+local checkbox = {
+  ["blueshaman"]    = "Enable Blue Shaman Class Color",
+  ["clickthrough"]  = "Disable Mouse",
+  ["showdebuffs"]   = "Show Debuffs on Target Nameplate",
+  ["showcastbar"]   = "Show Castbar",
+  ["spellname"]     = "Show Spellname On Castbar",
+  ["players"]       = "Only Show Player Nameplates",
+  ["showhp"]        = "Display HP",
+  ["rightclick"]    = "Enable Mouselook on Right-Click",
+  ["enemyclassc"]   = "Enable Enemy Class Colors",
+  ["friendclassc"]  = "Enable Friend Class Colors",
+}
+
+local text = {
+  ["clickthreshold"] = "Right-Click Threshold",
+  ["vpos"]           = "Vertical Offset",
+  ["raidiconsize"]   = "Raid Icon Size",
+}
+
+function ShaguPlatesConfig_CreateEntry(config, description, type)
+  -- basic frame
+  local frame = getglobal("SPC" .. config) or CreateFrame("Frame", "SPC" .. config, ShaguPlatesConfig)
+  frame:SetWidth(400)
+  frame:SetHeight(25)
+  frame:SetPoint("TOP", 0, -ShaguPlatesConfig.vpos)
+
+  -- caption
+  frame.caption = frame.caption or frame:CreateFontString("Status", "LOW", "GameFontWhite")
+  frame.caption:SetFont("Interface\\AddOns\\ShaguPlates\\fonts\\arial.ttf", 14)
+  frame.caption:SetPoint("LEFT", 20, 0)
+  frame.caption:SetJustifyH("LEFT")
+  frame.caption:SetText(description)
+
+  -- checkbox
+  if type == "checkbox" then
+    frame.input = frame.input or CreateFrame("CheckButton", nil, frame, "UICheckButtonTemplate")
+    frame.input:SetWidth(24)
+    frame.input:SetHeight(24)
+    frame.input:SetPoint("RIGHT" , -20, 0)
+
+    frame.input.config = config
+    if pfNameplates_config[config] == "1" then
+      frame.input:SetChecked()
+    end
+
+    frame.input:SetScript("OnClick", function ()
+      if this:GetChecked() then
+        pfNameplates_config[this.config] = "1"
+      else
+        pfNameplates_config[this.config] = "0"
+      end
+    end)
+
+  elseif type == "text" then
+    -- input field
+    frame.input = frame.input or CreateFrame("EditBox", nil, frame)
+    frame.input:SetTextColor(.2,1,.8,1)
+    frame.input:SetJustifyH("RIGHT")
+
+    frame.input:SetWidth(50)
+    frame.input:SetHeight(20)
+    frame.input:SetPoint("RIGHT" , -20, 0)
+    frame.input:SetFontObject(GameFontNormal)
+    frame.input:SetAutoFocus(false)
+    frame.input:SetScript("OnEscapePressed", function(self)
+      this:ClearFocus()
+    end)
+
+    frame.input.config = config
+    frame.input:SetText(pfNameplates_config[config])
+
+    frame.input:SetScript("OnTextChanged", function(self)
+      pfNameplates_config[this.config] = this:GetText()
+    end)
+  end
+
+  ShaguPlatesConfig.vpos = ShaguPlatesConfig.vpos + 30
+end
+
 function SlashCmdList.SHAGUPLATES(msg)
+  ShaguPlatesConfig = ShaguPlatesConfig or CreateFrame("Frame", "ShaguPlatesConfig", UIParent)
+  ShaguPlatesConfig:SetBackdrop(backdrop)
+  ShaguPlatesConfig:SetBackdropColor(0,0,0,1)
+  ShaguPlatesConfig:SetWidth(400)
+  ShaguPlatesConfig:SetHeight(500)
+  ShaguPlatesConfig:SetPoint("CENTER", 0, 0)
 
-  local commandlist = { }
+  ShaguPlatesConfig.vpos = 50
 
-  for command in string.gfind(msg, "[^ ]+") do
-    table.insert(commandlist, string.lower(command))
+  ShaguPlatesConfig.title = CreateFrame("Frame", nil, ShaguPlatesConfig)
+  ShaguPlatesConfig.title:SetPoint("TOP", 0, -2);
+  ShaguPlatesConfig.title:SetWidth(396);
+  ShaguPlatesConfig.title:SetHeight(40);
+  ShaguPlatesConfig.title.tex = ShaguPlatesConfig.title:CreateTexture("LOW");
+  ShaguPlatesConfig.title.tex:SetAllPoints();
+  ShaguPlatesConfig.title.tex:SetTexture(0,0,0,.5);
+
+  ShaguPlatesConfig.caption = ShaguPlatesConfig.caption or ShaguPlatesConfig.title:CreateFontString("Status", "LOW", "GameFontWhite")
+  ShaguPlatesConfig.caption:SetPoint("TOP", 0, -10)
+  ShaguPlatesConfig.caption:SetJustifyH("CENTER")
+  ShaguPlatesConfig.caption:SetText("ShaguPlates")
+  ShaguPlatesConfig.caption:SetFont("Interface\\AddOns\\ShaguPlates\\fonts\\arial.ttf", 24)
+  ShaguPlatesConfig.caption:SetTextColor(.2,1,.8,1)
+
+  for config, description in pairs(checkbox) do
+    ShaguPlatesConfig_CreateEntry(config, description, "checkbox")
   end
 
-  -- help page
-  if not commandlist[1] then
-    DEFAULT_CHAT_FRAME:AddMessage("|cff33ffccShagu|cffffffffPlates Settings:")
-    if pfNameplates_config.clickthrough == 1 then
-      DEFAULT_CHAT_FRAME:AddMessage("clickthrough: |cff55ff55enabled")
-    else
-      DEFAULT_CHAT_FRAME:AddMessage("clickthrough: |cffff5555disabled")
-    end
-
-    if pfNameplates_config.showdebuffs == 1 then
-      DEFAULT_CHAT_FRAME:AddMessage("showdebuffs: |cff55ff55enabled")
-    else
-      DEFAULT_CHAT_FRAME:AddMessage("showdebuffs: |cffff5555disabled")
-    end
-
-    if pfNameplates_config.showcastbar == 1 then
-      DEFAULT_CHAT_FRAME:AddMessage("showcastbar: |cff55ff55enabled")
-    else
-      DEFAULT_CHAT_FRAME:AddMessage("showcastbar: |cffff5555disabled")
-    end
-
-    if pfNameplates_config.showcasttext == 1 then
-      DEFAULT_CHAT_FRAME:AddMessage("showcasttext: |cff55ff55enabled")
-    else
-      DEFAULT_CHAT_FRAME:AddMessage("showcasttext: |cffff5555disabled")
-    end
-
-    if pfNameplates_config.blueshaman == 1 then
-      DEFAULT_CHAT_FRAME:AddMessage("blueshaman: |cff55ff55enabled")
-    else
-      DEFAULT_CHAT_FRAME:AddMessage("blueshaman: |cffff5555disabled")
-    end
-
-    if pfNameplates_config.onlyplayers == 1 then
-      DEFAULT_CHAT_FRAME:AddMessage("onlyplayers: |cff55ff55enabled")
-    else
-      DEFAULT_CHAT_FRAME:AddMessage("onlyplayers: |cffff5555disabled")
-    end
-
-    if pfNameplates_config.showhp == 1 then
-      DEFAULT_CHAT_FRAME:AddMessage("showhp: |cff55ff55enabled")
-    else
-      DEFAULT_CHAT_FRAME:AddMessage("showhp: |cffff5555disabled")
-    end
-
-    if pfNameplates_config.mouselook == 1 then
-      DEFAULT_CHAT_FRAME:AddMessage("mouselook: |cff55ff55enabled")
-    else
-      DEFAULT_CHAT_FRAME:AddMessage("mouselook: |cffff5555disabled")
-    end
-
-    if pfNameplates_config.classcolor_enemy == 1 then
-      DEFAULT_CHAT_FRAME:AddMessage("classcolor_enemy: |cff55ff55enabled")
-    else
-      DEFAULT_CHAT_FRAME:AddMessage("classcolor_enemy: |cffff5555disabled")
-    end
-
-    if pfNameplates_config.classcolor_friend == 1 then
-      DEFAULT_CHAT_FRAME:AddMessage("classcolor_friend: |cff55ff55enabled")
-    else
-      DEFAULT_CHAT_FRAME:AddMessage("classcolor_friend: |cffff5555disabled")
-    end
-
-    DEFAULT_CHAT_FRAME:AddMessage("raidiconsize: |cffffcc00" .. pfNameplates_config.raidiconsize)
-    DEFAULT_CHAT_FRAME:AddMessage("vertical_pos: |cffffcc00" .. pfNameplates_config.vertical_pos)
-    DEFAULT_CHAT_FRAME:AddMessage("|cffcccccc0 = disable. 1 = enable")
-    DEFAULT_CHAT_FRAME:AddMessage("|cffcccccce.g: /shaguplates clickthrough 0")
+  for config, description in pairs(text) do
+    ShaguPlatesConfig_CreateEntry(config, description, "text")
   end
 
-  if commandlist[1] == "clickthrough" and commandlist[2] then
-    if tonumber(commandlist[2]) == 1 then
-      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: clickthrough has been |cff55ff55enabled")
-      pfNameplates_config.clickthrough = 1
-    else
-      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: clickthrough has been |cffff5555disabled")
-      pfNameplates_config.clickthrough = 0
-    end
-  end
+  ShaguPlatesConfig.reload = CreateFrame("Button", nil, ShaguPlatesConfig, "UIPanelButtonTemplate")
+  ShaguPlatesConfig.reload:SetWidth(150)
+  ShaguPlatesConfig.reload:SetHeight(30)
+  ShaguPlatesConfig.reload:SetNormalTexture(nil)
+  ShaguPlatesConfig.reload:SetHighlightTexture(nil)
+  ShaguPlatesConfig.reload:SetPushedTexture(nil)
+  ShaguPlatesConfig.reload:SetDisabledTexture(nil)
+  ShaguPlatesConfig.reload:SetBackdrop(backdrop)
+  ShaguPlatesConfig.reload:SetBackdropColor(0,0,0,1)
+  ShaguPlatesConfig.reload:SetPoint("BOTTOMRIGHT", -20, 20)
+  ShaguPlatesConfig.reload:SetText("Save")
+  ShaguPlatesConfig.reload:SetScript("OnClick", function()
+    ReloadUI()
+  end)
 
-  if commandlist[1] == "raidiconsize" and commandlist[2] then
-    DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: raidiconsize has been set to |cffffcc00" .. commandlist[2])
-    pfNameplates_config.raidiconsize = tonumber(commandlist[2])
-  end
-
-  if commandlist[1] == "vertical_pos" and commandlist[2] then
-    DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: vertical_pos has been set to |cffffcc00" .. commandlist[2])
-    pfNameplates_config.vertical_pos = tonumber(commandlist[2])
-  end
-
-  if commandlist[1] == "showdebuffs" and commandlist[2] then
-    if tonumber(commandlist[2]) == 1 then
-      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: showdebuffs has been |cff55ff55enabled")
-      pfNameplates_config.showdebuffs = 1
-    else
-      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: showdebuffs has been |cffff5555disabled")
-      pfNameplates_config.showdebuffs = 0
-    end
-  end
-
-  if commandlist[1] == "showcastbar" and commandlist[2] then
-    if tonumber(commandlist[2]) == 1 then
-      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: showcastbar has been |cff55ff55enabled")
-      pfNameplates_config.showcastbar = 1
-    else
-      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: showcastbar has been |cffff5555disabled")
-      pfNameplates_config.showcastbar = 0
-    end
-  end
-
-  if commandlist[1] == "showcasttext" and commandlist[2] then
-    if tonumber(commandlist[2]) == 1 then
-      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: showcasttext has been |cff55ff55enabled")
-      pfNameplates_config.showcasttext = 1
-    else
-      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: showcasttext has been |cffff5555disabled")
-      pfNameplates_config.showcasttext = 0
-    end
-  end
-
-  if commandlist[1] == "blueshaman" and commandlist[2] then
-    if tonumber(commandlist[2]) == 1 then
-      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: blueshaman has been |cff55ff55enabled")
-      pfNameplates_config.blueshaman = 1
-    else
-      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: blueshaman has been |cffff5555disabled")
-      pfNameplates_config.blueshaman = 0
-    end
-  end
-
-  if commandlist[1] == "onlyplayers" and commandlist[2] then
-    if tonumber(commandlist[2]) == 1 then
-      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: onlyplayers has been |cff55ff55enabled")
-      pfNameplates_config.onlyplayers = 1
-    else
-      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: onlyplayers has been |cffff5555disabled")
-      pfNameplates_config.onlyplayers = 0
-    end
-  end
-
-  if commandlist[1] == "showhp" and commandlist[2] then
-    if tonumber(commandlist[2]) == 1 then
-      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: showhp has been |cff55ff55enabled")
-      pfNameplates_config.showhp = 1
-    else
-      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: showhp has been |cffff5555disabled")
-      pfNameplates_config.showhp = 0
-    end
-  end
-
-  if commandlist[1] == "mouselook" and commandlist[2] then
-    if tonumber(commandlist[2]) == 1 then
-      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: mouselook has been |cff55ff55enabled")
-      pfNameplates_config.mouselook = 1
-    else
-      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: mouselook has been |cffff5555disabled")
-      pfNameplates_config.mouselook = 0
-    end
-  end
-
-  if commandlist[1] == "classcolor_enemy" and commandlist[2] then
-    if tonumber(commandlist[2]) == 1 then
-      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: classcolor_enemy has been |cff55ff55enabled")
-      pfNameplates_config.classcolor_enemy = 1
-    else
-      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: classcolor_enemy has been |cffff5555disabled")
-      pfNameplates_config.classcolor_enemy = 0
-    end
-  end
-
-  if commandlist[1] == "classcolor_friend" and commandlist[2] then
-    if tonumber(commandlist[2]) == 1 then
-      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: classcolor_friend has been |cff55ff55enabled")
-      pfNameplates_config.classcolor_friend = 1
-    else
-      DEFAULT_CHAT_FRAME:AddMessage("ShaguPlates: classcolor_friend has been |cffff5555disabled")
-      pfNameplates_config.classcolor_friend = 0
-    end
-  end
+  ShaguPlatesConfig.reset = CreateFrame("Button", nil, ShaguPlatesConfig, "UIPanelButtonTemplate")
+  ShaguPlatesConfig.reset:SetWidth(150)
+  ShaguPlatesConfig.reset:SetHeight(30)
+  ShaguPlatesConfig.reset:SetNormalTexture(nil)
+  ShaguPlatesConfig.reset:SetHighlightTexture(nil)
+  ShaguPlatesConfig.reset:SetPushedTexture(nil)
+  ShaguPlatesConfig.reset:SetDisabledTexture(nil)
+  ShaguPlatesConfig.reset:SetBackdrop(backdrop)
+  ShaguPlatesConfig.reset:SetBackdropColor(0,0,0,1)
+  ShaguPlatesConfig.reset:SetPoint("BOTTOMLEFT", 20, 20)
+  ShaguPlatesConfig.reset:SetText("Reset")
+  ShaguPlatesConfig.reset:SetScript("OnClick", function()
+    pfNameplates_config = nil
+    ReloadUI()
+  end)
 end
