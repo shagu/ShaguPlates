@@ -10,4 +10,5 @@ env\locales_enUS.lua
 env\locales_frFR.lua
 env\locales_ruRU.lua
 env\locales_zhCN.lua
+config.lua
 nameplates.lua
