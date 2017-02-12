@@ -4,11 +4,14 @@
 ## Notes: Nameplate addon featuring castbars and class colors
 ## Version: 2.0
 ## SavedVariables: pfNameplates_config
-castbar.lua
+
+env\compat.lua
 env\locales_deDE.lua
 env\locales_enUS.lua
 env\locales_frFR.lua
 env\locales_ruRU.lua
 env\locales_zhCN.lua
+
+castbar.lua
 config.lua
 nameplates.lua
