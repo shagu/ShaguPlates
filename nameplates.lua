@@ -99,7 +99,7 @@ function pfNameplates:CreateNameplate()
 end
 
 function pfNameplates:CreateDebuffs(frame)
-  if not pfNameplates_config["showdebuffs"] == "1" then return end
+  if pfNameplates_config["showdebuffs"] ~= "1" then return end
 
   if frame.debuffs == nil then frame.debuffs = {} end
   for j=1, 16, 1 do
@@ -325,7 +325,9 @@ function pfNameplates:UpdateCastbar(frame, name, healthbar)
         healthbar.castbar.spell:SetText("")
       end
       healthbar.castbar:Show()
-      frame.debuffs[1]:SetPoint("TOPLEFT", healthbar.castbar, "BOTTOMLEFT", 0, -3)
+      if frame.debuffs then
+        frame.debuffs[1]:SetPoint("TOPLEFT", healthbar.castbar, "BOTTOMLEFT", 0, -3)
+      end
 
       if pfCastbar.casterDB[name:GetText()]["icon"] then
         healthbar.castbar.icon:SetTexture("Interface\\Icons\\" ..  pfCastbar.casterDB[name:GetText()]["icon"])
@@ -334,12 +336,14 @@ function pfNameplates:UpdateCastbar(frame, name, healthbar)
     end
   else
     healthbar.castbar:Hide()
-    frame.debuffs[1]:SetPoint("TOPLEFT", healthbar, "BOTTOMLEFT", 0, -3)
+    if frame.debuffs then
+      frame.debuffs[1]:SetPoint("TOPLEFT", healthbar, "BOTTOMLEFT", 0, -3)
+    end
   end
 end
 
 function pfNameplates:UpdateDebuffs(frame, healthbar)
-  if not frame.debuffs or not pfNameplates_config["showdebuffs"] == "1" then return end
+  if not frame.debuffs or pfNameplates_config["showdebuffs"] ~= "1" then return end
 
   if UnitExists("target") and healthbar:GetAlpha() == 1 then
   local j = 1
