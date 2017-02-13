@@ -63,6 +63,15 @@ function ShaguPlatesConfig:Initialize()
   ShaguPlatesConfig:SetWidth(400)
   ShaguPlatesConfig:SetHeight(500)
   ShaguPlatesConfig:SetPoint("CENTER", 0, 0)
+  ShaguPlatesConfig:SetMovable(true)
+  ShaguPlatesConfig:EnableMouse(true)
+  ShaguPlatesConfig:SetScript("OnMouseDown",function()
+    ShaguPlatesConfig:StartMoving()
+  end)
+
+  ShaguPlatesConfig:SetScript("OnMouseUp",function()
+    ShaguPlatesConfig:StopMovingOrSizing()
+  end)
 
   ShaguPlatesConfig.vpos = 60
 
