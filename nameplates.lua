@@ -457,7 +457,7 @@
     end
 
     -- update debuffs
-    if this.debuffs and pfNameplates_config["showdebuffs"] == "1" then
+    if this.debuffs and pfNameplates.debuffs and pfNameplates_config["showdebuffs"] == "1" then
       if UnitExists("target") and healthbar:GetAlpha() == 1 then
         local j = 1
         local k = 1
