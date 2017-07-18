@@ -5,7 +5,7 @@
 ## Version: 2.0
 ## SavedVariables: pfNameplates_config
 
-env\compat.lua
+env\locale.lua
 env\locales_deDE.lua
 env\locales_enUS.lua
 env\locales_frFR.lua

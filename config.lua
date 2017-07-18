@@ -9,17 +9,23 @@ local checkbox = {
   ["showdebuffs"]   = "Show Debuffs on Target Nameplate",
   ["showcastbar"]   = "Show Castbar",
   ["spellname"]     = "Show Spellname On Castbar",
-  -- ["players"]       = "Only Show Player Nameplates",
+  ["players"]       = "Only Show Player Nameplates",
   ["showhp"]        = "Display HP",
   ["rightclick"]    = "Enable Mouselook on Right-Click",
   ["enemyclassc"]   = "Enable Enemy Class Colors",
   ["friendclassc"]  = "Enable Friend Class Colors",
+  ["overlap"]       = "Nameplate Overlap",
+  ["critters"]      = "Hide Critters",
 }
 
 local text = {
   ["clickthreshold"] = "Right-Click Threshold",
   ["vpos"]           = "Vertical Offset",
   ["raidiconsize"]   = "Raid Icon Size",
+  ["width"]          = "Healthbar Width",
+  ["heighthealth"]   = "Healthbar Height",
+  ["heightcast"]     = "Castbar Height",
+  ["fontsize"]       = "Font Size",
 }
 
 -- config
@@ -31,16 +37,22 @@ function pfConfigCreate:ResetConfig()
   pfNameplates_config["blueshaman"] = "1"
   pfNameplates_config["clickthrough"] = "0"
   pfNameplates_config["raidiconsize"] = "16"
-  pfNameplates_config["showdebuffs"] = "0"
+  pfNameplates_config["showdebuffs"] = "1"
   pfNameplates_config["showcastbar"] = "1"
   pfNameplates_config["spellname"] = "1"
-  -- pfNameplates_config["players"] = "0"
+  pfNameplates_config["players"] = "0"
   pfNameplates_config["showhp"] = "0"
-  pfNameplates_config["vpos"] = "0"
+  pfNameplates_config["vpos"] = "-10"
   pfNameplates_config["rightclick"] = "1"
   pfNameplates_config["clickthreshold"] = ".5"
   pfNameplates_config["enemyclassc"] = "1"
   pfNameplates_config["friendclassc"] = "1"
+  pfNameplates_config["width"] = "120"
+  pfNameplates_config["heighthealth"] = "8"
+  pfNameplates_config["heightcast"] = "8"
+  pfNameplates_config["fontsize"] = "12"
+  pfNameplates_config["overlap"] = "0"
+  pfNameplates_config["critters"] = "0"
 end
 
 pfConfigCreate:SetScript("OnEvent", function()
@@ -61,7 +73,7 @@ function ShaguPlatesConfig:Initialize()
   ShaguPlatesConfig:SetBackdrop(backdrop)
   ShaguPlatesConfig:SetBackdropColor(0,0,0,1)
   ShaguPlatesConfig:SetWidth(400)
-  ShaguPlatesConfig:SetHeight(500)
+  ShaguPlatesConfig:SetHeight(640)
   ShaguPlatesConfig:SetPoint("CENTER", 0, 0)
   ShaguPlatesConfig:SetMovable(true)
   ShaguPlatesConfig:EnableMouse(true)
@@ -73,21 +85,21 @@ function ShaguPlatesConfig:Initialize()
     ShaguPlatesConfig:StopMovingOrSizing()
   end)
 
-  ShaguPlatesConfig.vpos = 60
+  ShaguPlatesConfig.vpos = 30
 
   ShaguPlatesConfig.title = CreateFrame("Frame", nil, ShaguPlatesConfig)
   ShaguPlatesConfig.title:SetPoint("TOP", 0, -2);
   ShaguPlatesConfig.title:SetWidth(396);
-  ShaguPlatesConfig.title:SetHeight(40);
+  ShaguPlatesConfig.title:SetHeight(25);
   ShaguPlatesConfig.title.tex = ShaguPlatesConfig.title:CreateTexture("LOW");
   ShaguPlatesConfig.title.tex:SetAllPoints();
   ShaguPlatesConfig.title.tex:SetTexture(0,0,0,.5);
 
   ShaguPlatesConfig.caption = ShaguPlatesConfig.caption or ShaguPlatesConfig.title:CreateFontString("Status", "LOW", "GameFontWhite")
-  ShaguPlatesConfig.caption:SetPoint("TOP", 0, -10)
+  ShaguPlatesConfig.caption:SetPoint("TOP", 0, -5)
   ShaguPlatesConfig.caption:SetJustifyH("CENTER")
   ShaguPlatesConfig.caption:SetText("ShaguPlates")
-  ShaguPlatesConfig.caption:SetFont("Interface\\AddOns\\ShaguPlates\\fonts\\arial.ttf", 24)
+  ShaguPlatesConfig.caption:SetFont("Interface\\AddOns\\ShaguPlates\\fonts\\arial.ttf", 14)
   ShaguPlatesConfig.caption:SetTextColor(.2,1,.8,1)
 
   for config, description in pairs(checkbox) do
@@ -100,14 +112,14 @@ function ShaguPlatesConfig:Initialize()
 
   ShaguPlatesConfig.reload = CreateFrame("Button", nil, ShaguPlatesConfig, "UIPanelButtonTemplate")
   ShaguPlatesConfig.reload:SetWidth(150)
-  ShaguPlatesConfig.reload:SetHeight(30)
+  ShaguPlatesConfig.reload:SetHeight(20)
   ShaguPlatesConfig.reload:SetNormalTexture(nil)
   ShaguPlatesConfig.reload:SetHighlightTexture(nil)
   ShaguPlatesConfig.reload:SetPushedTexture(nil)
   ShaguPlatesConfig.reload:SetDisabledTexture(nil)
   ShaguPlatesConfig.reload:SetBackdrop(backdrop)
   ShaguPlatesConfig.reload:SetBackdropColor(0,0,0,1)
-  ShaguPlatesConfig.reload:SetPoint("BOTTOMRIGHT", -20, 20)
+  ShaguPlatesConfig.reload:SetPoint("BOTTOMRIGHT", -10, 10)
   ShaguPlatesConfig.reload:SetText("Save")
   ShaguPlatesConfig.reload:SetScript("OnClick", function()
     ReloadUI()
@@ -115,14 +127,14 @@ function ShaguPlatesConfig:Initialize()
 
   ShaguPlatesConfig.reset = CreateFrame("Button", nil, ShaguPlatesConfig, "UIPanelButtonTemplate")
   ShaguPlatesConfig.reset:SetWidth(150)
-  ShaguPlatesConfig.reset:SetHeight(30)
+  ShaguPlatesConfig.reset:SetHeight(20)
   ShaguPlatesConfig.reset:SetNormalTexture(nil)
   ShaguPlatesConfig.reset:SetHighlightTexture(nil)
   ShaguPlatesConfig.reset:SetPushedTexture(nil)
   ShaguPlatesConfig.reset:SetDisabledTexture(nil)
   ShaguPlatesConfig.reset:SetBackdrop(backdrop)
   ShaguPlatesConfig.reset:SetBackdropColor(0,0,0,1)
-  ShaguPlatesConfig.reset:SetPoint("BOTTOMLEFT", 20, 20)
+  ShaguPlatesConfig.reset:SetPoint("BOTTOMLEFT", 10, 10)
   ShaguPlatesConfig.reset:SetText("Reset")
   ShaguPlatesConfig.reset:SetScript("OnClick", function()
     pfNameplates_config = nil
