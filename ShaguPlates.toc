@@ -11,6 +11,7 @@ env\locales_enUS.lua
 env\locales_frFR.lua
 env\locales_ruRU.lua
 env\locales_zhCN.lua
+env\locales_koKR.lua
 
 castbar.lua
 config.lua
