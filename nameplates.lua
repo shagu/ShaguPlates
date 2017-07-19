@@ -55,7 +55,7 @@
           if UnitIsPlayer("mouseover") then
             local _, class = UnitClass("mouseover")
             pfNameplates.players[name] = {}
-            pfNameplates.players[name]["mouseover"] = class
+            pfNameplates.players[name]["class"] = class
           elseif UnitClassification("mouseover") then
             local elite = UnitClassification("mouseover")
             pfNameplates.mobs[name] = elite
