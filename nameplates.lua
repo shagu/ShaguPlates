@@ -450,7 +450,10 @@
         end
       end
     else
-      healthbar.castbar:Hide()
+      if healthbar.castbar then
+        healthbar.castbar:Hide()
+      end
+
       if this.debuffs then
         this.debuffs[1]:SetPoint("TOPLEFT", healthbar, "BOTTOMLEFT", 0, -3)
       end
