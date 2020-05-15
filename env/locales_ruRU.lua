@@ -1,6 +1,145 @@
-pfUI_locale["ruRU"] = {}
+ShaguPlates_locale["ruRU"] = {}
 
-pfUI_locale["ruRU"]["interrupts"] = {
+ShaguPlates_locale["ruRU"]["class"] = {
+  ["Чернокнижник"] = "WARLOCK",
+  ["Воин"] = "WARRIOR",
+  ["Охотник"] = "HUNTER",
+  ["Маг"] = "MAGE",
+  ["Жрец"] = "PRIEST",
+  ["Друид"] = "DRUID",
+  ["Паладин"] = "PALADIN",
+  ["Шаман"] = "SHAMAN",
+  ["Разбойник"] = "ROGUE",
+}
+
+ShaguPlates_locale["ruRU"]["bagtypes"] = {
+  ["Колчан"] = "QUIVER",
+  ["Сумка душ"] = "SOULBAG",
+  ["Сумка"] = "DEFAULT",
+}
+
+ShaguPlates_locale["ruRU"]["itemtypes"] = {
+  ["INVTYPE_WAND"] = "Жезл",
+  ["INVTYPE_THROWN"] = "Метательное",
+  ["INVTYPE_GUN"] = "Огнестрельное",
+  ["INVTYPE_CROSSBOW"] = "Арбалет",
+  ["INVTYPE_PROJECTILE"] = "Боеприпасы",
+}
+
+ShaguPlates_locale["ruRU"]["hunterpaging"] = {
+  ["MELEE"] = "Подрезать крылья",
+  ["RANGED"] = "Чародейский выстрел",
+}
+
+ShaguPlates_locale["ruRU"]["customcast"] = {
+  ["AIMEDSHOT"] = "Прицельный выстрел",
+  ["MULTISHOT"] = "Залп",
+}
+
+ShaguPlates_locale["ruRU"]["critters"] = {
+  'Аспид',
+  'Жук',
+  'Чердачный нетопырь',
+  'Желчная жаба',
+  'Черная крыса',
+  'Бурая луговая собачка',
+  'Кролик в клетке',
+  'Овца в клетке',
+  'Белка в клетке',
+  'Жаба в клетке',
+  'Кошка',
+  'Курица',
+  'Клео',
+  'Крыса Недр',
+  'Корова',
+  'Корова',
+  'Исцеленный олень',
+  'Исцеленная газель',
+  'Подземная крыса',
+  'Олень',
+  'Собака',
+  'Эфси',
+  'Пойманная подземная крыса',
+  'Клык',
+  'Олененок',
+  'Огненный жук',
+  'Пушок',
+  'Лягушка',
+  'Газель',
+  'Заяц',
+  'Лошадь',
+  'Огромная жаба',
+  'Зараженный олень',
+  'Зараженная белка',
+  'Тропическая жаба',
+  'Термометр Кракла',
+  'Леди',
+  'Личинка',
+  'Лавовый краб',
+  'Червь',
+  'Болотная гадюка',
+  'Мышь',
+  'Мистер Бигглсуорт',
+  'Грызунчик',
+  'Нетронь',
+  'Старая Савраска',
+  'Попугай',
+  'Свинья',
+  'Пиратский клад инициатор – существо',
+  'Чумная блоха',
+  'Чумной червь',
+  'Чумная крыса',
+  'Термит Чумных земель',
+  'Курица в полиморфе',
+  'Крыса-полиморф',
+  'Луговая собачка',
+  'Кролик',
+  'Баран',
+  'Крыса',
+  'Ездовой баран',
+  'Таракан',
+  'Салом',
+  'Косяк рыбы',
+  'Скорпион',
+  'Овца',
+  'Овца',
+  'Шендраларский огонек',
+  'Больной олень',
+  'Больная газель',
+  'Змея',
+  'Паук',
+  'Хват',
+  'Белка',
+  'Свинья',
+  'Нечистый таракан',
+  'Нечистая крыса',
+  'Жаба',
+  'Неисправный транспортер',
+  'Черепаха',
+  'Шмыг',
+  'Голос Элуны',
+  'Точка маршрута (Только ГМ может увидеть это)',
+  'Огонек',
+}
+
+ShaguPlates_locale["ruRU"]["dyndebuffs"] = {
+  ["Rupture"] = "Рваная рана",
+  ["Kidney Shot"] = "Удар по почкам",
+  ["Rend"] = "Кровопускание",
+  ["Shadow Word: Pain"] = "Слово Тьмы: Боль",
+  ["Demoralizing Shout"] = "Деморализующий крик",
+  ["Frostbolt"] = "Ледяная стрела",
+  ["Gouge"] = "Парализующий удар",
+}
+
+ShaguPlates_locale["ruRU"]["judgements"] = {
+  ["Правосудие справедливости"] = true,
+  ["Правосудие света"] = true,
+  ["Правосудие мудрости"] = true,
+  ["Правосудие воина света"] = true,
+}
+
+ShaguPlates_locale["ruRU"]["interrupts"] = {
   ["Удар щитом"] = true,
   ["Зуботычина"] = true,
   ["Пинок"] = true,
@@ -13,7 +152,7 @@ pfUI_locale["ruRU"]["interrupts"] = {
   ["Подлый трюк"] = true,
   ["Парализующий удар"] = true,
   ["Удар по почкам"] = true,
-  ["Молчание"] = true,
+  ["Безмолвие"] = true,
   ["Антимагия"] = true,
   ["Антимагия - немота"] = true,
   ["Оглушить"] = true,
@@ -23,7 +162,7 @@ pfUI_locale["ruRU"]["interrupts"] = {
   ["Устрашающий крик"] = true,
   ["Звездный огонь - оглушение"] = true,
   ["Реванш - оглушение"] = true,
-  ["Улучшенный шокирующий выстрел"] = true,
+  ["Улучшенный контузящий выстрел"] = true,
   ["Сотрясение"] = true,
   ["Огнесдвиг"] = true,
   ["Затмение"] = true,
@@ -34,14 +173,14 @@ pfUI_locale["ruRU"]["interrupts"] = {
   ["Дезориентирующий выстрел"] = true,
   ["Ослепление"] = true,
   ["Спячка"] = true,
-  ["Жало виверны"] = true,
+  ["Укус виверны"] = true,
   ["Грубая медная бомба"] = true,
   ["Большая медная бомба"] = true,
   ["Небольшая бронзовая бомба"] = true,
   ["Большая бронзовая бомба"] = true,
   ["Большая железная бомба"] = true,
   ["Мифриловая осколочная бомба"] = true,
-  ["Взрывоопасная бомба"] = true,
+  ["Фугасная бомба"] = true,
   ["Бомба из черного железа"] = true,
   ["Железная граната"] = true,
   ["Осколочная граната M73"] = true,
@@ -49,1350 +188,2223 @@ pfUI_locale["ruRU"]["interrupts"] = {
   ["Гоблинская мортира"] = true,
 }
 
-pfUI_locale["ruRU"]["critters"] = {
-  'Аспид',
-  'Баран',
-  'Белка',
-  'Белка в клетке',
-  'Болотная гадюка',
-  'Больная газель',
-  'Больной олень',
-  'Бурая луговая собачка',
-  'Газель',
-  'Голос Элуны',
-  'Грызунчик',
-  'Ездовой баран',
-  'Жаба',
-  'Жаба в клетке',
-  'Желчная жаба',
-  'Жук',
-  'Зараженная белка',
-  'Зараженный олень',
-  'Заяц',
-  'Змея',
-  'Исцеленная газель',
-  'Исцеленный олень',
-  'Клео',
-  'Клык',
-  'Корова',
-  'Косяк рыбы',
-  'Кошка',
-  'Кролик',
-  'Кролик в клетке',
-  'Крыса',
-  'Крыса Недр',
-  'Крыса-полиморф',
-  'Курица',
-  'Курица в полиморфе',
-  'Лавовый краб',
-  'Леди',
-  'Личинка',
-  'Лошадь',
-  'Луговая собачка',
-  'Лягушка',
-  'Мистер Бигглсуорт',
-  'Мышь',
-  'Неисправный транспортер',
-  'Нетронь',
-  'Нечистая крыса',
-  'Нечистый таракан',
-  'Овца',
-  'Овца в клетке',
-  'Огненный жук',
-  'Огонек',
-  'Огромная жаба',
-  'Олененок',
-  'Олень',
-  'Паук',
-  'Пиратский клад инициатор – существо',
-  'Подземная крыса',
-  'Пойманная подземная крыса',
-  'Попугай',
-  'Пушок',
-  'Салом',
-  'Свинья',
-  'Скорпион',
-  'Собака',
-  'Старая Савраска',
-  'Таракан',
-  'Термит Чумных земель',
-  'Термометр Кракла',
-  'Точка маршрута (Только ГМ может увидеть это)',
-  'Тропическая жаба',
-  'Хват',
-  'Червь',
-  'Чердачный нетопырь',
-  'Черепаха',
-  'Черная крыса',
-  'Чумная блоха',
-  'Чумная крыса',
-  'Чумной червь',
-  'Шендраларский огонек',
-  'Шмыг',
-  'Эфси',
+ShaguPlates_locale["ruRU"]["resurrections"] = {
+  ["Воскрешение"] = true,
+  ["Возрождение"] = true,
+  ["Искупление"] = true,
+  ["Дух предков"] = true,
 }
 
-pfUI_locale["ruRU"]["spells"] = {
-  ['"Отчаянный" снова принимает облик цыпленка"'] = {t=1000, icon="Ability_Racial_BearForm" };
-  ['Плевок мясника'] = {t=2500, icon="Spell_Nature_CorrosiveBreath" };
-  ['Кислота Хаккара'] = {t=1000, icon="Spell_Nature_Acid_01" };
-  ['Кислотный плевок'] = {t=3000, icon="Spell_Nature_Acid_01" };
-  ['Всплеск кислоты'] = {t=1000, icon="INV_Drink_06" };
-  ['Кислотные брызги'] = {t=2000, icon="Spell_Nature_Acid_01" };
-  ['Активация защиты'] = {t=5000, icon="Temp" };
-  ['Исправление отношения'] = {t=2000, icon="INV_Gizmo_01" };
-  ['Прицельный выстрел'] = {t=3000, icon="INV_Spear_07" };
-  ['Усиленный урон'] = {t=2000, icon="Spell_Nature_AbolishMagic" };
-  ['Усиленное пламя'] = {t=1000, icon="Spell_Fire_Fireball" };
-  ['Дух предков'] = {t=10000, icon="Spell_Nature_Regenerate" };
-  ['Антимагический щит'] = {t=2000, icon="Spell_Shadow_AntiMagicShell" };
-  ['Применение мази'] = {t=1300, icon="Temp" };
-  ['Применение соблазняющей железы'] = {t=2500, icon="INV_Misc_Bowl_01" };
-  ['Использование приманки'] = {t=4000, icon="Temp" };
-  ['Аквадинамический магнит для рыбы'] = {t=5000, icon="INV_Misc_Orb_03" };
-  ['Открытие надежного сундука.'] = {t=5000, icon="INV_Misc_Spyglass_01" };
-  ['Квинтессенция воды - гашение руны Огненных Недр'] = {t=1000, icon="Temp" };
-  ['Чародейская стрела'] = {t=1000, icon="Spell_Arcane_StarFire" };
-  ['Чародейская бомба'] = {t=1500, icon="Spell_Holy_Silence" };
-  ['Волшебный взрыв'] = {t=1500, icon="Spell_Nature_WispSplode" };
-  ['Чародейский дух II'] = {t=1000, icon="Spell_Holy_MagicalSentry" };
-  ['Чародейский дух III'] = {t=1000, icon="Spell_Holy_MagicalSentry" };
-  ['Чародейский дух IV'] = {t=1000, icon="Spell_Holy_MagicalSentry" };
-  ['Чародейский дух V'] = {t=1000, icon="Spell_Holy_MagicalSentry" };
-  ['Чародейская слабость'] = {t=5000, icon="INV_Misc_QirajiCrystal_01" };
-  ['Арканитовая отмычка'] = {t=5000, icon="Temp" };
-  ['Пробуждение Аркедаса - визуальный эффект (DND)'] = {t=1500, icon="Spell_Nature_Earthquake" };
-  ['Снежный волк'] = {t=3000, icon="Ability_Mount_WhiteDireWolf" };
-  ['Выжигание участка'] = {t=3000, icon="Spell_Fire_SelfDestruct" };
-  ['Заклинание появления Аругала'] = {t=2000, icon="Temp" };
-  ['Дар Аругала'] = {t=2500, icon="Spell_Shadow_ChillTouch" };
-  ['Месть Аригоса'] = {t=2000, icon="Temp" };
-  ['Телепорт Ашкромба'] = {t=2000, icon="Spell_Fire_SelfDestruct" };
-  ['Выпустить Эшкромба'] = {t=4000, icon="Spell_Nature_MoonKey" };
-  ['Аспект Нептулона'] = {t=1000, icon="Temp" };
-  ['Астральное возвращение'] = {t=10000, icon="Spell_Nature_AstralRecal" };
-  ['Свет алтаря Аталаи - визуальный эффект (DND)'] = {t=1000, icon="Temp" };
-  ['Избирательное гашение'] = {t=2000, icon="Spell_Holy_SearingLight" };
-  ['Пробуждение Керлониана'] = {t=4500, icon="Temp" };
-  ['Пробуждение Свежевателя Душ'] = {t=5000, icon="Temp" };
-  ['Пробуждение тюремщика подземелья'] = {t=5000, icon="Spell_Nature_Earthquake" };
-  ['Стрела Айнаши'] = {t=500, icon="Temp" };
-  ['Оплеуха'] = {t=1000, icon="Spell_Shadow_LifeDrain" };
-  ['Природное равновесие'] = {t=3000, icon="Temp" };
-  ['Нарушение природного равновесия'] = {t=10000, icon="Temp" };
-  ['Шаровая молния'] = {t=1000, icon="Spell_Lightning_LightningBolt01" };
-  ['Изгнание'] = {t=1500, icon="Spell_Shadow_Cripple" };
-  ['Изгнание пылающего изгоя'] = {t=1000, icon="Spell_Shadow_LifeDrain" };
-  ['Изгнание морского изгоя'] = {t=1000, icon="Spell_Shadow_LifeDrain" };
-  ['Изгнание грозового изгоя'] = {t=1000, icon="Spell_Shadow_LifeDrain" };
-  ['Проклятие банши'] = {t=2000, icon="Spell_Nature_Drowsy" };
-  ['Вой банши'] = {t=1500, icon="Spell_Shadow_ShadowBolt" };
-  ['Барьер Света'] = {t=2000, icon="Temp" };
-  ['Обычный костер'] = {t=10000, icon="Spell_Fire_Fire" };
-  ['Коготь зверя'] = {t=1000, icon="Spell_Nature_Regeneration" };
-  ['Когти зверя II'] = {t=1000, icon="Spell_Nature_Regeneration" };
-  ['Когти зверя III'] = {t=1000, icon="Spell_Nature_Regeneration" };
-  ['Раскатистый рев'] = {t=1500, icon="Spell_Fire_Fire" };
-  ['Гнущаяся берцовая кость'] = {t=1500, icon="Temp" };
-  ['Большая бронзовая бомба'] = {t=1000, icon="Spell_Fire_SelfDestruct" };
-  ['Большая железная бомба'] = {t=1000, icon="Spell_Fire_SelfDestruct" };
-  ['Рождение'] = {t=2000, icon="Temp" };
-  ['Черная стрела'] = {t=2000, icon="Ability_TheBlackArrow" };
-  ['Черный боевой механодолгоног'] = {t=3000, icon="Ability_Mount_MechaStrider" };
-  ['Черный баран'] = {t=3000, icon="Ability_Mount_MountainRam" };
-  ['Черная слизь'] = {t=3000, icon="Spell_Shadow_CallofBone" };
-  ['Вороной жеребец'] = {t=3000, icon="Ability_Mount_NightmareHorse" };
-  ['Черный боевой кодо'] = {t=3000, icon="Ability_Mount_Kodo_01" };
-  ['Черный боевой баран'] = {t=3000, icon="Ability_Mount_MountainRam" };
-  ['Черный боевой ящер'] = {t=3000, icon="Ability_Mount_Raptor" };
-  ['Вороной боевой скакун'] = {t=3000, icon="Ability_Mount_NightmareHorse" };
-  ['Черный боевой саблезуб'] = {t=3000, icon="Ability_Mount_BlackPanther" };
-  ['Черный боевой волк'] = {t=3000, icon="Ability_Mount_BlackDireWolf" };
-  ['Черный волк'] = {t=3000, icon="Ability_Mount_BlackDireWolf" };
-  ['Благословленное волшебное масло'] = {t=3000, icon="Temp" };
-  ['Благословение Шахрама'] = {t=1000, icon="Spell_Holy_LayOnHands" };
-  ['Снежная буря'] = {t=2000, icon="Spell_Frost_IceStorm" };
-  ['Кровавый вой'] = {t=1000, icon="Spell_Shadow_LifeDrain" };
-  ['Превращение синего дракона DND'] = {t=1000, icon="Temp" };
-  ['Синий механодолгоног'] = {t=3000, icon="Ability_Mount_MechaStrider" };
-  ['Синий баран'] = {t=3000, icon="Ability_Mount_MountainRam" };
-  ['Синий конь-скелет'] = {t=3000, icon="Ability_Mount_Undeadhorse" };
-  ['Бегство отряда Блая'] = {t=10000, icon="INV_Misc_Rune_01" };
-  ['Бомба'] = {t=2000, icon="Spell_Fire_SelfDestruct" };
-  ['Обстрел'] = {t=3000, icon="Ability_GolemStormBolt" };
-  ['Обстрел II'] = {t=3000, icon="Ability_GolemStormBolt" };
-  ['Обстрел слизи'] = {t=1000, icon="Temp" };
-  ['Осколки костей'] = {t=500, icon="Spell_Shadow_ScourgeBuild" };
-  ['Валун'] = {t=2000, icon="Ability_Throw" };
-  ['Прерывание важного дела'] = {t=2000, icon="Spell_Shadow_CurseOfAchimonde" };
-  ['Прерывание дела'] = {t=2000, icon="Spell_Shadow_CurseOfAchimonde" };
-  ['Дыхание'] = {t=5000, icon="Spell_Fire_Fire" };
-  ['Дыхание Саргераса'] = {t=2000, icon="Spell_Shadow_Metamorphosis" };
-  ['Яркая побрякушка'] = {t=5000, icon="INV_Misc_Orb_03" };
-  ['Яркий костер'] = {t=10000, icon="Spell_Fire_Fire" };
-  ['Сверкающее масло маны'] = {t=3000, icon="Temp" };
-  ['Сверкающее волшебное масло'] = {t=3000, icon="Temp" };
-  ['Род Ноздорму - фракция +1000'] = {t=1000, icon="Temp" };
-  ['Гнедой конь'] = {t=3000, icon="Ability_Mount_RidingHorse" };
-  ['Бурый кодо'] = {t=3000, icon="Ability_Mount_Kodo_03" };
-  ['Бурый баран'] = {t=3000, icon="Ability_Mount_MountainRam" };
-  ['Гнедой конь-скелет'] = {t=3000, icon="Ability_Mount_Undeadhorse" };
-  ['Темно-бурый волк'] = {t=3000, icon="Ability_Mount_BlackDireWolf" };
-  ['Горящие ветра'] = {t=1000, icon="Spell_Nature_Cyclone" };
-  ['Червоточина'] = {t=1000, icon="Ability_Vanish" };
-  ['Погребение останков Самуэля'] = {t=2000, icon="Temp" };
-  ['Вкусняшка'] = {t=1000, icon="INV_ValentinesChocolate01" };
-  ['Вызов Анафемы'] = {t=1000, icon="Temp" };
-  ['Вызов Древних'] = {t=7000, icon="Temp" };
-  ['Вызов Благословения'] = {t=1000, icon="Temp" };
-  ['Вызов бесцветного ворга'] = {t=1300, icon="Spell_Shadow_ChillTouch" };
-  ['Вызов Охранных иероглифов'] = {t=3000, icon="Temp" };
-  ['Призыв жутеволка'] = {t=1300, icon="Spell_Shadow_ChillTouch" };
-  ['Зов могилы'] = {t=2000, icon="Spell_Shadow_ChillTouch" };
-  ['Зов Пустоты'] = {t=10000, icon="Temp" };
-  ['Зов Бездны'] = {t=3000, icon="Spell_Shadow_DeathCoil" };
-  ['Зов тунда'] = {t=1500, icon="Spell_Frost_Wisp" };
-  ['Вызов призматического барьера'] = {t=10000, icon="Temp" };
-  ['Вызов слюнявого ворга'] = {t=1300, icon="Spell_Shadow_ChillTouch" };
-  ['Воззвание к Айвусу'] = {t=10000, icon="Temp" };
-  ['Пушечный огонь'] = {t=1000, icon="Spell_Fire_FireBolt02" };
-  ['Свиток заклятия Проявления'] = {t=2000, icon="Spell_Magic_LesserInvisibilty" };
-  ['Пленение Грарка'] = {t=3000, icon="Temp" };
-  ['Пленение щенка ворга'] = {t=2500, icon="Temp" };
-  ['Ловля термитов'] = {t=5000, icon="Temp" };
-  ['Каскад роз'] = {t=500, icon="INV_Misc_Dust_04" };
-  ['Цепной удар'] = {t=2500, icon="Spell_Nature_ChainLightning" };
-  ['Цепной ожог'] = {t=3000, icon="Spell_Shadow_ManaBurn" };
-  ['Цепное исцеление'] = {t=2500, icon="Spell_Nature_HealingWaveGreater" };
-  ['Цепная молния'] = {t=2500, icon="Spell_Nature_ChainLightning" };
-  ['Звенья молний'] = {t=1800, icon="Spell_Nature_ChainLightning" };
-  ['Ледяные оковы'] = {t=1300, icon="Spell_Frost_ChainsOfIce" };
-  ['Заряженная чародейская стрела'] = {t=7000, icon="Spell_Arcane_StarFire" };
-  ['Зарядка'] = {t=5000, icon="Spell_Shadow_EvilEye" };
-  ['Гнедая кобыла'] = {t=3000, icon="Ability_Mount_RidingHorse" };
-  ['Студеное дыхание'] = {t=1000, icon="Spell_Frost_Wisp" };
-  ['Всецветный летун'] = {t=3000, icon="INV_Misc_Head_Dragon_Black" };
-  ['ЗАКЛИНАНИЕ ЗАДАНИЯ ЧУ'] = {t=4000, icon="Spell_Shadow_LifeDrain" };
-  ['Нейтрализация бомбы-вонючки'] = {t=5000, icon="Temp" };
-  ['Очищение колодца Громового Рога'] = {t=10000, icon="Temp" };
-  ['Очищение колодца Буйногривых'] = {t=10000, icon="Temp" };
-  ['Очищение колодца Заиндевевшего Копыта'] = {t=10000, icon="Temp" };
-  ['Рассекающий удар'] = {t=2500, icon="Ability_Warrior_Cleave" };
-  ['Двойник'] = {t=2500, icon="Spell_Shadow_BlackPlague" };
-  ['Закрытие'] = {t=1000, icon="Temp" };
-  ['Низкосортный динамит'] = {t=1000, icon="Spell_Fire_SelfDestruct" };
-  ['Яйцо из Питомника'] = {t=500, icon="Temp" };
-  ['Собирание осадков'] = {t=4000, icon="Temp" };
-  ['Колоссальный удар'] = {t=5000, icon="Temp" };
-  ['Сотворение алтаря Призыва'] = {t=10000, icon="Temp" };
-  ['Сотворение круга Зова'] = {t=10000, icon="Temp" };
-  ['Сотворение ущелья Снов'] = {t=10000, icon="Temp" };
-  ['Сотворение коня Скверны МАНЕКЕН DND'] = {t=5000, icon="Temp" };
-  ['Освященное оружие'] = {t=3000, icon="Temp" };
-  ['Пышка'] = {t=2000, icon="Spell_Holy_Heal" };
-  ['Копия темного Желания'] = {t=1000, icon="INV_ValentinesChocolate04" };
-  ['Копия страха'] = {t=1500, icon="Spell_Shadow_Possession" };
-  ['Копия ледяной стрелы'] = {t=1500, icon="Spell_Frost_FrostBolt02" };
-  ['Копия великого исцеления'] = {t=2000, icon="Spell_Holy_Heal" };
-  ['Копия волны исцеления'] = {t=3000, icon="Spell_Nature_MagicImmunity" };
-  ['Копия укрепления отношений'] = {t=1000, icon="Temp" };
-  ['Копия портала: Подгород'] = {t=10000, icon="Spell_Arcane_PortalUnderCity" };
-  ['Копия освобождение Яростного Когтя'] = {t=10000, icon="Temp" };
-  ['Разъедающая кислота'] = {t=1500, icon="Spell_Nature_Acid_01" };
-  ['Плевок разъедающей кислоты'] = {t=3000, icon="Spell_Nature_Acid_01" };
-  ['Разъедающий яд'] = {t=1500, icon="Spell_Nature_CorrosiveBreath" };
-  ['Разъедающий ядовитый плевок'] = {t=2500, icon="Spell_Nature_CorrosiveBreath" };
-  ['Осквернение Крассена'] = {t=2000, icon="Temp" };
-  ['Порча'] = {t=2000, icon="Spell_Shadow_AbominationExplosion" };
-  ['Напор волн'] = {t=2000, icon="Spell_Frost_FrostNova" };
-  ['Создание Тотема очищения'] = {t=5000, icon="Spell_Shadow_LifeDrain" };
-  ['Создание пусковой установки батарей фейерверков'] = {t=2000, icon="INV_Misc_EngGizmos_03" };
-  ['Создание шкатулки-духоловки'] = {t=500, icon="Temp" };
-  ['Создание полной шкатулки-духоловки'] = {t=2000, icon="Temp" };
-  ['Создание пусковой установки фейерверков'] = {t=2000, icon="INV_Musket_04" };
-  ['Создание камня здоровья'] = {t=3000, icon="INV_Stone_04" };
-  ['Создание камня здоровья'] = {t=3000, icon="INV_Stone_04" };
-  ['Создание камня здоровья'] = {t=3000, icon="INV_Stone_04" };
-  ['Создание камня здоровья'] = {t=3000, icon="INV_Stone_04" };
-  ['Создание камня здоровья'] = {t=3000, icon="INV_Stone_04" };
-  ['Сотворение предмета - визуальный эффект (DND)'] = {t=5000, icon="Spell_Shadow_SoulGem" };
-  ['Создание сферы мага'] = {t=4000, icon="Temp" };
-  ['Создание одеяния мага'] = {t=4000, icon="Temp" };
-  ['Создание PX83-Энигматрона'] = {t=2000, icon="INV_Misc_Bowl_01" };
-  ['Создание сверток с реликвиями'] = {t=1000, icon="Temp" };
-  ['Создание провала'] = {t=3000, icon="Temp" };
-  ['Создание сапты'] = {t=3000, icon="INV_Misc_Food_09" };
-  ['Создание свитка'] = {t=5000, icon="INV_Scroll_05" };
-  ['Создание гадальной чаши'] = {t=2500, icon="INV_Misc_Bowl_01" };
-  ['Создание крошера'] = {t=1000, icon="INV_Misc_Gear_01" };
-  ['Создание воды провидцев'] = {t=5000, icon="Spell_Shadow_LifeDrain" };
-  ['Создание тотемного узла Сухокожих'] = {t=2000, icon="Spell_Lightning_LightningBolt01" };
-  ['Особое существо'] = {t=2000, icon="Temp" };
-  ['Яд паучьего монстра'] = {t=2000, icon="Spell_Nature_NullifyPoison" };
-  ['Рыцарский щит Воздаяния'] = {t=1000, icon="INV_Shield_19" };
-  ['Увечье'] = {t=3000, icon="Spell_Shadow_Cripple" };
-  ['Калечащий яд'] = {t=3000, icon="Ability_PoisonSting" };
-  ['Некрорахниды-скарабеи'] = {t=1500, icon="Spell_Shadow_CarrionSwarm" };
-  ['Хрустальная вспышка'] = {t=2000, icon="Spell_Shadow_Teleport" };
-  ['Хрустальный взгляд'] = {t=2000, icon="Ability_GolemThunderClap" };
-  ['Хрустальный сон'] = {t=2000, icon="Spell_Nature_Sleep" };
-  ['Стрела Купидона'] = {t=1000, icon="Temp" };
-  ['Излечение болезни'] = {t=2500, icon="Spell_Holy_NullifyDisease" };
-  ['Проклятие крови'] = {t=2000, icon="Spell_Shadow_RitualOfSacrifice" };
-  ['Проклятье Хаккара'] = {t=2500, icon="Spell_Shadow_GatherShadows" };
-  ['Проклятие восстановления'] = {t=1000, icon="Spell_Shadow_AntiShadow" };
-  ['Проклятие Шахрама'] = {t=1000, icon="Spell_Magic_LesserInvisibilty" };
-  ['Проклятие Сталвана'] = {t=1000, icon="Spell_Shadow_ShadowPact" };
-  ['Проклятие темного наставника'] = {t=2000, icon="Spell_Shadow_AntiShadow" };
-  ['Проклятие Мертвого Леса'] = {t=2000, icon="Spell_Shadow_GatherShadows" };
-  ['Проклятье павших Маграм'] = {t=2000, icon="Spell_Shadow_UnholyFrenzy" };
-  ['Проклятие Огненного клейма'] = {t=2000, icon="Ability_Creature_Cursed_03" };
-  ['Проклятие чумной крысы'] = {t=1500, icon="Spell_Shadow_UnholyFrenzy" };
-  ['Проклятье племен'] = {t=2000, icon="Spell_Shadow_CurseOfMannoroth" };
-  ['Проклятие шипов'] = {t=2000, icon="Spell_Shadow_AntiShadow" };
-  ['Проклятие Тула'] = {t=2000, icon="Spell_Shadow_ShadowPact" };
-  ['Проклятие Тимми'] = {t=1000, icon="Spell_Shadow_ShadowPact" };
-  ['Проклятие слабости'] = {t=1000, icon="Spell_Shadow_CurseOfMannoroth" };
-  ['Маскировка под Даларанского волшебника'] = {t=3000, icon="Ability_Rogue_Disguise" };
-  ['Нанесение урона машине'] = {t=2000, icon="Spell_Fire_Fire" };
-  ['Темное Желание'] = {t=1000, icon="INV_ValentinesChocolate04" };
-  ['Бомба из черного железа'] = {t=1000, icon="Spell_Fire_SelfDestruct" };
-  ['Маскировка под дворфа из клана Черного Железа'] = {t=3000, icon="Ability_Rogue_Disguise" };
-  ['Мина клана Черного Железа'] = {t=1000, icon="Spell_Shadow_Metamorphosis" };
-  ['Исцеление тьмой'] = {t=3500, icon="Spell_Shadow_ChillTouch" };
-  ['Темное восстановление'] = {t=2000, icon="Ability_Hunter_MendPet" };
-  ['Темная жижа'] = {t=5000, icon="Spell_Shadow_CreepingPlague" };
-  ['Темный шепот'] = {t=3000, icon="Spell_Shadow_Haunting" };
-  ['Затмение зрения'] = {t=2000, icon="Spell_Shadow_Fumble" };
-  ['Рык'] = {t=1000, icon="Ability_Racial_Cannibalize" };
-  ['Рассветный гамбит'] = {t=1500, icon="Temp" };
-  ['Смертельный яд'] = {t=3000, icon="Ability_Rogue_DualWeild" };
-  ['Смертельный яд II'] = {t=3000, icon="Ability_Rogue_DualWeild" };
-  ['Смертельный яд III'] = {t=3000, icon="Ability_Rogue_DualWeild" };
-  ['Смертельный яд IV'] = {t=3000, icon="Ability_Rogue_DualWeild" };
-  ['Смертельный яд V'] = {t=3000, icon="Ability_Rogue_DualWeild" };
-  ['Динамит Мертвых копей'] = {t=2000, icon="Spell_Fire_SelfDestruct" };
-  ['Смерть и разложение'] = {t=2000, icon="Spell_Shadow_DeathAndDecay" };
-  ['Смертное ложе'] = {t=2000, icon="Spell_Shadow_Twilight" };
-  ['Конь смерти Ривендера'] = {t=3000, icon="Ability_Mount_Undeadhorse" };
-  ['Ослабление ловкости'] = {t=2000, icon="Spell_Holy_HarmUndeadAura" };
-  ['Ослабление силы'] = {t=2000, icon="Spell_Holy_HarmUndeadAura" };
-  ['Глубокая дремота'] = {t=1000, icon="Spell_Shadow_Cripple" };
-  ['Маскировка под члена Братства Справедливости'] = {t=3000, icon="Ability_Rogue_Disguise" };
-  ['Дефибриллировать'] = {t=4000, icon="Spell_Nature_Purge" };
-  ['Удали меня'] = {t=4000, icon="INV_Scroll_02" };
-  ['Кирка демона'] = {t=5000, icon="Temp" };
-  ['Портал демонов'] = {t=500, icon="Spell_Arcane_TeleportOrgrimmar" };
-  ['Факел вызова демонов'] = {t=3000, icon="Temp" };
-  ['Концентрированный динамит'] = {t=1000, icon="Spell_Fire_SelfDestruct" };
-  ['Уничтожение яйца'] = {t=3000, icon="INV_Misc_MonsterClaw_02" };
-  ['Уничтожение призрачного магнита'] = {t=10000, icon="Temp" };
-  ['Уничтожение шатра'] = {t=2500, icon="Temp" };
-  ['Взрыв'] = {t=2000, icon="Temp" };
-  ['Мгновенный взрыв'] = {t=5000, icon="Spell_Fire_SelfDestruct" };
-  ['Раскопки кобальта'] = {t=1500, icon="Temp" };
-  ['Пространственный портал'] = {t=2000, icon="Temp" };
-  ['Лютый рык'] = {t=1000, icon="Ability_Racial_Cannibalize" };
-  ['Лютый волк'] = {t=3000, icon="Ability_Mount_WhiteDireWolf" };
-  ['Обезвреживание ловушки'] = {t=2000, icon="Spell_Shadow_GrimWard" };
-  ['Болезнетворный удар'] = {t=1500, icon="Spell_Nature_EarthBind" };
-  ['Заразный выстрел'] = {t=2000, icon="Spell_Shadow_CallofBone" };
-  ['Заразная слизь'] = {t=2000, icon="Spell_Shadow_CreepingPlague" };
-  ['Болезнетворный плевок'] = {t=3000, icon="Spell_Shadow_CreepingPlague" };
-  ['Распыление'] = {t=3000, icon="Spell_Holy_RemoveCurse" };
-  ['Прогнать питомца'] = {t=5000, icon="Spell_Nature_SpiritWolf" };
-  ['Рассеяние'] = {t=1000, icon="Spell_Holy_DispelMagic" };
-  ['Рассеять яд'] = {t=2000, icon="Spell_Holy_Purify" };
-  ['Перемещение временной аномалии'] = {t=5000, icon="Temp" };
-  ['Разрушение'] = {t=3000, icon="Temp" };
-  ['Высидеть яйцо из питомника'] = {t=1000, icon="Temp" };
-  ['Божественный транс'] = {t=5000, icon="Temp" };
-  ['Господство над разумом'] = {t=2000, icon="Spell_Shadow_ShadowWordDominate" };
-  ['Власть'] = {t=1000, icon="Spell_Shadow_ShadowWordDominate" };
-  ['Господство над душой'] = {t=3000, icon="Spell_Shadow_ShadowWordDominate" };
-  ['Окунание'] = {t=5000, icon="Temp" };
-  ['Определение Изначального Пламени'] = {t=1000, icon="Temp" };
-  ['Драко-инкарцинатор 900'] = {t=2000, icon="Temp" };
-  ['Начертание древних рун'] = {t=10000, icon="Temp" };
-  ['Узы Чертополохха'] = {t=2000, icon="Spell_Shadow_Haunting" };
-  ['Набор для рисования'] = {t=7000, icon="Temp" };
-  ['Глоток малого зелья'] = {t=3000, icon="Spell_Holy_Heal" };
-  ['Глоток зелья'] = {t=3000, icon="Spell_Holy_Heal" };
-  ['Вогнать пику Нимбойи с тролльими черепами'] = {t=2000, icon="Temp" };
-  ['Друидская дремота'] = {t=2500, icon="Spell_Nature_Sleep" };
-  ['Пьяная команда на пит-стопе'] = {t=2000, icon="Temp" };
-  ['Ложная мишень НИП - призывание'] = {t=20000, icon="Spell_Shadow_UnsummonBuilding" };
-  ['Ложная мишень дистанционной атаки'] = {t=2000, icon="Temp" };
-  ['Пыльное облако'] = {t=1500, icon="Ability_Hibernation" };
-  ['Динамит'] = {t=1000, icon="Spell_Fire_SelfDestruct" };
-  ['Элементаль земли'] = {t=3000, icon="Ability_Temp" };
-  ['Тотем хватки Земли'] = {t=500, icon="Spell_Nature_NatureTouchDecay" };
-  ['Бузинный пирог'] = {t=1000, icon="INV_Misc_Food_10" };
-  ['Электрическая сеть'] = {t=500, icon="Ability_Ensnare" };
-  ['Броня стихий'] = {t=1000, icon="Spell_Frost_Frost" };
-  ['Первородный огонь'] = {t=500, icon="Spell_Fire_Fireball02" };
-  ['Неистовство стихий'] = {t=1000, icon="Spell_Fire_FireArmor" };
-  ['Свеча Элуны'] = {t=500, icon="Temp" };
-  ['Углеглаз'] = {t=5000, icon="Spell_Nature_EarthBindTotem" };
-  ['Изумрудный ящер'] = {t=3000, icon="Ability_Mount_Raptor" };
-  ['Усиление питомца'] = {t=500, icon="Spell_Shadow_DeathPact" };
-  ['Пустая праздничная кружка'] = {t=2000, icon="Temp" };
-  ['Заключение'] = {t=2000, icon="Spell_Shadow_Teleport" };
-  ['Оплетающие сети'] = {t=2000, icon="Spell_Nature_EarthBind" };
-  ['Зачаровывание'] = {t=3500, icon="Temp" };
-  ['Заколдованное семечко Геи'] = {t=5000, icon="Temp" };
-  ['Повышенная быстрота'] = {t=3000, icon="Spell_Nature_Invisibilty" };
-  ['Колдовской кристалл резонита'] = {t=5000, icon="Temp" };
-  ['Чарующая колыбельная'] = {t=1000, icon="Spell_Shadow_SoothingKiss" };
-  ['Вытягивание энергии'] = {t=1500, icon="Spell_Shadow_Cripple" };
-  ['Лишение сил'] = {t=1500, icon="Ability_Creature_Poison_03" };
-  ['Ослабление'] = {t=2000, icon="Spell_Shadow_CurseOfMannoroth" };
-  ['Поглощающая Тьма'] = {t=1500, icon="Spell_Shadow_LifeDrain02" };
-  ['Улучшение дробящего оружия'] = {t=3000, icon="Temp" };
-  ['Улучшение дробящего оружия'] = {t=3000, icon="Temp" };
-  ['Улучшение дробяшего оружия'] = {t=3000, icon="Temp" };
-  ['Улучшение дробящего оружия'] = {t=3000, icon="Temp" };
-  ['Улучшение дробящего оружия'] = {t=3000, icon="Temp" };
-  ['Увеличение'] = {t=2000, icon="Spell_Nature_Strength" };
-  ['Просветление'] = {t=2000, icon="Spell_Shadow_Fumble" };
-  ['Порабощение демона'] = {t=3000, icon="Spell_Shadow_EnslaveDemon" };
-  ['Гнев деревьев'] = {t=1500, icon="Spell_Nature_StrangleVines" };
-  ['Вихрь'] = {t=2000, icon="Spell_Nature_Cyclone" };
-  ['Мастер побега'] = {t=500, icon="Ability_Rogue_Trip" };
-  ['Транспортер: Круговзор'] = {t=10000, icon="Spell_Fire_SelfDestruct" };
-  ['Дурной глаз'] = {t=1500, icon="Spell_Shadow_Charm" };
-  ['Злой Бог'] = {t=300000, icon="Temp" };
-  ['Экзорцизм Атиеша'] = {t=20000, icon="Temp" };
-  ['Изгнание призраков'] = {t=4000, icon="Temp" };
-  ['Взрывной выстрел'] = {t=1000, icon="Spell_Fire_Fireball02" };
-  ['Взрывоопасная овца'] = {t=2000, icon="Ability_Repair" };
-  ['Разрывной выстрел'] = {t=1000, icon="Spell_Fire_Fireball02" };
-  ['Тушение'] = {t=2000, icon="Temp" };
-  ['Луч ока'] = {t=2000, icon="Spell_Nature_CallStorm" };
-  ['Око Бессмер\'тера'] = {t=2000, icon="Spell_Shadow_AntiMagicShell" };
-  ['Око Килрогга'] = {t=5000, icon="Spell_Shadow_EvilEye" };
-  ['Глаз Йесмура (PT)'] = {t=2000, icon="Temp" };
-  ['Звериный глаз'] = {t=2000, icon="Ability_EyeOfTheOwl" };
-  ['Динамит "Pro-100-брос"'] = {t=1000, icon="Spell_Fire_SelfDestruct" };
-  ['Волшебный огонь'] = {t=2000, icon="Spell_Nature_FaerieFire" };
-  ['Симуляция выстрела'] = {t=2000, icon="Ability_Marksmanship" };
-  ['Клинок фанатика'] = {t=1000, icon="Spell_Fire_Immolation" };
-  ['Дальнее зрение'] = {t=2000, icon="Spell_Nature_FarSight" };
-  ['Дальнее зрение (РТ)'] = {t=2000, icon="Temp" };
-  ['Страх'] = {t=1500, icon="Spell_Shadow_Possession" };
-  ['Страх (NYI)'] = {t=3000, icon="Spell_Shadow_Possession" };
-  ['Слабоумие'] = {t=1000, icon="Spell_Shadow_MindSteal" };
-  ['Слабоумие II'] = {t=1000, icon="Spell_Shadow_MindSteal" };
-  ['Слабоумие III'] = {t=1000, icon="Spell_Shadow_MindSteal" };
-  ['Проклятие скверны'] = {t=4000, icon="Temp" };
-  ['Воскресение Сквернстрома'] = {t=3000, icon="Spell_Totem_WardOfDraining" };
-  ['Дух дикого волка'] = {t=3000, icon="Spell_Nature_SpiritWolf" };
-  ['Дух дикого волка II'] = {t=3000, icon="Spell_Nature_SpiritWolf" };
-  ['Болезненная усталость'] = {t=3000, icon="Spell_Nature_NullifyDisease" };
-  ['Моровая лихорадка'] = {t=4500, icon="Spell_Nature_NullifyDisease" };
-  ['Яркое пламя'] = {t=3000, icon="Spell_Fire_SelfDestruct" };
-  ['Выброс огня'] = {t=1500, icon="Spell_Fire_FireBolt" };
-  ['Наполнить фиал'] = {t=5000, icon="Temp" };
-  ['Наполнение'] = {t=3000, icon="Temp" };
-  ['Поиск фрагмента артефакта'] = {t=5000, icon="Temp" };
-  ['Огненная пушка'] = {t=2000, icon="Temp" };
-  ['Элементаль огня'] = {t=3000, icon="Ability_Temp" };
-  ['Огненный щит'] = {t=1000, icon="Spell_Fire_Immolation" };
-  ['Огненный щит II'] = {t=1000, icon="Spell_Fire_Immolation" };
-  ['Огненный щит III'] = {t=1000, icon="Spell_Fire_Immolation" };
-  ['Огненный щит IV'] = {t=1000, icon="Spell_Fire_Immolation" };
-  ['Огненная буря'] = {t=2000, icon="Spell_Fire_SelfDestruct" };
-  ['Слабость перед Огнем'] = {t=5000, icon="INV_Misc_QirajiCrystal_02" };
-  ['Поджаренная булочка'] = {t=1000, icon="INV_Misc_Food_11" };
-  ['Огненный шар'] = {t=3500, icon="Spell_Fire_FlameBolt" };
-  ['Град огненных шаров'] = {t=3000, icon="Spell_Fire_FlameBolt" };
-  ['Огненная стрела'] = {t=2000, icon="Spell_Fire_FireBolt" };
-  ['Огненная стрела II'] = {t=3000, icon="Spell_Fire_FireBolt02" };
-  ['Огненная стрела III'] = {t=3000, icon="Spell_Fire_FireBolt02" };
-  ['Огненная стрела IV'] = {t=3000, icon="Spell_Fire_FireBolt02" };
-  ['Фейерверк'] = {t=500, icon="Temp" };
-  ['Первая помощь'] = {t=3000, icon="Spell_Holy_GreaterHeal" };
-  ['Кулак Шахрама'] = {t=1000, icon="Ability_Whirlwind" };
-  ['Исправление ритуального колокольчика (DND)'] = {t=3000, icon="Temp" };
-  ['Исправление ритуальной свечи (DND)'] = {t=3000, icon="Temp" };
-  ['Исправление ритуального элемента'] = {t=3000, icon="Temp" };
-  ['Пламенная вспышка'] = {t=7000, icon="Spell_Fire_SelfDestruct" };
-  ['Пламенное дыхание'] = {t=1700, icon="Spell_Fire_Fire" };
-  ['Удар пламенем'] = {t=2200, icon="Spell_Fire_Fireball" };
-  ['Выброс пламени'] = {t=3000, icon="Spell_Fire_SelfDestruct" };
-  ['Пламенная пушка'] = {t=1500, icon="Spell_Fire_FlameBolt" };
-  ['Пламенный кнут'] = {t=1000, icon="Spell_Fire_Fireball" };
-  ['Пламенный шип'] = {t=3000, icon="Spell_Fire_SelfDestruct" };
-  ['Брызги пламени'] = {t=1700, icon="Spell_Fire_Fire" };
-  ['Огненная трещина'] = {t=2500, icon="Spell_Fire_Fire" };
-  ['Пламя Хаоса'] = {t=1000, icon="Spell_Fire_WindsofWoe" };
-  ['Пламя Воздействия'] = {t=3000, icon="Temp" };
-  ['Пламя Шахрама'] = {t=1000, icon="Spell_Fire_SelfDestruct" };
-  ['Огненный плевок'] = {t=3000, icon="Spell_Fire_FlameBolt" };
-  ['Огненный столб'] = {t=3000, icon="Spell_Fire_SelfDestruct" };
-  ['Быстрое исцеление'] = {t=1500, icon="Spell_Holy_FlashHeal" };
-  ['Вспышка Света'] = {t=1500, icon="Spell_Holy_FlashHeal" };
-  ['Кусеница'] = {t=5000, icon="INV_Misc_Orb_03" };
-  ['Бросок факела'] = {t=1000, icon="Spell_Fire_Flare" };
-  ['Флюоресцирующий зеленый механодолгоног'] = {t=3000, icon="Ability_Mount_MechaStrider" };
-  ['Сосредоточение'] = {t=5000, icon="Temp" };
-  ['Тычок Силы'] = {t=1000, icon="INV_Gauntlets_31" };
-  ['Отковка кулака Веригана'] = {t=600, icon="Spell_Holy_RighteousFury" };
-  ['Прощение'] = {t=1000, icon="Temp" };
-  ['Раздвоенная молния'] = {t=2000, icon="Spell_Nature_ChainLightning" };
-  ['Облик Лунного охотника (без невидимости)'] = {t=1000, icon="Ability_Hibernation" };
-  ['Утраченные навыки'] = {t=2500, icon="Spell_Shadow_AntiShadow" };
-  ['Холод'] = {t=4000, icon="Spell_Frost_Glacier" };
-  ['Заморозить яйцо из питомника'] = {t=500, icon="Temp" };
-  ['Заморозить яйцо из питомника - модель'] = {t=500, icon="Temp" };
-  ['Полная заморозка'] = {t=2500, icon="Spell_Frost_Glacier" };
-  ['Жуткокоготь'] = {t=1000, icon="Spell_Shadow_ShadowPact" };
-  ['Дыхание льда'] = {t=250, icon="Spell_Frost_FrostNova" };
-  ['Ледяной ожог'] = {t=2000, icon="Spell_Frost_ChillingBlast" };
-  ['Масло льда'] = {t=3000, icon="Temp" };
-  ['Снежный баран'] = {t=3000, icon="Ability_Mount_MountainRam" };
-  ['Сопротивление магии льда'] = {t=1000, icon="Spell_Frost_WizardMark" };
-  ['Уязвимость ко льду'] = {t=5000, icon="INV_Misc_QirajiCrystal_04" };
-  ['Ледяная стрела'] = {t=3000, icon="Spell_Frost_FrostBolt02" };
-  ['Залп ледяных стрел'] = {t=2000, icon="Spell_Frost_FrostBolt02" };
-  ['Сила Снежной Гривы'] = {t=1000, icon="Spell_Nature_UndyingStrength" };
-  ['Древний ледопард'] = {t=3000, icon="Ability_Mount_WhiteTiger" };
-  ['Верховой северный волк'] = {t=3000, icon="Ability_Mount_WhiteDireWolf" };
-  ['Полное исцеление'] = {t=1000, icon="Temp" };
-  ['Неловкость'] = {t=1000, icon="Spell_Shadow_Fumble" };
-  ['Неловкость II'] = {t=1000, icon="Spell_Shadow_Fumble" };
-  ['Неловкость III'] = {t=1000, icon="Spell_Shadow_Fumble" };
-  ['Образ фурболга'] = {t=2000, icon="INV_Misc_MonsterClaw_04" };
-  ['Удар горгульи'] = {t=1500, icon="Spell_Shadow_ShadowBolt" };
-  ['Газовая бомба'] = {t=1000, icon="INV_Misc_Ammo_Bullet_01" };
-  ['Самоцвет Змеи'] = {t=5000, icon="Temp" };
-  ['Призрачный волк'] = {t=3000, icon="Spell_Nature_SpiritWolf" };
-  ['Дар Ксавиана'] = {t=5000, icon="Spell_Holy_FlashHeal" };
-  ['Ледниковый рев'] = {t=1000, icon="Spell_Frost_FrostNova" };
-  ['Яркий свет'] = {t=500, icon="Temp" };
-  ['Подключение гномской камеры'] = {t=3000, icon="Temp" };
-  ['Гномский транспортер'] = {t=10000, icon="Temp" };
-  ['Соединение камеры гоблинов'] = {t=3000, icon="Temp" };
-  ['Гоблинская мина'] = {t=1000, icon="Spell_Shadow_Metamorphosis" };
-  ['Гоблинская мортира'] = {t=1000, icon="Spell_Fire_SelfDestruct" };
-  ['Гонг'] = {t=500, icon="Temp" };
-  ['Гонг из Зул\'Фаррака - гонг'] = {t=500, icon="Temp" };
-  ['Зеленый грог Гордока'] = {t=1000, icon="INV_Drink_03" };
-  ['Хваткие лозы'] = {t=1000, icon="Spell_Nature_Earthquake" };
-  ['Серый кодо'] = {t=3000, icon="Ability_Mount_Kodo_01" };
-  ['Серый баран'] = {t=3000, icon="Ability_Mount_MountainRam" };
-  ['Серый волк'] = {t=3000, icon="Ability_Mount_WhiteDireWolf" };
-  ['Огромный бурый кодо'] = {t=3000, icon="Ability_Mount_Kodo_03" };
-  ['Огромный серый кодо'] = {t=3000, icon="Ability_Mount_Kodo_01" };
-  ['Великое исцеление'] = {t=4000, icon="Spell_Holy_Heal" };
-  ['Огромный белый кодо'] = {t=3000, icon="Ability_Mount_Kodo_01" };
-  ['Большее рассеивание'] = {t=4000, icon="Spell_Arcane_StarFire" };
-  ['Большее исцеление'] = {t=3000, icon="Spell_Holy_GreaterHeal" };
-  ['Большая невидимость'] = {t=3000, icon="Spell_Nature_Invisibilty" };
-  ['Преображение зеленого дракона - DND'] = {t=1000, icon="Temp" };
-  ['Зеленый кодо'] = {t=3000, icon="Ability_Mount_Kodo_02" };
-  ['Зеленый механодолгоног'] = {t=3000, icon="Ability_Mount_MechaStrider" };
-  ['Зеленый боевой конь-скелет'] = {t=3000, icon="Ability_Mount_Undeadhorse" };
-  ['Подношения Грому'] = {t=2000, icon="Temp" };
-  ['Коварство ящера'] = {t=3000, icon="INV_Misc_MonsterClaw_02" };
-  ['Порыв ветра'] = {t=2000, icon="Spell_Nature_EarthBind" };
-  ['Молот гнева'] = {t=1000, icon="Ability_ThunderClap" };
-  ['Рука Ируксоса'] = {t=5000, icon="Temp" };
-  ['Урожай яиц силитидов'] = {t=5000, icon="Temp" };
-  ['Голодный рой'] = {t=3000, icon="Spell_Holy_Dizzy" };
-  ['Неотвязные призраки'] = {t=2000, icon="Spell_Shadow_BlackPlague" };
-  ['Блуждающие духи'] = {t=2000, icon="Spell_Shadow_BlackPlague" };
-  ['Исцеление'] = {t=3000, icon="Spell_Holy_Heal02" };
-  ['Исцеление - визуальное (DND)'] = {t=3500, icon="Spell_Holy_Heal" };
-  ['Исцеление гнусь-лозы'] = {t=500, icon="Temp" };
-  ['Целебный круг'] = {t=3000, icon="Spell_Holy_BlessingOfProtection" };
-  ['Исцеляющая речь'] = {t=1000, icon="Spell_Holy_Heal" };
-  ['Исцеляющая речь II'] = {t=1000, icon="Spell_Holy_Heal" };
-  ['Целительное прикосновение'] = {t=3500, icon="Spell_Nature_HealingTouch" };
-  ['Дух-целитель'] = {t=2000, icon="Spell_Holy_LayOnHands" };
-  ['Волна исцеления'] = {t=3000, icon="Spell_Nature_MagicImmunity" };
-  ['Исцеляющая волна Антусула'] = {t=1000, icon="Spell_Holy_Heal02" };
-  ['Сердце Хаккара - Молтор бросает сердце'] = {t=2000, icon="Temp" };
-  ['Камень возвращения'] = {t=10000, icon="INV_Misc_Rune_01" };
-  ['Тяжелый динамит'] = {t=1000, icon="Spell_Fire_SelfDestruct" };
-  ['Обостренные чувства'] = {t=1000, icon="Temp" };
-  ['Адское пламя'] = {t=3000, icon="Spell_Fire_SelfDestruct" };
-  ['Адское Пламя II'] = {t=3000, icon="Spell_Fire_SelfDestruct" };
-  ['Адское Пламя III'] = {t=3000, icon="Spell_Fire_SelfDestruct" };
-  ['Сбор трав'] = {t=5000, icon="Spell_Nature_NatureTouchGrow" };
-  ['Сглаз'] = {t=2000, icon="Spell_Nature_Polymorph" };
-  ['Сглаз Когтеврана'] = {t=2000, icon="Spell_Shadow_Charm" };
-  ['Взрывоопасная бомба'] = {t=1000, icon="Spell_Fire_SelfDestruct" };
-  ['Спячка'] = {t=1500, icon="Spell_Nature_Sleep" };
-  ['Священный огонь'] = {t=3500, icon="Spell_Holy_SearingLight" };
-  ['Свет небес'] = {t=2500, icon="Spell_Holy_HolyBolt" };
-  ['Божественная кара'] = {t=2500, icon="Spell_Holy_HolySmite" };
-  ['Гнев небес'] = {t=2000, icon="Spell_Holy_Excorcism" };
-  ['Очки чести +138'] = {t=1000, icon="Temp" };
-  ['Очки чести +228'] = {t=1000, icon="Temp" };
-  ['Очки чести +2388'] = {t=1000, icon="INV_BannerPVP_02" };
-  ['Очки чести +378'] = {t=1000, icon="Temp" };
-  ['Очки чести +398'] = {t=1000, icon="Temp" };
-  ['Очки чести +50'] = {t=1000, icon="Temp" };
-  ['Очки чести +82'] = {t=1000, icon="Temp" };
-  ['Сеть с крючьями'] = {t=500, icon="Ability_Ensnare" };
-  ['Вой ужаса'] = {t=2000, icon="Spell_Shadow_DeathScream" };
-  ['Яростный вой'] = {t=5000, icon="Ability_BullRush" };
-  ['Ледяная могила'] = {t=1500, icon="Spell_Frost_Glacier" };
-  ['Морозная стрела'] = {t=2000, icon="Spell_Frost_FrostBolt02" };
-  ['Сосулька'] = {t=1500, icon="Spell_Frost_FrostBolt02" };
-  ['Льдисто-синий механодолгоног модель А'] = {t=3000, icon="Ability_Mount_MechaStrider" };
-  ['Обнаружение племени'] = {t=10000, icon="Spell_Lightning_LightningBolt01" };
-  ['Сожжение плоти'] = {t=2000, icon="Spell_Fire_Fire" };
-  ['Воспламенение Крошиуса'] = {t=3000, icon="Temp" };
-  ['Стражи Илкруда'] = {t=5000, icon="Spell_Shadow_SummonVoidWalker" };
-  ['Наложение чар на нагрудник - поглощение l'] = {t=5000, icon="Spell_Holy_GreaterHeal" };
-  ['Зачарование нагрудника - малое поглощение'] = {t=5000, icon="Spell_Holy_GreaterHeal" };
-  ['Зачарование нагрудника - дух I'] = {t=5000, icon="Spell_Holy_GreaterHeal" };
-  ['Чары для нагрудника - дух I'] = {t=5000, icon="Spell_Holy_GreaterHeal" };
-  ['Чары для палаща - защита l'] = {t=5000, icon="Spell_Holy_GreaterHeal" };
-  ['Зачарование плаща - малое сопротивление'] = {t=5000, icon="Spell_Holy_GreaterHeal" };
-  ['Чары для оружия - истребитель животных'] = {t=5000, icon="Spell_Holy_GreaterHeal" };
-  ['Жертвенный огонь'] = {t=2000, icon="Spell_Fire_Immolation" };
-  ['Взрыв'] = {t=10000, icon="Spell_Fire_SelfDestruct" };
-  ['Воспламеняющий порошок'] = {t=5000, icon="Temp" };
-  ['Испепеление'] = {t=2000, icon="Spell_Shadow_ChillTouch" };
-  ['Испепеление'] = {t=5000, icon="Temp" };
-  ['Укрепление отношений'] = {t=1000, icon="Temp" };
-  ['Расширение кругозора'] = {t=30000, icon="Spell_Shadow_LifeDrain" };
-  ['Инфернал'] = {t=2000, icon="Spell_Shadow_SummonInfernal" };
-  ['Инфернальный снаряд'] = {t=3000, icon="Spell_Fire_SelfDestruct" };
-  ['Чернильные брызги'] = {t=1000, icon="Spell_Nature_Sleep" };
-  ['Быстродействующий яд'] = {t=3000, icon="Ability_Poisons" };
-  ['Быстродействующий яд II'] = {t=3000, icon="Ability_Poisons" };
-  ['Быстродействующий яд III'] = {t=3000, icon="Ability_Poisons" };
-  ['Быстродействующий яд IV'] = {t=3000, icon="Ability_Poisons" };
-  ['Быстродействующий яд V'] = {t=3000, icon="Ability_Poisons" };
-  ['Быстродействующий яд VI'] = {t=3000, icon="Ability_Poisons" };
-  ['Быстродействующая отрава'] = {t=3000, icon="INV_Potion_19" };
-  ['Отделение души Лорда Вальтхалака DND'] = {t=5000, icon="Temp" };
-  ['Сильная боль'] = {t=1000, icon="Spell_Shadow_ShadowWordPain" };
-  ['Устрашающий рык'] = {t=1000, icon="Ability_Racial_Cannibalize" };
-  ['Невидимое размещение ловушки на медведя'] = {t=2000, icon="Temp" };
-  ['Невидимость'] = {t=3000, icon="Spell_Nature_Invisibilty" };
-  ['Железная граната'] = {t=1000, icon="Spell_Fire_SelfDestruct" };
-  ['Палевый ящер'] = {t=3000, icon="Ability_Mount_Raptor" };
-  ['Телепортация Айвуса - визальный эффект DND'] = {t=1000, icon="Temp" };
-  ['Дж\'ииви создает объект'] = {t=2000, icon="Temp" };
-  ['Перевод Джаркала'] = {t=4500, icon="Spell_Holy_Restoration" };
-  ['Благословение Юлии'] = {t=2000, icon="Spell_Holy_Renew" };
-  ['Скачущая молния'] = {t=3000, icon="Spell_Nature_Lightning" };
-  ['Флаг Кадрака'] = {t=2000, icon="INV_Banner_03" };
-  ['Кэларан создает факел'] = {t=1000, icon="Temp" };
-  ['Кев'] = {t=3000, icon="Spell_Fire_FireBolt" };
-  ['Отмычка Кадгара'] = {t=10000, icon="INV_Misc_Key_14" };
-  ['Король Гордока'] = {t=1000, icon="INV_Crown_02" };
-  ['Энергетический инкапсулятор кодо'] = {t=5000, icon="Trade_Fishing" };
-  ['Убойное пойло Крига'] = {t=1000, icon="INV_Drink_05" };
-  ['Большая медная бомба'] = {t=1000, icon="Spell_Fire_SelfDestruct" };
-  ['Большой сефориевый заряд'] = {t=5000, icon="Temp" };
-  ['Лесной волк'] = {t=3000, icon="Ability_Mount_BlackDireWolf" };
-  ['Леопард'] = {t=3000, icon="Ability_Mount_JungleTiger" };
-  ['Исцеление от проказы'] = {t=2000, icon="Spell_Holy_FlashHeal" };
-  ['Малое исцеление'] = {t=2500, icon="Spell_Holy_LesserHeal" };
-  ['Малая волна исцеления'] = {t=1500, icon="Spell_Nature_HealingWaveLesser" };
-  ['Простая невидимость'] = {t=3000, icon="Spell_Magic_LesserInvisibilty" };
-  ['Простое масло маны'] = {t=3000, icon="Temp" };
-  ['Простое волшебное масло'] = {t=3000, icon="Temp" };
-  ['Смертельная отрава'] = {t=3000, icon="Spell_Nature_CorrosiveBreath" };
-  ['Урожай жизни'] = {t=1000, icon="Spell_Shadow_Requiem" };
-  ['Кража жизни'] = {t=1500, icon="Spell_Shadow_LifeDrain02" };
-  ['Снятие печати'] = {t=2000, icon="Temp" };
-  ['Вспышка молнии'] = {t=3200, icon="Spell_Nature_Lightning" };
-  ['Молния'] = {t=3000, icon="Spell_Nature_Lightning" };
-  ['Грозовое дыхание'] = {t=2000, icon="Spell_Nature_Lightning" };
-  ['Грозовая туча'] = {t=3000, icon="Spell_Nature_CallStorm" };
-  ['Тотем молний'] = {t=500, icon="Spell_Nature_Lightning" };
-  ['Колодец Света'] = {t=1500, icon="Spell_Holy_SummonLightwell" };
-  ['Бумеранг Линкена'] = {t=500, icon="INV_Weapon_ShortBlade_10" };
-  ['Ящеричья молния'] = {t=2000, icon="Spell_Nature_Lightning" };
-  ['Жуки-трупоеды'] = {t=3000, icon="Spell_Nature_InsectSwarm" };
-  ['Дальний выстрел II'] = {t=4000, icon="Ability_Marksmanship" };
-  ['Дальний выстрел III'] = {t=4000, icon="Ability_Marksmanship" };
-  ['Орлиный взор'] = {t=1000, icon="Ability_TownWatch" };
-  ['Приглашение на фестиваль'] = {t=5000, icon="Spell_Arcane_TeleportMoonglade" };
-  ['Пулемет'] = {t=500, icon="Ability_Marksmanship" };
-  ['Воспламеняющий порошок Магаты'] = {t=1300, icon="Temp" };
-  ['Магическое зрение'] = {t=3000, icon="Temp" };
-  ['Вспышка магмы'] = {t=1000, icon="Spell_Fire_FlameShock" };
-  ['Телепортация мажордома - визуальный эффект'] = {t=1000, icon="Spell_Arcane_Blink" };
-  ['Сожжение маны'] = {t=3000, icon="Spell_Shadow_ManaBurn" };
-  ['Буря маны'] = {t=2000, icon="Spell_Frost_IceStorm" };
-  ['Явление духа'] = {t=5000, icon="Spell_Totem_WardOfDraining" };
-  ['Очищение явления'] = {t=4000, icon="Temp" };
-  ['Знак Пламени'] = {t=1000, icon="Spell_Fire_Fireball" };
-  ['Попадание снайпера'] = {t=2000, icon="Ability_Marksmanship" };
-  ['Массовое рассеивание'] = {t=1000, icon="Spell_Shadow_Teleport" };
-  ['Массовое исцеление'] = {t=1000, icon="Spell_Holy_GreaterHeal" };
-  ['Огромный гейзер'] = {t=1500, icon="Spell_Frost_SummonWaterElemental" };
-  ['Массивный миномет'] = {t=3000, icon="Temp" };
-  ['Майский шест'] = {t=10000, icon="Spell_Shadow_Twilight" };
-  ['Умный напиток Мебока'] = {t=3000, icon="Temp" };
-  ['Автоматический заплатный набор'] = {t=2000, icon="INV_Gizmo_03" };
-  ['Механическая белка'] = {t=1000, icon="Spell_Shadow_Metamorphosis" };
-  ['Мегавольт'] = {t=2000, icon="Spell_Nature_ChainLightning" };
-  ['Флейта крысолова'] = {t=1000, icon="Temp" };
-  ['Жидкая руда'] = {t=1500, icon="Spell_Fire_SelfDestruct" };
-  ['Слияние слизей'] = {t=500, icon="INV_Potion_12" };
-  ['Пробуждение Меритры'] = {t=2000, icon="Temp" };
-  ['Приманка Миблона'] = {t=2000, icon="INV_Misc_Food_50" };
-  ['Летняя колбаска'] = {t=1000, icon="INV_Misc_Food_53" };
-  ['Мощь Рагнароса'] = {t=500, icon="Spell_Fire_SelfDestruct" };
-  ['Мощь Шахрама'] = {t=1000, icon="Spell_Nature_WispSplode" };
-  ['Взрыв разума'] = {t=1500, icon="Spell_Shadow_UnholyFrenzy" };
-  ['Контроль над разумом'] = {t=3000, icon="Spell_Shadow_ShadowWordDominate" };
-  ['Гниение разума'] = {t=2000, icon="Spell_Shadow_MindRot" };
-  ['Мысленная дрожь'] = {t=2000, icon="Spell_Nature_Earthquake" };
-  ['Дурманящий яд'] = {t=3000, icon="Spell_Nature_NullifyDisease" };
-  ['Дурманящий яд II'] = {t=3000, icon="Spell_Nature_NullifyDisease" };
-  ['Дурманящий яд III'] = {t=3000, icon="Spell_Nature_NullifyDisease" };
-  ['Миниружье'] = {t=100, icon="INV_Musket_04" };
-  ['Горное дело'] = {t=3200, icon="Trade_Mining" };
-  ['Прислужник Морганта'] = {t=2500, icon="Spell_Totem_WardOfDraining" };
-  ['Прислужники Малатрома'] = {t=1000, icon="Spell_Shadow_CorpseExplode" };
-  ['Слабое масло маны'] = {t=3000, icon="Temp" };
-  ['Слабое волшебное масло'] = {t=3000, icon="Temp" };
-  ['Засасывающая жижа'] = {t=1000, icon="Spell_Nature_StrangleVines" };
-  ['Мрачноозерная поганка'] = {t=3000, icon="Spell_Holy_HarmUndeadAura" };
-  ['Омела'] = {t=1000, icon="INV_Misc_Branch_01" };
-  ['Мифриловая осколочная бомба'] = {t=1000, icon="Spell_Fire_SelfDestruct" };
-  ['Всплеск лавы'] = {t=2000, icon="Spell_Fire_Fire" };
-  ['Расплавленный металл'] = {t=2000, icon="Spell_Fire_Fireball" };
-  ['Лавовый дождь'] = {t=2000, icon="Temp" };
-  ['Чары Мор\'рогала'] = {t=1300, icon="Temp" };
-  ['Крапчатый красный ящер'] = {t=3000, icon="Ability_Mount_Raptor" };
-  ['Любвный эликсир Нагмары'] = {t=1000, icon="Temp" };
-  ['Нарайн!'] = {t=3000, icon="INV_Misc_Head_Gnome_01" };
-  ['Кошмар Наралекса'] = {t=2000, icon="Spell_Nature_Sleep" };
-  ['Природная слабость'] = {t=5000, icon="INV_Misc_QirajiCrystal_03" };
-  ['Атака Нефариуса 001'] = {t=1000, icon="Temp" };
-  ['Самоцвет Хаоса'] = {t=3000, icon="Temp" };
-  ['Выползки'] = {t=5000, icon="Trade_Fishing" };
-  ['Черный ночной саблезуб'] = {t=3000, icon="Ability_Mount_BlackPanther" };
-  ['Ностальгия'] = {t=4000, icon="Spell_Shadow_LifeDrain" };
-  ['Ликвидация маны'] = {t=2000, icon="Spell_Shadow_DarkRitual" };
-  ['Головокружительная боль'] = {t=1500, icon="Spell_Nature_CorrosiveBreath" };
-  ['Обсидиановый ящер'] = {t=3000, icon="Ability_Mount_Raptor" };
-  ['Открытие'] = {t=5000, icon="Temp" };
-  ['Открытие - без текста'] = {t=5000, icon="Temp" };
-  ['Открытие двери бара'] = {t=5000, icon="Temp" };
-  ['Открытие сундука Бенедикта'] = {t=5000, icon="Temp" };
-  ['Открытие сундука с добычей'] = {t=5000, icon="Temp" };
-  ['Открытие клетки'] = {t=5000, icon="Temp" };
-  ['Открытие сундука'] = {t=5000, icon="Temp" };
-  ['Открытие черного ящика'] = {t=5000, icon="Temp" };
-  ['Открытие большого сундука Скарабея'] = {t=5000, icon="Temp" };
-  ['Открытие дверцы реликвария'] = {t=5000, icon="Temp" };
-  ['Открытие сейфа'] = {t=5000, icon="Temp" };
-  ['Открытие сундука Скарабея'] = {t=5000, icon="Temp" };
-  ['Открытие потайного сейфа'] = {t=5000, icon="Temp" };
-  ['Открытие надежного сейфа'] = {t=5000, icon="Temp" };
-  ['Открытие почтового ящика Стратхольма'] = {t=5000, icon="Temp" };
-  ['Открытие надежного сундука'] = {t=5000, icon="Temp" };
-  ['Открытие термитной бочки'] = {t=5000, icon="Temp" };
-  ['Визуальный эффект исчезновения Оуро'] = {t=1500, icon="Spell_Fire_Volcano" };
-  ['Облик совы'] = {t=5000, icon="Spell_Nature_RavenForm" };
-  ['Взрыв Оззи'] = {t=2000, icon="Temp" };
-  ['Игреневый жеребец'] = {t=3000, icon="Ability_Mount_RidingHorse" };
-  ['Игреневый конь'] = {t=3000, icon="Ability_Mount_RidingHorse" };
-  ['Черный ночной саблезуб'] = {t=3000, icon="Ability_Mount_BlackPanther" };
-  ['Ключ от клетки пантеры'] = {t=5000, icon="Temp" };
-  ['Паразит'] = {t=2000, icon="Ability_Poisons" };
-  ['Заразное веселье'] = {t=1000, icon="Spell_Shadow_DarkSummoning" };
-  ['Маскировка крестьянина'] = {t=3000, icon="Ability_Rogue_Disguise" };
-  ['Маскировка батрака'] = {t=3000, icon="Ability_Rogue_Disguise" };
-  ['Постоянная иллюзия - Тирония'] = {t=3000, icon="Ability_Rogue_Disguise" };
-  ['Постоянная иллюзия - Тирион'] = {t=3000, icon="Ability_Rogue_Disguise" };
-  ['Взлом замка'] = {t=5000, icon="Spell_Nature_MoonKey" };
-  ['Карманник (PT)'] = {t=5000, icon="Temp" };
-  ['Пронзающая тень'] = {t=2000, icon="Spell_Shadow_ChillTouch" };
-  ['Котловина для колонны'] = {t=5000, icon="Temp" };
-  ['Пегий конь'] = {t=3000, icon="Ability_Mount_RidingHorse" };
-  ['Поместить арканитовый буй'] = {t=2000, icon="Temp" };
-  ['Поместить призрачный магнит'] = {t=1500, icon="Temp" };
-  ['Поместить труп льва'] = {t=2500, icon="INV_Misc_Bowl_01" };
-  ['Поместить магический кристалл'] = {t=3000, icon="Temp" };
-  ['Поместить труп млатозуба'] = {t=2500, icon="INV_Misc_Bowl_01" };
-  ['Поместить распылитель ядовитого тумана'] = {t=3000, icon="INV_Cask_01" };
-  ['Поместить неопалимый клинок'] = {t=1000, icon="Temp" };
-  ['Поместить некованную печать'] = {t=500, icon="Temp" };
-  ['Установка сигнального факела'] = {t=2300, icon="Temp" };
-  ['Установка ловушки на медведя'] = {t=2000, icon="Temp" };
-  ['Помещение подвески'] = {t=5000, icon="Temp" };
-  ['Установка бомбомета Дымка'] = {t=3000, icon="Temp" };
-  ['Чумное облако'] = {t=2000, icon="Spell_Shadow_CallofBone" };
-  ['Мысленная чума'] = {t=4000, icon="Spell_Shadow_CallofBone" };
-  ['Положить голову Гор\'теша'] = {t=5000, icon="Temp" };
-  ['Посадить волшебные бобы'] = {t=2000, icon="INV_Misc_Food_Wheat_02" };
-  ['Посадить семена'] = {t=5000, icon="Temp" };
-  ['Установка знамени'] = {t=2300, icon="Temp" };
-  ['Установка маяка Гуса'] = {t=5000, icon="Temp" };
-  ['Установка маяка Ичмена'] = {t=5000, icon="Temp" };
-  ['Установка маяка Джезтора'] = {t=5000, icon="Temp" };
-  ['Установка маяка Малверика'] = {t=5000, icon="Temp" };
-  ['Установка маяка Рисона'] = {t=5000, icon="Temp" };
-  ['Установка маяка Слидора'] = {t=5000, icon="Temp" };
-  ['Установка маяка Змейера'] = {t=5000, icon="Temp" };
-  ['Острый шип'] = {t=500, icon="Ability_ImpalingBolt" };
-  ['Ядовитый удар'] = {t=2500, icon="Spell_Nature_CorrosiveBreath" };
-  ['Ядовитое облако'] = {t=1000, icon="Spell_Nature_Regenerate" };
-  ['Ядовитый хвостокол'] = {t=2000, icon="INV_Misc_MonsterTail_03" };
-  ['Ядовитый гарпун'] = {t=2000, icon="Ability_Poisons" };
-  ['Ядовитый выстрел'] = {t=2000, icon="Ability_Poisons" };
-  ['Ядовитый плевок'] = {t=2000, icon="Spell_Nature_CorrosiveBreath" };
-  ['Сдвиг полярности'] = {t=3000, icon="Spell_Nature_Lightning" };
-  ['Превращение'] = {t=1500, icon="Spell_Nature_Polymorph" };
-  ['Превращение: корова'] = {t=1500, icon="Spell_Nature_Polymorph_Cow" };
-  ['Превращение: свинья'] = {t=1500, icon="Spell_Magic_PolymorphPig" };
-  ['Превращение: черепаха'] = {t=1500, icon="Ability_Hunter_Pet_Turtle" };
-  ['Портал: Дарнасс'] = {t=10000, icon="Spell_Arcane_PortalDarnassus" };
-  ['Портал в Стальгорн'] = {t=10000, icon="Spell_Arcane_PortalIronForge" };
-  ['Портал в Каражан'] = {t=10000, icon="Spell_Arcane_PortalUnderCity" };
-  ['Портал в Оргриммар'] = {t=10000, icon="Spell_Arcane_PortalOrgrimmar" };
-  ['Портал в Штормград'] = {t=10000, icon="Spell_Arcane_PortalStormWind" };
-  ['Портал в Громовой Утес'] = {t=10000, icon="Spell_Arcane_PortalThunderBluff" };
-  ['Портал в Подгород'] = {t=10000, icon="Spell_Arcane_PortalUnderCity" };
-  ['Бросок зелья'] = {t=2000, icon="Spell_Misc_Drink" };
-  ['Мощный сефориевый заряд'] = {t=5000, icon="Temp" };
-  ['Мощные ароматические соли'] = {t=2000, icon="INV_Misc_Ammo_Gunpowder_01" };
-  ['Молитва Элуны'] = {t=1000, icon="Spell_Holy_Resurrection" };
-  ['Молитва исцеления'] = {t=3000, icon="Spell_Holy_PrayerOfHealing02" };
-  ['Явление смерти'] = {t=1000, icon="Spell_Shadow_ShadeTrueSight" };
-  ['Первобытный ледопард'] = {t=3000, icon="Ability_Mount_JungleTiger" };
-  ['Портал Призывания принцессы'] = {t=10000, icon="Spell_Arcane_PortalIronForge" };
-  ['Защита Праудмура'] = {t=3000, icon="Spell_Holy_BlessingOfProtection" };
-  ['Сверхзнание'] = {t=5000, icon="Spell_Holy_Restoration" };
-  ['Очистить и положить еду'] = {t=5000, icon="INV_Misc_Bowl_01" };
-  ['Фиолетовые руки'] = {t=4000, icon="Spell_Shadow_SiphonMana" };
-  ['Лиловый механодолгоног'] = {t=3000, icon="Ability_Mount_MechaStrider" };
-  ['Лиловый боевой конь-скелет'] = {t=3000, icon="Ability_Mount_Undeadhorse" };
-  ['Огненная глыба'] = {t=6000, icon="Spell_Fire_Fireball02" };
-  ['Задание - Заклинание Сергры Черный Шип.'] = {t=3000, icon="Temp" };
-  ['Задание - Вызов древня'] = {t=3000, icon="Spell_Nature_NatureTouchGrow" };
-  ['Задание - Появление вне телепорта'] = {t=1000, icon="Temp" };
-  ['Задание - герой троллей'] = {t=30000, icon="Temp" };
-  ['Приступ кровожадности'] = {t=2000, icon="Spell_Nature_BloodLust" };
-  ['Быстрый оберег от пламени'] = {t=1500, icon="Spell_Fire_SealOfFire" };
-  ['Быстрая Защита от магии льда'] = {t=1500, icon="Spell_Fire_SealOfFire" };
-  ['Радиационный удар'] = {t=3000, icon="Spell_Shadow_CorpseExplode" };
-  ['Ярость Тула'] = {t=1500, icon="Spell_Shadow_UnholyFrenzy" };
-  ['Появление Рагнароса'] = {t=2900, icon="Spell_Fire_LavaSpawn" };
-  ['Огненный ливень'] = {t=3000, icon="Spell_Shadow_RainOfFire" };
-  ['Воскрешение мертвых'] = {t=1000, icon="Spell_Shadow_RaiseDead" };
-  ['Воскрешение нежити-скарабея'] = {t=1000, icon="Spell_Shadow_Contagion" };
-  ['Перо ящера'] = {t=5000, icon="Temp" };
-  ['Острая грива'] = {t=1000, icon="Spell_Nature_Thorns" };
-  ['Возрождение'] = {t=2000, icon="Spell_Nature_Reincarnation" };
-  ['Возвращение'] = {t=10000, icon="Temp" };
-  ['Чтение слов Келебраса'] = {t=3000, icon="Temp" };
-  ['Воссоздание'] = {t=3000, icon="Temp" };
-  ['Красно-синий механодолгоног'] = {t=3000, icon="Ability_Mount_MechaStrider" };
-  ['Превращение красного дракона DND'] = {t=1000, icon="Temp" };
-  ['Красный механодолгоног'] = {t=3000, icon="Ability_Mount_MechaStrider" };
-  ['Красный конь-скелет'] = {t=3000, icon="Ability_Mount_Undeadhorse" };
-  ['Красный боевой конь-скелет'] = {t=3000, icon="Ability_Mount_Undeadhorse" };
-  ['Рыжий волк'] = {t=3000, icon="Ability_Mount_BlackDireWolf" };
-  ['Искупление'] = {t=10000, icon="Spell_Holy_Resurrection" };
-  ['Восстановление'] = {t=2000, icon="Spell_Nature_ResistNature" };
-  ['Эффект пыли северного оленя'] = {t=8000, icon="Temp" };
-  ['Освобождение беса'] = {t=2000, icon="Temp" };
-  ['Освобождение Дж\'ииви'] = {t=2000, icon="Temp" };
-  ['Освобождение Яростного Когтя'] = {t=10000, icon="Temp" };
-  ['Освобождение ищейки'] = {t=2000, icon="Temp" };
-  ['Освобождение йети Юми'] = {t=2000, icon="Temp" };
-  ['Освобождение котенка Винны'] = {t=1000, icon="Ability_Seal" };
-  ['Освобождение фелвудского слизнюка'] = {t=5000, icon="INV_Potion_19" };
-  ['Дистанционный взрыв'] = {t=1000, icon="INV_Misc_StoneTablet_04" };
-  ['Удаление знака отличия'] = {t=1000, icon="Temp" };
-  ['Обновление'] = {t=2000, icon="Spell_Holy_Renew" };
-  ['Восстановление духа'] = {t=3000, icon="Spell_Nature_MoonGlow" };
-  ['Восстановление духа II'] = {t=3000, icon="Spell_Nature_MoonGlow" };
-  ['Отношение - храм Ан\'Киража'] = {t=1000, icon="Temp" };
-  ['Отношение - Пиратская Бухта +500'] = {t=1000, icon="Temp" };
-  ['Отношение - Круговзор +500'] = {t=1000, icon="Temp" };
-  ['Отношение - Прибамбасск +500'] = {t=1000, icon="Temp" };
-  ['Отношение - Кабестан +500'] = {t=1000, icon="Temp" };
-  ['Пополнение'] = {t=2000, icon="Spell_Misc_Drink" };
-  ['Воскрешение'] = {t=10000, icon="Spell_Holy_Resurrection" };
-  ['Рвотная чума'] = {t=2000, icon="Spell_Shadow_CallofBone" };
-  ['Возрождение пещерной крысы'] = {t=3000, icon="Spell_Holy_Resurrection" };
-  ['Воскрешение питомца'] = {t=10000, icon="Ability_Hunter_BeastSoothe" };
-  ['Оживление Ринго'] = {t=2500, icon="Temp" };
-  ['Верховой кодо'] = {t=3000, icon="INV_Misc_Head_Tauren_02" };
-  ['Ездовая черепаха'] = {t=3000, icon="Ability_Hunter_Pet_Turtle" };
-  ['Маяк Ущелья'] = {t=2000, icon="Spell_Nature_AbolishMagic" };
-  ['Праведное пламя Вкл'] = {t=4000, icon="Spell_Holy_InnerFire" };
-  ['Римблат выращивает цветок DND'] = {t=2000, icon="Temp" };
-  ['Ритуал Рока'] = {t=10000, icon="Spell_Shadow_AntiMagicShell" };
-  ['Эффект Ритуала Рока'] = {t=10000, icon="Spell_Arcane_PortalDarnassus" };
-  ['Ритуал призывания'] = {t=5000, icon="Spell_Shadow_Twilight" };
-  ['Эффект ритуала призывания'] = {t=5000, icon="Temp" };
-  ['Реактивная вспышка'] = {t=3000, icon="Temp" };
-  ['Заклинание вызова дракончика Гнездовья'] = {t=500, icon="Temp" };
-  ['Инициатор вращения'] = {t=3000, icon="Temp" };
-  ['Грубая медная бомба'] = {t=1000, icon="Spell_Fire_SelfDestruct" };
-  ['Грубый динамит'] = {t=1000, icon="Spell_Fire_SelfDestruct" };
-  ['Ром Рэмси'] = {t=1000, icon="INV_Drink_03" };
-  ['Ром Ромси "Черный ярлык"'] = {t=1000, icon="INV_Drink_04" };
-  ['Черный ром Ромси'] = {t=1000, icon="INV_Drink_04" };
-  ['Белый ром Ромси'] = {t=1000, icon="INV_Drink_08" };
-  ['Руна Открытия'] = {t=5000, icon="Temp" };
-  ['Ями Снежное Копыто - оборотничество (DND)'] = {t=1000, icon="Temp" };
-  ['Всевидяшее Око Рисона'] = {t=1000, icon="Ability_Ambush" };
-  ['Глаз Рисона в небе'] = {t=1000, icon="Ability_Hunter_EagleEye" };
-  ['Жертвоприношение'] = {t=1000, icon="Spell_Holy_DivineIntervention" };
-  ['Жертвенные паутинные железы'] = {t=10000, icon="Temp" };
-  ['Песчаный вихрь'] = {t=2000, icon="Spell_Nature_Cyclone" };
-  ['Дыхание песка'] = {t=2000, icon="Spell_Fire_WindsofWoe" };
-  ['Подрыв'] = {t=5000, icon="Spell_Fire_SelfDestruct" };
-  ['Сапфирон DND'] = {t=20000, icon="Temp" };
-  ['Элементали Сарилуса'] = {t=3000, icon="Spell_Shadow_RaiseDead" };
-  ['Отпугивание зверя'] = {t=1500, icon="Ability_Druid_Cower" };
-  ['Воскресение Алых'] = {t=2000, icon="Spell_Holy_Resurrection" };
-  ['Портал Изрубленного Щита'] = {t=1500, icon="Spell_Arcane_TeleportOrgrimmar" };
-  ['Ожог'] = {t=1500, icon="Spell_Fire_SoulBurn" };
-  ['Жгучее пламя'] = {t=2000, icon="Spell_Fire_Immolation" };
-  ['Жгучая боль'] = {t=1500, icon="Spell_Fire_SoulBurn" };
-  ['Соблазнение'] = {t=1500, icon="Spell_Shadow_MindSteal" };
-  ['Расползающийся ивняк'] = {t=1000, icon="Spell_Nature_CorrosiveBreath" };
-  ['Эффект Сергры Черный Шип'] = {t=3000, icon="Temp" };
-  ['Самоуничтожение'] = {t=7000, icon="Spell_Fire_SelfDestruct" };
-  ['Самоподрыв'] = {t=7000, icon="Spell_Fire_SelfDestruct" };
-  ['Самовоскрешение'] = {t=5000, icon="Temp" };
-  ['Змеиное очищение'] = {t=30000, icon="Spell_Shadow_LifeDrain" };
-  ['Закладка заряда NG-5 (синего)'] = {t=5000, icon="INV_Misc_Bomb_05" };
-  ['Закладка заряда NG-5 (красного)'] = {t=5000, icon="INV_Misc_Bomb_05" };
-  ['Сковывание нежити'] = {t=1500, icon="Spell_Nature_Slow" };
-  ['Стрела Тьмы'] = {t=3000, icon="Spell_Shadow_ShadowBolt" };
-  ['Стрела Тьмы - осечка'] = {t=2000, icon="Spell_Shadow_ShadowBolt" };
-  ['Залп стрел Тьмы'] = {t=3000, icon="Spell_Shadow_ShadowBolt" };
-  ['Теневое пламя'] = {t=2000, icon="Spell_Fire_Incinerate" };
-  ['Кольцо Тьмы II'] = {t=3000, icon="Spell_Shadow_ShadeTrueSight" };
-  ['Масло Тьмы'] = {t=3000, icon="Temp" };
-  ['Портал Тени'] = {t=250, icon="Spell_Shadow_AntiShadow" };
-  ['Портал Тьмы'] = {t=1000, icon="Spell_Shadow_SealOfKings" };
-  ['Сопротивление темной магии'] = {t=1000, icon="Spell_Frost_WizardMark" };
-  ['Панцирь Тени'] = {t=1000, icon="Spell_Shadow_AntiShadow" };
-  ['Теневая слабость'] = {t=5000, icon="INV_Misc_QirajiCrystal_05" };
-  ['Вспышка тени'] = {t=500, icon="Spell_Shadow_DetectLesserInvisibility" };
-  ['Общие узы'] = {t=1500, icon="Spell_Shadow_UnsummonBuilding" };
-  ['Заточка клинка'] = {t=3000, icon="Temp" };
-  ['Заточка клинка II'] = {t=3000, icon="Temp" };
-  ['Заточка клинка III'] = {t=3000, icon="Temp" };
-  ['Заточка клинка IV'] = {t=3000, icon="Temp" };
-  ['Заточка клинка V'] = {t=3000, icon="Temp" };
-  ['Заточка оружия - критическое поражение'] = {t=3000, icon="Temp" };
-  ['Колокольчик Шая'] = {t=4500, icon="Temp" };
-  ['Щит отражения'] = {t=1000, icon="Spell_Shadow_Teleport" };
-  ['Блестящая побрякушка'] = {t=5000, icon="INV_Misc_Orb_03" };
-  ['Шок'] = {t=1000, icon="Temp" };
-  ['Ударная волна'] = {t=2000, icon="Ability_Whirlwind" };
-  ['Выстрел из лука'] = {t=1000, icon="Ability_Marksmanship" };
-  ['Выстрел с арбалета'] = {t=1000, icon="Ability_Marksmanship" };
-  ['Выстрел с огнестрельного оружия'] = {t=1000, icon="Ability_Marksmanship" };
-  ['Запуск снаряда'] = {t=3000, icon="INV_Ammo_Bullet_03" };
-  ['Запуск ракеты'] = {t=3000, icon="INV_Ammo_Bullet_03" };
-  ['Резак'] = {t=2000, icon="Spell_Fire_Incinerate" };
-  ['Уменьшение'] = {t=3000, icon="Spell_Shadow_AntiShadow" };
-  ['Молчание'] = {t=1500, icon="Spell_Holy_Silence" };
-  ['Силитидова чума'] = {t=2000, icon="Spell_Nature_NullifyDisease" };
-  ['Серебряная отмычка'] = {t=5000, icon="Temp" };
-  ['Простая телепортация'] = {t=1000, icon="Spell_Magic_LesserInvisibilty" };
-  ['Простая групповая телепортация'] = {t=2000, icon="Spell_Magic_LesserInvisibilty" };
-  ['Простая телепортация другого игрока'] = {t=1000, icon="Spell_Magic_LesserInvisibilty" };
-  ['Конь-скелет'] = {t=3000, icon="Ability_Mount_Undeadhorse" };
-  ['Взрыв скелета-шахтера'] = {t=5000, icon="Spell_Fire_SelfDestruct" };
-  ['Наксрамасский конь смерти'] = {t=3000, icon="Ability_Mount_Undeadhorse" };
-  ['Cнятие шкур'] = {t=2500, icon="INV_Misc_Pelt_Wolf_01" };
-  ['Сокрушение'] = {t=1500, icon="Ability_Warrior_DecisiveStrike" };
-  ['Подпитка от раба'] = {t=1000, icon="Spell_Shadow_ChillTouch" };
-  ['Сон'] = {t=1500, icon="Spell_Nature_Sleep" };
-  ['Комок слизи'] = {t=2500, icon="Spell_Nature_CorrosiveBreath" };
-  ['Бросок грязью'] = {t=1000, icon="Spell_Nature_Sleep" };
-  ['Ком грязи'] = {t=1000, icon="Spell_Nature_Sleep" };
-  ['Медленный яд'] = {t=1000, icon="Spell_Nature_SlowPoison" };
-  ['Медленный яд II'] = {t=1000, icon="Spell_Nature_SlowPoison" };
-  ['Замедляющий яд'] = {t=1000, icon="Spell_Nature_SlowPoison" };
-  ['Болотный яд'] = {t=2000, icon="Spell_Nature_Regenerate" };
-  ['Небольшая бронзовая бомба'] = {t=1000, icon="Spell_Fire_SelfDestruct" };
-  ['Небольшой сефориевый заряд'] = {t=5000, icon="Temp" };
-  ['Кара'] = {t=2500, icon="Spell_Holy_HolySmite" };
-  ['Сражен'] = {t=1000, icon="INV_Ammo_Arrow_02" };
-  ['Снеговик'] = {t=1500, icon="INV_Ammo_Snowball" };
-  ['Управление шмыгуносом'] = {t=1500, icon="Spell_Shadow_LifeDrain" };
-  ['Сол Х'] = {t=3000, icon="Spell_Frost_ManaRecharge" };
-  ['Сол Л'] = {t=3000, icon="Spell_Frost_ManaRecharge" };
-  ['Сол М'] = {t=3000, icon="Spell_Frost_ManaRecharge" };
-  ['Сол У'] = {t=3000, icon="Spell_Frost_ManaRecharge" };
-  ['Плотный динамит'] = {t=1000, icon="Spell_Fire_SelfDestruct" };
-  ['Умиротворение зверя'] = {t=1500, icon="Ability_Hunter_BeastSoothe" };
-  ['Душевный укус'] = {t=2000, icon="Spell_Shadow_SiphonMana" };
-  ['Разрушитель душ'] = {t=2000, icon="Spell_Shadow_Haunting" };
-  ['Увядание души'] = {t=4000, icon="Ability_Racial_Cannibalize" };
-  ['Истощение души'] = {t=2000, icon="Spell_Shadow_LifeDrain02" };
-  ['Ожог души'] = {t=6000, icon="Spell_Fire_Fireball02" };
-  ['Разбитая душа'] = {t=2000, icon="Spell_Fire_Fire" };
-  ['Воскрешение камнем души'] = {t=3000, icon="Spell_Shadow_SoulGem" };
-  ['Маскировка под пирата Южных морей'] = {t=3000, icon="Ability_Rogue_Disguise" };
-  ['Пушечный огонь Южноморья'] = {t=5000, icon="Spell_Fire_FireBolt02" };
-  ['Искра'] = {t=2000, icon="Spell_Nature_Lightning" };
-  ['Появление вызова Арроку'] = {t=2000, icon="Temp" };
-  ['Разговор с головами'] = {t=5000, icon="Spell_Shadow_LifeDrain" };
-  ['Отклонение заклинания (NYI)'] = {t=1000, icon="Temp" };
-  ['Перцовая пушка'] = {t=500, icon="Spell_Fire_Fireball02" };
-  ['Залп шипов'] = {t=500, icon="Ability_ImpalingBolt" };
-  ['Сокрушение духа'] = {t=2000, icon="Spell_Holy_HarmUndeadAura" };
-  ['Дух'] = {t=500, icon="Temp" };
-  ['Похищение духа'] = {t=2000, icon="Spell_Shadow_Possession" };
-  ['Пятнистый ледопард'] = {t=3000, icon="Ability_Mount_WhiteTiger" };
-  ['Пятнистая пантера'] = {t=3000, icon="Ability_Mount_BlackPanther" };
-  ['Брызганье очищенной водой'] = {t=6000, icon="Temp" };
-  ['Звездный огонь'] = {t=3500, icon="Spell_Arcane_StarFire" };
-  ['Стальной механодолгоног'] = {t=3000, icon="Ability_Mount_MechaStrider" };
-  [' Пробуждение каменного дворфа - визуальный эффект'] = {t=1500, icon="Spell_Nature_Earthquake" };
-  ['Окаменение - направление заклинания'] = {t=3000, icon="Spell_Nature_Cyclone" };
-  ['Каменная Кожа'] = {t=6000, icon="Spell_Nature_EnchantArmor" };
-  ['Маскировка под трогга Осколка Камня'] = {t=3000, icon="Ability_Rogue_Disguise" };
-  ['Молот бурь'] = {t=1000, icon="INV_Hammer_01" };
-  ['Боевой скакун Грозовой Вершины'] = {t=3000, icon="Ability_Mount_MountainRam" };
-  ['Сила Арко\'нарин'] = {t=4000, icon="Spell_Nature_AstralRecal" };
-  ['Сила веков'] = {t=2000, icon="Spell_Shadow_Requiem" };
-  ['Разящий удар'] = {t=2000, icon="Temp" };
-  ['Полосатый ледопард'] = {t=3000, icon="Ability_Mount_WhiteTiger" };
-  ['Полосатый саблезуб'] = {t=3000, icon="Ability_Mount_BlackPanther" };
-  ['Застревание'] = {t=10000, icon="Spell_Shadow_Teleport" };
-  ['Оглушающая бомба'] = {t=2000, icon="Spell_Fire_SelfDestruct" };
-  ['Атака оглушающей бомбой.'] = {t=2000, icon="Spell_Fire_SelfDestruct" };
-  ['Погружение - визуальный эффект'] = {t=1500, icon="Spell_Fire_Volcano" };
-  ['Призыв'] = {t=1000, icon="Spell_Arcane_Blink" };
-  ['Вызов тревого-бота'] = {t=250, icon="INV_Gizmo_08" };
-  ['Змейка-альбинос'] = {t=1000, icon="Ability_Seal" };
-  ['Щелкоклюв-альбинос'] = {t=1000, icon="Ability_Seal" };
-  ['Вызов древних духов'] = {t=2000, icon="Temp" };
-  ['Анконская курица'] = {t=1000, icon="Ability_Seal" };
-  ['Вызов Аквамонтоса'] = {t=2000, icon="Temp" };
-  ['Вызов Ар\'лии'] = {t=2500, icon="Spell_Nature_GroundingTotem" };
-  ['Призыв скелета из племени Атал\'ай'] = {t=1000, icon="Spell_Shadow_RaiseDead" };
-  ['Лазурный дракончик'] = {t=1000, icon="Ability_Seal" };
-  ['Акуленок'] = {t=1000, icon="Ability_Seal" };
-  ['Черная королевская змейка'] = {t=1000, icon="Ability_Seal" };
-  ['Черный киражский боевой танк'] = {t=3000, icon="INV_Misc_QirajiCrystal_05" };
-  ['Призвать страхопряда легиона Чернорука'] = {t=5000, icon="Spell_Nature_Purge" };
-  ['Призвать ветерана легиона Чернорука'] = {t=5000, icon="Spell_Nature_Purge" };
-  ['Вызов кровавого попугая'] = {t=1000, icon="Ability_Seal" };
-  ['Вызов малых кровоцветов-паразитов'] = {t=2000, icon="Spell_Shadow_DarkSummoning" };
-  ['Вызов синего киражского боевого танка'] = {t=3000, icon="INV_Misc_QirajiCrystal_04" };
-  ['Синий полоз'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв духа вепря'] = {t=1500, icon="Spell_Magic_PolymorphPig" };
-  ['Крошечная ходячая бомба'] = {t=1000, icon="Ability_Seal" };
-  ['Бомбейская кошка'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв маленького бронзового дракончика'] = {t=1000, icon="Ability_Seal" };
-  ['Бурая змейка'] = {t=1000, icon="Ability_Seal" };
-  ['Вызов скарабея-падальщика'] = {t=2000, icon="Spell_Shadow_CarrionSwarm" };
-  ['Призыв скакуна'] = {t=3000, icon="Ability_Mount_Charger" };
-  ['Корелла'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв какаду'] = {t=1000, icon="Ability_Seal" };
-  ['Подгородский таракан'] = {t=1000, icon="Ability_Seal" };
-  ['Вызов котенка'] = {t=2000, icon="INV_Box_PetCarrier_01" };
-  ['Корниш-рекс'] = {t=1000, icon="Ability_Seal" };
-  ['Оскверненный котенок'] = {t=1000, icon="Ability_Seal" };
-  ['Зайчик-побегайчик'] = {t=1000, icon="Ability_Seal" };
-  ['Багровая змея'] = {t=1000, icon="Ability_Seal" };
-  ['Маленький багровый дракончик'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв Циклониана'] = {t=10000, icon="Spell_Nature_EarthBind" };
-  ['Призыв Дагуна'] = {t=5000, icon="Temp" };
-  ['Маленький темный дракончик'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв лягушки-попрыгушки'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв демона сферы'] = {t=5000, icon="Temp" };
-  ['Мини-Диабло'] = {t=1000, icon="Ability_Seal" };
-  ['Вызов омерзительного слизнюченыша'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв коня погибели'] = {t=3000, icon="Ability_Mount_Dreadsteed" };
-  ['Призыв филина'] = {t=1000, icon="Ability_Seal" };
-  ['Вызов Иучаки'] = {t=500, icon="Spell_Shadow_LifeDrain" };
-  ['Вызов Эданы Коготь Ненависти'] = {t=4000, icon="Temp" };
-  ['Призыв - воздействие'] = {t=5000, icon="Spell_Shadow_AnimateDead" };
-  ['Эльфийский огонек'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв Огнезолов'] = {t=2000, icon="Spell_Fire_Fire" };
-  ['Маленький изумрудный дракончик'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв фейлинга'] = {t=1000, icon="Ability_Seal" };
-  ['Цыпленок Западного края'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв охотника Скверны'] = {t=10000, icon="Spell_Shadow_SummonFelHunter" };
-  ['Призывание коня Скверны'] = {t=3000, icon="Spell_Nature_Swiftness" };
-  ['Вызов хрупкого скелета'] = {t=10000, icon="Spell_Shadow_RaiseDead" };
-  ['Вызов Зубощелка'] = {t=3000, icon="Temp" };
-  ['Вызов гоблинской бомбы'] = {t=250, icon="Ability_Repair" };
-  ['Большая рогатая сова'] = {t=1000, icon="Ability_Seal" };
-  ['Вызов зеленого киражского боевого танка'] = {t=3000, icon="INV_Misc_QirajiCrystal_03" };
-  ['Зеленая водяная змея'] = {t=1000, icon="Ability_Seal" };
-  ['Зеленокрылый ара'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв тени Гунтера'] = {t=2000, icon="Temp" };
-  ['Гурчаль'] = {t=1000, icon="Ability_Seal" };
-  ['Ястребиная сова'] = {t=1000, icon="Ability_Seal" };
-  ['Кривоклювый хрустогрыз'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв марионеток Хелькулара'] = {t=3000, icon="Spell_Shadow_Haunting" };
-  ['Детеныш гиппогрифа'] = {t=1000, icon="Ability_Seal" };
-  ['Гиацинтовый ара'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв иллюзорного сновидца'] = {t=1000, icon="Spell_Shadow_Teleport" };
-  ['Призыв Иллюзорного кошмара'] = {t=2000, icon="Spell_Fire_SealOfFire" };
-  ['Призыв иллюзорного фантазма'] = {t=2000, icon="Spell_Fire_SealOfFire" };
-  ['Призыв иллюзорного призрака'] = {t=1000, icon="Spell_Shadow_Teleport" };
-  ['Призыв беса'] = {t=10000, icon="Spell_Shadow_SummonImp" };
-  ['Призыв инфернала-слуги'] = {t=2000, icon="Spell_Shadow_SummonInfernal" };
-  ['Вызов Ишамухала'] = {t=2000, icon="Spell_Shadow_LifeDrain" };
-  ['Призыв островной лягушки'] = {t=1000, icon="Ability_Seal" };
-  ['Жаблинг'] = {t=1000, icon="Ability_Seal" };
-  ['Вызов знамени Каранга'] = {t=500, icon="Temp" };
-  ['Кожеспинный хрустогрыз'] = {t=1000, icon="Ability_Seal" };
-  ['Реалистичная жаба'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв Живого жара'] = {t=2000, icon="Spell_Fire_Fire" };
-  ['Древоголовый хрустогрыз'] = {t=1000, icon="Ability_Seal" };
-  ['Вызов Лунокогтя'] = {t=3000, icon="Temp" };
-  ['Призыв иллюзорных волков'] = {t=1000, icon="Spell_Shadow_Teleport" };
-  ['Вызов магического посоха'] = {t=2000, icon="INV_Staff_26" };
-  ['Вызов разрушителя из племени Маграм'] = {t=4000, icon="Spell_Shadow_RaiseDead" };
-  ['Серая полосатая кошка'] = {t=1000, icon="Ability_Seal" };
-  ['Механическая курица'] = {t=1000, icon="Ability_Seal" };
-  ['Вызов прислужника'] = {t=500, icon="Temp" };
-  ['Вызов мистера Вертихрюша'] = {t=1000, icon="Ability_Seal" };
-  ['Ворчаль'] = {t=1000, icon="Ability_Seal" };
-  ['Мурчаль'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв Мизраэли'] = {t=10000, icon="Spell_Shadow_LifeDrain" };
-  ['Вызов Демона Бездны'] = {t=4000, icon="Spell_Shadow_GatherShadows" };
-  ['Оливковый хрустогрыз'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв дракончика Ониксии'] = {t=2000, icon="Temp" };
-  ['Рыжая полосатая кошка'] = {t=1000, icon="Ability_Seal" };
-  ['Вызов сироты'] = {t=1000, icon="Ability_Seal" };
-  ['Детеныш панды'] = {t=1000, icon="Ability_Seal" };
-  ['Вызов Умки'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв степной курицы'] = {t=1000, icon="Ability_Seal" };
-  ['Бурая луговая собачка'] = {t=1000, icon="Ability_Seal" };
-  ['Призвание Рагнароса'] = {t=10000, icon="Spell_Fire_LavaSpawn" };
-  ['Вызов Разелиха'] = {t=10000, icon="Temp" };
-  ['Вызов красного киражского боевого танка'] = {t=3000, icon="INV_Misc_QirajiCrystal_02" };
-  ['Призыв дистанционно управляемого голема'] = {t=3000, icon="Ability_Repair" };
-  ['Пестрая лента'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв ездового Грифона'] = {t=3000, icon="Ability_BullRush" };
-  ['Вызов восставшего лакея'] = {t=2000, icon="Spell_Shadow_RaiseDead" };
-  ['Крошка Дымок'] = {t=1000, icon="Ability_Seal" };
-  ['Вызов горгульи Крыла Скалы'] = {t=10000, icon="Spell_Shadow_UnsummonBuilding" };
-  ['Вызов дракончика Гнездовья'] = {t=2000, icon="Temp" };
-  ['Алая змея'] = {t=1000, icon="Ability_Seal" };
-  ['Вызов духа крикуна'] = {t=2000, icon="Temp" };
-  ['Сенегальский попугай'] = {t=1000, icon="Ability_Seal" };
-  ['Вызов темного чародея'] = {t=5000, icon="Spell_Shadow_RaiseDead" };
-  ['Вызов удара Тени'] = {t=10000, icon="Temp" };
-  ['Призыв щитовой стражи'] = {t=5000, icon="Spell_Nature_Purge" };
-  ['Вызов Ши-Ротам'] = {t=2500, icon="Temp" };
-  ['Сиамская кошка'] = {t=1000, icon="Ability_Seal" };
-  ['Серебристая полосатая кошка'] = {t=1000, icon="Ability_Seal" };
-  ['Вызов скелета'] = {t=2000, icon="Spell_Shadow_RaiseDead" };
-  ['Белый кролик'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв белоснежной совы'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв Шмыгуноса'] = {t=2000, icon="Spell_Nature_ProtectionformNature" };
-  ['Вызов порождения Бал\'Гора'] = {t=4000, icon="Spell_Fire_LavaSpawn" };
-  ['Вызов Торопыги'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв стража-заклинателя'] = {t=5000, icon="Spell_Nature_Purge" };
-  ['Вызов бога-паука'] = {t=10000, icon="Spell_Shadow_LifeDrain" };
-  ['Пятнистый кролик'] = {t=1000, icon="Ability_Seal" };
-  ['Птенец летучего хамелеона'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв суккуба'] = {t=10000, icon="Spell_Shadow_SummonSuccubus" };
-  ['Призыв болотного слизнюка'] = {t=2500, icon="Spell_Shadow_BlackPlague" };
-  ['Призыв болотного духа'] = {t=1500, icon="Spell_Nature_AbolishMagic" };
-  ['Призыв призрака Синдиката'] = {t=1000, icon="Spell_Shadow_Twilight" };
-  ['Бурчаль'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв прислужника Тервоша'] = {t=4000, icon="Spell_Frost_Wisp" };
-  ['Вызов Телрина DND'] = {t=1000, icon="Temp" };
-  ['Призыв чудотворца'] = {t=5000, icon="Spell_Nature_Purge" };
-  ['Вызов громового удара'] = {t=10000, icon="Temp" };
-  ['Призыв древесника'] = {t=3000, icon="Spell_Nature_ProtectionformNature" };
-  ['Крошечный зеленый дракончик'] = {t=1000, icon="Ability_Seal" };
-  ['Крошечный красный дракончик'] = {t=1000, icon="Ability_Seal" };
-  ['Спокойный механический йети'] = {t=1000, icon="Ability_Seal" };
-  ['Вызов союзников-древней'] = {t=1500, icon="Spell_Nature_ForceOfNature" };
-  ['Вызов орды Сокровища'] = {t=1500, icon="Temp" };
-  ['Вызов орды Сокровища - визуальный эффект'] = {t=1500, icon="Temp" };
-  ['Древесная лягушка'] = {t=1000, icon="Ability_Seal" };
-  ['Призывание гадюки'] = {t=1500, icon="Spell_Nature_ResistMagic" };
-  ['Призыв демона Бездны'] = {t=10000, icon="Spell_Shadow_SummonVoidWalker" };
-  ['Вызов боевого коня'] = {t=3000, icon="Spell_Nature_Swiftness" };
-  ['Призыв элементаля воды'] = {t=2000, icon="Spell_Shadow_SealOfKings" };
-  ['Вызов Вибрисса'] = {t=1000, icon="Ability_Seal" };
-  ['Белый котенок'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв желтого мотылька'] = {t=1000, icon="Ability_Seal" };
-  ['Белый тигренок'] = {t=1000, icon="Ability_Seal" };
-  ['Призыв охотника Скверны из племени Сухокожих'] = {t=3000, icon="Spell_Shadow_SummonFelHunter" };
-  ['Лесная лягушка'] = {t=1000, icon="Ability_Seal" };
-  ['Щенок ворга'] = {t=1000, icon="Ability_Seal" };
-  ['Вызов ксоротианского коня погибели'] = {t=5000, icon="Temp" };
-  ['Вызов желтого киражского боевого танка'] = {t=3000, icon="INV_Misc_QirajiCrystal_01" };
-  ['Зерглинг'] = {t=1000, icon="Ability_Seal" };
-  ['Вызов зомби'] = {t=2000, icon="Spell_Shadow_RaiseDead" };
-  ['Призванный Урок'] = {t=1000, icon="Temp" };
-  ['Супер Кристалл'] = {t=6000, icon="Temp" };
-  ['Сильный исцеляющий идол'] = {t=2000, icon="Spell_Holy_LayOnHands" };
-  ['Сбивание'] = {t=1500, icon="Spell_Nature_Thorns" };
-  ['Приятный сюрприз'] = {t=1000, icon="INV_ValentinesChocolate03" };
-  ['Стремительный синий ящер'] = {t=3000, icon="Ability_Mount_Raptor" };
-  ['Стремительный бурый баран'] = {t=3000, icon="Ability_Mount_MountainRam" };
-  ['Стремительный гнедой рысак'] = {t=3000, icon="Ability_Mount_RidingHorse" };
-  ['Стремительный бурый волк'] = {t=3000, icon="Ability_Mount_BlackDireWolf" };
-  ['Стремительный рассветный саблезуб'] = {t=3000, icon="Ability_Mount_JungleTiger" };
-  ['Стремительный ледопард'] = {t=3000, icon="Ability_Mount_WhiteTiger" };
-  ['Стремительный серый баран'] = {t=3000, icon="Ability_Mount_MountainRam" };
-  ['Стремительный серый волк'] = {t=3000, icon="Ability_Mount_WhiteDireWolf" };
-  ['Стремительный зеленый механодолгоног'] = {t=3000, icon="Ability_Mount_MechaStrider" };
-  ['Стремительный туманный саблезуб'] = {t=3000, icon="Ability_Mount_BlackPanther" };
-  ['Стремительный оливковый ящер'] = {t=3000, icon="Ability_Mount_Raptor" };
-  ['Стремительный оранжевый ящер'] = {t=3000, icon="Ability_Mount_Raptor" };
-  ['Стремительный игреневый конь'] = {t=3000, icon="Ability_Mount_RidingHorse" };
-  ['Стремительный ящер Раззаши'] = {t=3000, icon="Ability_Mount_Raptor" };
-  ['Стремительный грозовой саблезуб'] = {t=3000, icon="Ability_Mount_BlackPanther" };
-  ['Стремительный лесной волк'] = {t=3000, icon="Ability_Mount_WhiteDireWolf" };
-  ['Стремительный белый механодолгоног'] = {t=3000, icon="Ability_Mount_MechaStrider" };
-  ['Стремительный белый баран'] = {t=3000, icon="Ability_Mount_MountainRam" };
-  ['Стремительный белый рысак'] = {t=3000, icon="Ability_Mount_RidingHorse" };
-  ['Стремительный желтый механодолгоног'] = {t=3000, icon="Ability_Mount_MechaStrider" };
-  ['Стремительный зульский тигр'] = {t=3000, icon="Ability_Mount_JungleTiger" };
-  ['Символ Жизни'] = {t=10000, icon="Spell_Holy_Resurrection" };
-  ['Бомба Синдиката'] = {t=3000, icon="Spell_Shadow_MindBomb" };
-  ['Маскировка под члена Синдиката'] = {t=3000, icon="Ability_Rogue_Disguise" };
-  ['Разведчик Синдиката (МУРП) DND'] = {t=1000, icon="Spell_Arcane_Blink" };
-  ['Смерть Таэлана'] = {t=2000, icon="Temp" };
-  ['Ремонт ожерелья Лаваша'] = {t=4500, icon="Spell_Holy_Restoration" };
-  ['Саженец Таммры'] = {t=1300, icon="Temp" };
-  ['Рыжий саблезуб'] = {t=3000, icon="Ability_Mount_JungleTiger" };
-  ['Изучить Роковой рык'] = {t=1000, icon="Temp" };
-  ['Бирюзовый кодо'] = {t=3000, icon="Ability_Mount_Kodo_02" };
-  ['Телепорт'] = {t=1000, icon="Spell_Magic_LesserInvisibilty" };
-  ['Телепорт Алтаря Приливов'] = {t=2000, icon="Temp" };
-  ['Телепорт в Старую Наковальню'] = {t=2000, icon="Temp" };
-  ['Телепорт в Казармы'] = {t=2000, icon="Temp" };
-  ['Телепорт на Кладбище'] = {t=2000, icon="Temp" };
-  ['Телепорт в Темнолесье'] = {t=2000, icon="Temp" };
-  ['Телепорт в Сумрачный лес'] = {t=2000, icon="Temp" };
-  ['Телепорт в Элвиннский лес'] = {t=2000, icon="Temp" };
-  ['Телепорт из башни Азшары'] = {t=1000, icon="Spell_Nature_EarthBind" };
-  ['Телепорт на Маяк'] = {t=2000, icon="Temp" };
-  ['Телепорт в Монастырь'] = {t=2000, icon="Temp" };
-  ['Телепорт в Луноречье'] = {t=2000, icon="Temp" };
-  ['Телепорт в Аббатство Североземья'] = {t=2000, icon="Temp" };
-  ['Телепорт в башню Азшары'] = {t=1000, icon="Spell_Nature_AstralRecalGroup" };
-  ['Телепорт в Дарнасс - событие'] = {t=1000, icon="Temp" };
-  ['Телепорт древня'] = {t=2000, icon="Temp" };
-  ['Телепорт в Западный край'] = {t=2000, icon="Temp" };
-  ['Телепортация: Дарнасс'] = {t=10000, icon="Spell_Arcane_TeleportDarnassus" };
-  ['Телепортация: Стальгорн'] = {t=10000, icon="Spell_Arcane_TeleportIronForge" };
-  ['Телепортация: Лунная поляна'] = {t=10000, icon="Spell_Arcane_TeleportMoonglade" };
-  ['Телепортация: Оргриммар'] = {t=10000, icon="Spell_Arcane_TeleportOrgrimmar" };
-  ['Телепортация: Штормград'] = {t=10000, icon="Spell_Arcane_TeleportStormWind" };
-  ['Телепортация: Громовой Утес'] = {t=10000, icon="Spell_Arcane_TeleportThunderBluff" };
-  ['Телепортация: Подгород'] = {t=10000, icon="Spell_Arcane_TeleportUnderCity" };
-  ['Пошутить'] = {t=2000, icon="Spell_Shadow_LifeDrain" };
-  ['Данные о температуре'] = {t=2000, icon="Temp" };
-  ['Средство Тарнариуна 1'] = {t=750, icon="Spell_Nature_RemoveDisease" };
-  ['Лечение Тарнариуна'] = {t=500, icon="Spell_Nature_MagicImmunity" };
-  ['Великан'] = {t=3000, icon="Spell_Fire_SelfDestruct" };
-  ['Ториевая граната'] = {t=1000, icon="Spell_Fire_SelfDestruct" };
-  ['Тысяча Клинков'] = {t=250, icon="INV-Sword_53" };
-  ['Угрожающий взгляд'] = {t=2000, icon="Spell_Shadow_Charm" };
-  ['Угрожающее рычание'] = {t=1000, icon="Ability_Racial_Cannibalize" };
-  ['Бросок топора'] = {t=1000, icon="INV_Axe_08" };
-  ['Бросок дротика Купидона'] = {t=1000, icon="Temp" };
-  ['Бросок эля Черного Железа'] = {t=500, icon="Temp" };
-  ['Бросок динамита'] = {t=2000, icon="Spell_Fire_SelfDestruct" };
-  ['Бросок кошмарного предмета'] = {t=2000, icon="Spell_Fire_SelfDestruct" };
-  ['Бросок валуна'] = {t=3000, icon="Ability_GolemStormBolt" };
-  ['Бросок валуна II'] = {t=3000, icon="Ability_GolemStormBolt" };
-  ['Тигр'] = {t=3000, icon="Ability_Mount_JungleTiger" };
-  ['Искажение времени'] = {t=2000, icon="Spell_Arcane_PortalOrgrimmar" };
-  ['Остановка времени'] = {t=3000, icon="Temp" };
-  ['Остановка времени: визуальный эффект DND'] = {t=3000, icon="Temp" };
-  ['Жареный сморк'] = {t=1000, icon="INV_SummerFest_Smorc" };
-  ['Совмещение факела'] = {t=5000, icon="Temp" };
-  ['Бросок факела'] = {t=3000, icon="Spell_Fire_Fireball02" };
-  ['Бросить топливо в огонь'] = {t=500, icon="Temp" };
-  ['Бросок бомбы-вонючки'] = {t=2000, icon="INV_Misc_Bowl_01" };
-  ['Касание смерти'] = {t=3000, icon="Spell_Shadow_UnsummonBuilding" };
-  ['Прикосновение Когтеврана'] = {t=1500, icon="Spell_Shadow_Requiem" };
-  ['Отравляющий удар'] = {t=2500, icon="Spell_Nature_CorrosiveBreath" };
-  ['Ядовитая слюна'] = {t=500, icon="Spell_Nature_CorrosiveBreath" };
-  ['Токсичный плевок'] = {t=2500, icon="Spell_Nature_CorrosiveBreath" };
-  ['Преображение жертвы'] = {t=2000, icon="Spell_Magic_LesserInvisibilty" };
-  ['Леденящее касание Трелана'] = {t=3000, icon="Spell_Shadow_UnsummonBuilding" };
-  ['Очередь на медобслуживание'] = {t=7000, icon="Temp" };
-  ['Истинное счастье'] = {t=500, icon="Spell_Shadow_Charm" };
-  ['Отмычка из истинного серебра'] = {t=5000, icon="Temp" };
-  ['Настройка'] = {t=7000, icon="INV_Gizmo_02" };
-  ['Изгнание зла'] = {t=1500, icon="Spell_Holy_TurnUndead" };
-  ['Бирюзовый ящер'] = {t=3000, icon="Ability_Mount_Raptor" };
-  ['Агрессия ключевого противника Ульдамана'] = {t=5000, icon="Spell_Nature_EarthBindTotem" };
-  ['Ключевой посох Ульдамана'] = {t=5000, icon="Temp" };
-  ['Агрессия малого ключевого противника Ульдамана'] = {t=5000, icon="Spell_Nature_EarthBindTotem" };
-  ['Проклятие нежити'] = {t=1000, icon="Spell_Shadow_CurseOfMannoroth" };
-  ['Открыть ногу Мори'] = {t=5000, icon="Temp" };
-  ['Отпирание'] = {t=5000, icon="Temp" };
-  ['Некрашеный механодолгоног'] = {t=3000, icon="Ability_Mount_MechaStrider" };
-  ['Ненадежное варево'] = {t=3000, icon="Spell_Fire_Incinerate" };
-  ['Исчезновение прислужников Урока'] = {t=2000, icon="Temp" };
-  ['Использовать блесну'] = {t=3000, icon="Temp" };
-  ['Подношение Утера'] = {t=2000, icon="Temp" };
-  ['Пелена Тени'] = {t=1500, icon="Spell_Shadow_GatherShadows" };
-  ['Отравляющий плевок'] = {t=2500, icon="Spell_Nature_CorrosiveBreath" };
-  ['Погибель яда'] = {t=2000, icon="Temp" };
-  ['Очень ягодный крем'] = {t=1000, icon="INV_ValentinesChocolate02" };
-  ['Превращение студента из смотровой - эффект'] = {t=1000, icon="Temp" };
-  ['Фиолетовый ящер'] = {t=3000, icon="Ability_Mount_Raptor" };
-  ['Кошачий облик Змейера DND'] = {t=1000, icon="Temp" };
-  ['Молния Бездны'] = {t=3000, icon="Spell_Shadow_ShadowBolt" };
-  ['Страж-демон Бездны'] = {t=3000, icon="Spell_Shadow_SummonVoidWalker" };
-  ['Летучая зараза'] = {t=2000, icon="Spell_Holy_HarmUndeadAura" };
-  ['Град стрел'] = {t=3000, icon="Ability_TheBlackArrow" };
-  ['Град стрел II'] = {t=3000, icon="Ability_TheBlackArrow" };
-  ['Вуду'] = {t=1000, icon="Spell_Shadow_AntiShadow" };
-  ['Вудуистский сглаз'] = {t=1000, icon="Spell_Shadow_CurseOfMannoroth" };
-  ['Вой банши'] = {t=2000, icon="Spell_Shadow_Possession" };
-  ['Бродячая чума'] = {t=2000, icon="Spell_Shadow_CallofBone" };
-  ['Громовая поступь'] = {t=500, icon="Ability_WarStomp" };
-  ['Преобразование Вароша'] = {t=1000, icon="Temp" };
-  ['Water Bubble'] = {t=1000, icon="Spell_Frost_Wisp" };
-  ['Слабая ледяная стрела'] = {t=2200, icon="Spell_Frost_FrostBolt02" };
-  ['Крутящийся заряд'] = {t=1500, icon="INV_Spear_05" };
-  ['Белый механодолгоног модель Б'] = {t=3000, icon="Ability_Mount_MechaStrider" };
-  ['Белый баран'] = {t=3000, icon="Ability_Mount_MountainRam" };
-  ['Белый жеребец'] = {t=3000, icon="Ability_Mount_RidingHorse" };
-  ['Широкий размах'] = {t=4000, icon="Ability_Whirlwind" };
-  ['Объятие Вдовы'] = {t=500, icon="Spell_Arcane_Blink" };
-  ['Дикое восстановление'] = {t=3000, icon="Spell_Nature_Rejuvenation" };
-  ['Воля Шахрама'] = {t=1000, icon="Spell_Holy_MindVision" };
-  ['Смерть Виндзора DND'] = {t=1500, icon="Temp" };
-  ['Читательные пластины Виндзора (DND)'] = {t=10000, icon="Temp" };
-  ['Рассечение крылом'] = {t=1000, icon="INV_Misc_MonsterScales_14" };
-  ['Снежный волк'] = {t=3000, icon="Ability_Mount_WhiteDireWolf" };
-  ['Мудрость зимы'] = {t=1000, icon="Ability_Ambush" };
-  ['Ледопард Зимних Ключей'] = {t=3000, icon="Ability_Mount_PinkTiger" };
-  ['Засуха'] = {t=1500, icon="Spell_Nature_NullifyDisease" };
-  ['Касание увядания'] = {t=2000, icon="Spell_Nature_Drowsy" };
-  ['Волшебное масло'] = {t=3000, icon="Temp" };
-  ['Слово оттепели'] = {t=5000, icon="Temp" };
-  ['Размах Червя'] = {t=1000, icon="INV_Misc_MonsterScales_05" };
-  ['Нейтрализующий яд'] = {t=3000, icon="INV_Misc_Herb_16" };
-  ['Гнев'] = {t=2000, icon="Spell_Nature_AbolishMagic" };
-  ['Освобождение Йеннику'] = {t=4000, icon="Spell_Shadow_LifeDrain" };
-  ['[PH] Активатор Опоры'] = {t=5000, icon="Temp" };
-  ['[PH] Хрустальная базука'] = {t=1000, icon="Temp" };
-  ['[PH] Телепорт в Аубердин'] = {t=2000, icon="Temp" };
-  ['[PH] Телепорт к Балтулу'] = {t=2000, icon="Temp" };
-  ['[PH] Телепорт в Пиратскую бухту'] = {t=2000, icon="Temp" };
-  ['[PH] Телепорт в Фелвудский лес'] = {t=2000, icon="Temp" };
-  ['[PH] Телепорт в Гром\'гол'] = {t=2000, icon="Temp" };
-  ['[PH] Телепорт в Гавань Менетил'] = {t=2000, icon="Temp" };
-  ['[PH] Телепорт в Оргриммар'] = {t=2000, icon="Temp" };
-  ['[PH] Телепорт в Кабестан'] = {t=2000, icon="Temp" };
-  ['[PH] Телепорт в Терамор'] = {t=2000, icon="Temp" };
-  ['[PH] Телепорт в Подгород'] = {t=2000, icon="Temp" };
+ShaguPlates_locale["ruRU"]["spells"] = {
+  [' Пробуждение каменного дворфа - визуальный эффект']={t=1500,icon='Spell_Nature_Earthquake'},
+  ['"Отчаянный" снова принимает облик цыпленка"']={t=1000,icon='Ability_Racial_BearForm'},
+  ['[PH] Активатор Опоры']={t=5000,icon='Temp'},
+  ['[PH] Телепорт в Аубердин']={t=2000,icon='Temp'},
+  ['[PH] Телепорт в Гавань Менетил']={t=2000,icon='Temp'},
+  ['[PH] Телепорт в Гром\'гол']={t=2000,icon='Temp'},
+  ['[PH] Телепорт в Кабестан']={t=2000,icon='Temp'},
+  ['[PH] Телепорт в Оргриммар']={t=2000,icon='Temp'},
+  ['[PH] Телепорт в Оскверненный лес.']={t=2000,icon='Temp'},
+  ['[PH] Телепорт в Пиратскую бухту']={t=2000,icon='Temp'},
+  ['[PH] Телепорт в Подгород']={t=2000,icon='Temp'},
+  ['[PH] Телепорт в Терамор']={t=2000,icon='Temp'},
+  ['[PH] Телепорт к Балтулу']={t=2000,icon='Temp'},
+  ['[PH] Хрустальная базука']={t=1000,icon='Temp'},
+  ['Автоматический заплатный набор']={t=2000,icon='INV_Gizmo_03'},
+  ['Агрессия ключевого противника Ульдамана']={t=5000,icon='Spell_Nature_EarthBindTotem'},
+  ['Агрессия малого ключевого противника Ульдамана']={t=5000,icon='Spell_Nature_EarthBindTotem'},
+  ['Адское Пламя']={t=3000,icon='Spell_Fire_SelfDestruct'},
+  ['Адское Пламя II']={t=3000,icon='Spell_Fire_SelfDestruct'},
+  ['Адское Пламя III']={t=3000,icon='Spell_Fire_SelfDestruct'},
+  ['Аквадинамическая блесна']={t=5000,icon='INV_Misc_Spyglass_01'},
+  ['Аквадинамический магнит для рыбы']={t=5000,icon='INV_Misc_Orb_03'},
+  ['Активация защиты']={t=5000,icon='Temp'},
+  ['Акуленок']={t=1000,icon='Ability_Seal'},
+  ['Алая змея']={t=1000,icon='Ability_Seal'},
+  ['Анконская курица']={t=1000,icon='Ability_Seal'},
+  ['Антимагический щит']={t=2000,icon='Spell_Shadow_AntiMagicShell'},
+  ['Арканитовая отмычка']={t=5000,icon='Temp'},
+  ['Аспект Нептулона']={t=1000,icon='Temp'},
+  ['Астральное возвращение']={t=10000,icon='Spell_Nature_AstralRecal'},
+  ['Атака Нефариуса 001']={t=1000,icon='Temp'},
+  ['Атака оглушающей бомбой.']={t=2000,icon='Spell_Fire_SelfDestruct'},
+  ['Багровая змея']={t=1000,icon='Ability_Seal'},
+  ['Барьер Света']={t=2000,icon='Temp'},
+  ['Бегство отряда Блая']={t=10000,icon='INV_Misc_Rune_01'},
+  ['Безмолвие']={t=1500,icon='Spell_Holy_Silence'},
+  ['Белый баран']={t=3000,icon='Ability_Mount_MountainRam'},
+  ['Белый жеребец']={t=3000,icon='Ability_Mount_RidingHorse'},
+  ['Белый котенок']={t=1000,icon='Ability_Seal'},
+  ['Белый механодолгоног модель Б']={t=3000,icon='Ability_Mount_MechaStrider'},
+  ['Белый ром Ромси']={t=1000,icon='INV_Drink_08'},
+  ['Белый тигренок']={t=1000,icon='Ability_Seal'},
+  ['Бирюзовый кодо']={t=3000,icon='Ability_Mount_Kodo_02'},
+  ['Бирюзовый ящер']={t=3000,icon='Ability_Mount_Raptor'},
+  ['Благословение Шахрама']={t=1000,icon='Spell_Holy_LayOnHands'},
+  ['Благословение Юлии']={t=2000,icon='Spell_Holy_Renew'},
+  ['Благословленное волшебное масло']={t=3000,icon='Temp'},
+  ['Блесна']={t=5000,icon='INV_Misc_Orb_03'},
+  ['Блуждающие духи']={t=2000,icon='Spell_Shadow_BlackPlague'},
+  ['Боевой скакун Грозовой Вершины']={t=3000,icon='Ability_Mount_MountainRam'},
+  ['Божественная кара']={t=2500,icon='Spell_Holy_HolySmite'},
+  ['Божественный транс']={t=5000,icon='Temp'},
+  ['Болезненная усталость']={t=3000,icon='Spell_Nature_NullifyDisease'},
+  ['Болезнетворный плевок']={t=3000,icon='Spell_Shadow_CreepingPlague'},
+  ['Болезнетворный удар']={t=1500,icon='Spell_Nature_EarthBind'},
+  ['Болотный яд']={t=2000,icon='Spell_Nature_Regenerate'},
+  ['Большая бронзовая бомба']={t=1000,icon='Spell_Fire_SelfDestruct'},
+  ['Большая железная бомба']={t=1000,icon='Spell_Fire_SelfDestruct'},
+  ['Большая медная бомба']={t=1000,icon='Spell_Fire_SelfDestruct'},
+  ['Большая невидимость']={t=3000,icon='Spell_Nature_Invisibilty'},
+  ['Большая рогатая сова']={t=1000,icon='Ability_Seal'},
+  ['Большее рассеивание']={t=4000,icon='Spell_Arcane_StarFire'},
+  ['Большой лесной волк']={t=3000,icon='Ability_Mount_BlackDireWolf'},
+  ['Большой сефориевый заряд']={t=5000,icon='Temp'},
+  ['Бомба']={t=2000,icon='Spell_Fire_SelfDestruct'},
+  ['Бомба Синдиката']={t=3000,icon='Spell_Shadow_MindBomb'},
+  ['Бомба из черного железа']={t=1000,icon='Spell_Fire_SelfDestruct'},
+  ['Бомбейская кошка']={t=1000,icon='Ability_Seal'},
+  ['Бродячая чума']={t=2000,icon='Spell_Shadow_CallofBone'},
+  ['Броня стихий']={t=1000,icon='Spell_Frost_Frost'},
+  ['Бросить топливо в огонь']={t=500,icon='Temp'},
+  ['Бросок бомбы-вонючки']={t=2000,icon='INV_Misc_Bowl_01'},
+  ['Бросок грязью']={t=1000,icon='Spell_Nature_Sleep'},
+  ['Бросок динамита']={t=2000,icon='Spell_Fire_SelfDestruct'},
+  ['Бросок дротика Купидона']={t=1000,icon='Temp'},
+  ['Бросок зелья']={t=2000,icon='Spell_Misc_Drink'},
+  ['Бросок камня']={t=3000,icon='Ability_GolemStormBolt'},
+  ['Бросок камня II']={t=3000,icon='Ability_GolemStormBolt'},
+  ['Бросок кошмарного предмета']={t=2000,icon='Spell_Fire_SelfDestruct'},
+  ['Бросок топора']={t=1000,icon='INV_Axe_08'},
+  ['Бросок факела']={t=1000,icon='Spell_Fire_Flare'},
+  ['Бросок эля Черного Железа']={t=500,icon='Temp'},
+  ['Брызги пламени']={t=1700,icon='Spell_Fire_Fire'},
+  ['Бузинный пирог']={t=1000,icon='INV_Misc_Food_10'},
+  ['Бумеранг Линкена']={t=500,icon='INV_Weapon_ShortBlade_10'},
+  ['Бурая змейка']={t=1000,icon='Ability_Seal'},
+  ['Бурчаль']={t=1000,icon='Ability_Seal'},
+  ['Бурый баран']={t=3000,icon='Ability_Mount_MountainRam'},
+  ['Бурый кодо']={t=3000,icon='Ability_Mount_Kodo_03'},
+  ['Буря маны']={t=2000,icon='Spell_Frost_IceStorm'},
+  ['Быстрая Защита от магии льда']={t=1500,icon='Spell_Fire_SealOfFire'},
+  ['Быстродействующая отрава']={t=3000,icon='INV_Potion_19'},
+  ['Быстродействующий яд']={t=3000,icon='Ability_Poisons'},
+  ['Быстродействующий яд II']={t=3000,icon='Ability_Poisons'},
+  ['Быстродействующий яд III']={t=3000,icon='Ability_Poisons'},
+  ['Быстродействующий яд IV']={t=3000,icon='Ability_Poisons'},
+  ['Быстродействующий яд V']={t=3000,icon='Ability_Poisons'},
+  ['Быстродействующий яд VI']={t=3000,icon='Ability_Poisons'},
+  ['Быстрое исцеление']={t=1500,icon='Spell_Holy_FlashHeal'},
+  ['Быстрый оберег от пламени']={t=1500,icon='Spell_Fire_SealOfFire'},
+  ['Валун']={t=2000,icon='Ability_Throw'},
+  ['Великан']={t=3000,icon='Spell_Fire_SelfDestruct'},
+  ['Великое исцеление']={t=3000,icon='Spell_Holy_GreaterHeal'},
+  ['Верховая черепаха']={t=3000,icon='Ability_Hunter_Pet_Turtle'},
+  ['Верховой кодо']={t=3000,icon='INV_Misc_Head_Tauren_02'},
+  ['Взлом замка']={t=5000,icon='Spell_Nature_MoonKey'},
+  ['Взрыв']={t=10000,icon='Spell_Fire_SelfDestruct'},
+  ['Взрыв Оззи']={t=2000,icon='Temp'},
+  ['Взрыв разума']={t=1500,icon='Spell_Shadow_UnholyFrenzy'},
+  ['Взрыв скелета-шахтера']={t=5000,icon='Spell_Fire_SelfDestruct'},
+  ['Взрывной выстрел']={t=1000,icon='Spell_Fire_Fireball02'},
+  ['Взрывоопасная овца']={t=2000,icon='Ability_Repair'},
+  ['Визуальный эффект исчезновения Оуро']={t=1500,icon='Spell_Fire_Volcano'},
+  ['Вихрь']={t=2000,icon='Spell_Nature_Cyclone'},
+  ['Власть']={t=1000,icon='Spell_Shadow_ShadowWordDominate'},
+  ['Вогнать пику Нимбойи с тролльими черепами']={t=2000,icon='Temp'},
+  ['Водяной пузырь']={t=1000,icon='Spell_Frost_Wisp'},
+  ['Возвращение']={t=10000,icon='Temp'},
+  ['Воззвание к Айвусу']={t=10000,icon='Temp'},
+  ['Возрождение']={t=2000,icon='Spell_Nature_Reincarnation'},
+  ['Возрождение пещерной крысы']={t=3000,icon='Spell_Holy_Resurrection'},
+  ['Вой Северного Волка']={t=3000,icon='Ability_Mount_WhiteDireWolf'},
+  ['Вой банши']={t=2000,icon='Spell_Shadow_Possession'},
+  ['Вой ужаса']={t=2000,icon='Spell_Shadow_DeathScream'},
+  ['Волна исцеления']={t=3000,icon='Spell_Nature_MagicImmunity'},
+  ['Волшебное масло']={t=3000,icon='Temp'},
+  ['Волшебный огонь']={t=2000,icon='Spell_Nature_FaerieFire'},
+  ['Воля Шахрама']={t=1000,icon='Spell_Holy_MindVision'},
+  ['Вороной боевой скакун']={t=3000,icon='Ability_Mount_NightmareHorse'},
+  ['Вороной жеребец']={t=3000,icon='Ability_Mount_NightmareHorse'},
+  ['Ворчаль']={t=1000,icon='Ability_Seal'},
+  ['Воскресение Алых']={t=2000,icon='Spell_Holy_Resurrection'},
+  ['Воскресение Сквернстрома']={t=3000,icon='Spell_Totem_WardOfDraining'},
+  ['Воскрешение']={t=10000,icon='Spell_Holy_Resurrection'},
+  ['Воскрешение камнем души']={t=3000,icon='Spell_Shadow_SoulGem'},
+  ['Воскрешение мертвых']={t=1000,icon='Spell_Shadow_RaiseDead'},
+  ['Воскрешение нежити-скарабея']={t=1000,icon='Spell_Shadow_Contagion'},
+  ['Воскрешение питомца']={t=10000,icon='Ability_Hunter_BeastSoothe'},
+  ['Воспламенение Крошиуса']={t=3000,icon='Temp'},
+  ['Воспламеняющий порошок']={t=5000,icon='Temp'},
+  ['Воспламеняющий порошок Магаты']={t=1300,icon='Temp'},
+  ['Воссоздание']={t=3000,icon='Temp'},
+  ['Восстановление']={t=2000,icon='Spell_Nature_ResistNature'},
+  ['Восстановление духа']={t=3000,icon='Spell_Nature_MoonGlow'},
+  ['Восстановление духа II']={t=3000,icon='Spell_Nature_MoonGlow'},
+  ['Всевидяшее Око Рисона']={t=1000,icon='Ability_Ambush'},
+  ['Всецветный летун']={t=3000,icon='INV_Misc_Head_Dragon_Black'},
+  ['Всплеск кислоты']={t=1000,icon='INV_Drink_06'},
+  ['Всплеск лавы']={t=2000,icon='Spell_Fire_Fire'},
+  ['Вспышка Света']={t=1500,icon='Spell_Holy_FlashHeal'},
+  ['Вспышка магмы']={t=1000,icon='Spell_Fire_FlameShock'},
+  ['Вспышка молнии']={t=3200,icon='Spell_Nature_Lightning'},
+  ['Вспышка тени']={t=500,icon='Spell_Shadow_DetectLesserInvisibility'},
+  ['Вуду']={t=1000,icon='Spell_Shadow_AntiShadow'},
+  ['Вудуистский сглаз']={t=1000,icon='Spell_Shadow_CurseOfMannoroth'},
+  ['Выброс огня']={t=1500,icon='Spell_Fire_FireBolt'},
+  ['Выброс пламени']={t=3000,icon='Spell_Fire_SelfDestruct'},
+  ['Выжигание участка']={t=3000,icon='Spell_Fire_SelfDestruct'},
+  ['Вызов Аквамонтоса']={t=2000,icon='Temp'},
+  ['Вызов Анафемы']={t=1000,icon='Temp'},
+  ['Вызов Ар\'лии']={t=2500,icon='Spell_Nature_GroundingTotem'},
+  ['Вызов Благословения']={t=1000,icon='Temp'},
+  ['Вызов Вибрисса']={t=1000,icon='Ability_Seal'},
+  ['Вызов Демона Бездны']={t=4000,icon='Spell_Shadow_GatherShadows'},
+  ['Вызов Древних']={t=7000,icon='Temp'},
+  ['Вызов Зубощелка']={t=3000,icon='Temp'},
+  ['Вызов Ичияки']={t=500,icon='Spell_Shadow_LifeDrain'},
+  ['Вызов Ишамухала']={t=2000,icon='Spell_Shadow_LifeDrain'},
+  ['Вызов Лунокогтя']={t=3000,icon='Temp'},
+  ['Вызов Охранных иероглифов']={t=3000,icon='Temp'},
+  ['Вызов Разелиха']={t=10000,icon='Temp'},
+  ['Вызов Телрина DND']={t=1000,icon='Temp'},
+  ['Вызов Торопыги']={t=1000,icon='Ability_Seal'},
+  ['Вызов Умки']={t=1000,icon='Ability_Seal'},
+  ['Вызов Ши-Ротам']={t=2500,icon='Temp'},
+  ['Вызов Эданы Коготь Ненависти']={t=4000,icon='Temp'},
+  ['Вызов бесцветного ворга']={t=1300,icon='Spell_Shadow_ChillTouch'},
+  ['Вызов бога-паука']={t=10000,icon='Spell_Shadow_LifeDrain'},
+  ['Вызов боевого коня']={t=3000,icon='Spell_Nature_Swiftness'},
+  ['Вызов восставшего лакея']={t=2000,icon='Spell_Shadow_RaiseDead'},
+  ['Вызов гномского тревого-бота']={t=250,icon='INV_Gizmo_08'},
+  ['Вызов гоблинской бомбы']={t=250,icon='Ability_Repair'},
+  ['Вызов дракончика Гнездовья']={t=2000,icon='Temp'},
+  ['Вызов древних духов']={t=2000,icon='Temp'},
+  ['Вызов духа крикуна']={t=2000,icon='Temp'},
+  ['Вызов желтого киражского боевого танка']={t=3000,icon='INV_Misc_QirajiCrystal_01'},
+  ['Вызов зайчика-побегайчика']={t=1000,icon='Ability_Seal'},
+  ['Вызов зеленого киражского боевого танка']={t=3000,icon='INV_Misc_QirajiCrystal_03'},
+  ['Вызов знамени Каранга']={t=500,icon='Temp'},
+  ['Вызов зомби']={t=2000,icon='Spell_Shadow_RaiseDead'},
+  ['Вызов котенка']={t=2000,icon='INV_Box_PetCarrier_01'},
+  ['Вызов красного киражского боевого танка']={t=3000,icon='INV_Misc_QirajiCrystal_02'},
+  ['Вызов кровавого попугая']={t=1000,icon='Ability_Seal'},
+  ['Вызов ксоротианского коня погибели']={t=5000,icon='Temp'},
+  ['Вызов магического посоха']={t=2000,icon='INV_Staff_26'},
+  ['Вызов малых кровоцветов-паразитов']={t=2000,icon='Spell_Shadow_DarkSummoning'},
+  ['Вызов мистера Вертихрюша']={t=1000,icon='Ability_Seal'},
+  ['Вызов омерзительного слизнюченыша']={t=1000,icon='Ability_Seal'},
+  ['Вызов орды Сокровища']={t=1500,icon='Temp'},
+  ['Вызов орды Сокровища - визуальный эффект']={t=1500,icon='Temp'},
+  ['Вызов порождения Бал\'Гора']={t=4000,icon='Spell_Fire_LavaSpawn'},
+  ['Вызов призматического барьера']={t=10000,icon='Temp'},
+  ['Вызов прислужника']={t=500,icon='Temp'},
+  ['Вызов разрушителя из племени Маграм']={t=4000,icon='Spell_Shadow_RaiseDead'},
+  ['Вызов синего киражского боевого танка']={t=3000,icon='INV_Misc_QirajiCrystal_04'},
+  ['Вызов сироты']={t=1000,icon='Ability_Seal'},
+  ['Вызов скалокрылой горгульи']={t=10000,icon='Spell_Shadow_UnsummonBuilding'},
+  ['Вызов скарабея-падальщика']={t=2000,icon='Spell_Shadow_CarrionSwarm'},
+  ['Вызов скелета']={t=2000,icon='Spell_Shadow_RaiseDead'},
+  ['Вызов слюнявого ворга']={t=1300,icon='Spell_Shadow_ChillTouch'},
+  ['Вызов союзников-древней']={t=1500,icon='Spell_Nature_ForceOfNature'},
+  ['Вызов темного чародея']={t=5000,icon='Spell_Shadow_RaiseDead'},
+  ['Вызов хрупкого скелета']={t=10000,icon='Spell_Shadow_RaiseDead'},
+  ['Выползки']={t=5000,icon='Trade_Fishing'},
+  ['Выпустить Эшкромба']={t=4000,icon='Spell_Nature_MoonKey'},
+  ['Высидеть яйцо из Гнездовья']={t=1000,icon='Temp'},
+  ['Выстрел из лука']={t=1000,icon='Ability_Marksmanship'},
+  ['Выстрел из пушки']={t=2000,icon='Temp'},
+  ['Выстрел ракетой']={t=3000,icon='Temp'},
+  ['Выстрел с арбалета']={t=1000,icon='Ability_Marksmanship'},
+  ['Выстрел с огнестрельного оружия']={t=1000,icon='Ability_Marksmanship'},
+  ['Вытягивание энергии']={t=1500,icon='Spell_Shadow_Cripple'},
+  ['Газовая бомба']={t=1000,icon='INV_Misc_Ammo_Bullet_01'},
+  ['Гиацинтовый ара']={t=1000,icon='Ability_Seal'},
+  ['Глаз Йесмура (PT)']={t=2000,icon='Temp'},
+  ['Глаз Рисона в небе']={t=1000,icon='Ability_Hunter_EagleEye'},
+  ['Глоток зелья']={t=3000,icon='Spell_Holy_Heal'},
+  ['Глоток малого зелья']={t=3000,icon='Spell_Holy_Heal'},
+  ['Глубокая дремота']={t=1000,icon='Spell_Shadow_Cripple'},
+  ['Гнев']={t=2000,icon='Spell_Nature_AbolishMagic'},
+  ['Гнев деревьев']={t=1500,icon='Spell_Nature_StrangleVines'},
+  ['Гнев небес']={t=2000,icon='Spell_Holy_Excorcism'},
+  ['Гнедая кобыла']={t=3000,icon='Ability_Mount_RidingHorse'},
+  ['Гнедой конь']={t=3000,icon='Ability_Mount_RidingHorse'},
+  ['Гнедой конь-скелет']={t=3000,icon='Ability_Mount_Undeadhorse'},
+  ['Гниение разума']={t=2000,icon='Spell_Shadow_MindRot'},
+  ['Гномский транспортер']={t=10000,icon='Temp'},
+  ['Гнущаяся берцовая кость']={t=1500,icon='Temp'},
+  ['Гоблинская мина']={t=1000,icon='Spell_Shadow_Metamorphosis'},
+  ['Гоблинская мортира']={t=1000,icon='Spell_Fire_SelfDestruct'},
+  ['Головокружительная боль']={t=1500,icon='Spell_Nature_CorrosiveBreath'},
+  ['Голодный рой']={t=3000,icon='Spell_Holy_Dizzy'},
+  ['Гонг']={t=500,icon='Temp'},
+  ['Гонг из Зул\'Фаррака - гонг']={t=500,icon='Temp'},
+  ['Горное дело']={t=3200,icon='Trade_Mining'},
+  ['Горящие ветра']={t=1000,icon='Spell_Nature_Cyclone'},
+  ['Господство над душой']={t=3000,icon='Spell_Shadow_ShadowWordDominate'},
+  ['Господство над разумом']={t=2000,icon='Spell_Shadow_ShadowWordDominate'},
+  ['Град огненных шаров']={t=3000,icon='Spell_Fire_FlameBolt'},
+  ['Град стрел']={t=3000,icon='Ability_TheBlackArrow'},
+  ['Град стрел II']={t=3000,icon='Ability_TheBlackArrow'},
+  ['Грозовая туча']={t=3000,icon='Spell_Nature_CallStorm'},
+  ['Грозовое дыхание']={t=2000,icon='Spell_Nature_Lightning'},
+  ['Громовая поступь']={t=500,icon='Ability_WarStomp'},
+  ['Грубая медная бомба']={t=1000,icon='Spell_Fire_SelfDestruct'},
+  ['Грубый динамит']={t=1000,icon='Spell_Fire_SelfDestruct'},
+  ['Гурчаль']={t=1000,icon='Ability_Seal'},
+  ['Д\'жииви создает объект']={t=2000,icon='Temp'},
+  ['Дальнее зрение']={t=2000,icon='Spell_Nature_FarSight'},
+  ['Дальнее зрение (РТ)']={t=2000,icon='Temp'},
+  ['Дальний выстрел II']={t=4000,icon='Ability_Marksmanship'},
+  ['Дальний выстрел III']={t=4000,icon='Ability_Marksmanship'},
+  ['Данные о температуре']={t=2000,icon='Temp'},
+  ['Дар Аругала']={t=2500,icon='Spell_Shadow_ChillTouch'},
+  ['Дар Ксавиана']={t=5000,icon='Spell_Holy_FlashHeal'},
+  ['Двойник']={t=2500,icon='Spell_Shadow_BlackPlague'},
+  ['Детеныш гиппогрифа']={t=1000,icon='Ability_Seal'},
+  ['Детеныш панды']={t=1000,icon='Ability_Seal'},
+  ['Дефибриллировать']={t=4000,icon='Spell_Nature_Purge'},
+  ['Дикое восстановление']={t=3000,icon='Spell_Nature_Rejuvenation'},
+  ['Динамит']={t=1000,icon='Spell_Fire_SelfDestruct'},
+  ['Динамит "Pro-100-брос"']={t=1000,icon='Spell_Fire_SelfDestruct'},
+  ['Динамит Мертвых копей']={t=2000,icon='Spell_Fire_SelfDestruct'},
+  ['Дистанционный взрыв']={t=1000,icon='INV_Misc_StoneTablet_04'},
+  ['Драко-инкарцинатор 900']={t=2000,icon='Temp'},
+  ['Древесная лягушка']={t=1000,icon='Ability_Seal'},
+  ['Древний ледопард']={t=3000,icon='Ability_Mount_WhiteTiger'},
+  ['Древоголовый хрустогрыз']={t=1000,icon='Ability_Seal'},
+  ['Друидская дремота']={t=2500,icon='Spell_Nature_Sleep'},
+  ['Дурманящий яд']={t=3000,icon='Spell_Nature_NullifyDisease'},
+  ['Дурманящий яд II']={t=3000,icon='Spell_Nature_NullifyDisease'},
+  ['Дурманящий яд III']={t=3000,icon='Spell_Nature_NullifyDisease'},
+  ['Дурной глаз']={t=1500,icon='Spell_Shadow_Charm'},
+  ['Дух']={t=500,icon='Temp'},
+  ['Дух дикого волка']={t=3000,icon='Spell_Nature_SpiritWolf'},
+  ['Дух дикого волка II']={t=3000,icon='Spell_Nature_SpiritWolf'},
+  ['Дух предков']={t=10000,icon='Spell_Nature_Regenerate'},
+  ['Дух-целитель']={t=2000,icon='Spell_Holy_LayOnHands'},
+  ['Душевный укус']={t=2000,icon='Spell_Shadow_SiphonMana'},
+  ['Дыхание']={t=5000,icon='Spell_Fire_Fire'},
+  ['Дыхание Саргераса']={t=2000,icon='Spell_Shadow_Metamorphosis'},
+  ['Дыхание льда']={t=250,icon='Spell_Frost_FrostNova'},
+  ['Дыхание песка']={t=2000,icon='Spell_Fire_WindsofWoe'},
+  ['Едкий яд']={t=1500,icon='Spell_Nature_CorrosiveBreath'},
+  ['Едкий ядовитый плевок']={t=2500,icon='Spell_Nature_CorrosiveBreath'},
+  ['Жаблинг']={t=1000,icon='Ability_Seal'},
+  ['Жареный сморк']={t=1000,icon='INV_SummerFest_Smorc'},
+  ['Жгучая боль']={t=1500,icon='Spell_Fire_SoulBurn'},
+  ['Жгучее пламя']={t=2000,icon='Spell_Fire_Immolation'},
+  ['Железная граната']={t=1000,icon='Spell_Fire_SelfDestruct'},
+  ['Жертвенные паутинные железы']={t=10000,icon='Temp'},
+  ['Жертвенный огонь']={t=2000,icon='Spell_Fire_Immolation'},
+  ['Жертвоприношение']={t=1000,icon='Spell_Holy_DivineIntervention'},
+  ['Жидкая руда']={t=1500,icon='Spell_Fire_SelfDestruct'},
+  ['Жуки-трупоеды']={t=3000,icon='Spell_Nature_InsectSwarm'},
+  ['Жуткокоготь']={t=1000,icon='Spell_Shadow_ShadowPact'},
+  ['ЗАКЛИНАНИЕ ЗАДАНИЯ ЧУ']={t=4000,icon='Spell_Shadow_LifeDrain'},
+  ['Задание - Вызов древня']={t=3000,icon='Spell_Nature_NatureTouchGrow'},
+  ['Задание - Заклинание Сергры Черный Шип.']={t=3000,icon='Temp'},
+  ['Задание - Появление вне телепорта']={t=1000,icon='Temp'},
+  ['Задание - герой троллей']={t=30000,icon='Temp'},
+  ['Закладка заряда NG-5 (красного)']={t=5000,icon='INV_Misc_Bomb_05'},
+  ['Закладка заряда NG-5 (синего)']={t=5000,icon='INV_Misc_Bomb_05'},
+  ['Заклинание вызова дракончика Гнездовья']={t=500,icon='Temp'},
+  ['Заклинание появления Аругала']={t=2000,icon='Temp'},
+  ['Заключение']={t=2000,icon='Spell_Shadow_Teleport'},
+  ['Заколдованное семечко Геи']={t=5000,icon='Temp'},
+  ['Закрытие']={t=1000,icon='Temp'},
+  ['Залп ледяных стрел']={t=2000,icon='Spell_Frost_FrostBolt02'},
+  ['Залп стрел Тьмы']={t=3000,icon='Spell_Shadow_ShadowBolt'},
+  ['Залп шипов']={t=500,icon='Ability_ImpalingBolt'},
+  ['Замедляющий яд']={t=1000,icon='Spell_Nature_SlowPoison'},
+  ['Заморозить яйцо из Гнездовья']={t=500,icon='Temp'},
+  ['Заморозить яйцо из Гнездовья - модель']={t=500,icon='Temp'},
+  ['Запуск ракеты']={t=3000,icon='INV_Ammo_Bullet_03'},
+  ['Запуск снаряда']={t=3000,icon='INV_Ammo_Bullet_03'},
+  ['Заразная слизь']={t=2000,icon='Spell_Shadow_CreepingPlague'},
+  ['Заразное веселье']={t=1000,icon='Spell_Shadow_DarkSummoning'},
+  ['Заразный выстрел']={t=2000,icon='Spell_Shadow_CallofBone'},
+  ['Зарядка']={t=5000,icon='Spell_Shadow_EvilEye'},
+  ['Заряженная чародейская стрела']={t=7000,icon='Spell_Arcane_StarFire'},
+  ['Засасывающая жижа']={t=1000,icon='Spell_Nature_StrangleVines'},
+  ['Застревание']={t=10000,icon='Spell_Shadow_Teleport'},
+  ['Засуха']={t=1500,icon='Spell_Nature_NullifyDisease'},
+  ['Затмение зрения']={t=2000,icon='Spell_Shadow_Fumble'},
+  ['Заточка клинка']={t=3000,icon='Temp'},
+  ['Заточка клинка II']={t=3000,icon='Temp'},
+  ['Заточка клинка III']={t=3000,icon='Temp'},
+  ['Заточка клинка IV']={t=3000,icon='Temp'},
+  ['Заточка клинка V']={t=3000,icon='Temp'},
+  ['Заточка оружия - критическое поражение']={t=3000,icon='Temp'},
+  ['Зачарование нагрудника - дух I']={t=5000,icon='Spell_Holy_GreaterHeal'},
+  ['Зачарование нагрудника - малое поглощение']={t=5000,icon='Spell_Holy_GreaterHeal'},
+  ['Зачарование плаща - малое сопротивление']={t=5000,icon='Spell_Holy_GreaterHeal'},
+  ['Зачаровывание']={t=3500,icon='Temp'},
+  ['Защита Праудмура']={t=3000,icon='Spell_Holy_BlessingOfProtection'},
+  ['Заяц-беляк']={t=1000,icon='Ability_Seal'},
+  ['Звездный огонь']={t=3500,icon='Spell_Arcane_StarFire'},
+  ['Звенья молний']={t=1800,icon='Spell_Nature_ChainLightning'},
+  ['Звериный глаз']={t=2000,icon='Ability_EyeOfTheOwl'},
+  ['Зеленая водяная змея']={t=1000,icon='Ability_Seal'},
+  ['Зеленокрылый ара']={t=1000,icon='Ability_Seal'},
+  ['Зеленый боевой конь-скелет']={t=3000,icon='Ability_Mount_Undeadhorse'},
+  ['Зеленый грог Гордока']={t=1000,icon='INV_Drink_03'},
+  ['Зеленый кодо']={t=3000,icon='Ability_Mount_Kodo_02'},
+  ['Зеленый механодолгоног']={t=3000,icon='Ability_Mount_MechaStrider'},
+  ['Зерглинг']={t=1000,icon='Ability_Seal'},
+  ['Злой Бог']={t=300000,icon='Temp'},
+  ['Змеиное очищение']={t=30000,icon='Spell_Shadow_LifeDrain'},
+  ['Змейка-альбинос']={t=1000,icon='Ability_Seal'},
+  ['Знак Пламени']={t=1000,icon='Spell_Fire_Fireball'},
+  ['Зов Бездны']={t=3000,icon='Spell_Shadow_DeathCoil'},
+  ['Зов Пустоты']={t=10000,icon='Temp'},
+  ['Зов могилы']={t=2000,icon='Spell_Shadow_ChillTouch'},
+  ['Зов тунда']={t=1500,icon='Spell_Frost_Wisp'},
+  ['Золотая отмычка']={t=5000,icon='Temp'},
+  ['Золотой саблезуб']={t=3000,icon='Ability_Mount_JungleTiger'},
+  ['Игреневый жеребец']={t=3000,icon='Ability_Mount_RidingHorse'},
+  ['Игреневый конь']={t=3000,icon='Ability_Mount_RidingHorse'},
+  ['Избирательное гашение']={t=2000,icon='Spell_Holy_SearingLight'},
+  ['Изгнание']={t=1500,icon='Spell_Shadow_Cripple'},
+  ['Изгнание грозового изгоя']={t=1000,icon='Spell_Shadow_LifeDrain'},
+  ['Изгнание морского изгоя']={t=1000,icon='Spell_Shadow_LifeDrain'},
+  ['Изгнание нежити']={t=1500,icon='Spell_Holy_TurnUndead'},
+  ['Изгнание призраков']={t=4000,icon='Temp'},
+  ['Изгнание пылающего изгоя']={t=1000,icon='Spell_Shadow_LifeDrain'},
+  ['Излечение болезни']={t=2500,icon='Spell_Holy_NullifyDisease'},
+  ['Изначальный леопард']={t=3000,icon='Ability_Mount_JungleTiger'},
+  ['Изумрудный ящер']={t=3000,icon='Ability_Mount_Raptor'},
+  ['Изучить Роковой рык']={t=1000,icon='Temp'},
+  ['Инициатор вращения']={t=3000,icon='Temp'},
+  ['Инфернал']={t=2000,icon='Spell_Shadow_SummonInfernal'},
+  ['Инфернальный снаряд']={t=3000,icon='Spell_Fire_SelfDestruct'},
+  ['Искажение времени']={t=2000,icon='Spell_Arcane_PortalOrgrimmar'},
+  ['Искра']={t=2000,icon='Spell_Nature_Lightning'},
+  ['Искупление']={t=10000,icon='Spell_Holy_Resurrection'},
+  ['Испепеление']={t=2000,icon='Spell_Shadow_ChillTouch'},
+  ['Использование приманки']={t=4000,icon='Temp'},
+  ['Использовать блесну']={t=3000,icon='Temp'},
+  ['Исправление отношения']={t=2000,icon='INV_Gizmo_01'},
+  ['Исправление ритуального колокольчика (DND)']={t=3000,icon='Temp'},
+  ['Исправление ритуального элемента']={t=3000,icon='Temp'},
+  ['Исправление ритуальной свечи (DND)']={t=3000,icon='Temp'},
+  ['Испытание знаний']={t=2000,icon='Spell_Nature_EarthBind'},
+  ['Истинное счастье']={t=500,icon='Spell_Shadow_Charm'},
+  ['Истощение души']={t=2000,icon='Spell_Shadow_LifeDrain02'},
+  ['Исцеление']={t=3000,icon='Spell_Holy_Heal02'},
+  ['Исцеление - визуальное (DND)']={t=3500,icon='Spell_Holy_Heal'},
+  ['Исцеление гнусь-лозы']={t=500,icon='Temp'},
+  ['Исцеление от проказы']={t=2000,icon='Spell_Holy_FlashHeal'},
+  ['Исцеление тьмой']={t=3500,icon='Spell_Shadow_ChillTouch'},
+  ['Исцеляющая волна Антусула']={t=1000,icon='Spell_Holy_Heal02'},
+  ['Исцеляющая речь']={t=1000,icon='Spell_Holy_Heal'},
+  ['Исцеляющая речь II']={t=1000,icon='Spell_Holy_Heal'},
+  ['Исчезновение прислужников Урока']={t=2000,icon='Temp'},
+  ['Калечащий яд']={t=3000,icon='Ability_PoisonSting'},
+  ['Каменная Кожа']={t=6000,icon='Spell_Nature_EnchantArmor'},
+  ['Камень возвращения']={t=10000,icon='INV_Misc_Rune_01'},
+  ['Кара']={t=2500,icon='Spell_Holy_HolySmite'},
+  ['Карманник (PT)']={t=5000,icon='Temp'},
+  ['Касание смерти']={t=3000,icon='Spell_Shadow_UnsummonBuilding'},
+  ['Касание увядания']={t=2000,icon='Spell_Nature_Drowsy'},
+  ['Каскад роз']={t=500,icon='INV_Misc_Dust_04'},
+  ['Квинтессенция воды - гашение руны Огненных Недр']={t=1000,icon='Temp'},
+  ['Кев']={t=3000,icon='Spell_Fire_FireBolt'},
+  ['Кирка демона']={t=5000,icon='Temp'},
+  ['Кислота Хаккара']={t=1000,icon='Spell_Nature_Acid_01'},
+  ['Кислотные брызги']={t=2000,icon='Spell_Nature_Acid_01'},
+  ['Кислотный плевок']={t=3000,icon='Spell_Nature_Acid_01'},
+  ['Клинок фанатика']={t=1000,icon='Spell_Fire_Immolation'},
+  ['Ключ от клетки пантеры']={t=5000,icon='Temp'},
+  ['Ключевой посох Ульдамана']={t=5000,icon='Temp'},
+  ['Коварство ящера']={t=3000,icon='INV_Misc_MonsterClaw_02'},
+  ['Коготь зверя']={t=1000,icon='Spell_Nature_Regeneration'},
+  ['Когти зверя II']={t=1000,icon='Spell_Nature_Regeneration'},
+  ['Когти зверя III']={t=1000,icon='Spell_Nature_Regeneration'},
+  ['Кожеспинный хрустогрыз']={t=1000,icon='Ability_Seal'},
+  ['Колдовской кристалл резонита']={t=5000,icon='Temp'},
+  ['Колодец Света']={t=1500,icon='Spell_Holy_SummonLightwell'},
+  ['Колокольчик Шая']={t=4500,icon='Temp'},
+  ['Колоссальный удар']={t=5000,icon='Temp'},
+  ['Кольцо Тьмы II']={t=3000,icon='Spell_Shadow_ShadeTrueSight'},
+  ['Ком грязи']={t=1000,icon='Spell_Nature_Sleep'},
+  ['Комок слизи']={t=2500,icon='Spell_Nature_CorrosiveBreath'},
+  ['Контроль над разумом']={t=3000,icon='Spell_Shadow_ShadowWordDominate'},
+  ['Концентрированный динамит']={t=1000,icon='Spell_Fire_SelfDestruct'},
+  ['Конь смерти Ривендера']={t=3000,icon='Ability_Mount_Undeadhorse'},
+  ['Конь-скелет']={t=3000,icon='Ability_Mount_Undeadhorse'},
+  ['Корелла']={t=1000,icon='Ability_Seal'},
+  ['Коричневый волк']={t=3000,icon='Ability_Mount_BlackDireWolf'},
+  ['Корниш-рекс']={t=1000,icon='Ability_Seal'},
+  ['Король Гордока']={t=1000,icon='INV_Crown_02'},
+  ['Котловина для колонны']={t=5000,icon='Temp'},
+  ['Кошачий облик Змейера DND']={t=1000,icon='Temp'},
+  ['Кошмар Наралекса']={t=2000,icon='Spell_Nature_Sleep'},
+  ['Кража жизни']={t=1500,icon='Spell_Shadow_LifeDrain02'},
+  ['Крапчатый красный ящер']={t=3000,icon='Ability_Mount_Raptor'},
+  ['Красно-синий механодолгоног']={t=3000,icon='Ability_Mount_MechaStrider'},
+  ['Красный боевой конь-скелет']={t=3000,icon='Ability_Mount_Undeadhorse'},
+  ['Красный конь-скелет']={t=3000,icon='Ability_Mount_Undeadhorse'},
+  ['Красный механодолгоног']={t=3000,icon='Ability_Mount_MechaStrider'},
+  ['Кривоклювый хрустогрыз']={t=1000,icon='Ability_Seal'},
+  ['Кровавый вой']={t=1000,icon='Spell_Shadow_LifeDrain'},
+  ['Крошечная ходячая бомба']={t=1000,icon='Ability_Seal'},
+  ['Крошечный зеленый дракончик']={t=1000,icon='Ability_Seal'},
+  ['Крошечный красный дракончик']={t=1000,icon='Ability_Seal'},
+  ['Крошка Дымок']={t=1000,icon='Ability_Seal'},
+  ['Крутящийся заряд']={t=1500,icon='INV_Spear_05'},
+  ['Кулак Шахрама']={t=1000,icon='Ability_Whirlwind'},
+  ['Кусеница']={t=5000,icon='INV_Misc_Orb_03'},
+  ['Кэларан создает факел']={t=1000,icon='Temp'},
+  ['Лавовый дождь']={t=2000,icon='Temp'},
+  ['Лазурный дракончик']={t=1000,icon='Ability_Seal'},
+  ['Леденящее касание Трелана']={t=3000,icon='Spell_Shadow_UnsummonBuilding'},
+  ['Ледниковый рев']={t=1000,icon='Spell_Frost_FrostNova'},
+  ['Ледопард Зимних Ключей']={t=3000,icon='Ability_Mount_PinkTiger'},
+  ['Ледяная могила']={t=1500,icon='Spell_Frost_Glacier'},
+  ['Ледяная стрела']={t=3000,icon='Spell_Frost_FrostBolt02'},
+  ['Ледяной ожог']={t=2000,icon='Spell_Frost_ChillingBlast'},
+  ['Ледяные оковы']={t=1300,icon='Spell_Frost_ChainsOfIce'},
+  ['Леопард']={t=3000,icon='Ability_Mount_JungleTiger'},
+  ['Лесная лягушка']={t=1000,icon='Ability_Seal'},
+  ['Летняя колбаска']={t=1000,icon='INV_Misc_Food_53'},
+  ['Летучая зараза']={t=2000,icon='Spell_Holy_HarmUndeadAura'},
+  ['Лечение Тарнариуна']={t=500,icon='Spell_Nature_MagicImmunity'},
+  ['Ликвидация маны']={t=2000,icon='Spell_Shadow_DarkRitual'},
+  ['Лиловый боевой конь-скелет']={t=3000,icon='Ability_Mount_Undeadhorse'},
+  ['Лиловый механодолгоног']={t=3000,icon='Ability_Mount_MechaStrider'},
+  ['Лишение сил']={t=1500,icon='Ability_Creature_Poison_03'},
+  ['Ловля термитов']={t=5000,icon='Temp'},
+  ['Ложная мишень НИП - призывание']={t=20000,icon='Spell_Shadow_UnsummonBuilding'},
+  ['Ложная мишень дистанционной атаки']={t=2000,icon='Temp'},
+  ['Луговая собачка']={t=1000,icon='Ability_Seal'},
+  ['Луч ока']={t=2000,icon='Spell_Nature_CallStorm'},
+  ['Льдисто-синий механодолгоног модель А']={t=3000,icon='Ability_Mount_MechaStrider'},
+  ['Любвный эликсир Нагмары']={t=1000,icon='Temp'},
+  ['Лютый волк']={t=3000,icon='Ability_Mount_WhiteDireWolf'},
+  ['Лютый рык']={t=1000,icon='Ability_Racial_Cannibalize'},
+  ['Магическое зрение']={t=3000,icon='Temp'},
+  ['Майский шест']={t=10000,icon='Spell_Shadow_Twilight'},
+  ['Малая волна исцеления']={t=1500,icon='Spell_Nature_HealingWaveLesser'},
+  ['Маленький багровый дракончик']={t=1000,icon='Ability_Seal'},
+  ['Маленький изумрудный дракончик']={t=1000,icon='Ability_Seal'},
+  ['Маленький темный дракончик']={t=1000,icon='Ability_Seal'},
+  ['Малое исцеление']={t=2500,icon='Spell_Holy_LesserHeal'},
+  ['Малый сефориевый заряд']={t=5000,icon='Temp'},
+  ['Маскировка батрака']={t=3000,icon='Ability_Rogue_Disguise'},
+  ['Маскировка крестьянина']={t=3000,icon='Ability_Rogue_Disguise'},
+  ['Маскировка под Даларанского волшебника']={t=3000,icon='Ability_Rogue_Disguise'},
+  ['Маскировка под дворфа из клана Черного Железа']={t=3000,icon='Ability_Rogue_Disguise'},
+  ['Маскировка под пирата Южных морей']={t=3000,icon='Ability_Rogue_Disguise'},
+  ['Маскировка под трогга Осколка Камня']={t=3000,icon='Ability_Rogue_Disguise'},
+  ['Маскировка под члена Братства Справедливости']={t=3000,icon='Ability_Rogue_Disguise'},
+  ['Маскировка под члена Синдиката']={t=3000,icon='Ability_Rogue_Disguise'},
+  ['Масло Тьмы']={t=3000,icon='Temp'},
+  ['Масло льда']={t=3000,icon='Temp'},
+  ['Массивный миномет']={t=3000,icon='Temp'},
+  ['Массовое исцеление']={t=1000,icon='Spell_Holy_GreaterHeal'},
+  ['Массовое рассеивание']={t=1000,icon='Spell_Shadow_Teleport'},
+  ['Мастер побега']={t=500,icon='Ability_Rogue_Trip'},
+  ['Маяк Ущелья']={t=2000,icon='Spell_Nature_AbolishMagic'},
+  ['Мгновенный взрыв']={t=5000,icon='Spell_Fire_SelfDestruct'},
+  ['Мегавольт']={t=2000,icon='Spell_Nature_ChainLightning'},
+  ['Медленный яд']={t=1000,icon='Spell_Nature_SlowPoison'},
+  ['Медленный яд II']={t=1000,icon='Spell_Nature_SlowPoison'},
+  ['Месть Аригоса']={t=2000,icon='Temp'},
+  ['Механическая белка']={t=1000,icon='Spell_Shadow_Metamorphosis'},
+  ['Механическая курица']={t=1000,icon='Ability_Seal'},
+  ['Мина клана Черного Железа']={t=1000,icon='Spell_Shadow_Metamorphosis'},
+  ['Мини-Диабло']={t=1000,icon='Ability_Seal'},
+  ['Миниружье']={t=100,icon='INV_Musket_04'},
+  ['Мифриловая осколочная бомба']={t=1000,icon='Spell_Fire_SelfDestruct'},
+  ['Могильные скарабеи']={t=1500,icon='Spell_Shadow_CarrionSwarm'},
+  ['Молитва Элуны']={t=1000,icon='Spell_Holy_Resurrection'},
+  ['Молитва исцеления']={t=3000,icon='Spell_Holy_PrayerOfHealing02'},
+  ['Молния']={t=3000,icon='Spell_Nature_Lightning'},
+  ['Молния Бездны']={t=3000,icon='Spell_Shadow_ShadowBolt'},
+  ['Молот бурь']={t=1000,icon='INV_Hammer_01'},
+  ['Молот гнева']={t=1000,icon='Ability_ThunderClap'},
+  ['Моровая лихорадка']={t=4500,icon='Spell_Nature_NullifyDisease'},
+  ['Морозная слабость']={t=5000,icon='INV_Misc_QirajiCrystal_04'},
+  ['Морозная стрела']={t=2000,icon='Spell_Frost_FrostBolt02'},
+  ['Мощные ароматические соли']={t=2000,icon='INV_Misc_Ammo_Gunpowder_01'},
+  ['Мощный сефориевый заряд']={t=5000,icon='Temp'},
+  ['Мощный удар']={t=1500,icon='Ability_Warrior_DecisiveStrike'},
+  ['Мощь Рагнароса']={t=500,icon='Spell_Fire_SelfDestruct'},
+  ['Мощь Шахрама']={t=1000,icon='Spell_Nature_WispSplode'},
+  ['Мрачноозерная поганка']={t=3000,icon='Spell_Holy_HarmUndeadAura'},
+  ['Мудрость зимы']={t=1000,icon='Ability_Ambush'},
+  ['Мурчаль']={t=1000,icon='Ability_Seal'},
+  ['Мысленная дрожь']={t=2000,icon='Spell_Nature_Earthquake'},
+  ['Мысленная чума']={t=4000,icon='Spell_Shadow_CallofBone'},
+  ['Набор для рисования']={t=7000,icon='Temp'},
+  ['Наксрамасский конь смерти']={t=3000,icon='Ability_Mount_Undeadhorse'},
+  ['Наложение чар на нагрудник - поглощение l']={t=5000,icon='Spell_Holy_GreaterHeal'},
+  ['Нанесение урона машине']={t=2000,icon='Spell_Fire_Fire'},
+  ['Наполнение']={t=3000,icon='Temp'},
+  ['Наполнить фиал']={t=5000,icon='Temp'},
+  ['Напор волн']={t=2000,icon='Spell_Frost_FrostNova'},
+  ['Нарайн!']={t=3000,icon='INV_Misc_Head_Gnome_01'},
+  ['Нарушение природного равновесия']={t=10000,icon='Temp'},
+  ['Настройка']={t=7000,icon='INV_Gizmo_02'},
+  ['Начертание древних рун']={t=10000,icon='Temp'},
+  ['Небольшая бронзовая бомба']={t=1000,icon='Spell_Fire_SelfDestruct'},
+  ['Невидимое размещение ловушки на медведя']={t=2000,icon='Temp'},
+  ['Невидимость']={t=3000,icon='Spell_Nature_Invisibilty'},
+  ['Неистовство стихий']={t=1000,icon='Spell_Fire_FireArmor'},
+  ['Нейтрализация бомбы-вонючки']={t=5000,icon='Temp'},
+  ['Нейтрализующий яд']={t=3000,icon='INV_Misc_Herb_16'},
+  ['Некрашеный механодолгоног']={t=3000,icon='Ability_Mount_MechaStrider'},
+  ['Неловкость']={t=1000,icon='Spell_Shadow_Fumble'},
+  ['Неловкость II']={t=1000,icon='Spell_Shadow_Fumble'},
+  ['Неловкость III']={t=1000,icon='Spell_Shadow_Fumble'},
+  ['Ненадежное варево']={t=3000,icon='Spell_Fire_Incinerate'},
+  ['Неотвязные призраки']={t=2000,icon='Spell_Shadow_BlackPlague'},
+  ['Низкосортный динамит']={t=1000,icon='Spell_Fire_SelfDestruct'},
+  ['Новый магический снаряд (тест)']={t=2000,icon='Temp'},
+  ['Ностальгия']={t=4000,icon='Spell_Shadow_LifeDrain'},
+  ['Обезвреживание ловушки']={t=2000,icon='Spell_Shadow_GrimWard'},
+  ['Облик Лунного охотника (без невидимости)']={t=1000,icon='Ability_Hibernation'},
+  ['Облик совы']={t=5000,icon='Spell_Nature_RavenForm'},
+  ['Обнаружение племени']={t=10000,icon='Spell_Lightning_LightningBolt01'},
+  ['Обновление']={t=2000,icon='Spell_Holy_Renew'},
+  ['Обостренные чувства']={t=1000,icon='Temp'},
+  ['Образ фурболга']={t=2000,icon='INV_Misc_MonsterClaw_04'},
+  ['Обсидиановый ящер']={t=3000,icon='Ability_Mount_Raptor'},
+  ['Обстрел']={t=3000,icon='Ability_GolemStormBolt'},
+  ['Обстрел II']={t=3000,icon='Ability_GolemStormBolt'},
+  ['Обстрел слизи']={t=1000,icon='Temp'},
+  ['Общие узы']={t=1500,icon='Spell_Shadow_UnsummonBuilding'},
+  ['Объятие Вдовы']={t=500,icon='Spell_Arcane_Blink'},
+  ['Обычный костер']={t=10000,icon='Spell_Fire_Fire'},
+  ['Оглушающая бомба']={t=2000,icon='Spell_Fire_SelfDestruct'},
+  ['Огненная буря']={t=2000,icon='Spell_Fire_SelfDestruct'},
+  ['Огненная глыба']={t=6000,icon='Spell_Fire_Fireball02'},
+  ['Огненная слабость']={t=5000,icon='INV_Misc_QirajiCrystal_02'},
+  ['Огненная стрела']={t=2000,icon='Spell_Fire_FireBolt'},
+  ['Огненная стрела II']={t=3000,icon='Spell_Fire_FireBolt02'},
+  ['Огненная стрела III']={t=3000,icon='Spell_Fire_FireBolt02'},
+  ['Огненная стрела IV']={t=3000,icon='Spell_Fire_FireBolt02'},
+  ['Огненная трещина']={t=2500,icon='Spell_Fire_Fire'},
+  ['Огненный ливень']={t=3000,icon='Spell_Shadow_RainOfFire'},
+  ['Огненный плевок']={t=3000,icon='Spell_Fire_FlameBolt'},
+  ['Огненный столб']={t=3000,icon='Spell_Fire_SelfDestruct'},
+  ['Огненный шар']={t=3500,icon='Spell_Fire_FlameBolt'},
+  ['Огненный щит']={t=1000,icon='Spell_Fire_Immolation'},
+  ['Огненный щит II']={t=1000,icon='Spell_Fire_Immolation'},
+  ['Огненный щит III']={t=1000,icon='Spell_Fire_Immolation'},
+  ['Огненный щит IV']={t=1000,icon='Spell_Fire_Immolation'},
+  ['Огромный белый кодо']={t=3000,icon='Ability_Mount_Kodo_01'},
+  ['Огромный бурый кодо']={t=3000,icon='Ability_Mount_Kodo_03'},
+  ['Огромный гейзер']={t=1500,icon='Spell_Frost_SummonWaterElemental'},
+  ['Огромный серый кодо']={t=3000,icon='Ability_Mount_Kodo_01'},
+  ['Оживление Ринго']={t=2500,icon='Temp'},
+  ['Ожог']={t=1500,icon='Spell_Fire_SoulBurn'},
+  ['Ожог души']={t=6000,icon='Spell_Fire_Fireball02'},
+  ['Окаменение - направление заклинания']={t=3000,icon='Spell_Nature_Cyclone'},
+  ['Око Бессмер\'тера']={t=2000,icon='Spell_Shadow_AntiMagicShell'},
+  ['Око Килрогга']={t=5000,icon='Spell_Shadow_EvilEye'},
+  ['Окрапление очищенной водой']={t=6000,icon='Temp'},
+  ['Окунание']={t=5000,icon='Temp'},
+  ['Оливковый хрустогрыз']={t=1000,icon='Ability_Seal'},
+  ['Омела']={t=1000,icon='INV_Misc_Branch_01'},
+  ['Оплетающие сети']={t=2000,icon='Spell_Nature_EarthBind'},
+  ['Оплеуха']={t=1000,icon='Spell_Shadow_LifeDrain'},
+  ['Определение Изначального Пламени']={t=1000,icon='Temp'},
+  ['Орлиный взор']={t=1000,icon='Ability_TownWatch'},
+  ['Освобождение Д\'жииви']={t=2000,icon='Temp'},
+  ['Освобождение Йеннику']={t=4000,icon='Spell_Shadow_LifeDrain'},
+  ['Освобождение Яростного Когтя']={t=10000,icon='Temp'},
+  ['Освобождение беса']={t=2000,icon='Temp'},
+  ['Освобождение едкой слизи']={t=5000,icon='INV_Potion_19'},
+  ['Освобождение ищейки']={t=2000,icon='Temp'},
+  ['Освобождение йети Юми']={t=2000,icon='Temp'},
+  ['Освобождение котенка Винны']={t=1000,icon='Ability_Seal'},
+  ['Освященное оружие']={t=3000,icon='Temp'},
+  ['Осквернение Крассена']={t=2000,icon='Temp'},
+  ['Оскверненный котенок']={t=1000,icon='Ability_Seal'},
+  ['Осколки костей']={t=500,icon='Spell_Shadow_ScourgeBuild'},
+  ['Ослабление']={t=2000,icon='Spell_Shadow_CurseOfMannoroth'},
+  ['Ослабление ловкости']={t=2000,icon='Spell_Holy_HarmUndeadAura'},
+  ['Ослабление силы']={t=2000,icon='Spell_Holy_HarmUndeadAura'},
+  ['Особое существо']={t=2000,icon='Temp'},
+  ['Остановка времени']={t=3000,icon='Temp'},
+  ['Остановка времени: визуальный эффект DND']={t=3000,icon='Temp'},
+  ['Острая грива']={t=1000,icon='Spell_Nature_Thorns'},
+  ['Острый шип']={t=500,icon='Ability_ImpalingBolt'},
+  ['Отделение души Лорда Вальтхалака DND']={t=5000,icon='Temp'},
+  ['Отклонение заклинания (NYI)']={t=1000,icon='Temp'},
+  ['Отковка кулака Веригана']={t=600,icon='Spell_Holy_RighteousFury'},
+  ['Открытие']={t=5000,icon='Temp'},
+  ['Открытие - без текста']={t=5000,icon='Temp'},
+  ['Открытие большого сундука Скарабея']={t=5000,icon='Temp'},
+  ['Открытие двери бара']={t=5000,icon='Temp'},
+  ['Открытие дверцы реликвария']={t=5000,icon='Temp'},
+  ['Открытие клетки']={t=5000,icon='Temp'},
+  ['Открытие надежного сейфа']={t=5000,icon='Temp'},
+  ['Открытие надежного сундука']={t=5000,icon='Temp'},
+  ['Открытие потайного сейфа']={t=5000,icon='Temp'},
+  ['Открытие почтового ящика Стратхольма']={t=5000,icon='Temp'},
+  ['Открытие сейфа']={t=5000,icon='Temp'},
+  ['Открытие сундука']={t=5000,icon='Temp'},
+  ['Открытие сундука Бенедикта']={t=5000,icon='Temp'},
+  ['Открытие сундука Скарабея']={t=5000,icon='Temp'},
+  ['Открытие сундука с добычей']={t=5000,icon='Temp'},
+  ['Открытие термитной бочки']={t=5000,icon='Temp'},
+  ['Открытие черного ящика']={t=5000,icon='Temp'},
+  ['Открыть ногу Мори']={t=5000,icon='Temp'},
+  ['Отмычка Кадгара']={t=10000,icon='INV_Misc_Key_14'},
+  ['Отмычка из истинного серебра']={t=5000,icon='Temp'},
+  ['Отношение - Кабестан +500']={t=1000,icon='Temp'},
+  ['Отношение - Круговзор +500']={t=1000,icon='Temp'},
+  ['Отношение - Пиратская Бухта +500']={t=1000,icon='Temp'},
+  ['Отношение - Прибамбасск +500']={t=1000,icon='Temp'},
+  ['Отношение - храм Ан\'Киража']={t=1000,icon='Temp'},
+  ['Отпирание']={t=5000,icon='Temp'},
+  ['Отпугивание зверя']={t=1500,icon='Ability_Druid_Cower'},
+  ['Отравляющий плевок']={t=2500,icon='Spell_Nature_CorrosiveBreath'},
+  ['Отравляющий удар']={t=2500,icon='Spell_Nature_CorrosiveBreath'},
+  ['Очень ягодный крем']={t=1000,icon='INV_ValentinesChocolate02'},
+  ['Очередь на медобслуживание']={t=7000,icon='Temp'},
+  ['Очистить и положить еду']={t=5000,icon='INV_Misc_Bowl_01'},
+  ['Очищение колодца Буйногривых']={t=10000,icon='Temp'},
+  ['Очищение колодца Громового Рога']={t=10000,icon='Temp'},
+  ['Очищение колодца Заиндевевшего Копыта']={t=10000,icon='Temp'},
+  ['Очищение явления']={t=4000,icon='Temp'},
+  ['Очки чести +138']={t=1000,icon='Temp'},
+  ['Очки чести +228']={t=1000,icon='Temp'},
+  ['Очки чести +2388']={t=1000,icon='INV_BannerPVP_02'},
+  ['Очки чести +378']={t=1000,icon='Temp'},
+  ['Очки чести +398']={t=1000,icon='Temp'},
+  ['Очки чести +50']={t=1000,icon='Temp'},
+  ['Очки чести +82']={t=1000,icon='Temp'},
+  ['Палевый ящер']={t=3000,icon='Ability_Mount_Raptor'},
+  ['Пантера']={t=3000,icon='Ability_Mount_BlackPanther'},
+  ['Панцирь Тени']={t=1000,icon='Spell_Shadow_AntiShadow'},
+  ['Паразит']={t=2000,icon='Ability_Poisons'},
+  ['Паучок Дымной Паутины']={t=1000,icon='Ability_Seal'},
+  ['Пегий конь']={t=3000,icon='Ability_Mount_RidingHorse'},
+  ['Пелена Тени']={t=1500,icon='Spell_Shadow_GatherShadows'},
+  ['Первая помощь']={t=3000,icon='Spell_Holy_GreaterHeal'},
+  ['Первородный огонь']={t=500,icon='Spell_Fire_Fireball02'},
+  ['Перевод Джаркала']={t=4500,icon='Spell_Holy_Restoration'},
+  ['Перемещение временной аномалии']={t=5000,icon='Temp'},
+  ['Перо ящера']={t=5000,icon='Temp'},
+  ['Перцовая пушка']={t=500,icon='Spell_Fire_Fireball02'},
+  ['Пестрая лента']={t=1000,icon='Ability_Seal'},
+  ['Песчаный вихрь']={t=2000,icon='Spell_Nature_Cyclone'},
+  ['Пламенная вспышка']={t=7000,icon='Spell_Fire_SelfDestruct'},
+  ['Пламенная пушка']={t=1500,icon='Spell_Fire_FlameBolt'},
+  ['Пламенное дыхание']={t=1700,icon='Spell_Fire_Fire'},
+  ['Пламенный кнут']={t=1000,icon='Spell_Fire_Fireball'},
+  ['Пламенный шип']={t=3000,icon='Spell_Fire_SelfDestruct'},
+  ['Пламя Хаоса']={t=1000,icon='Spell_Fire_WindsofWoe'},
+  ['Пламя Шахрама']={t=1000,icon='Spell_Fire_SelfDestruct'},
+  ['Пламя воздаяния']={t=3000,icon='Temp'},
+  ['Плевок мясника']={t=2500,icon='Spell_Nature_CorrosiveBreath'},
+  ['Плевок разъедающей кислоты']={t=3000,icon='Spell_Nature_Acid_01'},
+  ['Пленение Грарка']={t=3000,icon='Temp'},
+  ['Пленение щенка ворга']={t=2500,icon='Temp'},
+  ['Повышенная быстрота']={t=3000,icon='Spell_Nature_Invisibilty'},
+  ['Погибель яда']={t=2000,icon='Temp'},
+  ['Поглощающая Тьма']={t=1500,icon='Spell_Shadow_LifeDrain02'},
+  ['Погребение останков Самуэля']={t=2000,icon='Temp'},
+  ['Погружение - визуальный эффект']={t=1500,icon='Spell_Fire_Volcano'},
+  ['Подгородский таракан']={t=1000,icon='Ability_Seal'},
+  ['Поджаренная булочка']={t=1000,icon='INV_Misc_Food_11'},
+  ['Подключение гномской камеры']={t=3000,icon='Temp'},
+  ['Подношение Утера']={t=2000,icon='Temp'},
+  ['Подношения Грому']={t=2000,icon='Temp'},
+  ['Подпитка от раба']={t=1000,icon='Spell_Shadow_ChillTouch'},
+  ['Подрыв']={t=5000,icon='Spell_Fire_SelfDestruct'},
+  ['Поиск фрагмента артефакта']={t=5000,icon='Temp'},
+  ['Ползучая плесень']={t=3000,icon='Spell_Shadow_CreepingPlague'},
+  ['Полная заморозка']={t=2500,icon='Spell_Frost_Glacier'},
+  ['Полное исцеление']={t=1000,icon='Temp'},
+  ['Положить голову Гор\'теша']={t=5000,icon='Temp'},
+  ['Полосатый ледопард']={t=3000,icon='Ability_Mount_WhiteTiger'},
+  ['Полосатый саблезуб']={t=3000,icon='Ability_Mount_BlackPanther'},
+  ['Поместить арканитовый буй']={t=2000,icon='Temp'},
+  ['Поместить магический кристалл']={t=3000,icon='Temp'},
+  ['Поместить некованную печать']={t=500,icon='Temp'},
+  ['Поместить неопалимый клинок']={t=1000,icon='Temp'},
+  ['Поместить призрачный магнит']={t=1500,icon='Temp'},
+  ['Поместить распылитель ядовитого тумана']={t=3000,icon='INV_Cask_01'},
+  ['Поместить труп жесткозуба']={t=2500,icon='INV_Misc_Bowl_01'},
+  ['Поместить труп льва']={t=2500,icon='INV_Misc_Bowl_01'},
+  ['Помещение подвески']={t=5000,icon='Temp'},
+  ['Попадание снайпера']={t=2000,icon='Ability_Marksmanship'},
+  ['Пополнение']={t=2000,icon='Spell_Misc_Drink'},
+  ['Порабощение демона']={t=3000,icon='Spell_Shadow_EnslaveDemon'},
+  ['Портал Златоземья']={t=5000,icon='Temp'},
+  ['Портал Изрубленного Щита']={t=1500,icon='Spell_Arcane_TeleportOrgrimmar'},
+  ['Портал Призывания принцессы']={t=10000,icon='Spell_Arcane_PortalIronForge'},
+  ['Портал Тени']={t=250,icon='Spell_Shadow_AntiShadow'},
+  ['Портал Тьмы']={t=1000,icon='Spell_Shadow_SealOfKings'},
+  ['Портал в Громовой Утес']={t=10000,icon='Spell_Arcane_PortalThunderBluff'},
+  ['Портал в Дарнас']={t=10000,icon='Spell_Arcane_PortalDarnassus'},
+  ['Портал в Каражан']={t=10000,icon='Spell_Arcane_PortalUnderCity'},
+  ['Портал в Оргриммар']={t=10000,icon='Spell_Arcane_PortalOrgrimmar'},
+  ['Портал в Подгород']={t=10000,icon='Spell_Arcane_PortalUnderCity'},
+  ['Портал в Стальгорн']={t=10000,icon='Spell_Arcane_PortalIronForge'},
+  ['Портал в Штормград']={t=10000,icon='Spell_Arcane_PortalStormWind'},
+  ['Портал демонов']={t=500,icon='Spell_Arcane_TeleportOrgrimmar'},
+  ['Порча']={t=2000,icon='Spell_Shadow_AbominationExplosion'},
+  ['Порыв ветра']={t=2000,icon='Spell_Nature_EarthBind'},
+  ['Посадить волшебные бобы']={t=2000,icon='INV_Misc_Food_Wheat_02'},
+  ['Посадить семена']={t=5000,icon='Temp'},
+  ['Постоянная иллюзия - Тирион']={t=3000,icon='Ability_Rogue_Disguise'},
+  ['Постоянная иллюзия - Тирония']={t=3000,icon='Ability_Rogue_Disguise'},
+  ['Похищение духа']={t=2000,icon='Spell_Shadow_Possession'},
+  ['Пошутить']={t=2000,icon='Spell_Shadow_LifeDrain'},
+  ['Появление Рагнароса']={t=2900,icon='Spell_Fire_LavaSpawn'},
+  ['Появление вызова Арроку']={t=2000,icon='Temp'},
+  ['Праведное пламя Вкл']={t=4000,icon='Spell_Holy_InnerFire'},
+  ['Превращение']={t=1500,icon='Spell_Nature_Polymorph'},
+  ['Превращение красного дракона DND']={t=1000,icon='Temp'},
+  ['Превращение синего дракона DND']={t=1000,icon='Temp'},
+  ['Превращение студента из смотровой - эффект']={t=1000,icon='Temp'},
+  ['Превращение: корова']={t=1500,icon='Spell_Nature_Polymorph_Cow'},
+  ['Превращение: свинья']={t=1500,icon='Spell_Magic_PolymorphPig'},
+  ['Превращение: черепаха']={t=1500,icon='Ability_Hunter_Pet_Turtle'},
+  ['Преображение жертвы']={t=2000,icon='Spell_Magic_LesserInvisibilty'},
+  ['Преображение зеленого дракона - DND']={t=1000,icon='Temp'},
+  ['Преобразование Вароша']={t=1000,icon='Temp'},
+  ['Прерывание важного дела']={t=2000,icon='Spell_Shadow_CurseOfAchimonde'},
+  ['Прерывание дела']={t=2000,icon='Spell_Shadow_CurseOfAchimonde'},
+  ['Приглашение на фестиваль']={t=5000,icon='Spell_Arcane_TeleportMoonglade'},
+  ['Призвание Рагнароса']={t=10000,icon='Spell_Fire_LavaSpawn'},
+  ['Призванный Урок']={t=1000,icon='Temp'},
+  ['Призвать ветерана легиона Чернорука']={t=5000,icon='Spell_Nature_Purge'},
+  ['Призвать страхопряда легиона Чернорука']={t=5000,icon='Spell_Nature_Purge'},
+  ['Призрачный волк']={t=3000,icon='Spell_Nature_SpiritWolf'},
+  ['Призыв']={t=1000,icon='Spell_Arcane_Blink'},
+  ['Призыв - воздействие']={t=5000,icon='Spell_Shadow_AnimateDead'},
+  ['Призыв Дагуна']={t=5000,icon='Temp'},
+  ['Призыв Иллюзорного кошмара']={t=2000,icon='Spell_Fire_SealOfFire'},
+  ['Призыв Мизраэли']={t=10000,icon='Spell_Shadow_LifeDrain'},
+  ['Призыв Огнезолов']={t=2000,icon='Spell_Fire_Fire'},
+  ['Призыв Циклониана']={t=10000,icon='Spell_Nature_EarthBind'},
+  ['Призыв Шмыгуноса']={t=2000,icon='Spell_Nature_ProtectionformNature'},
+  ['Призыв белоснежной совы']={t=1000,icon='Ability_Seal'},
+  ['Призыв беса']={t=10000,icon='Spell_Shadow_SummonImp'},
+  ['Призыв болотного духа']={t=1500,icon='Spell_Nature_AbolishMagic'},
+  ['Призыв болотного слизнюка']={t=2500,icon='Spell_Shadow_BlackPlague'},
+  ['Призыв громового удара']={t=10000,icon='Temp'},
+  ['Призыв демона Бездны']={t=10000,icon='Spell_Shadow_SummonVoidWalker'},
+  ['Призыв демона сферы']={t=5000,icon='Temp'},
+  ['Призыв дистанционно управляемого голема']={t=3000,icon='Ability_Repair'},
+  ['Призыв дракончика Ониксии']={t=2000,icon='Temp'},
+  ['Призыв древесника']={t=3000,icon='Spell_Nature_ProtectionformNature'},
+  ['Призыв духа вепря']={t=1500,icon='Spell_Magic_PolymorphPig'},
+  ['Призыв ездового Грифона']={t=3000,icon='Ability_BullRush'},
+  ['Призыв желтого мотылька']={t=1000,icon='Ability_Seal'},
+  ['Призыв живого жара']={t=2000,icon='Spell_Fire_Fire'},
+  ['Призыв жутеволка']={t=1300,icon='Spell_Shadow_ChillTouch'},
+  ['Призыв иллюзорного призрака']={t=1000,icon='Spell_Shadow_Teleport'},
+  ['Призыв иллюзорного сновидца']={t=1000,icon='Spell_Shadow_Teleport'},
+  ['Призыв иллюзорного фантазма']={t=2000,icon='Spell_Fire_SealOfFire'},
+  ['Призыв иллюзорных волков']={t=1000,icon='Spell_Shadow_Teleport'},
+  ['Призыв инфернала-слуги']={t=2000,icon='Spell_Shadow_SummonInfernal'},
+  ['Призыв какаду']={t=1000,icon='Ability_Seal'},
+  ['Призыв коня погибели']={t=3000,icon='Ability_Mount_Dreadsteed'},
+  ['Призыв лягушки-попрыгушки']={t=1000,icon='Ability_Seal'},
+  ['Призыв маленького бронзового дракончика']={t=1000,icon='Ability_Seal'},
+  ['Призыв марионеток Хелькулара']={t=3000,icon='Spell_Shadow_Haunting'},
+  ['Призыв островной лягушки']={t=1000,icon='Ability_Seal'},
+  ['Призыв охотника Скверны']={t=10000,icon='Spell_Shadow_SummonFelHunter'},
+  ['Призыв охотника Скверны из племени Сухокожих']={t=3000,icon='Spell_Shadow_SummonFelHunter'},
+  ['Призыв призрака Синдиката']={t=1000,icon='Spell_Shadow_Twilight'},
+  ['Призыв прислужника Тервоша']={t=4000,icon='Spell_Frost_Wisp'},
+  ['Призыв скакуна']={t=3000,icon='Ability_Mount_Charger'},
+  ['Призыв скелета из племени Атал\'ай']={t=1000,icon='Spell_Shadow_RaiseDead'},
+  ['Призыв степной курицы']={t=1000,icon='Ability_Seal'},
+  ['Призыв стража-заклинателя']={t=5000,icon='Spell_Nature_Purge'},
+  ['Призыв суккуба']={t=10000,icon='Spell_Shadow_SummonSuccubus'},
+  ['Призыв тени Гунтера']={t=2000,icon='Temp'},
+  ['Призыв удара Тьмы']={t=10000,icon='Temp'},
+  ['Призыв фейлинга']={t=1000,icon='Ability_Seal'},
+  ['Призыв филина']={t=1000,icon='Ability_Seal'},
+  ['Призыв чудотворца']={t=5000,icon='Spell_Nature_Purge'},
+  ['Призыв щитовой стражи']={t=5000,icon='Spell_Nature_Purge'},
+  ['Призыв элементаля воды']={t=2000,icon='Spell_Shadow_SealOfKings'},
+  ['Призывание Духа древности']={t=4000,icon='Spell_Nature_Purge'},
+  ['Призывание гадюки']={t=1500,icon='Spell_Nature_ResistMagic'},
+  ['Призывание коня Скверны']={t=3000,icon='Spell_Nature_Swiftness'},
+  ['Прикосновение Когтя Ворона']={t=1500,icon='Spell_Shadow_Requiem'},
+  ['Приманка Миблона']={t=2000,icon='INV_Misc_Food_50'},
+  ['Применение мази']={t=1300,icon='Temp'},
+  ['Применение соблазняющей железы']={t=2500,icon='INV_Misc_Bowl_01'},
+  ['Природная слабость']={t=5000,icon='INV_Misc_QirajiCrystal_03'},
+  ['Природное равновесие']={t=3000,icon='Temp'},
+  ['Прислужник Морганта']={t=2500,icon='Spell_Totem_WardOfDraining'},
+  ['Прислужники Малатрома']={t=1000,icon='Spell_Shadow_CorpseExplode'},
+  ['Приступ кровожадности']={t=2000,icon='Spell_Nature_BloodLust'},
+  ['Прицельный выстрел']={t=3000,icon='INV_Spear_07'},
+  ['Приятный сюрприз']={t=1000,icon='INV_ValentinesChocolate03'},
+  ['Пробуждение Аркедаса - визуальный эффект (DND)']={t=1500,icon='Spell_Nature_Earthquake'},
+  ['Пробуждение Керлониана']={t=4500,icon='Temp'},
+  ['Пробуждение Меритры']={t=2000,icon='Temp'},
+  ['Пробуждение Свежевателя Душ']={t=5000,icon='Temp'},
+  ['Пробуждение тюремщика подземелья']={t=5000,icon='Spell_Nature_Earthquake'},
+  ['Прогнать питомца']={t=5000,icon='Spell_Nature_SpiritWolf'},
+  ['Проклятие Мертвого Леса']={t=2000,icon='Spell_Shadow_GatherShadows'},
+  ['Проклятие Огненного клейма']={t=2000,icon='Ability_Creature_Cursed_03'},
+  ['Проклятие Сталвана']={t=1000,icon='Spell_Shadow_ShadowPact'},
+  ['Проклятие Тимми']={t=1000,icon='Spell_Shadow_ShadowPact'},
+  ['Проклятие Тула']={t=2000,icon='Spell_Shadow_ShadowPact'},
+  ['Проклятие Шахрама']={t=1000,icon='Spell_Magic_LesserInvisibilty'},
+  ['Проклятие банши']={t=2000,icon='Spell_Nature_Drowsy'},
+  ['Проклятие восстановления']={t=1000,icon='Spell_Shadow_AntiShadow'},
+  ['Проклятие крови']={t=2000,icon='Spell_Shadow_RitualOfSacrifice'},
+  ['Проклятие нежити']={t=1000,icon='Spell_Shadow_CurseOfMannoroth'},
+  ['Проклятие скверны']={t=4000,icon='Temp'},
+  ['Проклятие слабости']={t=1000,icon='Spell_Shadow_CurseOfMannoroth'},
+  ['Проклятие темного наставника']={t=2000,icon='Spell_Shadow_AntiShadow'},
+  ['Проклятие чумной крысы']={t=1500,icon='Spell_Shadow_UnholyFrenzy'},
+  ['Проклятие шипов']={t=2000,icon='Spell_Shadow_AntiShadow'},
+  ['Проклятье Хаккара']={t=2500,icon='Spell_Shadow_GatherShadows'},
+  ['Проклятье павших Маграм']={t=2000,icon='Spell_Shadow_UnholyFrenzy'},
+  ['Проклятье племен']={t=2000,icon='Spell_Shadow_CurseOfMannoroth'},
+  ['Пронзающая тень']={t=2000,icon='Spell_Shadow_ChillTouch'},
+  ['Проникающий молот из ивы']={t=1000,icon='Spell_Nature_CorrosiveBreath'},
+  ['Просветление']={t=2000,icon='Spell_Shadow_Fumble'},
+  ['Простая групповая телепортация']={t=2000,icon='Spell_Magic_LesserInvisibilty'},
+  ['Простая невидимость']={t=3000,icon='Spell_Magic_LesserInvisibilty'},
+  ['Простая телепортация']={t=1000,icon='Spell_Magic_LesserInvisibilty'},
+  ['Простая телепортация другого игрока']={t=1000,icon='Spell_Magic_LesserInvisibilty'},
+  ['Простое волшебное масло']={t=3000,icon='Temp'},
+  ['Простое масло маны']={t=3000,icon='Temp'},
+  ['Пространственный портал']={t=2000,icon='Temp'},
+  ['Прощение']={t=1000,icon='Temp'},
+  ['Птенец летучего хамелеона']={t=1000,icon='Ability_Seal'},
+  ['Пулемет']={t=500,icon='Ability_Marksmanship'},
+  ['Пустая праздничная кружка']={t=2000,icon='Temp'},
+  ['Пушечный огонь']={t=1000,icon='Spell_Fire_FireBolt02'},
+  ['Пушечный огонь Южноморья']={t=5000,icon='Spell_Fire_FireBolt02'},
+  ['Пыльное облако']={t=1500,icon='Ability_Hibernation'},
+  ['Пышка']={t=2000,icon='Spell_Holy_Heal'},
+  ['Пьяная команда на пит-стопе']={t=2000,icon='Temp'},
+  ['Пятнистая пантера']={t=3000,icon='Ability_Mount_BlackPanther'},
+  ['Пятнистый кролик']={t=1000,icon='Ability_Seal'},
+  ['Пятнистый полярный ледопард']={t=3000,icon='Ability_Mount_WhiteTiger'},
+  ['Радиационный удар']={t=3000,icon='Spell_Shadow_CorpseExplode'},
+  ['Разбитая душа']={t=2000,icon='Spell_Fire_Fire'},
+  ['Разведчик Синдиката (МУРП) DND']={t=1000,icon='Spell_Arcane_Blink'},
+  ['Разговор с головами']={t=5000,icon='Spell_Shadow_LifeDrain'},
+  ['Раздвоенная молния']={t=2000,icon='Spell_Nature_ChainLightning'},
+  ['Размах Червя']={t=1000,icon='INV_Misc_MonsterScales_05'},
+  ['Разрушение']={t=3000,icon='Temp'},
+  ['Разрушитель душ']={t=2000,icon='Spell_Shadow_Haunting'},
+  ['Разрывной выстрел']={t=1000,icon='Spell_Fire_Fireball02'},
+  ['Разъедающая кислота']={t=1500,icon='Spell_Nature_Acid_01'},
+  ['Разящий удар']={t=2000,icon='Temp'},
+  ['Раскатистый рев']={t=1500,icon='Spell_Fire_Fire'},
+  ['Раскопки кобальта']={t=1500,icon='Temp'},
+  ['Расплавленный металл']={t=2000,icon='Spell_Fire_Fireball'},
+  ['Распыление']={t=3000,icon='Spell_Holy_RemoveCurse'},
+  ['Рассветный гамбит']={t=1500,icon='Temp'},
+  ['Рассекающий удар']={t=2500,icon='Ability_Warrior_Cleave'},
+  ['Рассечение крылом']={t=1000,icon='INV_Misc_MonsterScales_14'},
+  ['Рассеяние']={t=1000,icon='Spell_Holy_DispelMagic'},
+  ['Рассеять яд']={t=2000,icon='Spell_Holy_Purify'},
+  ['Расширение кругозора']={t=30000,icon='Spell_Shadow_LifeDrain'},
+  ['Рвотная чума']={t=2000,icon='Spell_Shadow_CallofBone'},
+  ['Реалистичная жаба']={t=1000,icon='Ability_Seal'},
+  ['Резак']={t=2000,icon='Spell_Fire_Incinerate'},
+  ['Ремонт ожерелья Лаваша']={t=4500,icon='Spell_Holy_Restoration'},
+  ['Римблат выращивает цветок DND']={t=2000,icon='Temp'},
+  ['Ритуал Рока']={t=10000,icon='Spell_Shadow_AntiMagicShell'},
+  ['Ритуал призыва']={t=5000,icon='Spell_Shadow_Twilight'},
+  ['Род Ноздорму - фракция +1000']={t=1000,icon='Temp'},
+  ['Рождение']={t=2000,icon='Temp'},
+  ['Ром Ромси "Черный ярлык"']={t=1000,icon='INV_Drink_04'},
+  ['Ром Рэмси']={t=1000,icon='INV_Drink_03'},
+  ['Рука Ируксоса']={t=5000,icon='Temp'},
+  ['Руна Открытия']={t=5000,icon='Temp'},
+  ['Рыжая полосатая кошка']={t=1000,icon='Ability_Seal'},
+  ['Рыжий волк']={t=3000,icon='Ability_Mount_BlackDireWolf'},
+  ['Рыжий саблезуб']={t=3000,icon='Ability_Mount_JungleTiger'},
+  ['Рык']={t=1000,icon='Ability_Racial_Cannibalize'},
+  ['Рыцарский щит Воздаяния']={t=1000,icon='INV_Shield_19'},
+  ['Саженец Таммры']={t=1300,icon='Temp'},
+  ['Самовоскрешение']={t=5000,icon='Temp'},
+  ['Самоподрыв']={t=7000,icon='Spell_Fire_SelfDestruct'},
+  ['Самоуничтожение']={t=7000,icon='Spell_Fire_SelfDestruct'},
+  ['Самоцвет Змеи']={t=5000,icon='Temp'},
+  ['Самоцвет Хаоса']={t=3000,icon='Temp'},
+  ['Сапфирон DND']={t=20000,icon='Temp'},
+  ['Сбивание']={t=1500,icon='Spell_Nature_Thorns'},
+  ['Сбор трав']={t=5000,icon='Spell_Nature_NatureTouchGrow'},
+  ['Сбор яиц силитидов']={t=5000,icon='Temp'},
+  ['Сверкающее волшебное масло']={t=3000,icon='Temp'},
+  ['Сверкающее масло маны']={t=3000,icon='Temp'},
+  ['Сверхзнание']={t=5000,icon='Spell_Holy_Restoration'},
+  ['Свет алтаря Аталаи - визуальный эффект (DND)']={t=1000,icon='Temp'},
+  ['Свет небес']={t=2500,icon='Spell_Holy_HolyBolt'},
+  ['Свеча Элуны']={t=500,icon='Temp'},
+  ['Свиток заклятия Проявления']={t=2000,icon='Spell_Magic_LesserInvisibilty'},
+  ['Священный огонь']={t=3500,icon='Spell_Holy_SearingLight'},
+  ['Сглаз']={t=2000,icon='Spell_Nature_Polymorph'},
+  ['Сглаз Когтя Ворона']={t=2000,icon='Spell_Shadow_Charm'},
+  ['Сдвиг полярности']={t=3000,icon='Spell_Nature_Lightning'},
+  ['Сенегальский попугай']={t=1000,icon='Ability_Seal'},
+  ['Серая полосатая кошка']={t=1000,icon='Ability_Seal'},
+  ['Сердце Хаккара - Молтор бросает сердце']={t=2000,icon='Temp'},
+  ['Серебристая полосатая кошка']={t=1000,icon='Ability_Seal'},
+  ['Серебряная отмычка']={t=5000,icon='Temp'},
+  ['Серый баран']={t=3000,icon='Ability_Mount_MountainRam'},
+  ['Серый волк']={t=3000,icon='Ability_Mount_WhiteDireWolf'},
+  ['Серый кодо']={t=3000,icon='Ability_Mount_Kodo_01'},
+  ['Сеть с крючьями']={t=500,icon='Ability_Ensnare'},
+  ['Сиамская кошка']={t=1000,icon='Ability_Seal'},
+  ['Сила Арко\'нарин']={t=4000,icon='Spell_Nature_AstralRecal'},
+  ['Сила Снежной Гривы']={t=1000,icon='Spell_Nature_UndyingStrength'},
+  ['Сила веков']={t=2000,icon='Spell_Shadow_Requiem'},
+  ['Силитидова чума']={t=2000,icon='Spell_Nature_NullifyDisease'},
+  ['Сильная боль']={t=1000,icon='Spell_Shadow_ShadowWordPain'},
+  ['Сильный исцеляющий идол']={t=2000,icon='Spell_Holy_LayOnHands'},
+  ['Символ Жизни']={t=10000,icon='Spell_Holy_Resurrection'},
+  ['Симуляция выстрела']={t=2000,icon='Ability_Marksmanship'},
+  ['Синий баран']={t=3000,icon='Ability_Mount_MountainRam'},
+  ['Синий конь-скелет']={t=3000,icon='Ability_Mount_Undeadhorse'},
+  ['Синий механодолгоног']={t=3000,icon='Ability_Mount_MechaStrider'},
+  ['Синий полоз']={t=1000,icon='Ability_Seal'},
+  ['Скачущая молния']={t=3000,icon='Spell_Nature_Lightning'},
+  ['Сковывание нежити']={t=1500,icon='Spell_Nature_Slow'},
+  ['Слабая ледяная стрела']={t=2200,icon='Spell_Frost_FrostBolt02'},
+  ['Слабое волшебное масло']={t=3000,icon='Temp'},
+  ['Слабое масло маны']={t=3000,icon='Temp'},
+  ['Слабоумие']={t=1000,icon='Spell_Shadow_MindSteal'},
+  ['Слабоумие II']={t=1000,icon='Spell_Shadow_MindSteal'},
+  ['Слабоумие III']={t=1000,icon='Spell_Shadow_MindSteal'},
+  ['Сливочное блаженство']={t=1000,icon='INV_ValentinesChocolate01'},
+  ['Слияние слизей']={t=500,icon='INV_Potion_12'},
+  ['Слово оттепели']={t=5000,icon='Temp'},
+  ['Смертельная отрава']={t=3000,icon='Spell_Nature_CorrosiveBreath'},
+  ['Смертельный яд']={t=3000,icon='Ability_Rogue_DualWeild'},
+  ['Смертельный яд II']={t=3000,icon='Ability_Rogue_DualWeild'},
+  ['Смертельный яд III']={t=3000,icon='Ability_Rogue_DualWeild'},
+  ['Смертельный яд IV']={t=3000,icon='Ability_Rogue_DualWeild'},
+  ['Смертельный яд V']={t=3000,icon='Ability_Rogue_DualWeild'},
+  ['Смертное ложе']={t=2000,icon='Spell_Shadow_Twilight'},
+  ['Смерть Виндзора DND']={t=1500,icon='Temp'},
+  ['Смерть Таэлана']={t=2000,icon='Temp'},
+  ['Смерть и разложение']={t=2000,icon='Spell_Shadow_DeathAndDecay'},
+  ['Снеговик']={t=1500,icon='INV_Ammo_Snowball'},
+  ['Снежная буря']={t=2000,icon='Spell_Frost_IceStorm'},
+  ['Снежный баран']={t=3000,icon='Ability_Mount_MountainRam'},
+  ['Снежный волк']={t=3000,icon='Ability_Mount_WhiteDireWolf'},
+  ['Снятие печати']={t=2000,icon='Temp'},
+  ['Снятие шкур']={t=2000,icon='INV_Misc_Pelt_Wolf_01'},
+  ['Собирание осадков']={t=4000,icon='Temp'},
+  ['Соблазн']={t=1500,icon='Spell_Shadow_MindSteal'},
+  ['Совмещение факела']={t=5000,icon='Temp'},
+  ['Соединение камеры гоблинов']={t=3000,icon='Temp'},
+  ['Сожжение маны']={t=3000,icon='Spell_Shadow_ManaBurn'},
+  ['Сожжение плоти']={t=2000,icon='Spell_Fire_Fire'},
+  ['Создание PX83-Энигматрона']={t=2000,icon='INV_Misc_Bowl_01'},
+  ['Создание Тотема очищения']={t=5000,icon='Spell_Shadow_LifeDrain'},
+  ['Создание воды провидцев']={t=5000,icon='Spell_Shadow_LifeDrain'},
+  ['Создание гадальной чаши']={t=2500,icon='INV_Misc_Bowl_01'},
+  ['Создание камня здоровья']={t=3000,icon='INV_Stone_04'},
+  ['Создание камня здоровья (большого)']={t=3000,icon='INV_Stone_04'},
+  ['Создание камня здоровья (крошечного)']={t=3000,icon='INV_Stone_04'},
+  ['Создание камня здоровья (крупного)']={t=3000,icon='INV_Stone_04'},
+  ['Создание камня здоровья (малого)']={t=3000,icon='INV_Stone_04'},
+  ['Создание крошера']={t=1000,icon='INV_Misc_Gear_01'},
+  ['Создание одеяния мага']={t=4000,icon='Temp'},
+  ['Создание полной шкатулки-духоловки']={t=2000,icon='Temp'},
+  ['Создание провала']={t=3000,icon='Temp'},
+  ['Создание пусковой установки батарей фейерверков']={t=2000,icon='INV_Misc_EngGizmos_03'},
+  ['Создание пусковой установки фейерверков']={t=2000,icon='INV_Musket_04'},
+  ['Создание сапты']={t=3000,icon='INV_Misc_Food_09'},
+  ['Создание сверток с реликвиями']={t=1000,icon='Temp'},
+  ['Создание свитка']={t=5000,icon='INV_Scroll_05'},
+  ['Создание сферы мага']={t=4000,icon='Temp'},
+  ['Создание тотемного узла Сухокожих']={t=2000,icon='Spell_Lightning_LightningBolt01'},
+  ['Создание шкатулки-духоловки']={t=500,icon='Temp'},
+  ['Сокрушение духа']={t=2000,icon='Spell_Holy_HarmUndeadAura'},
+  ['Сол Л']={t=3000,icon='Spell_Frost_ManaRecharge'},
+  ['Сол М']={t=3000,icon='Spell_Frost_ManaRecharge'},
+  ['Сол У']={t=3000,icon='Spell_Frost_ManaRecharge'},
+  ['Сол Х']={t=3000,icon='Spell_Frost_ManaRecharge'},
+  ['Сон']={t=1500,icon='Spell_Nature_Sleep'},
+  ['Сопротивление магии льда']={t=1000,icon='Spell_Frost_WizardMark'},
+  ['Сопротивление темной магии']={t=1000,icon='Spell_Frost_WizardMark'},
+  ['Сосредоточение']={t=5000,icon='Temp'},
+  ['Сосулька']={t=1500,icon='Spell_Frost_FrostBolt02'},
+  ['Сотворение алтаря Призыва']={t=10000,icon='Temp'},
+  ['Сотворение коня Скверны МАНЕКЕН DND']={t=5000,icon='Temp'},
+  ['Сотворение круга Зова']={t=10000,icon='Temp'},
+  ['Сотворение предмета - визуальный эффект (DND)']={t=5000,icon='Spell_Shadow_SoulGem'},
+  ['Сотворение ущелья Снов']={t=10000,icon='Temp'},
+  ['Спокойный механический йети']={t=1000,icon='Ability_Seal'},
+  ['Спячка']={t=1500,icon='Spell_Nature_Sleep'},
+  ['Сражен']={t=1000,icon='INV_Ammo_Arrow_02'},
+  ['Средство Тарнариуна 1']={t=750,icon='Spell_Nature_RemoveDisease'},
+  ['Стальной механодолгоног']={t=3000,icon='Ability_Mount_MechaStrider'},
+  ['Страж-демон Бездны']={t=3000,icon='Spell_Shadow_SummonVoidWalker'},
+  ['Стражи Илкруда']={t=5000,icon='Spell_Shadow_SummonVoidWalker'},
+  ['Страх']={t=1500,icon='Spell_Shadow_Possession'},
+  ['Страх (NYI)']={t=3000,icon='Spell_Shadow_Possession'},
+  ['Стрела Айнаши']={t=500,icon='Temp'},
+  ['Стрела Купидона']={t=1000,icon='Temp'},
+  ['Стрела Тьмы']={t=3000,icon='Spell_Shadow_ShadowBolt'},
+  ['Стрела Тьмы - осечка']={t=2000,icon='Spell_Shadow_ShadowBolt'},
+  ['Стремительный белый баран']={t=3000,icon='Ability_Mount_MountainRam'},
+  ['Стремительный белый механодолгоног']={t=3000,icon='Ability_Mount_MechaStrider'},
+  ['Стремительный белый рысак']={t=3000,icon='Ability_Mount_RidingHorse'},
+  ['Стремительный бурый баран']={t=3000,icon='Ability_Mount_MountainRam'},
+  ['Стремительный бурый волк']={t=3000,icon='Ability_Mount_BlackDireWolf'},
+  ['Стремительный гнедой рысак']={t=3000,icon='Ability_Mount_RidingHorse'},
+  ['Стремительный грозовой саблезуб']={t=3000,icon='Ability_Mount_BlackPanther'},
+  ['Стремительный желтый механодолгоног']={t=3000,icon='Ability_Mount_MechaStrider'},
+  ['Стремительный зеленый механодолгоног']={t=3000,icon='Ability_Mount_MechaStrider'},
+  ['Стремительный зулианский тигр']={t=3000,icon='Ability_Mount_JungleTiger'},
+  ['Стремительный игреневый конь']={t=3000,icon='Ability_Mount_RidingHorse'},
+  ['Стремительный ледопард']={t=3000,icon='Ability_Mount_WhiteTiger'},
+  ['Стремительный лесной волк']={t=3000,icon='Ability_Mount_WhiteDireWolf'},
+  ['Стремительный оливковый ящер']={t=3000,icon='Ability_Mount_Raptor'},
+  ['Стремительный оранжевый ящер']={t=3000,icon='Ability_Mount_Raptor'},
+  ['Стремительный рассветный саблезуб']={t=3000,icon='Ability_Mount_JungleTiger'},
+  ['Стремительный серый баран']={t=3000,icon='Ability_Mount_MountainRam'},
+  ['Стремительный серый волк']={t=3000,icon='Ability_Mount_WhiteDireWolf'},
+  ['Стремительный синий ящер']={t=3000,icon='Ability_Mount_Raptor'},
+  ['Стремительный туманный саблезуб']={t=3000,icon='Ability_Mount_BlackPanther'},
+  ['Стремительный ящер Раззаши']={t=3000,icon='Ability_Mount_Raptor'},
+  ['Студеное дыхание']={t=1000,icon='Spell_Frost_Wisp'},
+  ['Супер Кристалл']={t=6000,icon='Temp'},
+  ['Твердый динамит']={t=1000,icon='Spell_Fire_SelfDestruct'},
+  ['Телепорт']={t=1000,icon='Spell_Magic_LesserInvisibilty'},
+  ['Телепорт Алтаря Приливов']={t=2000,icon='Temp'},
+  ['Телепорт Ашкромба']={t=2000,icon='Spell_Fire_SelfDestruct'},
+  ['Телепорт в Аббатство Североземья']={t=2000,icon='Temp'},
+  ['Телепорт в Дарнас - событие']={t=1000,icon='Temp'},
+  ['Телепорт в Западный край']={t=2000,icon='Temp'},
+  ['Телепорт в Златоземье']={t=2000,icon='Temp'},
+  ['Телепорт в Казармы']={t=2000,icon='Temp'},
+  ['Телепорт в Луноречье']={t=2000,icon='Temp'},
+  ['Телепорт в Монастырь']={t=2000,icon='Temp'},
+  ['Телепорт в Старую Наковальню']={t=2000,icon='Temp'},
+  ['Телепорт в Сумрачный лес']={t=2000,icon='Temp'},
+  ['Телепорт в Темнолесье']={t=2000,icon='Temp'},
+  ['Телепорт в Элвиннский лес']={t=2000,icon='Temp'},
+  ['Телепорт в башню Азшары']={t=1000,icon='Spell_Nature_AstralRecalGroup'},
+  ['Телепорт древня']={t=2000,icon='Temp'},
+  ['Телепорт из башни Азшары']={t=1000,icon='Spell_Nature_EarthBind'},
+  ['Телепорт на Кладбище']={t=2000,icon='Temp'},
+  ['Телепорт на Маяк']={t=2000,icon='Temp'},
+  ['Телепортация Айвуса - визальный эффект DND']={t=1000,icon='Temp'},
+  ['Телепортация мажордома - визуальный эффект']={t=1000,icon='Spell_Arcane_Blink'},
+  ['Телепортация: Громовой Утес']={t=10000,icon='Spell_Arcane_TeleportThunderBluff'},
+  ['Телепортация: Дарнас']={t=10000,icon='Spell_Arcane_TeleportDarnassus'},
+  ['Телепортация: Лунная поляна']={t=10000,icon='Spell_Arcane_TeleportMoonglade'},
+  ['Телепортация: Оргриммар']={t=10000,icon='Spell_Arcane_TeleportOrgrimmar'},
+  ['Телепортация: Подгород']={t=10000,icon='Spell_Arcane_TeleportUnderCity'},
+  ['Телепортация: Стальгорн']={t=10000,icon='Spell_Arcane_TeleportIronForge'},
+  ['Телепортация: Штормград']={t=10000,icon='Spell_Arcane_TeleportStormWind'},
+  ['Темная жижа']={t=5000,icon='Spell_Shadow_CreepingPlague'},
+  ['Темное Желание']={t=1000,icon='INV_ValentinesChocolate04'},
+  ['Темное восстановление']={t=2000,icon='Ability_Hunter_MendPet'},
+  ['Темный шепот']={t=3000,icon='Spell_Shadow_Haunting'},
+  ['Теневая слабость']={t=5000,icon='INV_Misc_QirajiCrystal_05'},
+  ['Теневое пламя']={t=2000,icon='Spell_Fire_Incinerate'},
+  ['Тест заточки клинка']={t=3000,icon='Temp'},
+  ['Тестовое заклинание редактора']={t=250,icon='Temp'},
+  ['Тигр']={t=3000,icon='Ability_Mount_JungleTiger'},
+  ['Токсичный плевок']={t=2500,icon='Spell_Nature_CorrosiveBreath'},
+  ['Ториевая граната']={t=1000,icon='Spell_Fire_SelfDestruct'},
+  ['Тотем молний']={t=500,icon='Spell_Nature_Lightning'},
+  ['Тотем хватки Земли']={t=500,icon='Spell_Nature_NatureTouchDecay'},
+  ['Транспортер: Круговзор']={t=10000,icon='Spell_Fire_SelfDestruct'},
+  ['Тысяча Клинков']={t=250,icon='INV-Sword_53'},
+  ['Тычок Силы']={t=1000,icon='INV_Gauntlets_31'},
+  ['Тяжелый динамит']={t=1000,icon='Spell_Fire_SelfDestruct'},
+  ['Убойное пойло Крига']={t=1000,icon='INV_Drink_05'},
+  ['Увеличение']={t=2000,icon='Spell_Nature_Strength'},
+  ['Увечье']={t=3000,icon='Spell_Shadow_Cripple'},
+  ['Увядание души']={t=4000,icon='Ability_Racial_Cannibalize'},
+  ['Угасание']={t=2000,icon='Temp'},
+  ['Углеглаз']={t=5000,icon='Spell_Nature_EarthBindTotem'},
+  ['Угрожающее рычание']={t=1000,icon='Ability_Racial_Cannibalize'},
+  ['Угрожающий взгляд']={t=2000,icon='Spell_Shadow_Charm'},
+  ['Удаление знака отличия']={t=1000,icon='Temp'},
+  ['Удали меня']={t=4000,icon='INV_Scroll_02'},
+  ['Удар горгульи']={t=1500,icon='Spell_Shadow_ShadowBolt'},
+  ['Удар пламенем']={t=2200,icon='Spell_Fire_Fireball'},
+  ['Ударная волна']={t=2000,icon='Ability_Whirlwind'},
+  ['Узы Чертополохха']={t=2000,icon='Spell_Shadow_Haunting'},
+  ['Укрепление отношений']={t=1000,icon='Temp'},
+  ['Улучшение дробящего оружия']={t=3000,icon='Temp'},
+  ['Улучшение ударного оружия II']={t=3000,icon='Temp'},
+  ['Улучшение ударного оружия III']={t=3000,icon='Temp'},
+  ['Улучшение ударного оружия IV']={t=3000,icon='Temp'},
+  ['Улучшение ударного оружия V']={t=3000,icon='Temp'},
+  ['Уменьшение']={t=3000,icon='Spell_Shadow_AntiShadow'},
+  ['Умиротворение животного']={t=1500,icon='Ability_Hunter_BeastSoothe'},
+  ['Умный напиток Мебока']={t=3000,icon='Temp'},
+  ['Уничтожение призрачного магнита']={t=10000,icon='Temp'},
+  ['Уничтожение шатра']={t=2500,icon='Temp'},
+  ['Уничтожение яйца']={t=3000,icon='INV_Misc_MonsterClaw_02'},
+  ['Управление шмыгуносом']={t=1500,icon='Spell_Shadow_LifeDrain'},
+  ['Урожай жизни']={t=1000,icon='Spell_Shadow_Requiem'},
+  ['Усиление питомца']={t=500,icon='Spell_Shadow_DeathPact'},
+  ['Усиленное пламя']={t=1000,icon='Spell_Fire_Fireball'},
+  ['Усиленный урон']={t=2000,icon='Spell_Nature_AbolishMagic'},
+  ['Установка бомбомета Дымка']={t=3000,icon='Temp'},
+  ['Установка знамени']={t=2300,icon='Temp'},
+  ['Установка ловушки на медведя']={t=2000,icon='Temp'},
+  ['Установка маяка Гуса']={t=5000,icon='Temp'},
+  ['Установка маяка Джезтора']={t=5000,icon='Temp'},
+  ['Установка маяка Змейера']={t=5000,icon='Temp'},
+  ['Установка маяка Ичмена']={t=5000,icon='Temp'},
+  ['Установка маяка Малверика']={t=5000,icon='Temp'},
+  ['Установка маяка Рисона']={t=5000,icon='Temp'},
+  ['Установка маяка Слидора']={t=5000,icon='Temp'},
+  ['Установка сигнального факела']={t=2300,icon='Temp'},
+  ['Устрашающий рык']={t=1000,icon='Ability_Racial_Cannibalize'},
+  ['Утраченный навык']={t=2500,icon='Spell_Shadow_AntiShadow'},
+  ['Факел вызова демонов']={t=3000,icon='Temp'},
+  ['Фейерверк']={t=500,icon='Temp'},
+  ['Фиолетовые руки']={t=4000,icon='Spell_Shadow_SiphonMana'},
+  ['Фиолетовый ящер']={t=3000,icon='Ability_Mount_Raptor'},
+  ['Флаг Кадрака']={t=2000,icon='INV_Banner_03'},
+  ['Флейта крысолова']={t=1000,icon='Temp'},
+  ['Флюоресцирующий зеленый механодолгоног']={t=3000,icon='Ability_Mount_MechaStrider'},
+  ['Фугасная бомба']={t=1000,icon='Spell_Fire_SelfDestruct'},
+  ['Хваткие лозы']={t=1000,icon='Spell_Nature_Earthquake'},
+  ['Холод']={t=4000,icon='Spell_Frost_Glacier'},
+  ['Хрустальная вспышка']={t=2000,icon='Spell_Shadow_Teleport'},
+  ['Хрустальный взгляд']={t=2000,icon='Ability_GolemThunderClap'},
+  ['Хрустальный сон']={t=2000,icon='Spell_Nature_Sleep'},
+  ['Целебный круг']={t=3000,icon='Spell_Holy_BlessingOfProtection'},
+  ['Целительное прикосновение']={t=3500,icon='Spell_Nature_HealingTouch'},
+  ['Цепная молния']={t=2500,icon='Spell_Nature_ChainLightning'},
+  ['Цепное исцеление']={t=2500,icon='Spell_Nature_HealingWaveGreater'},
+  ['Цепной ожог']={t=3000,icon='Spell_Shadow_ManaBurn'},
+  ['Цепной удар']={t=2500,icon='Spell_Nature_ChainLightning'},
+  ['Цыпленок Западного края']={t=1000,icon='Ability_Seal'},
+  ['Чародейская бомба']={t=1500,icon='Spell_Holy_Silence'},
+  ['Чародейская слабость']={t=5000,icon='INV_Misc_QirajiCrystal_01'},
+  ['Чародейская стрела']={t=1000,icon='Spell_Arcane_StarFire'},
+  ['Чародейский взрыв']={t=1500,icon='Spell_Nature_WispSplode'},
+  ['Чародейский дух II']={t=1000,icon='Spell_Holy_MagicalSentry'},
+  ['Чародейский дух III']={t=1000,icon='Spell_Holy_MagicalSentry'},
+  ['Чародейский дух IV']={t=1000,icon='Spell_Holy_MagicalSentry'},
+  ['Чародейский дух V']={t=1000,icon='Spell_Holy_MagicalSentry'},
+  ['Чарующая колыбельная']={t=1000,icon='Spell_Shadow_SoothingKiss'},
+  ['Чары Мор\'рогала']={t=1300,icon='Temp'},
+  ['Чары для нагрудника - дух I']={t=5000,icon='Spell_Holy_GreaterHeal'},
+  ['Чары для оружия - истребитель животных']={t=5000,icon='Spell_Holy_GreaterHeal'},
+  ['Чары для палаща - защита l']={t=5000,icon='Spell_Holy_GreaterHeal'},
+  ['Червоточина']={t=1000,icon='Ability_Vanish'},
+  ['Черная королевская змейка']={t=1000,icon='Ability_Seal'},
+  ['Черная слизь']={t=3000,icon='Spell_Shadow_CallofBone'},
+  ['Черная стрела']={t=2000,icon='Ability_TheBlackArrow'},
+  ['Чернильные брызги']={t=1000,icon='Spell_Nature_Sleep'},
+  ['Черный баран']={t=3000,icon='Ability_Mount_MountainRam'},
+  ['Черный боевой баран']={t=3000,icon='Ability_Mount_MountainRam'},
+  ['Черный боевой волк']={t=3000,icon='Ability_Mount_BlackDireWolf'},
+  ['Черный боевой кодо']={t=3000,icon='Ability_Mount_Kodo_01'},
+  ['Черный боевой механодолгоног']={t=3000,icon='Ability_Mount_MechaStrider'},
+  ['Черный боевой тигр']={t=3000,icon='Ability_Mount_BlackPanther'},
+  ['Черный боевой ящер']={t=3000,icon='Ability_Mount_Raptor'},
+  ['Черный волк']={t=3000,icon='Ability_Mount_BlackDireWolf'},
+  ['Черный киражский боевой танк']={t=3000,icon='INV_Misc_QirajiCrystal_05'},
+  ['Черный ночной саблезуб']={t=3000,icon='Ability_Mount_BlackPanther'},
+  ['Черный ром Ромси']={t=1000,icon='INV_Drink_04'},
+  ['Читательные пластины Виндзора (DND)']={t=10000,icon='Temp'},
+  ['Чтение слов Келебраса']={t=3000,icon='Temp'},
+  ['Чумное облако']={t=2000,icon='Spell_Shadow_CallofBone'},
+  ['Шаровая молния']={t=1000,icon='Spell_Lightning_LightningBolt01'},
+  ['Широкий размах']={t=4000,icon='Ability_Whirlwind'},
+  ['Шок']={t=1000,icon='Temp'},
+  ['Щелкоклюв-альбинос']={t=1000,icon='Ability_Seal'},
+  ['Щенок ворга']={t=1000,icon='Ability_Seal'},
+  ['Щит отражения']={t=1000,icon='Spell_Shadow_Teleport'},
+  ['Экзорцизм Атиеша']={t=20000,icon='Temp'},
+  ['Электрическая сеть']={t=500,icon='Ability_Ensnare'},
+  ['Элементали Сарилуса']={t=3000,icon='Spell_Shadow_RaiseDead'},
+  ['Элементаль земли']={t=3000,icon='Ability_Temp'},
+  ['Элементаль огня']={t=3000,icon='Ability_Temp'},
+  ['Эльфийский огонек']={t=1000,icon='Ability_Seal'},
+  ['Энергетический инкапсулятор кодо']={t=5000,icon='Trade_Fishing'},
+  ['Эффект Ритуала Рока']={t=10000,icon='Spell_Arcane_PortalDarnassus'},
+  ['Эффект Сергры Черный Шип']={t=3000,icon='Temp'},
+  ['Эффект пыли северного оленя']={t=8000,icon='Temp'},
+  ['Эффект ритуала призывания']={t=5000,icon='Temp'},
+  ['Явление духа']={t=5000,icon='Spell_Totem_WardOfDraining'},
+  ['Явление смерти']={t=1000,icon='Spell_Shadow_ShadeTrueSight'},
+  ['Яд паучьего монстра']={t=2000,icon='Spell_Nature_NullifyPoison'},
+  ['Ядовитая слюна']={t=500,icon='Spell_Nature_CorrosiveBreath'},
+  ['Ядовитое облако']={t=1000,icon='Spell_Nature_Regenerate'},
+  ['Ядовитый выстрел']={t=2000,icon='Ability_Poisons'},
+  ['Ядовитый гарпун']={t=2000,icon='Ability_Poisons'},
+  ['Ядовитый плевок']={t=2000,icon='Spell_Nature_CorrosiveBreath'},
+  ['Ядовитый удар']={t=2500,icon='Spell_Nature_CorrosiveBreath'},
+  ['Ядовитый хвостокол']={t=2000,icon='INV_Misc_MonsterTail_03'},
+  ['Яйцо из Питомника']={t=500,icon='Temp'},
+  ['Ями Снежное Копыто - оборотничество (DND)']={t=1000,icon='Temp'},
+  ['Яркая блесна']={t=5000,icon='INV_Misc_Orb_03'},
+  ['Яркий костер']={t=10000,icon='Spell_Fire_Fire'},
+  ['Яркий свет']={t=500,icon='Temp'},
+  ['Яркое пламя']={t=3000,icon='Spell_Fire_SelfDestruct'},
+  ['Яростный вой']={t=5000,icon='Ability_BullRush'},
+  ['Ярость Тула']={t=1500,icon='Spell_Shadow_UnholyFrenzy'},
+  ['Ястребиная сова']={t=1000,icon='Ability_Seal'},
+  ['Ящеричья молния']={t=2000,icon='Spell_Nature_Lightning'},
+}
+
+ShaguPlates_locale["ruRU"]["debuffs"] = {
+  ['"Дар Артаса"']={[0]=180.0,},
+  ['Windsor Dismisses Horse DND']={[0]=55.0,},
+  ['[PH] Хрустальное тело - таймер']={[0]=7200.0,},
+  ['scaler test']={[0]=10.0,},
+  ['Антимагия']={[0]=10.0,},
+  ['Антимагия - немота']={[0]=4.0,},
+  ['Антинаправлятор']={[0]=12.0,},
+  ['Аспект Арлокк']={[0]=2.0,},
+  ['Аспект Веноксиса']={[0]=10.0,},
+  ['Аспект Джеклик']={[0]=5.0,},
+  ['Аспект Мар\'ли']={[0]=6.0,},
+  ['Атака вепря']={[0]=1.0,},
+  ['Атака-оглушение']={[0]=1.0,},
+  ['Атаковать Приказ']={[0]=10.0,},
+  ['Аура Ануб\'Рукана']={[0]=5.0,},
+  ['Аура Повелителя Крови']={[0]=5.0,},
+  ['Аура Эмерисс']={[0]=10.0,},
+  ['Аура агонии']={[0]=8.0,},
+  ['Аура повиновения']={[0]=30.0,},
+  ['Аура ритуальной свечи']={[0]=6.0,},
+  ['Аура страха']={[0]=3.0,},
+  ['Аура яда']={[0]=12.0,},
+  ['БИИИП!']={[0]=11.0,},
+  ['Безжалостно подрезать крылья']={[0]=5.0,},
+  ['Безмолвие']={[0]=5.0,},
+  ['Безрассудная атака']={[0]=30.0,},
+  ['Берсерк']={[0]=30.0,},
+  ['Беспощадная взбучка']={[0]=5.0,},
+  ['Бич Злобы']={[0]=20.0,},
+  ['Благословение Нордрассила']={[0]=10.0,},
+  ['Благословение Черного Похода']={[0]=6.0,},
+  ['Благословление вождя']={[0]=3600.0,},
+  ['Блуждающие духи']={[0]=300.0,},
+  ['Боевая аура']={[0]=10.0,},
+  ['Боевая сеть']={[0]=10.0,},
+  ['Боевой крик']={[0]=900.0,},
+  ['Боевой приказ']={[0]=6.0,},
+  ['Боевой штандарт']={[0]=3.0,},
+  ['Божественный дух']={[0]=1800.0,},
+  ['Болезненная усталость']={[0]=1800.0,},
+  ['Болезненный удар']={[0]=5.0,},
+  ['Болезнетворный плевок']={[0]=10.0,},
+  ['Болезнетворный удар']={[0]=20.0,},
+  ['Болотный яд']={[0]=45.0,},
+  ['Бочка - ловушка']={[0]=2.0,},
+  ['Бродячая чума']={[0]=300.0,},
+  ['Броня IV']={[0]=3600.0,},
+  ['Броня Мощи']={[0]=6.0,},
+  ['Бросок грязью']={[0]=10.0,},
+  ['Бросок топора']={[0]=2.0,},
+  ['Бросок факела']={[0]=30.0,},
+  ['Буйство']={[0]=2.5,},
+  ['Валун']={[0]=10.0,},
+  ['Варварский штурм']={[0]=30.0,},
+  ['Варварский штурм II']={[0]=30.0,},
+  ['Варварский штурм III']={[0]=30.0,},
+  ['Варварский штурм IV']={[0]=30.0,},
+  ['Варварский штурм V']={[0]=30.0,},
+  ['Вбирание']={[0]=15.0,},
+  ['Векнисский катализатор']={[0]=30.0,},
+  ['Ветрожнец']={[0]=20.0,},
+  ['Взорвать ману']={[0]=5.0,},
+  ['Взрыв бочонка']={[0]=3.0,},
+  ['Взрыв жука']={[0]=4.0,},
+  ['Взрыв факела']={[0]=30.0,},
+  ['Взрыв яйца']={[0]=3.0,},
+  ['Взрывание']={[0]=2.5,},
+  ['Взрывная волна']={[0]=6.0,},
+  ['Визг']={[0]=4.0,},
+  ['Визг банши']={[0]=5.0,},
+  ['Вихрь']={[0]=10.0,},
+  ['Власть']={[0]=15.0,},
+  ['Внезапное оглушение']={[1]=5.0,[2]=8.0,[0]=8.0,},
+  ['Водобоязнь']={[0]=600.0,},
+  ['Водяные миазмы']={[0]=3600.0,},
+  ['Возгорание']={[0]=20.0,},
+  ['Воздушные пузыри']={[0]=10.0,},
+  ['Возжигание пламени']={[0]=60.0,},
+  ['Вой банши']={[0]=12.0,},
+  ['Вой банши Плеть Ночи']={[0]=15.0,},
+  ['Вой ужаса']={[1]=10.0,[2]=15.0,[0]=15.0,},
+  ['Волшебный вихрь']={[0]=8.0,},
+  ['Волшебный огонь']={[0]=40.0,},
+  ['Волшебный огонь (зверь)']={[0]=40.0,},
+  ['Воля Хаккара']={[0]=20.0,},
+  ['Вопли прошлого']={[0]=5.0,},
+  ['Воспламенение']={[0]=4.0,},
+  ['Воспламенение маны']={[0]=300.0,},
+  ['Воющий клинок']={[0]=30.0,},
+  ['Всепожирающая чума']={[0]=24.0,},
+  ['Всецветная мутация']={[0]=300.0,},
+  ['Всплеск кислоты']={[0]=30.0,},
+  ['Вспышка безумия']={[0]=3.0,},
+  ['Вудуистский сглаз']={[0]=120.0,},
+  ['Вурдалачий гной']={[0]=600.0,},
+  ['Вурдалачий мор']={[0]=1800.0,},
+  ['Выброс слизи']={[0]=5.0,},
+  ['Вызов Джариен и Сотоса DND']={[0]=600.0,},
+  ['Вызов Исалиена DND']={[0]=600.0,},
+  ['Вызов Кормока DND']={[0]=600.0,},
+  ['Вызов Лорда Вальтхалака DND']={[0]=600.0,},
+  ['Вызов Мардука Черного']={[0]=300.0,},
+  ['Вызов Мора Серое Копыто DND']={[0]=600.0,},
+  ['Вызов Телрина DND']={[0]=600.0,},
+  ['Вызов духа крикуна']={[0]=120.0,},
+  ['Вызов различных DND']={[0]=600.0,},
+  ['Вызывающий крик']={[0]=6.0,},
+  ['Вызывающий рев']={[0]=6.0,},
+  ['Выклевать глаз']={[0]=12.0,},
+  ['Выпад тенеохотника']={[0]=5.0,},
+  ['Выплеск магмы']={[0]=30.0,},
+  ['Высасывание души']={[0]=12.0,},
+  ['Вытягивание благословления']={[0]=30.0,},
+  ['Вытягивание души']={[0]=10.0,},
+  ['Вытягивание жизни']={[0]=30.0,},
+  ['Вытягивание здоровья']={[0]=15.0,},
+  ['Выявление слабости']={[0]=5.0,},
+  ['Гаррота']={[0]=18.0,},
+  ['Гейзер']={[0]=5.0,},
+  ['Генератор призыва Айс Вентурона']={[0]=5.0,},
+  ['Гибельный яд']={[0]=120.0,},
+  ['Глубокая дремота']={[0]=15.0,},
+  ['Глубокая рана']={[0]=9.0,},
+  ['Глубокий сон']={[0]=10.0,},
+  ['Гнев Чумного']={[0]=10.0,},
+  ['Гнев деревьев']={[1]=12.0,[2]=15.0,[3]=18.0,[4]=21.0,[5]=24.0,[6]=27.0,[0]=27.0,},
+  ['Гниение плоти']={[0]=10.0,},
+  ['Гниение разума']={[0]=30.0,},
+  ['Гнилая желчь']={[0]=45.0,},
+  ['Гнилостная вонь']={[0]=10.0,},
+  ['Гнилостное дыхание']={[0]=30.0,},
+  ['Гнилостный укус']={[0]=30.0,},
+  ['Гнилостный фермент']={[0]=300.0,},
+  ['Гниль']={[0]=60.0,},
+  ['Гнойная сыпь']={[0]=1800.0,},
+  ['Гнойный укус']={[0]=1800.0,},
+  ['Гномская шапка контроля над разумом']={[0]=20.0,},
+  ['Головокружение']={[0]=10.0,},
+  ['Головокружительная боль']={[0]=10.0,},
+  ['Горение души']={[0]=16.0,},
+  ['Горящие ветра']={[0]=8.0,},
+  ['Горящий адреналин']={[0]=20.0,},
+  ['Господство над душой']={[0]=60.0,},
+  ['Господство над разумом']={[0]=10.0,},
+  ['Град']={[0]=3.0,},
+  ['Град шипов']={[0]=2.0,},
+  ['Гриб Болотного Плавника']={[0]=8.0,},
+  ['Грозовой удар']={[0]=5.0,},
+  ['Громовая поступь']={[0]=2.0,},
+  ['Громовой грохот']={[0]=2.5,},
+  ['Громовой удар']={[0]=5.0,},
+  ['Грохот']={[0]=10.0,},
+  ['Грохот земли']={[0]=3.0,},
+  ['Гул земли']={[0]=5.0,},
+  ['Гулкий рык']={[0]=20.0,},
+  ['Дар Аругала']={[0]=300.0,},
+  ['Дезориентирующий выстрел']={[0]=4.0,},
+  ['Демоническая вилка']={[0]=25.0,},
+  ['Деморализующий крик']={[0]=30.0,},
+  ['Деморализующий рев']={[0]=30.0,},
+  ['Дикая магия']={[0]=30.0,},
+  ['Дисбалансирующий удар']={[0]=6.0,},
+  ['Дистиллятор эктоплазмы']={[0]=3.0,},
+  ['Доверие Големагга']={[0]=2.0,},
+  ['Долгое оцепенение']={[0]=6.0,},
+  ['Дразнящий удар']={[0]=6.0,},
+  ['Древнее отчаяние']={[0]=5.0,},
+  ['Древний ужас']={[0]=900.0,},
+  ['Древняя истерия']={[0]=900.0,},
+  ['Дрожь земли']={[0]=2.0,},
+  ['Друидская дремота']={[0]=15.0,},
+  ['Дурманящий яд']={[0]=10.0,},
+  ['Дурманящий яд II']={[0]=12.0,},
+  ['Дурманящий яд III']={[0]=14.0,},
+  ['Дух Зандалара']={[0]=7200.0,},
+  ['Дух Лунокогтя']={[0]=120.0,},
+  ['Дымовая шашка']={[0]=4.0,},
+  ['Дыхание Саргераса']={[0]=90.0,},
+  ['Едкий яд']={[0]=30.0,},
+  ['Едкий ядовитый плевок']={[0]=10.0,},
+  ['Жажда крови']={[0]=15.0,},
+  ['Жгучая вспышка']={[0]=30.0,},
+  ['Жгучее пламя']={[0]=9.0,},
+  ['Жертвенный огонь']={[0]=15.0,},
+  ['Жертвоприношение']={[0]=8.0,},
+  ['Жесткий щипок']={[0]=15.0,},
+  ['Жестокий ветер']={[0]=1.0,},
+  ['Жестокий рывок']={[0]=15.0,},
+  ['Жестокий яд']={[0]=30.0,},
+  ['Живая бомба']={[0]=8.0,},
+  ['Жидкая руда']={[0]=20.0,},
+  ['Жуки-трупоеды']={[0]=6.0,},
+  ['Жуткокоготь']={[0]=60.0,},
+  ['Завеса тьмы']={[0]=7.0,},
+  ['Задержка сигнала']={[0]=10.0,},
+  ['Заключение']={[0]=30.0,},
+  ['Залп ледяных стрел']={[0]=8.0,},
+  ['Замедление']={[1]=10.0,[2]=15.0,[0]=15.0,},
+  ['Замедляющая жижа']={[0]=10.0,},
+  ['Замедляющий яд']={[0]=25.0,},
+  ['Замшелые ноги']={[0]=180.0,},
+  ['Замшелые руки']={[0]=180.0,},
+  ['Запрет чар']={[1]=6.0,[2]=8.0,[0]=8.0,},
+  ['Запугивание']={[0]=4.0,},
+  ['Запутывание']={[0]=8.0,},
+  ['Запутывание хлыстня']={[0]=18.0,},
+  ['Запятнанный разум']={[0]=600.0,},
+  ['Зараженная рана']={[0]=300.0,},
+  ['Зараза Желчной жабы']={[0]=180.0,},
+  ['Заразная гниль']={[0]=240.0,},
+  ['Заразная слизь']={[0]=120.0,},
+  ['Заразный выстрел']={[0]=300.0,},
+  ['Заразный укус']={[0]=180.0,},
+  ['Заразный шип']={[0]=300.0,},
+  ['Засасывающая жижа']={[0]=5.0,},
+  ['Засуха']={[0]=21.0,},
+  ['Затмение']={[0]=3.0,},
+  ['Затмение зрения']={[0]=12.0,},
+  ['Захват крылом']={[0]=10.0,},
+  ['Защита от льда']={[0]=3600.0,},
+  ['Защита от темной магии']={[0]=3600.0,},
+  ['Звездные осколки']={[0]=6.0,},
+  ['Звездный огонь - оглушение']={[0]=3.0,},
+  ['Звериная атака - эффект']={[0]=4.0,},
+  ['Здоровье II']={[0]=3600.0,},
+  ['Земной шок']={[0]=2.0,},
+  ['Зимняя стужа']={[0]=15.0,},
+  ['Знак Бломе']={[0]=75.0,},
+  ['Знак Зелиека']={[0]=75.0,},
+  ['Знак Кортазза']={[0]=75.0,},
+  ['Знак Льда']={[0]=12.0,},
+  ['Знак Могрейна']={[0]=75.0,},
+  ['Знак Пламени']={[0]=120.0,},
+  ['Знак Природы']={[0]=12.0,},
+  ['Знак Тьмы']={[0]=15.0,},
+  ['Знак детонации']={[0]=30.0,},
+  ['Знак дикой природы']={[0]=1800.0,},
+  ['Зов могилы']={[0]=60.0,},
+  ['Зуботычина']={[0]=4.0,},
+  ['Извлечение сущности']={[0]=12.0,},
+  ['Изгнание']={[1]=20.0,[2]=30.0,[0]=30.0,},
+  ['Изгнание нежити']={[1]=10.0,[2]=15.0,[3]=20.0,[0]=20.0,},
+  ['Изнурение']={[0]=15.0,},
+  ['Изнуряющая атака']={[0]=8.0,},
+  ['Изнуряющее прикосновение']={[0]=120.0,},
+  ['Илистая топь']={[0]=300.0,},
+  ['Иллюзии Джин\'до']={[0]=20.0,},
+  ['Инстинкт выживания']={[0]=2.0,},
+  ['Интеллект IX']={[0]=3600.0,},
+  ['Инфернальный снаряд']={[0]=10.0,},
+  ['Искажение времени']={[0]=8.0,},
+  ['Испепеление']={[0]=60.0,},
+  ['Иссушающее прикосновение']={[0]=180.0,},
+  ['Иссушающий жар']={[0]=900.0,},
+  ['Иссушающий удар']={[0]=8.0,},
+  ['Иссушающий яд']={[0]=180.0,},
+  ['Истинное счастье']={[0]=20.0,},
+  ['Истощение души']={[0]=10.0,},
+  ['Истребление']={[0]=3.0,},
+  ['Исчезновение']={[0]=20.0,},
+  ['Калечащий яд']={[0]=12.0,},
+  ['Калечение']={[0]=2.0,},
+  ['Кара']={[0]=10.0,},
+  ['Касание Огненного скелета']={[0]=3.0,},
+  ['Касание увядания']={[0]=120.0,},
+  ['Катализатор Улья Зара']={[0]=30.0,},
+  ['Кипяток']={[0]=4.0,},
+  ['Кислота Хаккара']={[0]=60.0,},
+  ['Кислота землееда']={[0]=30.0,},
+  ['Кислота проходчика']={[0]=30.0,},
+  ['Кислотная слизь']={[0]=30.0,},
+  ['Кислотные брызги']={[0]=10.0,},
+  ['Кислотный град']={[0]=25.0,},
+  ['Кислотный плевок']={[0]=30.0,},
+  ['Клеймо Черепокованого']={[0]=30.0,},
+  ['Клык Хрустального Паука']={[0]=10.0,},
+  ['Кнут']={[0]=2.0,},
+  ['Когти Эсхандара']={[0]=30.0,},
+  ['Колдовство бронзовых драконов']={[0]=600.0,},
+  ['Колдовство зеленых драконов']={[0]=600.0,},
+  ['Колдовство красных драконов']={[0]=600.0,},
+  ['Колдовство синих драконов']={[0]=600.0,},
+  ['Колдовство черных драконов']={[0]=600.0,},
+  ['Колодец Света']={[0]=180.0,},
+  ['Кольцо льда']={[0]=8.0,},
+  ['Кольцо мороза']={[0]=2.0,},
+  ['Кольцо стужи']={[0]=10.0,},
+  ['Колючее жало']={[0]=300.0,},
+  ['Колючка девизавра']={[0]=10.0,},
+  ['Ком грязи']={[0]=15.0,},
+  ['Комок слизи']={[0]=6.0,},
+  ['Контратака']={[0]=5.0,},
+  ['Контроль над разумом']={[0]=60.0,},
+  ['Контузящий выстрел']={[0]=4.0,},
+  ['Корни хлыстня']={[0]=15.0,},
+  ['Костяной расплав']={[0]=20.0,},
+  ['Кошмар Наралекса']={[0]=15.0,},
+  ['Кошмарное существо']={[0]=30.0,},
+  ['Крепкий щипок']={[0]=5.0,},
+  ['Кривое зеркало']={[0]=45.0,},
+  ['Кровавый вой']={[0]=15.0,},
+  ['Кровавый клык']={[0]=6.0,},
+  ['Кровавый насос']={[0]=8.0,},
+  ['Кровоизлияние']={[0]=15.0,},
+  ['Кровопускание']={[1]=9.0,[2]=12.0,[3]=15.0,[4]=18.0,[5]=21.0,[6]=21.0,[7]=21.0,[0]=21.0,},
+  ['Кровоточащая рана']={[0]=18.0,},
+  ['Кровь']={[0]=15.0,},
+  ['Кружение паутины']={[0]=7.0,},
+  ['Крутящийся пробег']={[0]=2.0,},
+  ['Крылья отчаяния']={[0]=6.0,},
+  ['Крысизм']={[0]=10.0,},
+  ['Кулак Рагнароса']={[0]=5.0,},
+  ['Лед']={[0]=10.0,},
+  ['Леденящее касание Трелана']={[0]=12.0,},
+  ['Леденящее прикосновение']={[0]=8.0,},
+  ['Леденящий коготь']={[0]=5.0,},
+  ['Ледниковый рев']={[0]=3.0,},
+  ['Ледяная аура']={[0]=5.0,},
+  ['Ледяная могила']={[0]=10.0,},
+  ['Ледяная стрела']={[1]=5.0,[2]=6.0,[3]=6.0,[4]=7.0,[5]=7.0,[6]=8.0,[7]=8.0,[8]=9.0,[9]=9.0,[10]=9.0,[11]=9.0,[0]=9.0,},
+  ['Ледяная хватка']={[0]=5.0,},
+  ['Ледяной взгляд']={[0]=15.0,},
+  ['Ледяной взрыв']={[0]=10.0,},
+  ['Ледяной выстрел']={[0]=10.0,},
+  ['Ледяной коготь']={[0]=6.0,},
+  ['Ледяной ожог']={[0]=15.0,},
+  ['Ледяной шок']={[0]=8.0,},
+  ['Ледяные оковы']={[1]=15.0,[2]=20.0,[0]=20.0,},
+  ['Летучая зараза']={[0]=120.0,},
+  ['Летящая паутина']={[0]=10.0,},
+  ['Лик смерти']={[0]=3.0,},
+  ['Липкая смола']={[0]=4.0,},
+  ['Лихорадка дряхлости']={[0]=21.0,},
+  ['Личиночный студень']={[0]=6.0,},
+  ['Лишение сил']={[0]=10.0,},
+  ['Ловкий пинок']={[0]=2.0,},
+  ['Ловкость VIII']={[0]=3600.0,},
+  ['Ловушка']={[0]=10.0,},
+  ['Ловушка-вонючка']={[0]=120.0,},
+  ['Ложная мишень Джеффа 1']={[0]=30.0,},
+  ['Ложная мишень Джеффа 2']={[0]=30.0,},
+  ['Лунатизм']={[0]=10.0,},
+  ['Лунная удача']={[0]=1800.0,},
+  ['Лунный огонь']={[1]=9.0,[2]=12.0,[3]=12.0,[4]=12.0,[5]=12.0,[6]=12.0,[7]=12.0,[8]=12.0,[9]=12.0,[10]=12.0,[0]=12.0,},
+  ['Луч супер-уменьшения']={[0]=20.0,},
+  ['Лютый рык']={[0]=15.0,},
+  ['Массовая зуботычина']={[0]=5.0,},
+  ['Массовое исцеление']={[0]=12.0,},
+  ['Маяк Ущелья']={[0]=60.0,},
+  ['Мгновенная заморозка']={[0]=5.0,},
+  ['Медленный яд']={[0]=30.0,},
+  ['Медленный яд II']={[0]=30.0,},
+  ['Ментальная власть']={[0]=120.0,},
+  ['Ментальный крик']={[0]=8.0,},
+  ['Мертвенный вой']={[0]=6.0,},
+  ['Месть Кривой Сосны']={[0]=6.0,},
+  ['Месть Огненного скелета']={[0]=2.0,},
+  ['Метание топора']={[0]=3.0,},
+  ['Метка Арлокк']={[0]=120.0,},
+  ['Метка Каззака']={[0]=60.0,},
+  ['Метка охотника']={[0]=120.0,},
+  ['Могущественное превращение']={[0]=20.0,},
+  ['Мозгоруб']={[0]=30.0,},
+  ['Молния Бездны']={[0]=10.0,},
+  ['Молот бурь']={[0]=8.0,},
+  ['Молот правосудия']={[1]=3.0,[2]=4.0,[3]=5.0,[4]=6.0,[0]=6.0,},
+  ['Молот рыцаря']={[0]=4.0,},
+  ['Мор']={[0]=40.0,},
+  ['Моровая лихорадка']={[0]=180.0,},
+  ['Морозная слабость']={[0]=45.0,},
+  ['Морозная стрела']={[0]=2.0,},
+  ['Морозная стрела защита']={[0]=5.0,},
+  ['Мощный удар']={[0]=2.0,},
+  ['Мощный удар щитом']={[0]=2.0,},
+  ['Мощь Шахрама']={[0]=5.0,},
+  ['Мощь сока']={[0]=300.0,},
+  ['Мрачноозерная поганка']={[0]=2700.0,},
+  ['Мутагенный укол']={[0]=10.0,},
+  ['Мутация жука']={[0]=240.0,},
+  ['Мучительная боль']={[0]=15.0,},
+  ['Мучительные припадки']={[0]=180.0,},
+  ['Мысленная дрожь']={[0]=600.0,},
+  ['Мысленная чума']={[0]=600.0,},
+  ['Мясорубка']={[0]=6.0,},
+  ['Надвигающийся рок']={[0]=10.0,},
+  ['Накинуться']={[0]=2.0,},
+  ['Наложение ледяного клейма']={[0]=8.0,},
+  ['Нанесение увечья']={[0]=20.0,},
+  ['Напор волн']={[0]=10.0,},
+  ['Наскок']={[0]=2.0,},
+  ['Насылание безумия']={[0]=6.0,},
+  ['Невольная трансформация']={[0]=30.0,},
+  ['Невосприимчивость']={[0]=1800.0,},
+  ['Неисправность стремительного движения']={[0]=20.0,},
+  ['Неистовство бури']={[0]=12.0,},
+  ['Неистовый нырок']={[0]=2.0,},
+  ['Нейтрализующий яд']={[0]=15.0,},
+  ['Некротический яд']={[0]=30.0,},
+  ['Неловкость']={[0]=30.0,},
+  ['Неловкость II']={[0]=30.0,},
+  ['Неловкость III']={[0]=30.0,},
+  ['Немощь']={[0]=60.0,},
+  ['Ненависть к нулю']={[0]=1.7,},
+  ['Неожиданная атака']={[0]=2.5,},
+  ['Неотвратимый рок']={[0]=10.0,},
+  ['Неотвязные призраки']={[0]=300.0,},
+  ['Непереносимый смрад']={[0]=6.0,},
+  ['Нерешительность']={[0]=60.0,},
+  ['Низкий выпад']={[0]=12.0,},
+  ['Нити воздуха']={[0]=2.0,},
+  ['Нокаут']={[0]=6.0,},
+  ['Нокдаун']={[0]=2.0,},
+  ['ОД оберег']={[0]=300.0,},
+  ['Оберег лености - воздействие']={[0]=3.0,},
+  ['Обессиливающий сглаз']={[0]=120.0,},
+  ['Облако дыма']={[0]=3.0,},
+  ['Облучение']={[0]=60.0,},
+  ['Обморожение']={[0]=5.0,},
+  ['Обнаружение большей невидимости']={[0]=600.0,},
+  ['Ободряющий клич Драконоборца']={[0]=7200.0,},
+  ['Обращение в камень']={[0]=8.0,},
+  ['Общие узы']={[0]=4.0,},
+  ['Объятие Вдовы']={[0]=30.0,},
+  ['Объятия вампира']={[0]=60.0,},
+  ['Оглушающий взрыв']={[1]=3.0,[2]=5.0,[0]=5.0,},
+  ['Оглушающий удар']={[0]=5.0,},
+  ['Оглушение']={[0]=2.0,},
+  ['Оглушительный визг']={[0]=8.0,},
+  ['Оглушить']={[1]=2.0,[2]=3.0,[3]=4.0,[0]=4.0,},
+  ['Огненная глыба']={[0]=12.0,},
+  ['Огненная защита']={[0]=3600.0,},
+  ['Огненная слабость']={[0]=45.0,},
+  ['Огненный шар']={[1]=4.0,[2]=6.0,[3]=6.0,[4]=8.0,[5]=8.0,[6]=8.0,[7]=8.0,[8]=8.0,[9]=8.0,[10]=8.0,[11]=8.0,[12]=8.0,[0]=8.0,},
+  ['Огненный шок']={[0]=12.0,},
+  ['Огнесдвиг']={[0]=3.0,},
+  ['Одержимость']={[0]=120.0,},
+  ['Одурманивание']={[0]=15.0,},
+  ['Оживление души']={[0]=1800.0,},
+  ['Ожог Тьмы']={[0]=5.0,},
+  ['Ой!']={[0]=10.0,},
+  ['Око Бессмер\'тера']={[0]=4.0,},
+  ['Оковы земли']={[0]=5.0,},
+  ['Оковы магмы']={[0]=15.0,},
+  ['Окоченение']={[0]=1.5,},
+  ['Оледенение']={[0]=10.0,},
+  ['Оплетающие сети']={[0]=6.0,},
+  ['Оплеуха']={[0]=2.0,},
+  ['Оправдание']={[0]=10.0,},
+  ['Опутывающая сеть']={[0]=8.0,},
+  ['Опутывающие сети']={[0]=8.0,},
+  ['Орлиный коготь']={[0]=15.0,},
+  ['Осквернение']={[0]=10.0,},
+  ['Оскверненные тотемы']={[0]=30.0,},
+  ['Оскверняющая аура']={[0]=5.0,},
+  ['Ослабление']={[0]=120.0,},
+  ['Ослабление доспеха']={[0]=30.0,},
+  ['Ослабление ловкости']={[0]=300.0,},
+  ['Ослабление силы']={[0]=300.0,},
+  ['Ослабляющая болезнь']={[0]=30.0,},
+  ['Ослепление']={[0]=10.0,},
+  ['Ответный удар']={[0]=6.0,},
+  ['Отвлекающее движение']={[0]=7.0,},
+  ['Отмщение']={[0]=600.0,},
+  ['Отпугивание зверя']={[1]=10.0,[2]=15.0,[3]=20.0,[0]=20.0,},
+  ['Отравление грибом-малиновиком']={[0]=1200.0,},
+  ['Отравление разума']={[0]=15.0,},
+  ['Отравляющий град']={[0]=15.0,},
+  ['Отравляющий плевок']={[0]=10.0,},
+  ['Отражающее поле']={[0]=5.0,},
+  ['Отражение магии']={[0]=10.0,},
+  ['Отупляющая боль']={[0]=15.0,},
+  ['Охотник']={[0]=60.0,},
+  ['Ошеломление']={[1]=25.0,[2]=35.0,[3]=45.0,[0]=45.0,},
+  ['Палка погонщика рабов']={[0]=30.0,},
+  ['Паника']={[0]=8.0,},
+  ['Паразит']={[0]=75.0,},
+  ['Паразитирующий змей']={[0]=10.0,},
+  ['Парализация']={[0]=30.0,},
+  ['Парализующий крик']={[0]=60.0,},
+  ['Парализующий удар']={[0]=4.0,},
+  ['Парализующий яд']={[0]=8.0,},
+  ['Паутина']={[0]=8.0,},
+  ['Паутина II']={[0]=10.0,},
+  ['Паутина III']={[0]=12.0,},
+  ['Паутина Нараксиса']={[0]=30.0,},
+  ['Паутинный взрыв']={[0]=10.0,},
+  ['Паучий яд']={[0]=30.0,},
+  ['Пелена Тени']={[0]=15.0,},
+  ['Первородный огонь']={[0]=8.0,},
+  ['Перемещение духа']={[0]=5.0,},
+  ['Перехват - оглушение']={[0]=3.0,},
+  ['Перехват оглушение.']={[0]=3.0,},
+  ['Пинок']={[0]=5.0,},
+  ['Пинок - немота']={[0]=2.0,},
+  ['Пиявка ауры (PT)']={[0]=15.0,},
+  ['Пламенный кнут']={[0]=45.0,},
+  ['Пламень']={[0]=30.0,},
+  ['Плевок мясника']={[0]=10.0,},
+  ['Плевок разъедающей кислоты']={[0]=10.0,},
+  ['Плевок рассеяния']={[0]=15.0,},
+  ['Пленение древня']={[0]=5.0,},
+  ['Пленение духа']={[0]=9.0,},
+  ['Пленение духа гончей Скверны']={[0]=9.0,},
+  ['Пленение духа огненного голема']={[0]=9.0,},
+  ['Повреждение мозга']={[0]=30.0,},
+  ['Повреждение сухожилий']={[0]=8.0,},
+  ['Поганочный цвет']={[0]=90.0,},
+  ['Поглощающее пламя']={[0]=6.0,},
+  ['Поглощение']={[0]=15.0,},
+  ['Погружение']={[0]=60.0,},
+  ['Подводное дыхание']={[0]=600.0,},
+  ['Подлый трюк']={[0]=4.0,},
+  ['Подножка']={[0]=3.0,},
+  ['Подрезать крылья']={[0]=10.0,},
+  ['Подрезать сухожилия']={[0]=15.0,},
+  ['Покаяние']={[0]=6.0,},
+  ['Ползучая плесень']={[0]=60.0,},
+  ['Ползучий мор']={[0]=20.0,},
+  ['Полиморф: цыпленок']={[0]=10.0,},
+  ['Полиморфный луч']={[0]=4.0,},
+  ['Полная заморозка']={[0]=10.0,},
+  ['Полоснуть']={[0]=12.0,},
+  ['Помещено']={[0]=3.0,},
+  ['Пониженная выносливость']={[0]=4.0,},
+  ['Поощрение']={[0]=1800.0,},
+  ['Порабощение']={[0]=15.0,},
+  ['Порабощение демона']={[0]=300.0,},
+  ['Порочное лечение']={[0]=30.0,},
+  ['Порочный страх']={[0]=2.0,},
+  ['Порча']={[1]=12.0,[2]=15.0,[3]=18.0,[4]=18.0,[5]=18.0,[6]=18.0,[7]=18.0,[0]=18.0,},
+  ['Порча души']={[0]=15.0,},
+  ['Порча земли']={[0]=10.0,},
+  ['Порыв ветра']={[0]=4.0,},
+  ['Последствия']={[0]=5.0,},
+  ['Поступь Азретока']={[0]=5.0,},
+  ['Поступь Скверны']={[0]=3.0,},
+  ['Поток слизи']={[0]=3.0,},
+  ['Потрошитель Гутгора']={[0]=30.0,},
+  ['Похищение души']={[0]=15.0,},
+  ['Похищение жизни']={[0]=5.0,},
+  ['Похищение маны']={[0]=5.0,},
+  ['Поцелуй паука']={[0]=10.0,},
+  ['Праведный огонь']={[0]=8.0,},
+  ['Правосудие воина света']={[0]=10.0,},
+  ['Правосудие мудрости']={[0]=10.0,},
+  ['Правосудие света']={[0]=10.0,},
+  ['Правосудие справедливости']={[0]=10.0,},
+  ['Праздник Огня - неистовство']={[0]=3600.0,},
+  ['Праздник Огня - стойкость']={[0]=3600.0,},
+  ['Праздничная удача!']={[0]=1800.0,},
+  ['Превращение']={[1]=20.0,[2]=30.0,[3]=40.0,[4]=50.0,[0]=50.0,},
+  ['Превращение Балназзара - оглушение']={[0]=5.0,},
+  ['Превращение в овцу']={[0]=10.0,},
+  ['Превращение наоборот']={[0]=8.0,},
+  ['Превращение: корова']={[0]=50.0,},
+  ['Превращение: свинья']={[0]=50.0,},
+  ['Превращение: черепаха']={[0]=50.0,},
+  ['Предательская стужа']={[0]=120.0,},
+  ['Прерывание завершения работы (PT)']={[0]=30.0,},
+  ['Преследование']={[1]=10.0,[2]=20.0,[3]=30.0,[0]=30.0,},
+  ['Привлечение яростня']={[0]=2.0,},
+  ['Прием "Взрывное сердце пяти жирных пальцев"']={[0]=30.0,},
+  ['Прижигание пламенем']={[0]=900.0,},
+  ['Призрачный удар']={[0]=7.0,},
+  ['Призыв Освобожденной души']={[0]=60.0,},
+  ['Призыв духа Дарроушира']={[0]=60.0,},
+  ['Призыв исцеляющей келебрийской лозы']={[0]=604800.0,},
+  ['Призыв конного рыцаря']={[0]=120.0,},
+  ['Призыв рыцаря']={[0]=180.0,},
+  ['Призыв ученика']={[0]=230.0,},
+  ['Приказ бешенства']={[0]=10.0,},
+  ['Прикосновение Когтя Ворона']={[0]=5.0,},
+  ['Прикосновение слабости']={[0]=120.0,},
+  ['Приливная хватка']={[0]=4.0,},
+  ['Приливное подчинение']={[0]=3.0,},
+  ['Природная защита']={[0]=3600.0,},
+  ['Природная слабость']={[0]=45.0,},
+  ['Приручение большого скального вепря']={[0]=20.0,},
+  ['Приручение бронескорпа']={[0]=900.0,},
+  ['Приручение взрослого долгонога']={[0]=900.0,},
+  ['Приручение волка прерий']={[0]=900.0,},
+  ['Приручение зверя']={[0]=20.0,},
+  ['Приручение лютого пятнистого вепря.']={[0]=900.0,},
+  ['Приручение медведя-ледолапа']={[0]=20.0,},
+  ['Приручение ночного саблезуба']={[0]=900.0,},
+  ['Приручение перепелятника']={[0]=900.0,},
+  ['Приручение приливного краба']={[0]=900.0,},
+  ['Приручение снежного леопарда']={[0]=900.0,},
+  ['Приручение совиного крикуна']={[0]=900.0,},
+  ['Приручение чащобного тенетника']={[0]=900.0,},
+  ['Пробуждение глиняных землестражей']={[0]=5.0,},
+  ['Провокация']={[0]=3.0,},
+  ['Прокалывание']={[0]=9.0,},
+  ['Проклятая кровь']={[0]=600.0,},
+  ['Проклятие Аругала']={[0]=10.0,},
+  ['Проклятие Гееннаса']={[0]=300.0,},
+  ['Проклятие Джаммал\'ана']={[0]=10.0,},
+  ['Проклятие Люцифрона']={[0]=300.0,},
+  ['Проклятие Мардука']={[0]=5.0,},
+  ['Проклятие Мертвого Леса']={[0]=120.0,},
+  ['Проклятие Молота Ужаса']={[0]=60.0,},
+  ['Проклятие Огненного клейма']={[0]=300.0,},
+  ['Проклятие Повелителя элементалей']={[0]=60.0,},
+  ['Проклятие Сталвана']={[0]=600.0,},
+  ['Проклятие Тенерога']={[0]=300.0,},
+  ['Проклятие Тимми']={[0]=60.0,},
+  ['Проклятие Тула']={[0]=240.0,},
+  ['Проклятие Тутен\'каш']={[0]=900.0,},
+  ['Проклятие Тьмы']={[0]=300.0,},
+  ['Проклятие Холодного Сердца']={[0]=180.0,},
+  ['Проклятие Чумного']={[0]=10.0,},
+  ['Проклятие агонии']={[0]=24.0,},
+  ['Проклятие банши']={[0]=12.0,},
+  ['Проклятие безрассудства']={[0]=120.0,},
+  ['Проклятие бессилия']={[0]=120.0,},
+  ['Проклятие восстановления']={[0]=180.0,},
+  ['Проклятие изнеможения']={[0]=12.0,},
+  ['Проклятие косноязычия']={[0]=30.0,},
+  ['Проклятие крови']={[0]=600.0,},
+  ['Проклятие маразма']={[0]=120.0,},
+  ['Проклятие мрачнодерева']={[0]=60.0,},
+  ['Проклятие нежити']={[0]=12.0,},
+  ['Проклятие ока']={[0]=120.0,},
+  ['Проклятие отмщения']={[0]=900.0,},
+  ['Проклятие рока']={[0]=60.0,},
+  ['Проклятие слабости']={[0]=120.0,},
+  ['Проклятие стихий']={[0]=300.0,},
+  ['Проклятие темного наставника']={[0]=60.0,},
+  ['Проклятие чумной крысы']={[0]=14.0,},
+  ['Проклятие шипов']={[0]=180.0,},
+  ['Проклятый клинок']={[0]=20.0,},
+  ['Проклятье Хаккара']={[0]=120.0,},
+  ['Проклятье Шаззраха']={[0]=300.0,},
+  ['Проклятье павших Маграм']={[0]=900.0,},
+  ['Проклятье племен']={[0]=1800.0,},
+  ['Прокол']={[0]=10.0,},
+  ['Проколотая броня']={[0]=20.0,},
+  ['Прокусить лодыжку']={[0]=3.0,},
+  ['Пронзание брони']={[0]=30.0,},
+  ['Пронзающая тень']={[0]=1800.0,},
+  ['Пронзающий выстрел']={[0]=15.0,},
+  ['Пронзительный визг']={[0]=6.0,},
+  ['Пронзительный вой']={[0]=6.0,},
+  ['Проникающий молот из ивы']={[0]=30.0,},
+  ['Прорубание брони']={[0]=15.0,},
+  ['Пугающий визг']={[0]=6.0,},
+  ['Пугающий вопль']={[0]=8.0,},
+  ['Пугающий рык']={[0]=5.0,},
+  ['Пыльное облако']={[0]=12.0,},
+  ['Пытка разума']={[0]=3.0,},
+  ['Пьяный яд']={[0]=120.0,},
+  ['Радиационное заражение']={[0]=25.0,},
+  ['Разбитые доспехи']={[0]=45.0,},
+  ['Развеивание магии']={[0]=2.0,},
+  ['Раздирание плоти']={[0]=12.0,},
+  ['Размах']={[0]=2.0,},
+  ['Разорвать']={[0]=12.0,},
+  ['Разоружение']={[0]=10.0,},
+  ['Разрушитель душ']={[0]=30.0,},
+  ['Разрыв мышц']={[0]=5.0,},
+  ['Разрыв сухожилий']={[0]=8.0,},
+  ['Разъедающая кислота']={[0]=300.0,},
+  ['Разъедающая слизь']={[0]=60.0,},
+  ['Разъединение']={[0]=300.0,},
+  ['Рана']={[0]=25.0,},
+  ['Ранящий щит']={[0]=10.0,},
+  ['Раскатистый рев']={[0]=3.0,},
+  ['Раскол брони']={[0]=30.0,},
+  ['Расплавленная броня']={[0]=60.0,},
+  ['Расплавленный металл']={[0]=15.0,},
+  ['Распознавание магии']={[0]=120.0,},
+  ['Рассекающий колун']={[0]=30.0,},
+  ['Расстройство ума']={[0]=3.0,},
+  ['Растворение брони']={[0]=20.0,},
+  ['Растерзать']={[0]=8.0,},
+  ['Расчленение']={[0]=10.0,},
+  ['Рваная рана']={[0]=6.0,},
+  ['Рвотная чума']={[0]=300.0,},
+  ['Реванш - оглушение']={[0]=3.0,},
+  ['Регенерация IV']={[0]=3600.0,},
+  ['Рой насекомых']={[0]=12.0,},
+  ['Рука Рагнароса']={[0]=2.0,},
+  ['Рука Тауриссана']={[0]=5.0,},
+  ['Рывок']={[0]=4.0,},
+  ['Рык']={[0]=3.0,},
+  ['Свиток заклятия Проявления']={[0]=600.0,},
+  ['Священная защита']={[0]=3600.0,},
+  ['Священный взрыв']={[0]=4.0,},
+  ['Священный огонь']={[0]=10.0,},
+  ['Священный раскол']={[0]=60.0,},
+  ['Сглаз']={[0]=10.0,},
+  ['Сглаз Когтя Ворона']={[0]=30.0,},
+  ['Сгусток магмы']={[0]=30.0,},
+  ['Серьезная рана']={[0]=10.0,},
+  ['Сетестрел']={[0]=10.0,},
+  ['Сеть']={[0]=10.0,},
+  ['Сеть с крючьями']={[0]=10.0,},
+  ['Сила Племени: бронзовый']={[0]=5.0,},
+  ['Сила Племени: зеленый']={[0]=6.0,},
+  ['Сила Племени: красный']={[0]=5.0,},
+  ['Сила Племени: синий']={[0]=6.0,},
+  ['Силитидова чума']={[0]=1800.0,},
+  ['Сильнейший страх']={[0]=5.0,},
+  ['Сильный трепет']={[0]=2.0,},
+  ['Сильный чародейский эликсир']={[0]=1800.0,},
+  ['Скачок']={[0]=1.0,},
+  ['Сковывание нежити']={[1]=30.0,[2]=40.0,[3]=50.0,[0]=50.0,},
+  ['Слабоумие']={[0]=30.0,},
+  ['Слабоумие II']={[0]=30.0,},
+  ['Слабоумие III']={[0]=30.0,},
+  ['Слабый яд']={[0]=12.0,},
+  ['Слизентерия']={[0]=1800.0,},
+  ['Слизистая лихорадка']={[0]=600.0,},
+  ['Слизняк']={[0]=1800.0,},
+  ['Слово Света: Стойкость духа']={[0]=1800.0,},
+  ['Слово Тьмы: Боль']={[0]=18.0,},
+  ['Случайное превращение']={[0]=20.0,},
+  ['Смертельная отрава']={[0]=12.0,},
+  ['Смертельная отрава II']={[0]=12.0,},
+  ['Смертельная отрава III']={[0]=12.0,},
+  ['Смертельная отрава IV']={[0]=12.0,},
+  ['Смертельная рана']={[0]=8.0,},
+  ['Смертельный раскол']={[0]=5.0,},
+  ['Смертельный удар']={[0]=10.0,},
+  ['Смертельный укус скорпида']={[0]=20.0,},
+  ['Смертельный яд']={[0]=12.0,},
+  ['Смертельный яд II']={[0]=12.0,},
+  ['Смертельный яд III']={[0]=12.0,},
+  ['Смертельный яд IV']={[0]=12.0,},
+  ['Смертельный яд V']={[0]=12.0,},
+  ['Смертное ложе']={[0]=10.0,},
+  ['Смертоносная рана']={[0]=15.0,},
+  ['Смертоносный луч гномов']={[0]=4.0,},
+  ['Смерть надсмотрщика из клана Черного Железа']={[0]=6.0,},
+  ['Смерть от утопления']={[0]=300.0,},
+  ['Снятие всех кандалов']={[0]=1.0,},
+  ['Соблазн']={[0]=15.0,},
+  ['Сожжение маны']={[0]=8.0,},
+  ['Сожжение плоти']={[0]=60.0,},
+  ['Создание Взрыв сердца Хаккара']={[0]=30.0,},
+  ['Создание ауры Зула']={[0]=30.0,},
+  ['Создание сердца Хаккара - провал']={[0]=30.0,},
+  ['Создание сердца Хаккара - создание круга']={[0]=30.0,},
+  ['Сокрушение головы']={[0]=2.0,},
+  ['Сокрушение демона']={[0]=5.0,},
+  ['Сокрушение доспеха']={[0]=30.0,},
+  ['Сокрушение духа']={[0]=1200.0,},
+  ['Сокрушение черепа']={[0]=2.0,},
+  ['Сол Л']={[0]=5.0,},
+  ['Сон']={[1]=20.0,[2]=30.0,[0]=30.0,},
+  ['Сосредоточение внимания']={[0]=10.0,},
+  ['Сосредоточенный яд']={[0]=60.0,},
+  ['Сосулька']={[0]=10.0,},
+  ['Сотрясение']={[0]=2.0,},
+  ['Спешивающий выстрел']={[0]=2.0,},
+  ['Справедливость господина']={[0]=5.0,},
+  ['Спячка']={[1]=20.0,[2]=30.0,[3]=40.0,[0]=40.0,},
+  ['Статический контур']={[0]=15.0,},
+  ['Стигийская хватка']={[0]=5.0,},
+  ['Столбняк']={[0]=1200.0,},
+  ['Страж сети']={[0]=20.0,},
+  ['Страх']={[1]=10.0,[2]=15.0,[3]=20.0,[0]=20.0,},
+  ['Страх (NYI)']={[0]=15.0,},
+  ['Страх чернокнижника']={[0]=2.0,},
+  ['Стрела Тьмы']={[0]=6.0,},
+  ['Струя пара']={[0]=10.0,},
+  ['Студеное дыхание']={[0]=12.0,},
+  ['Стужа']={[0]=30.0,},
+  ['Судейский молоточек']={[0]=10.0,},
+  ['Суль-траз']={[0]=15.0,},
+  ['Сущность красных драконов']={[0]=180.0,},
+  ['Схватить оружие']={[0]=15.0,},
+  ['Темная жижа']={[0]=300.0,},
+  ['Темная энергия']={[0]=300.0,},
+  ['Теневая слабость']={[0]=45.0,},
+  ['Теневое пламя']={[0]=10.0,},
+  ['Теневой приказ']={[0]=15.0,},
+  ['Тень Черноскала']={[0]=8.0,},
+  ['Терзания']={[0]=60.0,},
+  ['Тест стазиса']={[0]=5.0,},
+  ['Тестовое проклятие агонии']={[0]=24.0,},
+  ['Тестовый разрыв']={[0]=12.0,},
+  ['Тестовый удар W35']={[0]=10.0,},
+  ['Тестовый удар W50']={[0]=10.0,},
+  ['Тина']={[0]=3.0,},
+  ['Токсическая инфекция']={[0]=60.0,},
+  ['Топот']={[0]=10.0,},
+  ['Топот кодо']={[0]=3.0,},
+  ['Торнадо']={[0]=4.0,},
+  ['Трещина в черепе']={[0]=20.0,},
+  ['Тыквовинская страшилка']={[0]=6.0,},
+  ['Убийственное жало']={[0]=12.0,},
+  ['Увечье']={[0]=20.0,},
+  ['Угрожающее рычание']={[0]=30.0,},
+  ['Угрожающий взгляд']={[0]=8.0,},
+  ['Удар Рак-Зора']={[0]=3.0,},
+  ['Удар ауры']={[0]=300.0,},
+  ['Удар бури']={[0]=12.0,},
+  ['Удар воина Света']={[0]=30.0,},
+  ['Удар головой']={[0]=2.0,},
+  ['Удар грома']={[1]=10.0,[2]=14.0,[3]=18.0,[4]=22.0,[5]=26.0,[6]=30.0,[0]=30.0,},
+  ['Удар пламенем']={[0]=45.0,},
+  ['Удар по почкам']={[0]=1.0,},
+  ['Удар сплеча']={[0]=10.0,},
+  ['Удар тенеохотника']={[0]=5.0,},
+  ['Удар хвостом']={[0]=2.0,},
+  ['Удар щитом']={[0]=6.0,},
+  ['Удар щитом - немота']={[0]=3.0,},
+  ['Ударная волна']={[0]=2.0,},
+  ['Удержание']={[0]=5.0,},
+  ['Удушение']={[0]=6.0,},
+  ['Ужасающий визг']={[0]=4.0,},
+  ['Ужасающий вой']={[0]=3.0,},
+  ['Ужасающий рев']={[0]=5.0,},
+  ['Ужасное кровопускание']={[0]=15.0,},
+  ['Узы Чертополохха']={[0]=8.0,},
+  ['Укус бешенства']={[0]=30.0,},
+  ['Укус вдовы']={[0]=4.0,},
+  ['Укус виверны']={[0]=12.0,},
+  ['Укус гадюки']={[0]=8.0,},
+  ['Укус змеи']={[0]=15.0,},
+  ['Укус скорпида']={[0]=20.0,},
+  ['Укус ярости']={[0]=6.0,},
+  ['Улучшенное подрезание сухожилий']={[0]=5.0,},
+  ['Улучшенный контузящий выстрел']={[0]=3.0,},
+  ['Уменьшающий луч']={[0]=20.0,},
+  ['Уменьшение']={[0]=120.0,},
+  ['Умиротворение']={[0]=10.0,},
+  ['Умиротворение животного']={[0]=15.0,},
+  ['Умысел']={[0]=10.0,},
+  ['Уничтожение']={[0]=8.0,},
+  ['Управление техникой']={[0]=60.0,},
+  ['Урожай душ']={[0]=60.0,},
+  ['Урон интеллекта']={[0]=4.0,},
+  ['Урон ловкости']={[0]=4.0,},
+  ['Урон силы']={[0]=4.0,},
+  ['Урон стойкости']={[0]=4.0,},
+  ['Усиленное пламя']={[0]=30.0,},
+  ['Усиленный урон']={[0]=10.0,},
+  ['Усмирение']={[0]=15.0,},
+  ['Усовершенствованный манекен-мишень - эффект возникновения']={[0]=10.0,},
+  ['Успокоительный яд']={[0]=8.0,},
+  ['Устрашающий крик']={[0]=8.0,},
+  ['Устрашающий рев']={[0]=8.0,},
+  ['Устрашающий рык']={[0]=5.0,},
+  ['Устрашение']={[0]=3.0,},
+  ['Утраченный навык']={[0]=300.0,},
+  ['Уют очага']={[0]=60.0,},
+  ['Уязвимость']={[0]=3.0,},
+  ['Уязвимость к Тьме']={[0]=15.0,},
+  ['Уязвимость к заклинаниям']={[0]=5.0,},
+  ['Уязвимость к огню']={[0]=30.0,},
+  ['Уязвимость к стихиям']={[0]=30.0,},
+  ['Флакон яда']={[0]=30.0,},
+  ['Хватка земли']={[0]=4.0,},
+  ['Хватка командования']={[0]=10.0,},
+  ['Хваткие когти']={[0]=4.0,},
+  ['Хваткие лозы']={[0]=10.0,},
+  ['Химический пилинг']={[0]=10.0,},
+  ['Хлопушка Мэлоуна']={[0]=2.0,},
+  ['Холод']={[0]=15.0,},
+  ['Холод III PROC']={[0]=5.0,},
+  ['Хрустальный взгляд']={[0]=6.0,},
+  ['Хрустальный сон']={[0]=15.0,},
+  ['Хрустальный удар']={[0]=120.0,},
+  ['Цап за руку']={[0]=8.0,},
+  ['Цепи Кел\'Тузада']={[0]=20.0,},
+  ['Чародейская слабость']={[0]=45.0,},
+  ['Чародейские стрелы']={[1]=3.0,[2]=4.0,[3]=5.0,[4]=5.0,[5]=5.0,[6]=5.0,[7]=5.0,[8]=5.0,[0]=5.0,},
+  ['Чародейский интеллект']={[0]=1800.0,},
+  ['Чарующая колыбельная']={[0]=10.0,},
+  ['Червестудень']={[0]=6.0,},
+  ['Черви кадавра']={[0]=600.0,},
+  ['Черная копоть']={[0]=10.0,},
+  ['Черная слизь']={[0]=120.0,},
+  ['Черная стрела']={[0]=30.0,},
+  ['Чернильные брызги']={[0]=15.0,},
+  ['Черный гной']={[0]=1800.0,},
+  ['Черный мор']={[0]=90.0,},
+  ['Чесотка']={[0]=8.0,},
+  ['Чума']={[0]=40.0,},
+  ['Чумное облако']={[0]=240.0,},
+  ['Чумной туман']={[0]=8.0,},
+  ['Шепот К\'Туна']={[0]=20.0,},
+  ['Шипы']={[0]=600.0,},
+  ['Шквал топора']={[0]=2.0,},
+  ['Электрическая сеть']={[0]=10.0,},
+  ['Эликсир великанов']={[0]=1200.0,},
+  ['Эфект появления манекена цели']={[0]=5.0,},
+  ['Эффект взрывной ловушки']={[0]=20.0,},
+  ['Эффект замораживающей ловушки']={[1]=10.0,[2]=15.0,[3]=20.0,[0]=20.0,},
+  ['Эффект инфернала']={[0]=2.0,},
+  ['Эффект медлительности']={[0]=3.0,},
+  ['Эффект младшего скорпионьего яда']={[0]=60.0,},
+  ['Эффект надоедания']={[0]=3.0,},
+  ['Эффект насмешки ложной мишени Гизлока']={[0]=5.0,},
+  ['Эффект обжигающей ловушки']={[0]=15.0,},
+  ['Эффект оглушения дробящего оружия']={[0]=3.0,},
+  ['Эффект открытой раны']={[0]=8.0,},
+  ['Эффект порченой крови']={[0]=10.0,},
+  ['Эффект стазиса']={[0]=15.0,},
+  ['Эффект страданий Таэлана']={[0]=2.0,},
+  ['Яд']={[0]=30.0,},
+  ['Яд Атал\'аи']={[0]=30.0,},
+  ['Яд Наблюдателя']={[0]=60.0,},
+  ['Яд воспоминаний Дирга']={[0]=30.0,},
+  ['Яд кровоцвета']={[0]=30.0,},
+  ['Яд паучьего монстра']={[0]=300.0,},
+  ['Яд пиявки']={[0]=40.0,},
+  ['Яд равазавра']={[0]=30.0,},
+  ['Яд скорпида']={[0]=10.0,},
+  ['Яд смертоносной пиявки']={[0]=45.0,},
+  ['Ядовитая слюна']={[0]=120.0,},
+  ['Ядовитое жало']={[0]=45.0,},
+  ['Ядовитое облако']={[0]=45.0,},
+  ['Ядовитый выстрел']={[0]=75.0,},
+  ['Ядовитый гарпун']={[0]=60.0,},
+  ['Ядовитый град']={[0]=10.0,},
+  ['Ядовитый заряд']={[0]=9.0,},
+  ['Ядовитый катализатор']={[0]=120.0,},
+  ['Ядовитый плевок']={[0]=15.0,},
+  ['Ядовитый тычок']={[0]=15.0,},
+  ['Ядовитый удар']={[0]=10.0,},
+  ['Ядовитый хвостокол']={[0]=10.0,},
+  ['Яростный вой']={[0]=300.0,},
+  ['Ярость Арантира']={[0]=6.0,},
+  ['Ярость Тула']={[0]=120.0,},
+}
+
+ShaguPlates_locale["ruRU"]["totems"] = {
+  ["Тотем очищения от болезней"] = true,
+  ["Тотем оков земли"] = true,
+  ["Тотем кольца огня"] = true,
+  ["Тотем защиты от огня"] = true,
+  ["Тотем языка пламени"] = true,
+  ["Тотем защиты от магии льда"] = true,
+  ["Тотем заземления"] = true,
+  ["Тотем исцеляющего потока"] = true,
+  ["Тотем магмы"] = true,
+  ["Тотем источника маны"] = true,
+  ["Тотем прилива маны"] = true,
+  ["Тотем защиты от сил природы"] = true,
+  ["Опаляющий тотем"] = true,
+  ["Сторожевой тотем"] = true,
+  ["Тотем каменного когтя"] = true,
+  ["Тотем каменной кожи"] = true,
+  ["Тотем силы земли"] = true,
+  ["Тотем трепета"] = true,
+  ["Тотем неистовства ветра"] = true,
 }
