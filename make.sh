@@ -49,6 +49,27 @@ sed -i '/.*unitframes.*/d' init/api.xml
 rm libs/libtotem.lua
 sed -i '/.*libtotem.*/d' init/libs.xml
 
+# remove obsolete graphics
+rm img/classicons.tga
+rm img/Curse.tga
+rm img/Disease.tga
+rm img/disenchant.tga
+rm img/empty.tga
+rm img/full.tga
+rm img/happy.tga
+rm img/key.tga
+rm img/Magic.tga
+rm img/mail.tga
+rm img/minimap.tga
+rm img/neutral.tga
+rm img/picklock.tga
+rm img/Poison.tga
+rm img/proxy.tga
+rm img/pvp.tga
+rm img/ress.tga
+rm img/sad.tga
+rm img/sort.tga
+
 # rename core files
 mv pfUI.toc ShaguPlates.toc
 mv pfUI-tbc.toc ShaguPlates-tbc.toc
