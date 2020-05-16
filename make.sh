@@ -41,6 +41,14 @@ echo '<Ui xmlns="http://www.blizzard.com/wow/ui/">
   <Include file="..\modules\nameplates.lua"/>
 </Ui>' > init/modules.xml
 
+# remove unitframe api
+rm api/unitframes.lua
+sed -i '/.*unitframes.*/d' init/api.xml
+
+# remove libtotem
+rm libs/libtotem.lua
+sed -i '/.*libtotem.*/d' init/libs.xml
+
 # rename core files
 mv pfUI.toc ShaguPlates.toc
 mv pfUI-tbc.toc ShaguPlates-tbc.toc

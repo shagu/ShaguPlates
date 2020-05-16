@@ -2,5 +2,4 @@
   <Include file="..\api\api.lua"/>
   <Include file="..\api\config.lua"/>
   <Include file="..\api\ui-widgets.lua"/>
-  <Include file="..\api\unitframes.lua"/>
 </Ui>
