@@ -70,6 +70,9 @@ rm img/ress.tga
 rm img/sad.tga
 rm img/sort.tga
 
+# remove obsolete fonts
+rm fonts/RobotoMono.ttf
+
 # rename core files
 mv pfUI.toc ShaguPlates.toc
 mv pfUI-tbc.toc ShaguPlates-tbc.toc
