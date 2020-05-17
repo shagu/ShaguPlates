@@ -1,4 +1,5 @@
 ShaguPlates_translation["frFR"] = {
+  ["Abbreviate Numbers (4200 -> 4.2k)"] = "Nombre abrégés (4200 -> 4.2k)",
   ["Always Show Health In Percent"] = nil,
   ["Always Show Target Units"] = nil,
   ["Always Show Units With Missing HP"] = nil,

@@ -1,4 +1,5 @@
 ShaguPlates_translation["ruRU"] = {
+  ["Abbreviate Numbers (4200 -> 4.2k)"] = "Сокращать числа (4200 -> 4.2k)",
   ["Always Show Health In Percent"] = nil,
   ["Always Show Target Units"] = "Всегда показывать цель юнитов",
   ["Always Show Units With Missing HP"] = "Всегда показывать юнитов с отсутствующим здоровьем",

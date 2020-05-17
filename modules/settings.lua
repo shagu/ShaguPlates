@@ -998,6 +998,7 @@ ShaguPlates:RegisterModule("gui", "vanilla:tbc", function ()
     CreateGUIEntry(T["Core Options"], nil, function()
       CreateConfig(nil, T["Highlight Settings That Require Reload"], C.gui, "reloadmarker", "checkbox")
       CreateConfig(nil, T["Show Incompatible Config Entries"], C.gui, "showdisabled", "checkbox")
+      CreateConfig(nil, T["Abbreviate Numbers (4200 -> 4.2k)"], C.unitframes, "abbrevnum", "checkbox")
 
       CreateConfig(nil, T["Regional Settings"], nil, nil, "header")
       CreateConfig(nil, T["Language"], C.global, "language", "dropdown", ShaguPlates.gui.dropdowns.languages)

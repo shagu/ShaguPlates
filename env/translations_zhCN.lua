@@ -1,4 +1,5 @@
 ShaguPlates_translation["zhCN"] = {
+  ["Abbreviate Numbers (4200 -> 4.2k)"] = "缩写数字格式[4200为4.2K]",
   ["Always Show Health In Percent"] = nil,
   ["Always Show Target Units"] = nil,
   ["Always Show Units With Missing HP"] = nil,

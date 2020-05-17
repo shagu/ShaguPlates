@@ -1,4 +1,5 @@
 ShaguPlates_translation["koKR"] = {
+  ["Abbreviate Numbers (4200 -> 4.2k)"] = "체력수치 약어 (4200 -> 4.2k)",
   ["Always Show Health In Percent"] = nil,
   ["Always Show Target Units"] = nil,
   ["Always Show Units With Missing HP"] = nil,
