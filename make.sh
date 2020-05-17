@@ -84,3 +84,22 @@ sed -i '/.*STANDARD_TEXT_FONT.*/d' ShaguPlates.lua
 sed -i '/.*DAMAGE_TEXT_FONT.*/d' ShaguPlates.lua
 sed -i '/.*NAMEPLATE_FONT.*/d' ShaguPlates.lua
 sed -i '/.*UNIT_NAME_FONT.*/d' ShaguPlates.lua
+
+# remove obsolete translations
+for locale in "deDE" "enUS" "frFR" "koKR" "ruRU" "zhCN" "zhTW" "esES"; do
+  file=env/translations_$locale.lua
+  file_new=env/translations_$locale.lua_new
+
+  echo "ShaguPlates_translation[\"$locale\"] = {" > $file_new
+
+  cat *.lua modules/* | sed "s/\(T\[\"\)/\n\1/" | grep -oP "T\[\".*?\"]" | sed 's/T\["\(.*\)"\]/\1/' | sort | uniq | while read -r entry; do
+    old=$(grep -F "[\"$entry\"]" $file | head -n 1 2> /dev/null)
+    if [ -z "$old" ] ; then
+      old="  [\"$entry\"] = nil,"
+    fi
+    echo "$old"
+  done >> $file_new
+  echo "}" >> $file_new
+
+  mv $file_new $file
+done
