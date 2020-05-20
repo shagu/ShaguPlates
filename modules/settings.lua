@@ -612,8 +612,40 @@ ShaguPlates:RegisterModule("gui", "vanilla:tbc", function ()
     ShaguPlates.gui.frames = {}
     ShaguPlates.gui.frames.area = CreateFrame("Frame", nil, ShaguPlates.gui)
     ShaguPlates.gui.frames.area:SetPoint("TOPLEFT", 7, -25)
-    ShaguPlates.gui.frames.area:SetPoint("BOTTOMRIGHT", -7, 7)
+    ShaguPlates.gui.frames.area:SetPoint("BOTTOMRIGHT", -7, 37)
     CreateBackdrop(ShaguPlates.gui.frames.area)
+
+    -- reset
+    ShaguPlates.gui.reset = CreateFrame("Button", nil, ShaguPlates.gui)
+    ShaguPlates.gui.reset:SetPoint("TOPLEFT", ShaguPlates.gui.frames.area.backdrop, "BOTTOMLEFT", 0, -5)
+    ShaguPlates.gui.reset:SetWidth(150)
+    ShaguPlates.gui.reset:SetHeight(25)
+    ShaguPlates.gui.reset:SetText(T["Load Defaults"])
+    ShaguPlates.gui.reset:SetScript("OnClick", function()
+      CreateQuestionDialog(T["Do you really want to reset |cffffaaaaEVERYTHING|r?"],
+        function()
+          _G["ShaguPlates_init"] = {}
+          _G["ShaguPlates_config"] = {}
+          _G["ShaguPlates_playerDB"] = {}
+          _G["ShaguPlates_profiles"] = {}
+          _G["ShaguPlates_cache"] = {}
+          ShaguPlates:LoadConfig()
+          this:GetParent():Hide()
+          ShaguPlates.gui:Reload()
+        end)
+    end)
+    SkinButton(ShaguPlates.gui.reset)
+
+    -- save
+    ShaguPlates.gui.save = CreateFrame("Button", nil, ShaguPlates.gui)
+    ShaguPlates.gui.save:SetPoint("TOPRIGHT", ShaguPlates.gui.frames.area.backdrop, "BOTTOMRIGHT", 0, -5)
+    ShaguPlates.gui.save:SetWidth(150)
+    ShaguPlates.gui.save:SetHeight(25)
+    ShaguPlates.gui.save:SetText(T["Save & Reload"])
+    ShaguPlates.gui.save:SetScript("OnClick", function()
+      ShaguPlates.gui:Hide()
+    end)
+    SkinButton(ShaguPlates.gui.save)
   end
 
   do -- DropDown Menus
