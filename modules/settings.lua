@@ -955,6 +955,8 @@ ShaguPlates:RegisterModule("gui", "vanilla:tbc", function ()
   do -- Generate Config UI
     CreateGUIEntry(T["Nameplates"], nil, function()
       --CreateConfig(U["nameplates"], T["Use Unit Fonts"], C.nameplates, "use_unitfonts", "checkbox")
+      CreateConfig(U["nameplates"], T["Show On Hostile Units"], C.nameplates, "showhostile", "checkbox")
+      CreateConfig(U["nameplates"], T["Show On Friendly Units"], C.nameplates, "showfriendly", "checkbox")
       CreateConfig(nil, T["Standard Text Font"], C.global, "font_unit", "dropdown", ShaguPlates.gui.dropdowns.fonts)
       CreateConfig(nil, T["Standard Text Font Size"], C.global, "font_unit_size")
 
