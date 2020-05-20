@@ -2,7 +2,7 @@
 ## Title: |cff33ffccShagu|cffffffffPlates
 ## Author: Shagu
 ## Notes: Nameplate addon featuring castbars and class colors
-## Version: 4.7.0
+## Version: 4.7.1
 ## SavedVariables: ShaguPlates_profiles, ShaguPlates_addon_profiles, ShaguPlates_cache
 ## SavedVariablesPerCharacter: ShaguPlates_config, ShaguPlates_init, ShaguPlates_playerDB
 

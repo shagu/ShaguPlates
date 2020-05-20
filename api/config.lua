@@ -603,6 +603,8 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("chat",       "global",      "scrollspeed",      "1")
   ShaguPlates:UpdateConfig("chat",       "bubbles",     "alpha",            ".75")
 
+  ShaguPlates:UpdateConfig("nameplates", nil,           "showhostile",      "1")
+  ShaguPlates:UpdateConfig("nameplates", nil,           "showfriendly",     "0")
   ShaguPlates:UpdateConfig("nameplates", nil,           "use_unitfonts", "1")
   ShaguPlates:UpdateConfig("nameplates", nil,           "legacy",           "0")
   ShaguPlates:UpdateConfig("nameplates", nil,           "overlap",          "0")
