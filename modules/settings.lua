@@ -684,6 +684,12 @@ ShaguPlates:RegisterModule("gui", "vanilla:tbc", function ()
         "4:4 " .. T["Pixel"],
         "5:5 " .. T["Pixel"],
       },
+      ["fontstyle"] = {
+        "NONE:" .. T["None"],
+        "OUTLINE:" .. T["Outline"],
+        "THICKOUTLINE:" .. T["Thick Outline"],
+        "MONOCHROME:" .. T["Monochrome"],
+      },
       ["spacing"] = {
         "0:0" .. T["None"],
         "1:1 " .. T["Pixel"],
