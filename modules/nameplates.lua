@@ -218,15 +218,14 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     -- adjust sizes and scaling of the nameplate
     nameplate:SetScale(UIParent:GetScale())
 
-    nameplate.name = nameplate:CreateFontString(nil, "OVERLAY")
-    nameplate.name:SetPoint("TOP", nameplate, "TOP", 0, 0)
-
     nameplate.health = CreateFrame("StatusBar", nil, nameplate)
-    nameplate.health:SetPoint("TOP", nameplate.name, "BOTTOM", 0, -3)
     nameplate.health:SetFrameLevel(4) -- keep above glow
     nameplate.health.text = nameplate.health:CreateFontString(nil, "OVERLAY", "GameFontNormal")
     nameplate.health.text:SetAllPoints()
     nameplate.health.text:SetTextColor(1,1,1,1)
+
+    nameplate.name = nameplate.health:CreateFontString(nil, "OVERLAY")
+    nameplate.name:SetPoint("TOP", nameplate, "TOP", 0, nameoffset)
 
     nameplate.glow = nameplate:CreateTexture(nil, "BACKGROUND")
     nameplate.glow:SetPoint("CENTER", nameplate.health, "CENTER", 0, 0)
@@ -329,6 +328,7 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
 
     local font = C.nameplates.use_unitfonts == "1" and ShaguPlates.font_unit or ShaguPlates.font_default
     local font_size = C.nameplates.use_unitfonts == "1" and C.global.font_unit_size or C.global.font_size
+    local font_style = C.nameplates.name.fontstyle
     local glowr, glowg, glowb, glowa = GetStringColor(C.nameplates.glowcolor)
     local hptexture = ShaguPlates.media[C.nameplates.healthtexture]
     local rawborder, default_border = GetBorderSize("nameplates")
@@ -340,13 +340,15 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
 
     local width = tonumber(C.nameplates.width)
     local debuffsize = tonumber(C.nameplates.debuffsize)
+    local healthoffset = tonumber(C.nameplates.health.offset)
 
     nameplate:SetWidth(plate_width)
     nameplate:SetHeight(plate_height)
     nameplate:SetPoint("TOP", parent, "TOP", 0, 0)
 
-    nameplate.name:SetFont(font, font_size, "OUTLINE")
+    nameplate.name:SetFont(font, font_size, font_style)
 
+    nameplate.health:SetPoint("TOP", nameplate.name, "BOTTOM", 0, healthoffset)
     nameplate.health:SetStatusBarTexture(hptexture)
     nameplate.health:SetWidth(C.nameplates.width)
     nameplate.health:SetHeight(C.nameplates.heighthealth)
