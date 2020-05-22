@@ -224,7 +224,7 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     nameplate.health.text:SetAllPoints()
     nameplate.health.text:SetTextColor(1,1,1,1)
 
-    nameplate.name = nameplate.health:CreateFontString(nil, "OVERLAY")
+    nameplate.name = nameplate:CreateFontString(nil, "OVERLAY")
     nameplate.name:SetPoint("TOP", nameplate, "TOP", 0, nameoffset)
 
     nameplate.glow = nameplate:CreateTexture(nil, "BACKGROUND")
@@ -443,13 +443,6 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     -- always make sure to keep plate visible
     plate:Show()
 
-    -- set plate alpha
-    if target then
-      plate:SetAlpha(1)
-    else
-      plate:SetAlpha(tonumber(C.nameplates.notargalpha))
-    end
-
     if target and C.nameplates.targetglow == "1" then
       plate.glow:Show() else plate.glow:Hide()
     end
@@ -465,9 +458,11 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     -- hide frames according to the configuration
     if HidePlate(unittype, name, (hpmax-hp == hpmin), target) then
       plate.level:SetPoint("RIGHT", plate.name, "LEFT", -3, 0)
+      plate.name:SetParent(plate)
       plate.health:Hide()
     else
       plate.level:SetPoint("RIGHT", plate.health, "LEFT", -3, 0)
+      plate.name:SetParent(plate.health)
       plate.health:Show()
     end
 
@@ -570,6 +565,14 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     local name = original.name:GetText()
     local target = UnitExists("target") and frame:GetAlpha() == 1 or nil
     local mouseover = UnitExists("mouseover") and original.glow:IsShown() or nil
+
+    -- set non-target plate alpha
+    if target then
+      nameplate:SetAlpha(1)
+    else
+      frame:SetAlpha(.95)
+      nameplate:SetAlpha(tonumber(C.nameplates.notargalpha))
+    end
 
     -- use timer based updates
     if not nameplate.tick or nameplate.tick < GetTime() then
