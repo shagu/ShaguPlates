@@ -879,6 +879,7 @@ function ShaguPlates.api.GetPerfectPixel()
     local _, _, screenwidth, screenheight = strfind(resolution, "(.+)x(.+)")
 
     ShaguPlates.pixel = 768 / screenheight / scale
+    ShaguPlates.pixel = ShaguPlates.pixel > 1 and 1 or ShaguPlates.pixel
 
     -- autodetect and zoom for HiDPI displays
     if ShaguPlates_config.appearance.border.hidpi == "1" then
