@@ -70,7 +70,7 @@ function libdebuff:GetMaxRank(effect)
 end
 
 function libdebuff:UpdateUnits()
-  if not ShaguPlates.uf.target then return end
+  if not ShaguPlates.uf or not ShaguPlates.uf.target then return end
   ShaguPlates.uf:RefreshUnit(ShaguPlates.uf.target, "aura")
 end
 
