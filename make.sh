@@ -69,6 +69,8 @@ rm img/pvp.tga
 rm img/ress.tga
 rm img/sad.tga
 rm img/sort.tga
+rm img/circleparty.tga
+rm img/circleraid.tga
 
 # remove obsolete fonts
 rm fonts/RobotoMono.ttf
