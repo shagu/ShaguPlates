@@ -230,8 +230,11 @@ end
 ShaguPlates:SetScript("OnEvent", function()
   -- some addons overwrite color and font settings
   -- need to enforce ShaguPlates's selection every time
-  ShaguPlates:UpdateFonts()
-  ShaguPlates:UpdateColors()
+  -- as soon as ShaguPlates's config got initialized
+  if not ShaguPlates.bootup then
+    ShaguPlates:UpdateFonts()
+    ShaguPlates:UpdateColors()
+  end
 
   if arg1 == ShaguPlates.name then
     -- read ShaguPlates version from .toc file

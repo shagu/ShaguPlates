@@ -592,13 +592,16 @@ end
 -- [ Save Movable ]
 -- Save the positions of a Frame.
 -- 'frame'      [frame]        the frame that should be saved.
-function ShaguPlates.api.SaveMovable(frame)
+function ShaguPlates.api.SaveMovable(frame, scale)
   local anchor, _, _, xpos, ypos = frame:GetPoint()
   C.position[frame:GetName()] = C.position[frame:GetName()] or {}
   C.position[frame:GetName()]["xpos"] = round(xpos)
   C.position[frame:GetName()]["ypos"] = round(ypos)
   C.position[frame:GetName()]["anchor"] = anchor
   C.position[frame:GetName()]["parent"] = frame:GetParent() and frame:GetParent():GetName() or nil
+  if scale then
+    C.position[frame:GetName()]["scale"] = frame:GetScale()
+  end
 end
 
 -- [ Update Movable ]
@@ -1109,9 +1112,12 @@ function ShaguPlates.api.GetColoredTimeString(remaining)
   elseif remaining > 99 then
     local r,g,b,a = ShaguPlates.api.GetStringColor(C.appearance.cd.minutecolor)
     return ShaguPlates.api.rgbhex(r,g,b) .. round(remaining / 60) .. "|rm"
-  elseif remaining <= 5 then
+  elseif remaining <= 5 and ShaguPlates_config.appearance.cd.milliseconds == "1" then
     local r,g,b,a = ShaguPlates.api.GetStringColor(C.appearance.cd.lowcolor)
     return ShaguPlates.api.rgbhex(r,g,b) .. string.format("%.1f", round(remaining,1))
+  elseif remaining <= 5 then
+    local r,g,b,a = ShaguPlates.api.GetStringColor(C.appearance.cd.lowcolor)
+    return ShaguPlates.api.rgbhex(r,g,b) .. round(remaining)
   elseif remaining >= 0 then
     local r, g, b, a = ShaguPlates.api.GetStringColor(C.appearance.cd.normalcolor)
     return ShaguPlates.api.rgbhex(r,g,b) .. round(remaining)

@@ -22,8 +22,8 @@ libhealth:SetScript("OnEvent", function()
 
     -- load enable state and set functions
     libhealth.enabled = ShaguPlates_config["global"]["libhealth"] == "1" and true or nil
-    libhealth.reqhit = tonumber(ShaguPlates_config["global"]["libhealth_hit"])
-    libhealth.reqdmg = tonumber(ShaguPlates_config["global"]["libhealth_dmg"]) * 100
+    libhealth.reqhit = (tonumber(ShaguPlates_config["global"]["libhealth_hit"]) or 4)
+    libhealth.reqdmg = (tonumber(ShaguPlates_config["global"]["libhealth_dmg"]) or 0.5) * 100
   end
 
   -- return as we're not supposed to be here
