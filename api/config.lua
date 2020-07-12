@@ -666,6 +666,7 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("nameplates", "debuffs",     "whitelist",        "")
   ShaguPlates:UpdateConfig("nameplates", "debuffs",     "blacklist",        "")
   ShaguPlates:UpdateConfig("nameplates", "debuffs",     "showstacks",       "0")
+  ShaguPlates:UpdateConfig("nameplates", "debuffs",     "position",         "BOTTOM")
 
   ShaguPlates:UpdateConfig("abuttons",   nil,           "enable",           "0")
   ShaguPlates:UpdateConfig("abuttons",   nil,           "position",         "bottom")
