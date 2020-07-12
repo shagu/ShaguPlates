@@ -228,12 +228,14 @@ function ShaguPlates:LoadSkin(s)
 end
 
 ShaguPlates:SetScript("OnEvent", function()
-  -- some addons overwrite color and font settings
-  -- need to enforce ShaguPlates's selection every time
-  -- as soon as ShaguPlates's config got initialized
+  -- enforce color updates on each event
+  ShaguPlates:UpdateColors()
+
+  -- make sure to initialize and set our fonts
+  -- each time an addon got loaded but only
+  -- when the config is already accessible
   if not ShaguPlates.bootup then
     ShaguPlates:UpdateFonts()
-    ShaguPlates:UpdateColors()
   end
 
   if arg1 == ShaguPlates.name then
