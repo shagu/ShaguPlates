@@ -34,6 +34,7 @@ ShaguPlates_translation["zhCN"] = {
   ["Cursor"] = "鼠标跟随",
   ["Custom"] = nil,
   ["Debuff Icon Size"] = nil,
+  ["Debuff Position"] = "Debuff显示的位置",
   ["Debuffs"] = "Debuff（减益）",
   ["Default"] = "默认设置",
   ["Descending"] = "下移",

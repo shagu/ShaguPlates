@@ -34,6 +34,7 @@ ShaguPlates_translation["enUS"] = {
   ["Cursor"] = nil,
   ["Custom"] = nil,
   ["Debuff Icon Size"] = nil,
+  ["Debuff Position"] = nil,
   ["Debuffs"] = nil,
   ["Default"] = nil,
   ["Descending"] = nil,

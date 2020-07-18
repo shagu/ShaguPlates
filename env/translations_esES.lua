@@ -34,6 +34,7 @@ ShaguPlates_translation["esES"] = {
   ["Cursor"] = "Puntero",
   ["Custom"] = "Personalizado",
   ["Debuff Icon Size"] = "Tamaño del icono de perjuicios",
+  ["Debuff Position"] = "Posición de perjuicios",
   ["Debuffs"] = "Perjuicios",
   ["Default"] = "Predeterminado",
   ["Descending"] = "Descendiendo",

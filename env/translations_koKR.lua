@@ -34,6 +34,7 @@ ShaguPlates_translation["koKR"] = {
   ["Cursor"] = "Cursor(커서)",
   ["Custom"] = nil,
   ["Debuff Icon Size"] = nil,
+  ["Debuff Position"] = "디버프 위치",
   ["Debuffs"] = nil,
   ["Default"] = "기본",
   ["Descending"] = nil,

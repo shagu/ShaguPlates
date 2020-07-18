@@ -34,6 +34,7 @@ ShaguPlates_translation["frFR"] = {
   ["Cursor"] = "Curseur",
   ["Custom"] = "Personnaliser",
   ["Debuff Icon Size"] = "Taille des icones des Affaiblissements",
+  ["Debuff Position"] = "Position des affaiblissements",
   ["Debuffs"] = "Affaiblissements",
   ["Default"] = "Défaut",
   ["Descending"] = "Descendante",
