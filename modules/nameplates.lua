@@ -72,7 +72,7 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
       return true
     elseif C.nameplates.critters == "1" and unittype == "NEUTRAL_NPC" then
       for i, critter in pairs(L["critters"]) do
-        if string.find(name, critter) then return true end
+        if string.lower(name) == string.lower(critter) then return true end
       end
     elseif C.nameplates.totems == "1" then
       for totem in pairs(L["totems"]) do
@@ -210,8 +210,10 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     for i, object in pairs({parent:GetRegions()}) do
       if NAMEPLATE_OBJECTORDER[i] and NAMEPLATE_OBJECTORDER[i] == "raidicon" then
         nameplate[NAMEPLATE_OBJECTORDER[i]] = object
-      else
+      elseif NAMEPLATE_OBJECTORDER[i] then
         nameplate.original[NAMEPLATE_OBJECTORDER[i]] = object
+        DisableObject(object)
+      else
         DisableObject(object)
       end
     end
@@ -444,7 +446,7 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     local name = plate.original.name:GetText()
     local level = plate.original.level:IsShown() and plate.original.level:GetObjectType() == "FontString" and tonumber(plate.original.level:GetText()) or "??"
     local class, _, elite, player = GetUnitData(name, true)
-    local target = UnitExists("target") and plate.parent:GetAlpha() == 1 or nil
+    local target = plate.istarget
     local mouseover = UnitExists("mouseover") and plate.original.glow:IsShown() or nil
     local unitstr = target and "target" or mouseover and "mouseover" or nil
     local red, green, blue = plate.original.healthbar:GetStatusBarColor()
@@ -596,8 +598,11 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     local target = UnitExists("target") and frame:GetAlpha() == 1 or nil
     local mouseover = UnitExists("mouseover") and original.glow:IsShown() or nil
 
+    -- cache target value
+    nameplate.istarget = target
+
     -- set non-target plate alpha
-    if target then
+    if target or not UnitExists("target") then
       nameplate:SetAlpha(1)
     else
       frame:SetAlpha(.95)
