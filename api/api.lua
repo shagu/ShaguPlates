@@ -266,6 +266,28 @@ function ShaguPlates.api.GetItemCount(itemName)
   return count
 end
 
+-- [ FindItem ]
+-- Returns the bag and slot position of an item based on the name.
+-- 'item'       [string]         name of the item
+-- returns:     [int]            bag
+--              [int]            slot
+function ShaguPlates.api.FindItem(item)
+  for bag = 4, 0, -1 do
+    for slot = 1, GetContainerNumSlots(bag) do
+      local itemLink = GetContainerItemLink(bag,slot)
+      if itemLink then
+        local _, _, parse = strfind(itemLink, "(%d+):")
+        local query = GetItemInfo(parse)
+        if query and query ~= "" and query == item then
+          return bag, slot
+        end
+      end
+    end
+  end
+
+  return nil
+end
+
 -- [ GetBagFamily ]
 -- Returns information about the type of a bag such as Soul Bags or Quivers.
 -- Available bagtypes are "BAG", "KEYRING", "SOULBAG", "QUIVER" and "SPECIAL"
@@ -1133,6 +1155,7 @@ local gradientcolors = {}
 function ShaguPlates.api.GetColorGradient(perc)
   perc = perc > 1 and 1 or perc
   perc = perc < 0 and 0 or perc
+  perc = floor(perc*100)/100
 
   local index = perc
   if not gradientcolors[index] then

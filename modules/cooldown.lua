@@ -6,12 +6,14 @@ ShaguPlates:RegisterModule("cooldown", "vanilla:tbc", function ()
   local hourcolor   = {strsplit(",", C.appearance.cd.hourcolor)}
   local daycolor    = {strsplit(",", C.appearance.cd.daycolor)}
 
+  local parent
   local function pfCooldownOnUpdate()
-    if not this:GetParent() then this:Hide()  end
+    parent = this:GetParent()
+    if not parent then this:Hide() end
 
     -- avoid to set cooldowns on invalid frames
-    if this:GetParent() and this:GetParent():GetName() and _G[this:GetParent():GetName() .. "Cooldown"] then
-      if not _G[this:GetParent():GetName() .. "Cooldown"]:IsShown() then
+    if parent and parent:GetName() and _G[parent:GetName() .. "Cooldown"] then
+      if not _G[parent:GetName() .. "Cooldown"]:IsShown() then
         this:Hide()
       end
     end
@@ -21,7 +23,7 @@ ShaguPlates:RegisterModule("cooldown", "vanilla:tbc", function ()
     this.next = GetTime() + .1
 
     -- fix own alpha value (should be inherited, but somehow isn't always)
-    this:SetAlpha(this:GetParent():GetAlpha())
+    this:SetAlpha(parent:GetAlpha())
 
     local remaining = this.duration - (GetTime() - this.start)
     if remaining >= 0 then
@@ -32,23 +34,23 @@ ShaguPlates:RegisterModule("cooldown", "vanilla:tbc", function ()
   end
 
   local function pfCreateCoolDown(cooldown, start, duration)
-    cooldown.cd = CreateFrame("Frame", "pfCooldownFrame", cooldown:GetParent())
-    cooldown.cd:SetAllPoints(cooldown:GetParent())
-    cooldown.cd:SetFrameLevel(cooldown.cd:GetFrameLevel() + 1)
+    cooldown.pfCooldownText = CreateFrame("Frame", "pfCooldownFrame", cooldown:GetParent())
+    cooldown.pfCooldownText:SetAllPoints(cooldown:GetParent())
+    cooldown.pfCooldownText:SetFrameLevel(cooldown:GetParent():GetFrameLevel() + 1)
 
-    cooldown.cd.text = cooldown.cd:CreateFontString("pfCooldownFrameText", "OVERLAY")
+    cooldown.pfCooldownText.text = cooldown.pfCooldownText:CreateFontString("pfCooldownFrameText", "OVERLAY")
     if not cooldown.pfCooldownType then
-      cooldown.cd.text:SetFont(ShaguPlates.font_unit, C.appearance.cd.font_size_foreign, "OUTLINE")
+      cooldown.pfCooldownText.text:SetFont(ShaguPlates.font_unit, C.appearance.cd.font_size_foreign, "OUTLINE")
     elseif cooldown.pfCooldownType == "BLIZZARD" then
-      cooldown.cd.text:SetFont(ShaguPlates.font_unit, C.appearance.cd.font_size_blizz, "OUTLINE")
+      cooldown.pfCooldownText.text:SetFont(ShaguPlates.font_unit, C.appearance.cd.font_size_blizz, "OUTLINE")
     elseif cooldown.pfCooldownSize then
-      cooldown.cd.text:SetFont(ShaguPlates.font_unit, cooldown.pfCooldownSize, "OUTLINE")
+      cooldown.pfCooldownText.text:SetFont(ShaguPlates.font_unit, cooldown.pfCooldownSize, "OUTLINE")
     else
-      cooldown.cd.text:SetFont(ShaguPlates.font_unit, C.appearance.cd.font_size, "OUTLINE")
+      cooldown.pfCooldownText.text:SetFont(ShaguPlates.font_unit, C.appearance.cd.font_size, "OUTLINE")
     end
 
-    cooldown.cd.text:SetPoint("CENTER", cooldown.cd, "CENTER", 0, 0)
-    cooldown.cd:SetScript("OnUpdate", pfCooldownOnUpdate)
+    cooldown.pfCooldownText.text:SetPoint("CENTER", cooldown.pfCooldownText, "CENTER", 0, 0)
+    cooldown.pfCooldownText:SetScript("OnUpdate", pfCooldownOnUpdate)
   end
 
   -- hook
@@ -71,16 +73,25 @@ ShaguPlates:RegisterModule("cooldown", "vanilla:tbc", function ()
       return
     end
 
+    -- hide animation
+    if this.pfCooldownStyleAnimation == 0 then
+      this:SetAlpha(0)
+    else
+      this:SetAlpha(this:GetParent():GetAlpha())
+    end
+
     -- print time as text on cooldown frames
-    if start > 0 and duration > 0 and (not enable or enable > 0) then
-      if( not this.cd ) then
+    if ( not this.pfCooldownStyleText or this.pfCooldownStyleText == 1)
+    and start > 0 and duration > 0 and (not enable or enable > 0) then
+      if( not this.pfCooldownText ) then
         pfCreateCoolDown(this, start, duration)
       end
-      this.cd.start = start
-      this.cd.duration = duration
-      this.cd:Show()
-    elseif(this.cd) then
-      this.cd:Hide()
+
+      this.pfCooldownText.start = start
+      this.pfCooldownText.duration = duration
+      this.pfCooldownText:Show()
+    elseif(this.pfCooldownText) then
+      this.pfCooldownText:Hide()
     end
   end
 

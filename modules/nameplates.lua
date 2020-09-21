@@ -160,6 +160,11 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
 
   -- create nameplate core
   local nameplates = CreateFrame("Frame", "pfNameplates", UIParent)
+  nameplates:RegisterEvent("PLAYER_ENTERING_WORLD")
+  nameplates:SetScript("OnEvent", function()
+    this:SetGameVariables()
+  end)
+
   nameplates:SetScript("OnUpdate", function()
     parentCount = WorldFrame:GetNumChildren()
     if initialized < parentCount then
@@ -264,6 +269,7 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
         debuffs[i].stacks:SetTextColor(1,1,0)
 
         debuffs[i].cd = CreateFrame(COOLDOWN_FRAME_TYPE, nil, debuffs[i], "CooldownFrameTemplate")
+        debuffs[i].cd.pfCooldownStyleAnimation = 0
         debuffs[i].cd.pfCooldownType = "ALL"
       end
       nameplate.debuffs = debuffs
