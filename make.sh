@@ -34,6 +34,7 @@ find . -iname "*.toc" -type f | xargs sed -i '/Notes-/d'
 sed -i 's/"use_unitfonts".*"0")/"use_unitfonts", "1")/g' api/config.lua
 sed -i 's/"use_unitfonts".*"0")/"use_unitfonts", "1")/g' api/config.lua
 sed -i 's/"border",.*"nameplates",.*"-1"/"border",      "nameplates",       "2"/g' api/config.lua
+sed -i 's/\("appearance", "cd",          "blizzard",         "\)1"/\10"/g' api/config.lua
 
 # only load required modules
 echo '<Ui xmlns="http://www.blizzard.com/wow/ui/">
