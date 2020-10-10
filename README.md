@@ -25,7 +25,7 @@ Initially, this project started as a fork of CustomNameplates that became an ent
 
 * **Debuff Caches** can be activated on the nameplates, to make it remember the debuffs it had while it was the target. Those are also updated when you hover the nameplate with the mouse cursor.
 
-* **Debuf Filters** help to only display those debuffs that are relevant for you.
+* **Debuff Filters** help to only display those debuffs that are relevant for you.
 
 * **Combo Points** can be enabled to show up on the nameplates.
 
