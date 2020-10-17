@@ -140,6 +140,7 @@ ShaguPlates_translation["frFR"] = {
   ["Player Unitframe"] = "Cadre du Joueur",
   ["Raid Icon Size"] = "Taille des icônes de Raid",
   ["Regional Settings"] = nil,
+  ["Replace Totems With Icons"] = nil,
   ["Reputation Bar"] = "Barre de réputation",
   ["Required Damage In Percent"] = "Dommage en pourcentage obligatoire",
   ["Right"] = "Droit",

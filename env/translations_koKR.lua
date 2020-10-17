@@ -140,6 +140,7 @@ ShaguPlates_translation["koKR"] = {
   ["Player Unitframe"] = nil,
   ["Raid Icon Size"] = "레이드 아이콘 크기",
   ["Regional Settings"] = nil,
+  ["Replace Totems With Icons"] = nil,
   ["Reputation Bar"] = nil,
   ["Required Damage In Percent"] = nil,
   ["Right"] = "오른쪽",

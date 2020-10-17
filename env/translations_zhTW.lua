@@ -140,6 +140,7 @@ ShaguPlates_translation["zhTW"] = {
   ["Player Unitframe"] = nil,
   ["Raid Icon Size"] = "團隊圖示大小",
   ["Regional Settings"] = nil,
+  ["Replace Totems With Icons"] = nil,
   ["Reputation Bar"] = nil,
   ["Required Damage In Percent"] = nil,
   ["Right"] = "右邊",

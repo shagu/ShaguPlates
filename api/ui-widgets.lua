@@ -763,23 +763,19 @@ function ShaguPlates.api.SkinArrowButton(button, dir, size)
 
   button.icon:SetTexture(ShaguPlates.media["img:"..dir])
 
-  if not button.pfScripted then
-    RunOOC(function()
-      local enable = button.Enable
-      local disable = button.Disable
+  if not button.pficonfade then
+    local button, state = button, nil
+    button.pficonfade = CreateFrame("Frame", nil, button)
+    button.pficonfade:SetScript("OnUpdate", function()
+      if state == button:IsEnabled() then return end
+      state = button:IsEnabled()
 
-      button.Enable = function(self)
-        if enable then enable(self) end
-        self.icon:SetVertexColor(.8,.8,.8,1)
-      end
-
-      button.Disable = function(self)
-        if disable then disable(self) end
-        self.icon:SetVertexColor(.2,.2,.2,1)
+      if state > 0 then
+        button.icon:SetVertexColor(.8,.8,.8,1)
+      else
+        button.icon:SetVertexColor(.2,.2,.2,1)
       end
     end)
-
-    button.pfScripted = true
   end
 end
 
@@ -811,7 +807,8 @@ function ShaguPlates.api.SkinScrollbar(frame, always)
   -- always show parent frame
   if always then
     RunOOC(function()
-      parent:SetScript("OnHide", function() this:Show() end)
+      if not parent.HookScript then parent.HookScript = HookScript end
+      parent:HookScript("OnHide", function() this:Show() end)
     end)
   end
 end

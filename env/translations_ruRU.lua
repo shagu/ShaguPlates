@@ -140,6 +140,7 @@ ShaguPlates_translation["ruRU"] = {
   ["Player Unitframe"] = "Окно юнита Игрок",
   ["Raid Icon Size"] = "Размер иконки рейда",
   ["Regional Settings"] = nil,
+  ["Replace Totems With Icons"] = nil,
   ["Reputation Bar"] = "Панель репутации",
   ["Required Damage In Percent"] = "Необходимый урон в %",
   ["Right"] = "Справа",

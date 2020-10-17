@@ -140,6 +140,7 @@ ShaguPlates_translation["deDE"] = {
   ["Player Unitframe"] = nil,
   ["Raid Icon Size"] = nil,
   ["Regional Settings"] = nil,
+  ["Replace Totems With Icons"] = nil,
   ["Reputation Bar"] = nil,
   ["Required Damage In Percent"] = nil,
   ["Right"] = nil,
