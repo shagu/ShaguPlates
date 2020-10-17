@@ -1014,6 +1014,8 @@ ShaguPlates:RegisterModule("gui", "vanilla:tbc", function ()
       CreateConfig(U["nameplates"], T["Enable Overlap"], C.nameplates, "overlap", "checkbox", nil, nil, nil, nil, "vanilla")
       CreateConfig(U["nameplates"], T["Enable Mouselook With Right Click"], C.nameplates, "rightclick", "checkbox", nil, nil, nil, nil, "vanilla")
       CreateConfig(U["nameplates"], T["Right Click Auto Attack Threshold"], C.nameplates, "clickthreshold", nil, nil, nil, nil, nil, "vanilla")
+      CreateConfig(U["nameplates"], T["Replace Totems With Icons"], C.nameplates, "totemicons", "checkbox")
+
       -- CreateConfig(U["nameplates"], T["Use Unit Fonts"], C.nameplates, "use_unitfonts", "checkbox")
       CreateConfig(nil, T["Standard Text Font"], C.global, "font_unit", "dropdown", ShaguPlates.gui.dropdowns.fonts)
       CreateConfig(nil, T["Standard Text Font Size"], C.global, "font_unit_size")
