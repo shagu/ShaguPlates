@@ -149,7 +149,6 @@ function ShaguPlates:UpdateFonts()
   -- set game constants
 
   -- set dropdown font to default size
-  UIDROPDOWNMENU_DEFAULT_TEXT_HEIGHT = 11
 
   -- change default game font objects
 
