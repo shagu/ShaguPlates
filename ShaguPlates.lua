@@ -295,7 +295,6 @@ error = function(msg)
     DEFAULT_CHAT_FRAME:AddMessage("|cffcc3333ERROR: |cffff5555".. (msg or "nil" ))
   end
 end
-seterrorhandler(error)
 
 function ShaguPlates.SetupCVars()
   ClearTutorials()

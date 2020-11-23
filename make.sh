@@ -90,6 +90,9 @@ sed -i '/.*NAMEPLATE_FONT.*/d' ShaguPlates.lua
 sed -i '/.*UNIT_NAME_FONT.*/d' ShaguPlates.lua
 sed -i '/.*UIDROPDOWNMENU_DEFAULT_TEXT_HEIGHT.*/d' ShaguPlates.lua
 
+# remove default error handler
+sed -i '/seterrorhandler/d' ShaguPlates.lua
+
 # remove obsolete translations
 for locale in "deDE" "enUS" "frFR" "koKR" "ruRU" "zhCN" "zhTW" "esES"; do
   file=env/translations_$locale.lua
