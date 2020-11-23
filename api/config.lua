@@ -124,7 +124,7 @@ function ShaguPlates:LoadConfig()
 
   ShaguPlates:UpdateConfig("appearance", "border",      "background",       "0,0,0,1")
   ShaguPlates:UpdateConfig("appearance", "border",      "color",            "0.2,0.2,0.2,1")
-  ShaguPlates:UpdateConfig("appearance", "border",      "shadow",           "1")
+  ShaguPlates:UpdateConfig("appearance", "border",      "shadow",           "0")
   ShaguPlates:UpdateConfig("appearance", "border",      "shadow_intensity", ".35")
   ShaguPlates:UpdateConfig("appearance", "border",      "pixelperfect",     "1")
   ShaguPlates:UpdateConfig("appearance", "border",      "hidpi",            "1")

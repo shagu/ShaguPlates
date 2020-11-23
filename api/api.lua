@@ -164,6 +164,42 @@ function ShaguPlates.api.modf(f)
   return math.ceil(f), mod(f,1)
 end
 
+-- [ GetSlashCommands ]
+-- Lists all registeres slash commands
+-- 'text'       [string]        optional, a specific command to find
+-- return:      [list]          a list of all matching slash commands
+function ShaguPlates.api.GetSlashCommands(text)
+  local cmds
+  for k, v in pairs(_G) do
+    if strfind(k, "^SLASH_") and (not text or v == text) then
+      cmds = cmds or {}
+      cmds[k] = v
+    end
+  end
+
+  return cmds
+end
+
+-- [ RegisterSlashCommand ]
+-- Lists all registeres slash commands
+-- 'name'       [string]      name of the command
+-- 'cmds'       [table]       table containing all slash command strings
+-- 'func'       [function]    the function that should be assigned
+-- 'force'      [boolean]     force assign the command even if aleady provided
+--                            by another function/addon.
+function ShaguPlates.api.RegisterSlashCommand(name, cmds, func, force)
+  local counter = 1
+
+  for _, cmd in pairs(cmds) do
+    if force or not ShaguPlates.api.GetSlashCommands(cmd) then
+      _G["SLASH_"..name..counter] = cmd
+      counter = counter + 1
+    end
+  end
+
+  _G.SlashCmdList[name] = func
+end
+
 -- [ GetCaptures ]
 -- Returns the indexes of a given regex pattern
 -- 'pat'        [string]         unformatted pattern
@@ -278,7 +314,7 @@ function ShaguPlates.api.FindItem(item)
       if itemLink then
         local _, _, parse = strfind(itemLink, "(%d+):")
         local query = GetItemInfo(parse)
-        if query and query ~= "" and query == item then
+        if query and query ~= "" and string.lower(query) == string.lower(item) then
           return bag, slot
         end
       end

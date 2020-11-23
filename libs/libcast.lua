@@ -293,9 +293,9 @@ local aimedshot = L["customcast"]["AIMEDSHOT"]
 local multishot = L["customcast"]["MULTISHOT"]
 
 libcast.customcast = {}
-libcast.customcast[strlower(aimedshot)] = function(begin)
+libcast.customcast[strlower(aimedshot)] = function(begin, duration)
   if begin then
-    local duration = 3000
+    local duration = duration or 3000
 
     for i=1,32 do
       if UnitBuff("player", i) == "Interface\\Icons\\Racial_Troll_Berserk" then
@@ -334,9 +334,26 @@ libcast.customcast[strlower(aimedshot)] = function(begin)
   end
 end
 
-libcast.customcast[strlower(multishot)] = function(begin)
+libcast.customcast[strlower(multishot)] = function(begin, duration)
   if begin then
-    local duration = 500
+    local duration = duration or 500
+
+    for i=1,32 do
+      if UnitBuff("player", i) == "Interface\\Icons\\Racial_Troll_Berserk" then
+        local berserk = 0.3
+        if((UnitHealth("player")/UnitHealthMax("player")) >= 0.40) then
+          berserk = (1.30 - (UnitHealth("player") / UnitHealthMax("player"))) / 3
+        end
+        duration = duration / (1 + berserk)
+      elseif UnitBuff("player", i) == "Interface\\Icons\\Ability_Hunter_RunningShot" then
+        duration = duration / 1.4
+      elseif UnitBuff("player", i) == "Interface\\Icons\\Ability_Warrior_InnerRage" then
+        duration = duration / 1.3
+      elseif UnitBuff("player", i) == "Interface\\Icons\\Inv_Trinket_Naxxramas04" then
+        duration = duration / 1.2
+      end
+    end
+
     local _,_, lag = GetNetStats()
     local start = GetTime() + lag/1000
 
@@ -397,12 +414,12 @@ end, true)
 
 hooksecurefunc("UseAction", function(slot, target, button)
   scanner:SetAction(slot)
-  _, lastrank = scanner:Line(1)
+  local spellName, rank = scanner:Line(1)
+
   lastcasttex = GetActionTexture(slot)
+  lastrank = rank
 
   if GetActionText(slot) or not IsCurrentAction(slot) then return end
-  scanner:SetAction(slot)
-  local spellName = scanner:Line(1)
   CastCustom(spellName)
 end, true)
 

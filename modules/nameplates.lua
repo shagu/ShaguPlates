@@ -329,7 +329,7 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
       end)
 
       castbar.text = castbar:CreateFontString("Status", "DIALOG", "GameFontNormal")
-      castbar.text:SetPoint("RIGHT", castbar, "LEFT")
+      castbar.text:SetPoint("RIGHT", castbar, "LEFT", -4, 0)
       castbar.text:SetNonSpaceWrap(false)
       castbar.text:SetTextColor(1,1,1,.5)
 
@@ -532,7 +532,7 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
       plate.health:Hide()
       plate.totem:Hide()
     else
-      plate.level:SetPoint("RIGHT", plate.health, "LEFT", -3, 0)
+      plate.level:SetPoint("RIGHT", plate.health, "LEFT", -5, 0)
       plate.name:SetParent(plate.health)
 
       plate.level:Show()

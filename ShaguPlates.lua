@@ -146,11 +146,10 @@ function ShaguPlates:UpdateFonts()
   ShaguPlates.font_combat = combat
   ShaguPlates.font_unit = unit
 
-  ShaguPlates.font_default_size = default_size
-  ShaguPlates.font_combat_size = combat_size
-  ShaguPlates.font_unit_size = unit_size
-
   -- set game constants
+
+  -- set dropdown font to default size
+  UIDROPDOWNMENU_DEFAULT_TEXT_HEIGHT = 11
 
   -- change default game font objects
 
