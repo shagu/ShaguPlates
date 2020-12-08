@@ -49,6 +49,7 @@ sed -i '/.*unitframes.*/d' init/api.xml
 
 # remove libtotem
 rm libs/libtotem.lua
+rm libs/libpredict.lua
 sed -i '/.*libtotem.*/d' init/libs.xml
 
 # remove obsolete graphics
