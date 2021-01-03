@@ -864,6 +864,16 @@ ShaguPlates:RegisterModule("gui", "vanilla:tbc", function ()
         "powermiss:" .. T["Mana - Missing"],
         "powerminmax:" .. T["Mana - Min/Max"],
       },
+      ["hpformat"] = {
+        "percent:" .. T["Percent"],
+        "cur:" .. T["Current HP"],
+        "curperc:" .. T["Current HP | Percent"],
+        "curmax:" .. T["Current HP - Max HP"],
+        "curmaxs:" .. T["Current HP / Max HP"],
+        "curmaxperc:" .. T["Current HP - Max HP | Percent"],
+        "curmaxpercs:" .. T["Current HP / Max HP | Percent"],
+        "deficit:" .. T["Deficit"],
+      },
       ["panel_values"] = {
         "none:" .. T["Disable"],
         "time:" .. T["Clock"],
@@ -951,6 +961,11 @@ ShaguPlates:RegisterModule("gui", "vanilla:tbc", function ()
         "TOP:" .. T["Top"],
         "RIGHT:" .. T["Right"]
       },
+      ["textalign"] = {
+        "LEFT:" .. T["Left"],
+        "CENTER:" .. T["Center"],
+        "RIGHT:" .. T["Right"],
+      },
     }
 
     -- add locale dependent client fonts to the list
@@ -1007,12 +1022,17 @@ ShaguPlates:RegisterModule("gui", "vanilla:tbc", function ()
       CreateConfig(U["nameplates"], T["Enable Class Colors On Enemies"], C.nameplates, "enemyclassc", "checkbox")
       CreateConfig(U["nameplates"], T["Enable Class Colors On Friends"], C.nameplates, "friendclassc", "checkbox")
       CreateConfig(U["nameplates"], T["Enable Combo Point Display"], C.nameplates, "cpdisplay", "checkbox")
-      CreateConfig(U["nameplates"], T["Raid Icon Size"], C.nameplates, "raidiconsize")
       CreateConfig(U["nameplates"], T["Enable Clickthrough"], C.nameplates, "clickthrough", "checkbox", nil, nil, nil, nil, "vanilla")
       CreateConfig(U["nameplates"], T["Enable Overlap"], C.nameplates, "overlap", "checkbox", nil, nil, nil, nil, "vanilla")
       CreateConfig(U["nameplates"], T["Enable Mouselook With Right Click"], C.nameplates, "rightclick", "checkbox", nil, nil, nil, nil, "vanilla")
       CreateConfig(U["nameplates"], T["Right Click Auto Attack Threshold"], C.nameplates, "clickthreshold", nil, nil, nil, nil, nil, "vanilla")
       CreateConfig(U["nameplates"], T["Replace Totems With Icons"], C.nameplates, "totemicons", "checkbox")
+
+      CreateConfig(nil, T["Raid Icon"], nil, nil, "header")
+      CreateConfig(U["nameplates"], T["Raid Icon Position"], C.nameplates, "raidiconpos", "dropdown", ShaguPlates.gui.dropdowns.positions)
+      CreateConfig(U["nameplates"], T["Raid Icon X-Offset"], C.nameplates, "raidiconoffx")
+      CreateConfig(U["nameplates"], T["Raid Icon Y-Offset"], C.nameplates, "raidiconoffy")
+      CreateConfig(U["nameplates"], T["Raid Icon Size"], C.nameplates, "raidiconsize")
 
       -- CreateConfig(U["nameplates"], T["Use Unit Fonts"], C.nameplates, "use_unitfonts", "checkbox")
       CreateConfig(nil, T["Standard Text Font"], C.global, "font_unit", "dropdown", ShaguPlates.gui.dropdowns.fonts)
@@ -1056,7 +1076,8 @@ ShaguPlates:RegisterModule("gui", "vanilla:tbc", function ()
       CreateConfig(U["nameplates"], T["Healthbar Height"], C.nameplates, "heighthealth")
       CreateConfig(U["nameplates"], T["Healthbar Texture"], C.nameplates, "healthtexture", "dropdown", ShaguPlates.gui.dropdowns.uf_bartexture)
       CreateConfig(U["nameplates"], T["Show Health Points"], C.nameplates, "showhp", "checkbox")
-      CreateConfig(U["nameplates"], T["Always Show Health In Percent"], C.nameplates, "alwaysperc", "checkbox")
+      CreateConfig(U["nameplates"], T["Health Text Position"], C.nameplates, "hptextpos", "dropdown", ShaguPlates.gui.dropdowns.textalign)
+      CreateConfig(U["nameplates"], T["Health Text Format"], C.nameplates, "hptextformat", "dropdown", ShaguPlates.gui.dropdowns.hpformat)
       CreateConfig(U["nameplates"], T["Hide Healthbar On Enemy NPCs"], C.nameplates, "enemynpc", "checkbox")
       CreateConfig(U["nameplates"], T["Hide Healthbar On Enemy Players"], C.nameplates, "enemyplayer", "checkbox")
       CreateConfig(U["nameplates"], T["Hide Healthbar On Neutral NPCs"], C.nameplates, "neutralnpc", "checkbox")
