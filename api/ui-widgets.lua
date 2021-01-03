@@ -568,15 +568,12 @@ function ShaguPlates.api.EnableClickRotate(frame)
   end)
 end
 
-
-local SetHighlightEnter = function()
-  if this.funce then this:funce() end
+local function SetHighlightEnter()
   if this.locked then return end
   (this.backdrop or this):SetBackdropBorderColor(this.cr,this.cg,this.cb,1)
 end
 
-local SetHighlightLeave = function()
-  if this.funcl then this:funcl() end
+local function SetHighlightLeave()
   if this.locked then return end
   (this.backdrop or this):SetBackdropBorderColor(this.rr,this.rg,this.rb,1)
 end
@@ -593,10 +590,21 @@ function ShaguPlates.api.SetHighlight(frame, cr, cg, cb)
   frame.rr, frame.rg, frame.rb = GetStringColor(ShaguPlates_config.appearance.border.color)
 
   if not frame.pfEnterLeave then
-    frame.funce = frame:GetScript("OnEnter")
-    frame.funcl = frame:GetScript("OnLeave")
-    frame:SetScript("OnEnter", SetHighlightEnter)
-    frame:SetScript("OnLeave", SetHighlightLeave)
+    if not frame.HookScript then frame.HookScript = HookScript end
+    local enter, leave = frame:GetScript("OnEnter"), frame:GetScript("OnLeave")
+
+    if enter then
+      frame:HookScript("OnEnter", SetHighlightEnter)
+    else
+      frame:SetScript("OnEnter", SetHighlightEnter)
+    end
+
+    if leave then
+      frame:HookScript("OnLeave", SetHighlightLeave)
+    else
+      frame:SetScript("OnLeave", SetHighlightLeave)
+    end
+
     frame.pfEnterLeave = true
   end
 end
@@ -630,17 +638,9 @@ function ShaguPlates.api.SkinButton(button, cr, cg, cb, icon, disableHighlight)
   b:SetHighlightTexture("")
   b:SetPushedTexture("")
   b:SetDisabledTexture("")
-  if b.SetCheckedTexture then
-    b:SetCheckedTexture(nil)
-    function b.SetChecked(self, checked)
-      if checked == 1 then
-        self.locked = true
-        self:SetBackdropBorderColor(1,1,1)
-        else
-        self.locked = false
-        self:SetBackdropBorderColor(GetStringColor(ShaguPlates_config.appearance.border.color))
-      end
-    end
+
+  if b.SetCheckedTexture and b:GetCheckedTexture() then
+    b:GetCheckedTexture():SetTexture(cr, cg, cb, .25)
   end
 
   if not disableHighlight then
@@ -658,6 +658,7 @@ function ShaguPlates.api.SkinButton(button, cr, cg, cb, icon, disableHighlight)
     b:SetBackdropBorderColor(cr,cg,cb,1)
     b.locked = true
   end
+
   b.UnlockHighlight = function()
     if not MouseIsOver(b) then
       b:SetBackdropBorderColor(GetStringColor(ShaguPlates_config.appearance.border.color))
@@ -730,6 +731,8 @@ end
 -- 'offsetX'     [integer]  offsets the button horizontally
 -- 'offsetY'     [integer]  offsets the button vertically
 function ShaguPlates.api.SkinCloseButton(button, parentFrame, offsetX, offsetY)
+  if not button then return end
+
   SkinButton(button, 1, .25, .25)
 
   button:SetWidth(15)
@@ -748,6 +751,8 @@ function ShaguPlates.api.SkinCloseButton(button, parentFrame, offsetX, offsetY)
 end
 
 function ShaguPlates.api.SkinArrowButton(button, dir, size)
+  if not button then return end
+
   SkinButton(button)
 
   button:SetHitRectInsets(-3,-3,-3,-3)

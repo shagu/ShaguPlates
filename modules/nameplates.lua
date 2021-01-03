@@ -254,8 +254,6 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     nameplate.level:SetPoint("RIGHT", nameplate.health, "LEFT", -3, 0)
 
     nameplate.raidicon:SetParent(nameplate.health)
-    nameplate.raidicon:ClearAllPoints()
-    nameplate.raidicon:SetPoint("CENTER", nameplate.health, "CENTER", 0, -5)
     nameplate.raidicon:SetDrawLayer("OVERLAY")
     nameplate.raidicon:SetTexture(ShaguPlates.media["img:raidicons"])
 
@@ -395,12 +393,14 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     CreateBackdrop(nameplate.health, default_border)
 
     nameplate.health.text:SetFont(font, font_size - 2, "OUTLINE")
-    nameplate.health.text:SetJustifyH("RIGHT")
+    nameplate.health.text:SetJustifyH(C.nameplates.hptextpos)
 
     nameplate.glow:SetWidth(C.nameplates.width + 60)
     nameplate.glow:SetHeight(C.nameplates.heighthealth + 30)
     nameplate.glow:SetVertexColor(glowr, glowg, glowb, glowa)
 
+    nameplate.raidicon:ClearAllPoints()
+    nameplate.raidicon:SetPoint(C.nameplates.raidiconpos, nameplate.health, C.nameplates.raidiconpos, C.nameplates.raidiconoffx, C.nameplates.raidiconoffy)
     nameplate.level:SetFont(font, font_size, font_style)
     nameplate.raidicon:SetWidth(C.nameplates.raidiconsize)
     nameplate.raidicon:SetHeight(C.nameplates.raidiconsize)
@@ -555,9 +555,24 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
         rhp, rhpmax, estimated = ShaguPlates.libhealth:GetUnitHealthByName(name,level,tonumber(hp),tonumber(hpmax))
       end
 
-      if C.nameplates.alwaysperc == "0" and ( estimated or hpmax > 100 or (round(hpmax/100*hp) ~= hp) ) then
+      local setting = C.nameplates.hptextformat
+      local hasdata = ( estimated or hpmax > 100 or (round(hpmax/100*hp) ~= hp) )
+
+      if setting == "curperc" and hasdata then
+        plate.health.text:SetText(string.format("%s | %s%%", Abbreviate(rhp), ceil(hp/hpmax*100)))
+      elseif setting == "cur" and hasdata then
+        plate.health.text:SetText(string.format("%s", Abbreviate(rhp)))
+      elseif setting == "curmax" and hasdata then
+        plate.health.text:SetText(string.format("%s - %s", Abbreviate(rhp), Abbreviate(rhpmax)))
+      elseif setting == "curmaxs" and hasdata then
         plate.health.text:SetText(string.format("%s / %s", Abbreviate(rhp), Abbreviate(rhpmax)))
-      else
+      elseif setting == "curmaxperc" and hasdata then
+        plate.health.text:SetText(string.format("%s - %s | %s%%", Abbreviate(rhp), Abbreviate(rhpmax), ceil(hp/hpmax*100)))
+      elseif setting == "curmaxpercs" and hasdata then
+        plate.health.text:SetText(string.format("%s / %s | %s%%", Abbreviate(rhp), Abbreviate(rhpmax), ceil(hp/hpmax*100)))
+      elseif setting == "deficit" then
+        plate.health.text:SetText(string.format("-%s" .. (hasdata and "" or "%%"), Abbreviate(rhpmax) - Abbreviate(rhp)))
+      else -- "percent" as fallback
         plate.health.text:SetText(string.format("%s%%", ceil(hp/hpmax*100)))
       end
     else
