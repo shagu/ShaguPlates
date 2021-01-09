@@ -443,7 +443,12 @@ function ShaguPlates:LoadConfig()
     ShaguPlates:UpdateConfig("unitframes", unit,      "energycolor",      "1,1,.5,1")
     ShaguPlates:UpdateConfig("unitframes", unit,      "ragecolor",        "1,.5,.5,1")
     ShaguPlates:UpdateConfig("unitframes", unit,      "focuscolor",       "1,1,.75,1")
+    ShaguPlates:UpdateConfig("unitframes", unit,      "healcolor",        "0,1,0,0.6")
     ShaguPlates:UpdateConfig("unitframes", unit,      "overhealperc",     "20")
+    ShaguPlates:UpdateConfig("unitframes", unit,      "customfont",       "0")
+    ShaguPlates:UpdateConfig("unitframes", unit,      "customfont_name",  "Interface\\AddOns\\ShaguPlates\\fonts\\BigNoodleTitling.ttf")
+    ShaguPlates:UpdateConfig("unitframes", unit,      "customfont_size",  "12")
+    ShaguPlates:UpdateConfig("unitframes", unit,      "customfont_style", "OUTLINE")
   end
 
   ShaguPlates:UpdateConfig("bars",       "bar1",        "pageable",         "1")
