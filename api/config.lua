@@ -247,6 +247,16 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("unitframes", "focus",       "buffsize",         "12")
   ShaguPlates:UpdateConfig("unitframes", "focus",       "debuffsize",       "12")
 
+  ShaguPlates:UpdateConfig("unitframes", "focustarget", "visible",          "0")
+  ShaguPlates:UpdateConfig("unitframes", "focustarget", "width",            "80")
+  ShaguPlates:UpdateConfig("unitframes", "focustarget", "height",           "12")
+  ShaguPlates:UpdateConfig("unitframes", "focustarget", "pheight",          "-1")
+  ShaguPlates:UpdateConfig("unitframes", "focustarget", "buffs",            "off")
+  ShaguPlates:UpdateConfig("unitframes", "focustarget", "debuffs",          "off")
+  ShaguPlates:UpdateConfig("unitframes", "focustarget", "txthpleft",        "none")
+  ShaguPlates:UpdateConfig("unitframes", "focustarget", "txthpcenter",      "name")
+  ShaguPlates:UpdateConfig("unitframes", "focustarget", "txthpright",       "none")
+
   ShaguPlates:UpdateConfig("unitframes", "group",       "portrait",         "off")
   ShaguPlates:UpdateConfig("unitframes", "group",       "width",            "164")
   ShaguPlates:UpdateConfig("unitframes", "group",       "height",           "32")
@@ -357,7 +367,7 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("unitframes", "ptarget",     "txthpright",       "none")
   ShaguPlates:UpdateConfig("unitframes", "ptarget",     "overhealperc",     "10")
 
-  local ufs = { "player", "target", "focus", "group", "grouptarget", "grouppet", "raid", "ttarget", "pet", "ptarget", "fallback", "tttarget" }
+  local ufs = { "player", "target", "focus", "focustarget", "group", "grouptarget", "grouppet", "raid", "ttarget", "pet", "ptarget", "fallback", "tttarget" }
   for _, unit in pairs(ufs) do
     ShaguPlates:UpdateConfig("unitframes", unit,      "visible",          "1")
     ShaguPlates:UpdateConfig("unitframes", unit,      "showPVP",          "0")
@@ -600,6 +610,7 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("chat",       "text",        "input_width",      "0")
   ShaguPlates:UpdateConfig("chat",       "text",        "input_height",     "0")
   ShaguPlates:UpdateConfig("chat",       "text",        "outline",          "1")
+  ShaguPlates:UpdateConfig("chat",       "text",        "history",          "1")
   ShaguPlates:UpdateConfig("chat",       "text",        "mouseover",        "0")
   ShaguPlates:UpdateConfig("chat",       "text",        "bracket",          "[]")
   ShaguPlates:UpdateConfig("chat",       "text",        "time",             "0")

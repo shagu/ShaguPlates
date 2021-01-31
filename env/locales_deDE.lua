@@ -196,7 +196,7 @@ ShaguPlates_locale["deDE"]["resurrections"] = {
 }
 
 ShaguPlates_locale["deDE"]["spells"] = {
-  [' Dämmerungstrickfalle']={t=1500,icon='Temp'},
+  ['Dämmerungstrickfalle']={t=1500,icon='Temp'},
   ['Aasskarabäus beschwören']={t=2000,icon='Spell_Shadow_CarrionSwarm'},
   ['Abbau-Schwarm']={t=3000,icon='Spell_Holy_Dizzy'},
   ['Ablagerungen sammeln']={t=4000,icon='Temp'},
