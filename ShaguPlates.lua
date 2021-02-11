@@ -156,19 +156,21 @@ function ShaguPlates:UpdateFonts()
   end
 end
 
+local translations
 function ShaguPlates:GetEnvironment()
   -- load api into environment
   for m, func in pairs(ShaguPlates.api or {}) do
     ShaguPlates.env[m] = func
   end
 
-  if ShaguPlates_config and ShaguPlates_config.global and ShaguPlates_config.global.language and not ShaguPlates.env.T then
+  if ShaguPlates_config and ShaguPlates_config.global and ShaguPlates_config.global.language and not translations then
     local lang = ShaguPlates_config and ShaguPlates_config.global and ShaguPlates_config.global.language and ShaguPlates_translation[ShaguPlates_config.global.language] and ShaguPlates_config.global.language or GetLocale()
     ShaguPlates.env.T = setmetatable(ShaguPlates_translation[lang] or {}, { __index = function(tab,key)
       local value = tostring(key)
       rawset(tab,key,value)
       return value
     end})
+    translations = true
   end
 
   ShaguPlates.env._G = getfenv(0)
