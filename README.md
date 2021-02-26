@@ -1,5 +1,7 @@
 # ShaguPlates
 
+**This AddOn is no longer under active development. Bugfixes will still be made and pull-requests will be processed. However, feature-requests will no longer being worked on.**
+
 A World of Warcraft: Vanilla and Burning Crusade addon, that is compatible to the original game versions 1.12.1 and 2.4.3 from back in the days. This addon modifies and extends the default nameplates by several features.
 
 <a href="preview/left.jpg"><img src="preview/left.jpg" width="24%"></a>
