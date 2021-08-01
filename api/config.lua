@@ -173,6 +173,7 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("appearance", "worldmap",    "tooltipsize",      "0")
   ShaguPlates:UpdateConfig("appearance", "worldmap",    "mapreveal",        "0")
   ShaguPlates:UpdateConfig("appearance", "worldmap",    "mapreveal_color",  ".4,.4,.4,1")
+  ShaguPlates:UpdateConfig("appearance", "worldmap",    "mapexploration",   "0")
   ShaguPlates:UpdateConfig("appearance", "worldmap",    "groupcircles",     "3")
 
   ShaguPlates:UpdateConfig("loot",       nil,           "autoresize",       "1")
