@@ -93,6 +93,8 @@ sed -i '/.*UIDROPDOWNMENU_DEFAULT_TEXT_HEIGHT.*/d' ShaguPlates.lua
 
 # remove default error handler
 sed -i '/seterrorhandler/d' ShaguPlates.lua
+sed -i 's/message = function(msg)/local message = function(msg)/g' ShaguPlates.lua
+sed -i '/print = message/d' ShaguPlates.lua
 
 # remove obsolete translations
 for locale in "deDE" "enUS" "frFR" "koKR" "ruRU" "zhCN" "zhTW" "esES"; do

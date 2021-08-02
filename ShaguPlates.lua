@@ -284,10 +284,9 @@ ShaguPlates.backdrop_shadow = {
   insets = {left = 0, right = 0, top = 0, bottom = 0},
 }
 
-message = function(msg)
+local message = function(msg)
   DEFAULT_CHAT_FRAME:AddMessage("|cffcccc33INFO: |cffffff55" .. ( msg or "nil" ))
 end
-print = message
 
 error = function(msg)
   if PF_DEBUG_MODE then message(debugstack()) end
