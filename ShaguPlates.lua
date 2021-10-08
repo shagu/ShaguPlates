@@ -284,6 +284,22 @@ ShaguPlates.backdrop_shadow = {
   insets = {left = 0, right = 0, top = 0, bottom = 0},
 }
 
+ShaguPlates.backdrop_blizz_bg = {
+  bgFile =  "Interface\\BUTTONS\\WHITE8X8", tile = true, tileSize = 8,
+  insets = { left = 3, right = 3, top = 3, bottom = 3 }
+}
+
+ShaguPlates.backdrop_blizz_border = {
+  edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 12,
+  insets = { left = 3, right = 3, top = 3, bottom = 3 }
+}
+
+ShaguPlates.backdrop_blizz_full = {
+  bgFile =  "Interface\\BUTTONS\\WHITE8X8", tile = true, tileSize = 8,
+  edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 12,
+  insets = { left = 3, right = 3, top = 3, bottom = 3 }
+}
+
 local message = function(msg)
   DEFAULT_CHAT_FRAME:AddMessage("|cffcccc33INFO: |cffffff55" .. ( msg or "nil" ))
 end

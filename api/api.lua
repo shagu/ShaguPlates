@@ -983,6 +983,11 @@ function ShaguPlates.api.CreateBackdrop(f, inset, legacy, transp, backdropSettin
     border = inset
   end
 
+  -- detect if blizzard backdrops shall be used
+  local blizz = C.appearance.border.force_blizz == "1" and true or nil
+  backdrop = blizz and ShaguPlates.backdrop_blizz_full or rawborder == 1 and ShaguPlates.backdrop_thin or ShaguPlates.backdrop
+  border = blizz and math.max(border, 3) or border
+
   -- get the color settings
   br, bg, bb, ba = ShaguPlates.api.GetStringColor(ShaguPlates_config.appearance.border.background)
   er, eg, eb, ea = ShaguPlates.api.GetStringColor(ShaguPlates_config.appearance.border.color)
@@ -991,7 +996,6 @@ function ShaguPlates.api.CreateBackdrop(f, inset, legacy, transp, backdropSettin
 
   -- use legacy backdrop handling
   if legacy then
-    backdrop = rawborder == 1 and ShaguPlates.backdrop_thin or ShaguPlates.backdrop
     if backdropSetting then f:SetBackdrop(backdropSetting) end
     f:SetBackdrop(backdrop)
     f:SetBackdropColor(br, bg, bb, ba)
@@ -1019,10 +1023,25 @@ function ShaguPlates.api.CreateBackdrop(f, inset, legacy, transp, backdropSettin
 
     f.backdrop:SetPoint("TOPLEFT", f, "TOPLEFT", -border, border)
     f.backdrop:SetPoint("BOTTOMRIGHT", f, "BOTTOMRIGHT", border, -border)
-    f.backdrop:SetBackdrop(rawborder > 1 and ShaguPlates.backdrop or ShaguPlates.backdrop_thin)
-
+    f.backdrop:SetBackdrop(backdrop)
     f.backdrop:SetBackdropColor(br, bg, bb, ba)
     f.backdrop:SetBackdropBorderColor(er, eg, eb , ea)
+
+    if blizz then
+      if not f.backdrop_border then
+        local border = CreateFrame("Frame", nil, f)
+        border:SetFrameLevel(level + 1)
+        f.backdrop_border = border
+      end
+
+      f.backdrop.SetBackdropBorderColor = function(self, r, g, b, a)
+        f.backdrop_border:SetBackdropBorderColor(r,g,b,a)
+      end
+
+      f.backdrop_border:SetAllPoints(f.backdrop)
+      f.backdrop_border:SetBackdrop(ShaguPlates.backdrop_blizz_border)
+      f.backdrop_border:SetBackdropBorderColor(er, eg, eb , ea)
+    end
   end
 end
 

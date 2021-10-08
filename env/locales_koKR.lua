@@ -2313,6 +2313,9 @@ ShaguPlates_locale["koKR"]["debuffs"] = {
   ['힘줄 베기']={[0]=8.0,},
 }
 
+-- custom entries not detected by DBC extractor
+ShaguPlates_locale["koKR"]["debuffs"]['냉기 돌']={[0]=8.0,} -- Cone of Cold
+
 ShaguPlates_locale["koKR"]["totems"] = {
   ["질병 정화 토템"] = "spell_nature_diseasecleansingtotem",
   ["대지의 정령 토템"] = "spell_nature_earthelemental_totem",

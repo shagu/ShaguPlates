@@ -1042,6 +1042,8 @@ ShaguPlates:RegisterModule("gui", "vanilla:tbc", function ()
       CreateConfig(U["nameplates"], T["Font Style"], C.nameplates.name, "fontstyle", "dropdown", ShaguPlates.gui.dropdowns.fontstyle)
       CreateConfig(nil, T["Background Color"], C.appearance.border, "background", "color")
       CreateConfig(nil, T["Border Color"], C.appearance.border, "color", "color")
+      CreateConfig(nil, T["Force Blizzard Borders (|cffffaaaaExperimental|r)"], C.appearance.border, "force_blizz", "checkbox")
+
       -- CreateConfig(nil, T["Enable Frame Shadow"], C.appearance.border, "shadow", "checkbox")
       -- CreateConfig(nil, T["Frame Shadow Intensity"], C.appearance.border, "shadow_intensity", "dropdown", ShaguPlates.gui.dropdowns.uf_debuff_indicator_size)
       CreateConfig(U["nameplates"], T["Border Size"], C.appearance.border, "nameplates", "dropdown", ShaguPlates.gui.dropdowns.border)
