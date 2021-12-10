@@ -75,6 +75,7 @@ ShaguPlates_translation["ruRU"] = {
   ["Fast"] = "Быстро",
   ["Filter Mode"] = "Режим фильтра",
   ["Font Style"] = "Стиль шрифта",
+  ["Force Blizzard Borders (|cffffaaaaExperimental|r)"] = "Границы Blizzard принудительно (|cffffaaaaЭкспериментально|r)",
   ["FPS & Ping"] = "Кадры в секунду & Задержка",
   ["Frame Shadow Intensity"] = "Интенсивность тени окон",
   ["Friends Online"] = "Друзья в сети",

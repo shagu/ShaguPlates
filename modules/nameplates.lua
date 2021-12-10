@@ -463,7 +463,7 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
 
   nameplates.OnEvent = function(frame)
     local frame = frame or this
-    nameplates:OnDataChanged(frame)
+    frame.eventcache = true
   end
 
   nameplates.OnDataChanged = function(self, plate)
@@ -488,8 +488,10 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     -- remove unitstr on unit name mismatch
     if unitstr and UnitName(unitstr) ~= name then unitstr = nil end
 
+    -- use mobhealth values if addon is running
     if (MobHealth3 or MobHealthFrame) and target and name == UnitName('target') and MobHealth_GetTargetCurHP() then
-      hp, hpmax = MobHealth_GetTargetCurHP(), MobHealth_GetTargetMaxHP()
+      hp = MobHealth_GetTargetCurHP() > 0 and MobHealth_GetTargetCurHP() or hp
+      hpmax = MobHealth_GetTargetMaxHP() > 0 and MobHealth_GetTargetMaxHP() or hpmax
     end
 
     -- always make sure to keep plate visible
@@ -665,6 +667,12 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     local name = original.name:GetText()
     local target = UnitExists("target") and frame:GetAlpha() == 1 or nil
     local mouseover = UnitExists("mouseover") and original.glow:IsShown() or nil
+
+    -- trigger queued event update
+    if nameplate.eventcache then
+      nameplates:OnDataChanged(nameplate)
+      nameplate.eventcache = nil
+    end
 
     -- cache target value
     nameplate.istarget = target

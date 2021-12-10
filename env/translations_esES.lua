@@ -75,6 +75,7 @@ ShaguPlates_translation["esES"] = {
   ["Fast"] = "Rápido",
   ["Filter Mode"] = "Modo de filtro",
   ["Font Style"] = "Estilo de la fuente",
+  ["Force Blizzard Borders (|cffffaaaaExperimental|r)"] = nil,
   ["FPS & Ping"] = "IPS y ping",
   ["Frame Shadow Intensity"] = "Intensidad de la sombra del marco",
   ["Friends Online"] = "Amigos conectados",

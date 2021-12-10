@@ -75,6 +75,7 @@ ShaguPlates_translation["koKR"] = {
   ["Fast"] = "빠르게",
   ["Filter Mode"] = nil,
   ["Font Style"] = nil,
+  ["Force Blizzard Borders (|cffffaaaaExperimental|r)"] = nil,
   ["FPS & Ping"] = "프레임&핑",
   ["Frame Shadow Intensity"] = nil,
   ["Friends Online"] = "접속중인 친구",

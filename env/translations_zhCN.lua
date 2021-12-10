@@ -75,6 +75,7 @@ ShaguPlates_translation["zhCN"] = {
   ["Fast"] = "快速",
   ["Filter Mode"] = "过滤模式",
   ["Font Style"] = nil,
+  ["Force Blizzard Borders (|cffffaaaaExperimental|r)"] = nil,
   ["FPS & Ping"] = "帧数和延时",
   ["Frame Shadow Intensity"] = "框架阴影强度",
   ["Friends Online"] = "在线好友",

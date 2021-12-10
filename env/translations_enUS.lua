@@ -75,6 +75,7 @@ ShaguPlates_translation["enUS"] = {
   ["Fast"] = nil,
   ["Filter Mode"] = nil,
   ["Font Style"] = nil,
+  ["Force Blizzard Borders (|cffffaaaaExperimental|r)"] = nil,
   ["FPS & Ping"] = nil,
   ["Frame Shadow Intensity"] = nil,
   ["Friends Online"] = nil,

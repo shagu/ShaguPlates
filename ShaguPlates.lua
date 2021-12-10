@@ -146,6 +146,11 @@ function ShaguPlates:UpdateFonts()
   ShaguPlates.font_combat = combat
   ShaguPlates.font_unit = unit
 
+  -- skip setting fonts, keep blizzard defaults
+  if ShaguPlates_config.global.font_blizzard == "1" then
+    return
+  end
+
   -- set game constants
 
   -- set dropdown font to default size
