@@ -866,6 +866,7 @@ function ShaguPlates.api.SetAllPointsOffset(frame, parent, offset)
 end
 
 function ShaguPlates.api.SkinCheckbox(frame, size)
+  if not frame then return end
   frame:SetNormalTexture("")
   frame:SetPushedTexture("")
   frame:SetHighlightTexture("")
@@ -1042,11 +1043,12 @@ function ShaguPlates.api.CreateQuestionDialog(text, yes, no, editbox, onclose)
   question:SetFrameStrata("TOOLTIP")
   question:SetMovable(true)
   question:EnableMouse(true)
-  question:SetScript("OnMouseDown",function()
+  question:RegisterForDrag("LeftButton")
+  question:SetScript("OnDragStart",function()
     this:StartMoving()
   end)
 
-  question:SetScript("OnMouseUp",function()
+  question:SetScript("OnDragStop",function()
     this:StopMovingOrSizing()
   end)
 

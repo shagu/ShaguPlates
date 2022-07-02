@@ -526,8 +526,8 @@ end
 -- 'name'       [frame/string]  Name of the Frame that should be movable
 -- 'addon'      [string]        Addon that must be loaded before being able to access the frame
 -- 'blacklist'  [table]         A list of frames that should be deactivated for mouse usage
-local function MoveMouseDown() this:StartMoving() end
-local function MoveMouseUp() this:StopMovingOrSizing() end
+local function OnDragStart() this:StartMoving() end
+local function OnDragStop() this:StopMovingOrSizing() end
 function ShaguPlates.api.EnableMovable(name, addon, blacklist)
   if addon then
     local scan = CreateFrame("Frame")
@@ -544,8 +544,9 @@ function ShaguPlates.api.EnableMovable(name, addon, blacklist)
 
         frame:SetMovable(true)
         frame:EnableMouse(true)
-        frame:SetScript("OnMouseDown", MoveMouseDown)
-        frame:SetScript("OnMouseUp", MoveMouseUp)
+        frame:RegisterForDrag("LeftButton")
+        frame:SetScript("OnDragStart", OnDragStart)
+        frame:SetScript("OnDragStop", OnDragStop)
 
         this:UnregisterAllEvents()
       end
@@ -561,8 +562,9 @@ function ShaguPlates.api.EnableMovable(name, addon, blacklist)
     if type(name) == "string" then frame = _G[name] end
     frame:SetMovable(true)
     frame:EnableMouse(true)
-    frame:SetScript("OnMouseDown", MoveMouseDown)
-    frame:SetScript("OnMouseUp", MoveMouseUp)
+    frame:RegisterForDrag("LeftButton")
+    frame:SetScript("OnDragStart", OnDragStart)
+    frame:SetScript("OnDragStop", OnDragStop)
   end
 end
 
@@ -1138,8 +1140,9 @@ end
 
 -- [ Enable Autohide ] --
 -- 'frame'  the frame that should be hidden
-function ShaguPlates.api.EnableAutohide(frame, timeout)
+function ShaguPlates.api.EnableAutohide(frame, timeout, combat)
   if not frame then return end
+  local timeout = timeout
 
   frame.hover = frame.hover or CreateFrame("Frame", frame:GetName() .. "Autohide", frame)
   frame.hover:SetParent(frame)
@@ -1147,14 +1150,29 @@ function ShaguPlates.api.EnableAutohide(frame, timeout)
   frame.hover.parent = frame
   frame.hover:Show()
 
-  local timeout = timeout
+  if combat then
+    frame.hover:RegisterEvent("PLAYER_REGEN_ENABLED")
+    frame.hover:RegisterEvent("PLAYER_REGEN_DISABLED")
+    frame.hover:SetScript("OnEvent", function()
+      if event == "PLAYER_REGEN_DISABLED" then
+        this.parent:SetAlpha(1)
+        this.activeTo = "keep"
+      elseif event == "PLAYER_REGEN_ENABLED" then
+        this.activeTo = GetTime() + timeout
+      end
+    end)
+  end
+
   frame.hover:SetScript("OnUpdate", function()
+    if this.activeTo == "keep" then return end
+
     if MouseIsOver(this, 10, -10, -10, 10) then
       this.activeTo = GetTime() + timeout
       this.parent:SetAlpha(1)
     elseif this.activeTo then
       if this.activeTo < GetTime() and this.parent:GetAlpha() > 0 then
-        this.parent:SetAlpha(this.parent:GetAlpha() - 0.1)
+        local fps = (60 / math.max(GetFramerate(), 1))
+        this.parent:SetAlpha(this.parent:GetAlpha() - 0.05*fps)
       end
     else
       this.activeTo = GetTime() + timeout
@@ -1168,6 +1186,7 @@ function ShaguPlates.api.DisableAutohide(frame)
   if not frame then return end
   if not frame.hover then return end
 
+  frame.hover:SetScript("OnEvent", nil)
   frame.hover:SetScript("OnUpdate", nil)
   frame.hover:Hide()
   frame:SetAlpha(1)
