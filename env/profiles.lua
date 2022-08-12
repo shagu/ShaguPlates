@@ -52,12 +52,15 @@ f:SetScript("OnEvent", function()
 
       ["grouptarget"] = {
         ["bartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
+        ["pbartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
       },
       ["ptarget"] = {
         ["bartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
+        ["pbartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
       },
       ["target"] = {
         ["bartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
+        ["pbartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
         ["txthpleft"] = "healthdyn",
         ["pspace"] = "1",
         ["txtpowerleft"] = "powerdyn",
@@ -70,12 +73,14 @@ f:SetScript("OnEvent", function()
       },
       ["ttarget"] = {
         ["bartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
+        ["pbartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
         ["pspace"] = "1",
         ["height"] = "7",
         ["portrait"] = "off",
       },
       ["pet"] = {
         ["bartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
+        ["pbartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
         ["pspace"] = "1",
         ["pheight"] = "3",
         ["txtpowercenter"] = "healthdyn",
@@ -87,6 +92,7 @@ f:SetScript("OnEvent", function()
       ["player"] = {
         ["txtpowerright"] = "powerdyn",
         ["bartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
+        ["pbartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
         ["pspace"] = "1",
         ["debuffs"] = "TOPRIGHT",
         ["portrait"] = "left",
@@ -98,10 +104,12 @@ f:SetScript("OnEvent", function()
       ["customfullhp"] = "1",
       ["focustarget"] = {
         ["bartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
+        ["pbartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
       },
       ["customfade"] = "1",
       ["group"] = {
         ["bartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
+        ["pbartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
       },
       ["raid"] = {
         ["indicator_pos"] = "TOPRIGHT",
@@ -114,6 +122,7 @@ f:SetScript("OnEvent", function()
         ["txthpcenter"] = "namehealthbreak",
         ["ragecolor"] = "0.6,0.2,0.2,1",
         ["bartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
+        ["pbartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
         ["glowaggro"] = "0",
         ["height"] = "35",
         ["txthpright"] = "none",
@@ -126,12 +135,15 @@ f:SetScript("OnEvent", function()
       },
       ["focus"] = {
         ["bartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
+        ["pbartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
       },
       ["tttarget"] = {
         ["bartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
+        ["pbartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
       },
       ["grouppet"] = {
         ["bartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
+        ["pbartexture"] = "Interface\\AddOns\\ShaguPlates\\img\\bar_gradient",
       },
     },
     ["appearance"] = {

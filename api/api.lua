@@ -1197,13 +1197,13 @@ end
 -- return        a colored string including a time unit (m/h/d)
 function ShaguPlates.api.GetColoredTimeString(remaining)
   if not remaining then return "" end
-  if remaining > 356400 then -- 99 * 3600
+  if remaining > 356400 then -- Show days if remaining is > 99 Hours (99 * 60 * 60)
     local r,g,b,a = ShaguPlates.api.GetStringColor(C.appearance.cd.daycolor)
     return ShaguPlates.api.rgbhex(r,g,b) .. round(remaining / 86400) .. "|rd"
-  elseif remaining > 5940 then -- 99 * 60
+  elseif remaining > 5940 then -- Show hours if remaining is > 99 Minutes (99 * 60)
     local r,g,b,a = ShaguPlates.api.GetStringColor(C.appearance.cd.hourcolor)
     return ShaguPlates.api.rgbhex(r,g,b) .. round(remaining / 3600) .. "|rh"
-  elseif remaining > 99 then
+  elseif remaining > 99 then -- Show minutes if remaining is > 99 Seconds (99)
     local r,g,b,a = ShaguPlates.api.GetStringColor(C.appearance.cd.minutecolor)
     return ShaguPlates.api.rgbhex(r,g,b) .. round(remaining / 60) .. "|rm"
   elseif remaining <= 5 and ShaguPlates_config.appearance.cd.milliseconds == "1" then

@@ -168,6 +168,58 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     return c.effect, c.rank, c.texture, c.stacks, c.dtype, c.duration, (c.stop - GetTime())
   end
 
+  local function CreateDebuffIcon(plate, index)
+    plate.debuffs[index] = CreateFrame("Frame", plate.platename.."Debuff"..index, plate)
+    plate.debuffs[index]:Hide()
+    plate.debuffs[index]:SetFrameLevel(1)
+
+    plate.debuffs[index].icon = plate.debuffs[index]:CreateTexture(nil, "BACKGROUND")
+    plate.debuffs[index].icon:SetTexture(.3,1,.8,1)
+    plate.debuffs[index].icon:SetAllPoints(plate.debuffs[index])
+
+    plate.debuffs[index].stacks = plate.debuffs[index]:CreateFontString(nil, "OVERLAY")
+    plate.debuffs[index].stacks:SetAllPoints(plate.debuffs[index])
+    plate.debuffs[index].stacks:SetJustifyH("RIGHT")
+    plate.debuffs[index].stacks:SetJustifyV("BOTTOM")
+    plate.debuffs[index].stacks:SetTextColor(1,1,0)
+
+    plate.debuffs[index].cd = CreateFrame(COOLDOWN_FRAME_TYPE, plate.platename.."Debuff"..index.."Cooldown", plate.debuffs[index], "CooldownFrameTemplate")
+    plate.debuffs[index].cd.pfCooldownStyleAnimation = 0
+    plate.debuffs[index].cd.pfCooldownType = "ALL"
+  end
+
+  local function UpdateDebuffConfig(nameplate, i)
+    if not nameplate.debuffs[i] then return end
+
+    -- update debuff positions
+    local width = tonumber(C.nameplates.width)
+    local debuffsize = tonumber(C.nameplates.debuffsize)
+    local limit = floor(width / debuffsize)
+    local font = C.nameplates.use_unitfonts == "1" and ShaguPlates.font_unit or ShaguPlates.font_default
+    local font_size = C.nameplates.use_unitfonts == "1" and C.global.font_unit_size or C.global.font_size
+    local font_style = C.nameplates.name.fontstyle
+
+    local aligna, alignb, offs, space
+    if C.nameplates.debuffs["position"] == "BOTTOM" then
+      aligna, alignb, offs, space = "TOPLEFT", "BOTTOMLEFT", -4, -1
+    else
+      aligna, alignb, offs, space = "BOTTOMLEFT", "TOPLEFT", 20, 1
+    end
+
+    nameplate.debuffs[i].stacks:SetFont(font, font_size, font_style)
+    nameplate.debuffs[i]:ClearAllPoints()
+    if i == 1 then
+      nameplate.debuffs[i]:SetPoint(aligna, nameplate.health, alignb, 0, offs)
+    elseif i <= limit then
+      nameplate.debuffs[i]:SetPoint("LEFT", nameplate.debuffs[i-1], "RIGHT", 1, 0)
+    elseif i > limit and limit > 0 then
+      nameplate.debuffs[i]:SetPoint(aligna, nameplate.debuffs[i-limit], alignb, 0, space)
+    end
+
+    nameplate.debuffs[i]:SetWidth(tonumber(C.nameplates.debuffsize))
+    nameplate.debuffs[i]:SetHeight(tonumber(C.nameplates.debuffsize))
+  end
+
   -- create nameplate core
   local nameplates = CreateFrame("Frame", "pfNameplates", UIParent)
   nameplates:RegisterEvent("PLAYER_ENTERING_WORLD")
@@ -212,6 +264,7 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
 
     -- create ShaguPlates nameplate overlay
     local nameplate = CreateFrame("Button", platename, parent)
+    nameplate.platename = platename
     nameplate:EnableMouse(0)
     nameplate.parent = parent
     nameplate.cache = {}
@@ -271,27 +324,8 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     CreateBackdrop(nameplate.totem)
 
     do -- debuffs
-      local debuffs = {}
-      for i=1, 16, 1 do
-        debuffs[i] = CreateFrame("Frame", platename.."Debuff"..i, nameplate)
-        debuffs[i]:Hide()
-        debuffs[i]:SetFrameLevel(1)
-
-        debuffs[i].icon = debuffs[i]:CreateTexture(nil, "BACKGROUND")
-        debuffs[i].icon:SetTexture(.3,1,.8,1)
-        debuffs[i].icon:SetAllPoints(debuffs[i])
-
-        debuffs[i].stacks = debuffs[i]:CreateFontString(nil, "OVERLAY")
-        debuffs[i].stacks:SetAllPoints(debuffs[i])
-        debuffs[i].stacks:SetJustifyH("RIGHT")
-        debuffs[i].stacks:SetJustifyV("BOTTOM")
-        debuffs[i].stacks:SetTextColor(1,1,0)
-
-        debuffs[i].cd = CreateFrame(COOLDOWN_FRAME_TYPE, platename.."Debuff"..i.."Cooldown", debuffs[i], "CooldownFrameTemplate")
-        debuffs[i].cd.pfCooldownStyleAnimation = 0
-        debuffs[i].cd.pfCooldownType = "ALL"
-      end
-      nameplate.debuffs = debuffs
+      nameplate.debuffs = {}
+      CreateDebuffIcon(nameplate, 1)
     end
 
     do -- combopoints
@@ -409,29 +443,8 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     nameplate.raidicon:SetWidth(C.nameplates.raidiconsize)
     nameplate.raidicon:SetHeight(C.nameplates.raidiconsize)
 
-    -- update debuff positions
-    local limit = floor(width / debuffsize)
-
-    local aligna, alignb, offs, space
-    if C.nameplates.debuffs["position"] == "BOTTOM" then
-      aligna, alignb, offs, space = "TOPLEFT", "BOTTOMLEFT", -4, -1
-    else
-      aligna, alignb, offs, space = "BOTTOMLEFT", "TOPLEFT", 20, 1
-    end
-
     for i=1,16 do
-      nameplate.debuffs[i].stacks:SetFont(font, font_size, font_style)
-      nameplate.debuffs[i]:ClearAllPoints()
-      if i == 1 then
-        nameplate.debuffs[i]:SetPoint(aligna, nameplate.health, alignb, 0, offs)
-      elseif i <= limit then
-        nameplate.debuffs[i]:SetPoint("LEFT", nameplate.debuffs[i-1], "RIGHT", 1, 0)
-      elseif i > limit and limit > 0 then
-        nameplate.debuffs[i]:SetPoint(aligna, nameplate.debuffs[i-limit], alignb, 0, space)
-      end
-
-      nameplate.debuffs[i]:SetWidth(tonumber(C.nameplates.debuffsize))
-      nameplate.debuffs[i]:SetHeight(tonumber(C.nameplates.debuffsize))
+      UpdateDebuffConfig(nameplate, i)
     end
 
     for i=1,5 do
@@ -468,19 +481,42 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
   end
 
   nameplates.OnDataChanged = function(self, plate)
+    local visible = plate:IsVisible()
     local hp = plate.original.healthbar:GetValue()
     local hpmin, hpmax = plate.original.healthbar:GetMinMaxValues()
     local name = plate.original.name:GetText()
     local level = plate.original.level:IsShown() and plate.original.level:GetObjectType() == "FontString" and tonumber(plate.original.level:GetText()) or "??"
-    local class, _, elite, player = GetUnitData(name, true)
+    local class, ulevel, elite, player = GetUnitData(name, true)
     local target = plate.istarget
     local mouseover = UnitExists("mouseover") and plate.original.glow:IsShown() or nil
     local unitstr = target and "target" or mouseover and "mouseover" or nil
     local red, green, blue = plate.original.healthbar:GetStatusBarColor()
     local unittype = GetUnitType(red, green, blue) or "ENEMY_NPC"
+
+    -- ignore players with npc names if plate level is lower than player level
+    if ulevel and ulevel > (level == "??" and -1 or level) then player = nil end
+
+    -- cache name and reset unittype on change
+    if plate.cache.name ~= name then
+      plate.cache.name = name
+      plate.cache.player = nil
+    end
+
+    -- read and cache unittype
+    if plate.cache.player then
+      -- overwrite unittype from cache if existing
+      player = plate.cache.player == "PLAYER" and true or nil
+    elseif unitstr then
+      -- read unit type while unitstr is set
+      plate.cache.player = UnitIsPlayer(unitstr) and "PLAYER" or "NPC"
+    end
+
     if player and unittype == "ENEMY_NPC" then unittype = "ENEMY_PLAYER" end
     elite = plate.original.levelicon:IsShown() and not player and "boss" or elite
     if not class then plate.wait_for_scan = true end
+
+    -- skip data updates on invisible frames
+    if not visible then return end
 
     -- target event sometimes fires too quickly, where nameplate identifiers are not
     -- yet updated. So while being inside this event, we cannot trust the unitstr.
@@ -625,6 +661,11 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
         end
 
         if effect and texture and DebuffFilter(effect) then
+          if not plate.debuffs[index] then
+            CreateDebuffIcon(plate, index)
+            UpdateDebuffConfig(plate, index)
+          end
+
           plate.debuffs[index]:Show()
           plate.debuffs[index].icon:SetTexture(texture)
           plate.debuffs[index].icon:SetTexCoord(.078, .92, .079, .937)
@@ -649,7 +690,9 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
 
     -- hide remaining debuffs
     for i = index, 16 do
-      plate.debuffs[i]:Hide()
+      if plate.debuffs[i] then
+        plate.debuffs[i]:Hide()
+      end
     end
   end
 

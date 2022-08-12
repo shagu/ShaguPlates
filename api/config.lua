@@ -211,6 +211,7 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("unitframes", nil,           "rangechecki",      "4")
   ShaguPlates:UpdateConfig("unitframes", nil,           "combosize",        "6")
   ShaguPlates:UpdateConfig("unitframes", nil,           "abbrevnum",        "1")
+  ShaguPlates:UpdateConfig("unitframes", nil,           "abbrevname",       "1")
 
   ShaguPlates:UpdateConfig("unitframes", nil,           "selfingroup",      "0")
   ShaguPlates:UpdateConfig("unitframes", nil,           "selfinraid",       "0")
@@ -383,6 +384,7 @@ function ShaguPlates:LoadConfig()
     ShaguPlates:UpdateConfig("unitframes", unit,      "raidiconsize",     "24")
     ShaguPlates:UpdateConfig("unitframes", unit,      "portrait",         "bar")
     ShaguPlates:UpdateConfig("unitframes", unit,      "bartexture",       "Interface\\AddOns\\ShaguPlates\\img\\bar")
+    ShaguPlates:UpdateConfig("unitframes", unit,      "pbartexture",       "Interface\\AddOns\\ShaguPlates\\img\\bar")
     ShaguPlates:UpdateConfig("unitframes", unit,      "width",            "200")
     ShaguPlates:UpdateConfig("unitframes", unit,      "height",           "46")
     ShaguPlates:UpdateConfig("unitframes", unit,      "pheight",          "10")
@@ -1135,6 +1137,14 @@ function ShaguPlates:MigrateConfig()
 
     for _, option in pairs(options) do
       ShaguPlates_config.unitframes[option] = nil
+    end
+  end
+
+  -- use same powerbar texture as for health (> 5.2.10)
+  if checkversion(5, 2, 10) then
+    local unitframes = { "player", "target", "focus", "group", "grouptarget", "grouppet", "raid", "ttarget", "pet", "ptarget", "fallback", "tttarget" }
+    for _, unitframe in pairs(unitframes) do
+      ShaguPlates_config.unitframes[unitframe].pbartexture = ShaguPlates_config.unitframes[unitframe].bartexture
     end
   end
 
