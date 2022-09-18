@@ -4,6 +4,8 @@ function SlashCmdList.RELOAD(msg, editbox)
 end
 
 SLASH_SHAGUPLATES1 = '/shaguplates'
+SLASH_SHAGUPLATES2 = '/splates'
+SLASH_SHAGUPLATES3 = '/sp'
 function SlashCmdList.SHAGUPLATES(msg, editbox)
   if ShaguPlates.gui:IsShown() then
     ShaguPlates.gui:Hide()
