@@ -584,7 +584,7 @@ ShaguPlates:RegisterModule("gui", "vanilla:tbc", function ()
     ShaguPlates.gui.version:SetFontObject(GameFontWhite)
     ShaguPlates.gui.version:SetPoint("LEFT", ShaguPlates.gui.title, "RIGHT", 0, 0)
     ShaguPlates.gui.version:SetJustifyH("LEFT")
-    ShaguPlates.gui.version:SetFont(ShaguPlates.media["Fonts\\FRIZQT__.TTF"], 12)
+    ShaguPlates.gui.version:SetFont(ShaguPlates.media["Fonts\\FRIZQT__.TTF"], 10)
     ShaguPlates.gui.version:SetText("|cff555555[|r" .. ShaguPlates.version.string.. "|cff555555]|r")
 
     ShaguPlates.gui.close = CreateFrame("Button", "pfQuestionDialogClose", ShaguPlates.gui)

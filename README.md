@@ -39,7 +39,7 @@ Initially, this project started as a fork of CustomNameplates that became an ent
 
 ## Commands
 
-* **/shaguplates** to access the options panel
+* **/shaguplates**, **/splates** or **/sp** to access the options panel
 
 ## Installation (Vanilla)
 1. Download **[Latest Version](https://github.com/shagu/ShaguPlates/archive/master.zip)**
