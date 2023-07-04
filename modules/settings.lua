@@ -1050,6 +1050,7 @@ ShaguPlates:RegisterModule("gui", "vanilla:tbc", function ()
 
       CreateConfig(nil, T["Castbar"], nil, nil, "header")
       CreateConfig(U["nameplates"], T["Enable Castbars"], C.nameplates, "showcastbar", "checkbox")
+      CreateConfig(U["nameplates"], T["Only Show Target Castbar"], C.nameplates, "targetcastbar", "checkbox")
       CreateConfig(U["nameplates"], T["Enable Spellname"], C.nameplates, "spellname", "checkbox")
       CreateConfig(U["nameplates"], T["Castbar Height"], C.nameplates, "heightcast")
 

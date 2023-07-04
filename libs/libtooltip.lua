@@ -49,6 +49,18 @@ end
 ShaguPlates.api.libtooltip = libtooltip
 
 -- setup item hooks
+local pfHookSetHyperlink = GameTooltip.SetHyperlink
+function GameTooltip.SetHyperlink(self, arg1)
+  if arg1 then
+    local _, _, linktype = string.find(arg1, "^(.-):(.+)$")
+    if linktype == "item" then
+      libtooltip.itemLink = arg1
+    end
+  end
+
+  return pfHookSetHyperlink(self, arg1)
+end
+
 local pfHookSetBagItem = GameTooltip.SetBagItem
 function GameTooltip.SetBagItem(self, container, slot)
   -- skip special/invalid calls to the function
@@ -125,6 +137,14 @@ function GameTooltip.SetTradeSkillItem(self, skillIndex, reagentIndex)
     libtooltip.itemLink = GetTradeSkillItemLink(skillIndex)
   end
   return pfHookSetTradeSkillItem(self, skillIndex, reagentIndex)
+end
+
+local pfHookSetAuctionItem = GameTooltip.SetAuctionItem
+function GameTooltip.SetAuctionItem(self, atype, index)
+  local itemName, _, itemCount = GetAuctionItemInfo(atype, index)
+  libtooltip.itemCount = itemCount
+  libtooltip.itemLink = GetItemLinkByName(itemName)
+  return pfHookSetAuctionItem(self, atype, index)
 end
 
 local pfHookSetAuctionSellItem = GameTooltip.SetAuctionSellItem
