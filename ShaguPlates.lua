@@ -120,40 +120,46 @@ function ShaguPlates:UpdateFonts()
   if not ShaguPlates_config or not ShaguPlates_config.global then return end
 
   -- load font configuration
-  local default, unit, unit_name, combat
+  local default, tooltip, unit, unit_name, combat
   if ShaguPlates_config.global.force_region == "1" and GetLocale() == "zhCN" and ShaguPlates.expansion == "vanilla" then
     -- force locale compatible fonts (zhCN 1.12)
     default = "Fonts\\FZXHLJW.TTF"
+    tooltip = "Fonts\\FZXHLJW.TTF"
     combat = "Fonts\\FZXHLJW.TTF"
     unit = "Fonts\\FZXHLJW.TTF"
     unit_name = "Fonts\\FZXHLJW.TTF"
   elseif ShaguPlates_config.global.force_region == "1" and GetLocale() == "zhCN" and ShaguPlates.expansion == "tbc" then
     -- force locale compatible fonts (zhCN 2.4.3)
     default = "Fonts\\ZYHei.ttf"
+    tooltip = "Fonts\\ZYHei.ttf"
     combat = "Fonts\\ZYKai_C.ttf"
     unit = "Fonts\\ZYKai_T.ttf"
     unit_name = "Fonts\\ZYHei.ttf"
   elseif ShaguPlates_config.global.force_region == "1" and GetLocale() == "zhTW" and ShaguPlates.expansion == "vanilla" then
     -- force locale compatible fonts (zhTW 1.12)
     default = "Fonts\\FZXHLJW.ttf"
+    tooltip = "Fonts\\FZXHLJW.ttf"
     combat = "Fonts\\FZXHLJW.ttf"
     unit = "Fonts\\FZXHLJW.ttf"
     unit_name = "Fonts\\FZXHLJW.ttf"
   elseif ShaguPlates_config.global.force_region == "1" and GetLocale() == "zhTW" and ShaguPlates.expansion == "tbc" then
     -- force locale compatible fonts (zhTW 2.4.3)
     default = "Fonts\\bHEI01B.ttf"
+    tooltip = "Fonts\\bHEI01B.ttf"
     combat = "Fonts\\bHEI01B.ttf"
     unit = "Fonts\\bHEI01B.ttf"
     unit_name = "Fonts\\bHEI01B.ttf"
   elseif ShaguPlates_config.global.force_region == "1" and GetLocale() == "koKR" then
     -- force locale compatible fonts (koKR)
     default = "Fonts\\2002.TTF"
+    tooltip = "Fonts\\2002.TTF"
     combat = "Fonts\\2002.TTF"
     unit = "Fonts\\2002.TTF"
     unit_name = "Fonts\\2002.TTF"
   else
     -- use default entries
     default = ShaguPlates.media[ShaguPlates_config.global.font_default]
+    tooltip = ShaguPlates.media[ShaguPlates_config.tooltip.font_tooltip]
     combat = ShaguPlates.media[ShaguPlates_config.global.font_combat]
     unit = ShaguPlates.media[ShaguPlates_config.global.font_unit]
     unit_name = ShaguPlates.media[ShaguPlates_config.global.font_unit_name]
@@ -262,6 +268,11 @@ ShaguPlates:SetScript("OnEvent", function()
     ShaguPlates.version.minor = tonumber(minor) or 2
     ShaguPlates.version.fix   = tonumber(fix)   or 0
     ShaguPlates.version.string = ShaguPlates.version.major .. "." .. ShaguPlates.version.minor .. "." .. ShaguPlates.version.fix
+
+    -- use "Modern" as default profile on a fresh install
+    if ShaguPlates.api.isempty(ShaguPlates_init) and ShaguPlates.api.isempty(ShaguPlates_config) then
+      ShaguPlates_config = ShaguPlates.api.CopyTable(ShaguPlates_profiles["Modern"])
+    end
 
     ShaguPlates:LoadConfig()
     ShaguPlates:MigrateConfig()

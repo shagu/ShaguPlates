@@ -146,6 +146,7 @@ ShaguPlates_translation["frFR"] = {
   ["Off"] = "Off",
   ["On Key Press"] = "Appuyez sur la touche",
   ["Only"] = "Seulement",
+  ["Only Show Target Castbar"] = nil,
   ["On State Change"] = "Sur changement d'état",
   ["Outline"] = "Contour",
   ["Outlines"] = "Grandes lignes",

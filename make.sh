@@ -99,7 +99,8 @@ sed -i '/.*UIDROPDOWNMENU_DEFAULT_TEXT_HEIGHT.*/d' ShaguPlates.lua
 # remove default error handler
 sed -i '/seterrorhandler/d' ShaguPlates.lua
 sed -i 's/message = function(msg)/local message = function(msg)/g' ShaguPlates.lua
-sed -i '/print = message/d' ShaguPlates.lua
+sed -i '/print = print or message/d' ShaguPlates.lua
+sed -i '/SIMPLE_CHAT = /d' ShaguPlates.lua
 
 # add aditional slashcomands
 sed -i "7iSLASH_SHAGUPLATES2 = '/splates'" ShaguPlates.lua

@@ -146,6 +146,7 @@ ShaguPlates_translation["zhTW"] = {
   ["Off"] = "關",
   ["On Key Press"] = nil,
   ["Only"] = nil,
+  ["Only Show Target Castbar"] = nil,
   ["On State Change"] = nil,
   ["Outline"] = nil,
   ["Outlines"] = nil,

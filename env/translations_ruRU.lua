@@ -146,6 +146,7 @@ ShaguPlates_translation["ruRU"] = {
   ["Off"] = "Отключено",
   ["On Key Press"] = "при нажатии",
   ["Only"] = "Только",
+  ["Only Show Target Castbar"] = nil,
   ["On State Change"] = "Изменение статуса",
   ["Outline"] = "Контурный", -- font style
   ["Outlines"] = "Контуры",
