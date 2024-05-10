@@ -2,4 +2,5 @@
   <Include file="..\modules\cooldown.lua"/>
   <Include file="..\modules\settings.lua"/>
   <Include file="..\modules\nameplates.lua"/>
+  <Include file="..\modules\superwow.lua"/>
 </Ui>

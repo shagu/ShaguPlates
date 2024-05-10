@@ -15,9 +15,11 @@ rm -rf Bindings.xml
 mv modules/settings.lua .
 mv modules/cooldown.lua .
 mv modules/nameplates.lua .
+mv modules/superwow.lua .
 rm modules/*
 mv settings.lua modules
 mv cooldown.lua modules
+mv superwow.lua modules
 mv nameplates.lua modules
 
 # replace all variables and frames
@@ -46,6 +48,7 @@ echo '<Ui xmlns="http://www.blizzard.com/wow/ui/">
   <Include file="..\modules\cooldown.lua"/>
   <Include file="..\modules\settings.lua"/>
   <Include file="..\modules\nameplates.lua"/>
+  <Include file="..\modules\superwow.lua"/>
 </Ui>' > init/modules.xml
 
 # remove unitframe api
