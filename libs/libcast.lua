@@ -180,11 +180,56 @@ libcast:RegisterEvent("SPELLCAST_DELAYED")
 libcast:RegisterEvent("SPELLCAST_CHANNEL_START")
 libcast:RegisterEvent("SPELLCAST_CHANNEL_STOP")
 libcast:RegisterEvent("SPELLCAST_CHANNEL_UPDATE")
+libcast:RegisterEvent("UNIT_CASTEVENT")
 
 local mob, spell, icon, _
 libcast:SetScript("OnEvent", function()
+  if event == "UNIT_CASTEVENT" and C.nameplates["usesuperwow"] == "1" then
+    if arg3 == "MAINHAND" or arg3 == "OFFHAND" then
+        return
+    end
+    -- human readable argument list
+    local guid = arg1
+    local target = arg2
+    local event_type = arg3
+    local spell_id = arg4
+    local timer = arg5
+    local start = GetTime()
+
+    if arg3 == "CAST" then
+        local currentCastInfo = libcast.db[guid]
+        if not currentCastInfo or spell_id ~= currentCastInfo.spell_id then
+            return
+        end
+    elseif arg3 == "FAIL" then
+        -- remove guid from db
+        this.db[guid] = nil
+    end
+
+    -- get spell info from spell id
+    local spell, icon, _
+    if SpellInfo and SpellInfo(spell_id) then
+      spell, _, icon = SpellInfo(spell_id)
+    end
+
+    -- set fallback values
+    spell = spell or UNKNOWN
+    icon = icon or "Interface\\Icons\\INV_Misc_QuestionMark"
+
+    -- add cast action to the database
+    if not this.db[guid] then this.db[guid] = {} end
+    this.db[guid].cast = spell
+    this.db[guid].spell_id = spell_id
+    this.db[guid].rank = nil
+    this.db[guid].start = GetTime()
+    this.db[guid].casttime = timer
+    this.db[guid].icon = icon
+    this.db[guid].channel = false
+
+    -- write state variable
+    superwow_active = true
   -- Fill database with player casts
-  if event == "SPELLCAST_START" then
+  elseif event == "SPELLCAST_START" then
     icon = L["spells"][arg1] and L["spells"][arg1].icon and string.format("%s%s", "Interface\\Icons\\", L["spells"][arg1].icon) or lastcasttex
     -- add cast action to the database
     this.db[player].cast = arg1
