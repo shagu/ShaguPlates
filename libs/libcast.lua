@@ -184,7 +184,7 @@ libcast:RegisterEvent("UNIT_CASTEVENT")
 
 local mob, spell, icon, _
 libcast:SetScript("OnEvent", function()
-  if event == "UNIT_CASTEVENT" and C.nameplates["usesuperwow"] == "1" then
+  if event == "UNIT_CASTEVENT" then
     if arg3 == "MAINHAND" or arg3 == "OFFHAND" then
         return
     end
