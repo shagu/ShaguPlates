@@ -4,7 +4,7 @@ setfenv(1, ShaguPlates:GetEnvironment())
 function ShaguPlates:UpdateConfig(group, subgroup, entry, value)
   -- create empty config if not existing
   if not ShaguPlates_config then
-    ShaguPlates_config = {}
+    _G.ShaguPlates_config = {}
   end
 
   -- check for missing config groups

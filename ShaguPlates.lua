@@ -271,7 +271,7 @@ ShaguPlates:SetScript("OnEvent", function()
 
     -- use "Modern" as default profile on a fresh install
     if ShaguPlates.api.isempty(ShaguPlates_init) and ShaguPlates.api.isempty(ShaguPlates_config) then
-      ShaguPlates_config = ShaguPlates.api.CopyTable(ShaguPlates_profiles["Modern"])
+      ShaguPlates_config = ShaguPlates.api.CopyTable(ShaguPlates_profiles["Modern"]) or {}
     end
 
     ShaguPlates:LoadConfig()
