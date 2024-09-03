@@ -1094,6 +1094,7 @@ ShaguPlates:RegisterModule("gui", "vanilla:tbc", function ()
       CreateConfig(nil, T["Threshold To Trust Health Estimation"], C.global, "libhealth_hit", "dropdown", ShaguPlates.gui.dropdowns.uf_rangecheckinterval)
       CreateConfig(nil, T["Required Damage In Percent"], C.global, "libhealth_dmg", "dropdown", ShaguPlates.gui.dropdowns.percent_small)
       CreateConfig(nil, T["Abbreviate Numbers (4200 -> 4.2k)"], C.unitframes, "abbrevnum", "checkbox")
+      CreateConfig(nil, T["Abbreviate Unit Names"], C.unitframes, "abbrevname", "checkbox")
 
       CreateConfig(nil, T["Cooldown / Durations"], nil, nil, "header")
       CreateConfig(U["nameplates"], T["Show Milliseconds When Timer Runs Out"], C.appearance.cd, "milliseconds", "checkbox")

@@ -704,6 +704,7 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("nameplates", nil,           "totemicons",       "0")
   ShaguPlates:UpdateConfig("nameplates", nil,           "showguildname",    "0")
 
+  ShaguPlates:UpdateConfig("nameplates", nil,           "outcombatstate",   "1")
   ShaguPlates:UpdateConfig("nameplates", nil,           "outfriendly",      "0")
   ShaguPlates:UpdateConfig("nameplates", nil,           "outfriendlynpc",   "1")
   ShaguPlates:UpdateConfig("nameplates", nil,           "outneutral",       "1")
