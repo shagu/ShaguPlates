@@ -790,6 +790,15 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     -- cache target value
     nameplate.istarget = target
 
+    -- set target nameplate strata
+    if C.nameplates["targetstrata"] == "1" then
+      if target then
+        nameplate:SetFrameStrata("LOW")
+      else
+        nameplate:SetFrameStrata("BACKGROUND")
+      end
+    end
+
     -- set non-target plate alpha
     if target or not UnitExists("target") then
       nameplate:SetAlpha(1)

@@ -184,6 +184,7 @@ ShaguPlates_translation["enUS"] = {
   ["Standard Text Font"] = nil,
   ["Standard Text Font Size"] = nil,
   ["Target Nameplate Zoom Factor"] = nil,
+  ["Target Nameplate In Front"] = nil,
   ["Thick Outline"] = nil,
   ["Threshold To Trust Health Estimation"] = nil,
   ["Tiny (PixelPerfect)"] = nil,
