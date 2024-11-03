@@ -1023,6 +1023,7 @@ ShaguPlates:RegisterModule("gui", "vanilla:tbc", function ()
       CreateConfig(U["nameplates"], T["Border Size"], C.appearance.border, "nameplates", "dropdown", ShaguPlates.gui.dropdowns.border)
       CreateConfig(nil, T["Enable Pixel Perfect Borders"], C.appearance.border, "pixelperfect", "checkbox")
       CreateConfig(nil, T["Scale Border On HiDPI Displays"], C.appearance.border, "hidpi", "checkbox")
+      CreateConfig(U["nameplates"], T["Vertical Offset (|cffffaaaaExperimental|r)"], C.nameplates, "vertical_offset", nil, nil, nil, nil, nil, "vanilla")
 
       CreateConfig(nil, T["Look & Feel"], nil, nil, "header")
       CreateConfig(U["nameplates"], T["Show On Hostile Units"], C.nameplates, "showhostile", "checkbox")

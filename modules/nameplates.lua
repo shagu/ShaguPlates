@@ -245,11 +245,29 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
   -- create nameplate core
   local nameplates = CreateFrame("Frame", "pfNameplates", UIParent)
   nameplates:RegisterEvent("PLAYER_ENTERING_WORLD")
+  nameplates:RegisterEvent("PLAYER_TARGET_CHANGED")
+  nameplates:RegisterEvent("UNIT_COMBO_POINTS")
+  nameplates:RegisterEvent("PLAYER_COMBO_POINTS")
+  nameplates:RegisterEvent("UNIT_AURA")
+
   nameplates:SetScript("OnEvent", function()
-    this:SetGameVariables()
+    if event == "PLAYER_ENTERING_WORLD" then
+      this:SetGameVariables()
+    else
+      this.eventcache = true
+    end
   end)
 
   nameplates:SetScript("OnUpdate", function()
+    -- propagate events to all nameplates
+    if this.eventcache then
+      this.eventcache = nil
+      for plate in pairs(registry) do
+        plate.eventcache = true
+      end
+    end
+
+    -- detect new nameplates
     parentcount = WorldFrame:GetNumChildren()
     if initialized < parentcount then
       childs = { WorldFrame:GetChildren() }
@@ -322,7 +340,7 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     nameplate.health.text:SetTextColor(1,1,1,1)
 
     nameplate.name = nameplate:CreateFontString(nil, "OVERLAY")
-    nameplate.name:SetPoint("TOP", nameplate, "TOP", 0, nameoffset)
+    nameplate.name:SetPoint("TOP", nameplate, "TOP", 0, 0)
 
     nameplate.glow = nameplate:CreateTexture(nil, "BACKGROUND")
     nameplate.glow:SetPoint("CENTER", nameplate.health, "CENTER", 0, 0)
@@ -410,13 +428,6 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     HookScript(parent, "OnShow", nameplates.OnShow)
     HookScript(parent, "OnUpdate", nameplates.OnUpdate)
 
-
-    nameplate:RegisterEvent("PLAYER_TARGET_CHANGED")
-    nameplate:RegisterEvent("UNIT_AURA")
-    nameplate:RegisterEvent("UNIT_COMBO_POINTS")
-    nameplate:RegisterEvent("PLAYER_COMBO_POINTS")
-    nameplate:SetScript("OnEvent", nameplates.OnEvent)
-
     nameplates.OnConfigChange(parent)
     nameplates.OnShow(parent)
   end
@@ -502,11 +513,6 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     nameplates:OnDataChanged(this:GetParent().nameplate)
   end
 
-  nameplates.OnEvent = function(frame)
-    local frame = frame or this
-    frame.eventcache = true
-  end
-
   nameplates.OnDataChanged = function(self, plate)
     local visible = plate:IsVisible()
     local hp = plate.original.healthbar:GetValue()
@@ -520,6 +526,11 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     local red, green, blue = plate.original.healthbar:GetStatusBarColor()
     local unittype = GetUnitType(red, green, blue) or "ENEMY_NPC"
     local font_size = C.nameplates.use_unitfonts == "1" and C.global.font_unit_size or C.global.font_size
+
+    -- use superwow unit guid as unitstr if possible
+    if superwow_active and not unitstr then
+      unitstr = plate.parent:GetName(1)
+    end
 
     -- ignore players with npc names if plate level is lower than player level
     if ulevel and ulevel > (level == "??" and -1 or level) then player = nil end
@@ -1019,8 +1030,12 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
       local nameplate = self.nameplate
       local plate = C.nameplates["overlap"] == "1" and nameplate or parent
 
+      if C.nameplates["vertical_offset"] ~= "0" then
+        nameplate:SetPoint("TOP", plate, "TOP", 0, tonumber(C.nameplates["vertical_offset"]))
+      end
+
       -- replace clickhandler
-      if C.nameplates["overlap"] == "1" then
+      if C.nameplates["overlap"] == "1" or C.nameplates["vertical_offset"] ~= "0" then
         parent:SetFrameLevel(0)
         nameplate:SetScript("OnClick", function() parent:Click() end)
 
@@ -1040,6 +1055,7 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
 
       -- disable click event on frames
       if C.nameplates["clickthrough"] == "1" then
+        nameplate:EnableMouse(false)
         plate:EnableMouse(false)
       else
         plate:EnableMouse(true)
@@ -1049,13 +1065,22 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     local hookOnUpdate = nameplates.OnUpdate
     nameplates.OnUpdate = function(self)
       if C.nameplates["overlap"] == "1" then
-        -- set parent to 1 pixel to have them overlap each other
-        this:SetWidth(1)
-        this:SetHeight(1)
+        if this:GetWidth() > 1 then
+          -- set parent to 1 pixel to have them overlap each other
+          this:SetWidth(1)
+          this:SetHeight(1)
+        end
       else
-        -- align parent plate to the actual size
-        this:SetWidth(this.nameplate:GetWidth() * UIParent:GetScale())
-        this:SetHeight(this.nameplate:GetHeight() * UIParent:GetScale())
+        if not this.nameplate.dwidth then
+          -- cache initial sizing value for comparison
+          this.nameplate.dwidth = floor(this.nameplate:GetWidth() * UIParent:GetScale())
+        end
+
+        if floor(this:GetWidth()) ~= this.nameplate.dwidth then
+          -- align parent plate to the actual size
+          this:SetWidth(this.nameplate:GetWidth() * UIParent:GetScale())
+          this:SetHeight(this.nameplate:GetHeight() * UIParent:GetScale())
+        end
       end
 
       -- disable click events while spell is targeting
