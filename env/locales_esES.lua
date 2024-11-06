@@ -12,6 +12,11 @@ ShaguPlates_locale["esES"]["class"] = {
   ["Pícaro"] = "ROGUE",
 }
 
+ShaguPlates_locale["esES"]["healduration"] = {
+  ["Rejuvenation"] = "Aumenta 3 s la duración de tu hechizo Rejuvenecimiento.",
+  ["Renew"] = "Aumenta en 3 s la duración de tu hechizo Renovar.",
+}
+
 ShaguPlates_locale["esES"]["bagtypes"] = {
   ["Carcaj"] = "QUIVER",
   ["Bolsa de almas"] = "SOULBAG",

@@ -12,6 +12,11 @@ ShaguPlates_locale["frFR"]["class"] = {
   ["Voleur"] = "ROGUE",
 }
 
+ShaguPlates_locale["frFR"]["healduration"] = {
+  ["Rejuvenation"] = "Augmente la durée de votre sort Récupération de 3 sec.",
+  ["Renew"] = "Augmente la durée de votre sort Rénovation de 3 sec.",
+}
+
 ShaguPlates_locale["frFR"]["bagtypes"] = {
   ["Carquois"] = "QUIVER",
   ["Sac d'âme"] = "SOULBAG",

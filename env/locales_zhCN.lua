@@ -12,6 +12,11 @@ ShaguPlates_locale["zhCN"]["class"] = {
   ["盗贼"] = "ROGUE",
 }
 
+ShaguPlates_locale["zhCN"]["healduration"] = {
+  ["Rejuvenation"] = "使你的回春术的持续时间延长3秒。",
+  ["Renew"] = "使你的恢复术的持续时间延长3秒。",
+}
+
 ShaguPlates_locale["zhCN"]["bagtypes"] = {
   ["箭袋"] = "QUIVER",
   ["灵魂袋"] = "SOULBAG",

@@ -12,6 +12,11 @@ ShaguPlates_locale["deDE"]["class"] = {
   ["Schurke"] = "ROGUE",
 }
 
+ShaguPlates_locale["deDE"]["healduration"] = {
+  ["Rejuvenation"] = "Erhöht die Dauer Eures Zaubers 'Verjüngung' um 3 Sek.",
+  ["Renew"] = "Erhöht die Wirkungsdauer von 'Erneuerung' um 3 Sek.",
+}
+
 ShaguPlates_locale["deDE"]["bagtypes"] = {
   ["Köcher"] = "QUIVER",
   ["Seelentasche"] = "SOULBAG",
