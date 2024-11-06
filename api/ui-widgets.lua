@@ -911,6 +911,7 @@ function ShaguPlates.api.SkinCheckbox(frame, size)
 end
 
 function ShaguPlates.api.SkinDropDown(frame, cr, cg, cb, useSmall)
+  if not frame then return end
   StripTextures(frame)
   CreateBackdrop(frame)
   frame.backdrop:SetPoint("TOPLEFT", 15, -1)

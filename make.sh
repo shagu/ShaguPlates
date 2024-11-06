@@ -53,6 +53,7 @@ echo '<Ui xmlns="http://www.blizzard.com/wow/ui/">
   <Include file="..\modules\settings.lua"/>
   <Include file="..\modules\nameplates.lua"/>
   <Include file="..\modules\superwow.lua"/>
+  <Include file="..\modules\turtle-wow.lua"/>
 </Ui>' > init/modules.xml
 
 # remove unitframe api
