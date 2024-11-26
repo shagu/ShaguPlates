@@ -39,6 +39,8 @@ Initially, this project started as a fork of CustomNameplates that became an ent
 
 * **Elite and Rare** identifier are displayed as "+" and "R" (or "R+") on the nameplate as soon as a unit has been detected to be either one of those.
 
+* **SuperWoW** support allows to have better nameplates and accurate castbars, even on units that share the same name. ([GitHub](https://github.com/balakethelock/SuperWoW))
+
 ## Commands
 
 * **/shaguplates**, **/splates** or **/sp** to access the options panel
