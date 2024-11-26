@@ -1,8 +1,8 @@
 # ShaguPlates
 
-A World of Warcraft: Vanilla and Burning Crusade addon, that is compatible to the original game versions 1.12.1 and 2.4.3 from back in the days. This addon modifies and extends the default nameplates by several features.
+<a href="preview/rounded.jpg"><img src="preview/rounded.jpg" float="right" align="right" width="320"></a>
 
-<a href="preview/left.jpg"><img src="preview/rounded.jpg"></a>
+A World of Warcraft: Vanilla and Burning Crusade addon, that is compatible to the original game versions 1.12.1 and 2.4.3 from back in the days. This addon modifies and extends the default nameplates by several features.
 
 Initially, this project started as a fork of CustomNameplates that became an entire rewrite and was then rewritten from scratch several times. At one point, the ShaguPlates got merged into pfUI and received over time many updates there. Nowadays, this addon is a *mostly* auto generated stand-alone version of the pfUI-nameplates to allow people without pfUI to still use its nameplates.
 
