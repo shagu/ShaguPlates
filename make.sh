@@ -46,6 +46,7 @@ sed -i 's/\("appearance", "cd",          "blizzard",         "\)1"/\10"/g' api/c
 sed -i 's/"font_unit".*)/"font_unit", "Fonts\\\\FRIZQT__.TTF")/g' api/config.lua
 sed -i 's/"font_default".*)/"font_default", "Fonts\\\\FRIZQT__.TTF")/g' api/config.lua
 sed -i 's/"force_blizz".*)/"force_blizz", "1")/g' api/config.lua
+sed -i 's/"nameplates", "health",      "offset",           "-3"/"nameplates", "health",      "offset",           "-4"/' api/config.lua
 
 # only load required modules
 echo '<Ui xmlns="http://www.blizzard.com/wow/ui/">
