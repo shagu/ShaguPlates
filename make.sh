@@ -33,7 +33,7 @@ find . -iname "*.lua" -type f | xargs sed -i 's/pfui/shaguplates/g'
 find . -iname "*.toc" -type f | xargs sed -i 's/|cff33ffccpf|cffffffffUI/|cff33ffccShagu|cffffffffPlates/g'
 find . -iname "*.toc" -type f | xargs sed -i 's/pfUI/ShaguPlates/g'
 find . -iname "*.toc" -type f | xargs sed -i '/init\\skins.xml/d'
-find . -iname "*.toc" -type f | xargs sed -i 's/## Notes:.*/## Notes: Nameplate addon featuring castbars and class colors/g'
+find . -iname "*.toc" -type f | xargs sed -i 's/## Notes:.*/## Notes: Nameplate addon featuring castbars, class colors and much more. Type \/splates to show the settings./g'
 find . -iname "*.toc" -type f | xargs sed -i '/Notes-/d'
 
 # use unitframes by default to not interfere with UI
