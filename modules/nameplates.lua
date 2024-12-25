@@ -216,6 +216,7 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     -- update debuff positions
     local width = tonumber(C.nameplates.width)
     local debuffsize = tonumber(C.nameplates.debuffsize)
+    local debuffoffset = tonumber(C.nameplates.debuffoffset)
     local limit = floor(width / debuffsize)
     local font = C.nameplates.use_unitfonts == "1" and ShaguPlates.font_unit or ShaguPlates.font_default
     local font_size = C.nameplates.use_unitfonts == "1" and C.global.font_unit_size or C.global.font_size
@@ -223,9 +224,9 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
 
     local aligna, alignb, offs, space
     if C.nameplates.debuffs["position"] == "BOTTOM" then
-      aligna, alignb, offs, space = "TOPLEFT", "BOTTOMLEFT", -4, -1
+      aligna, alignb, offs, space = "TOPLEFT", "BOTTOMLEFT", -debuffoffset, -1
     else
-      aligna, alignb, offs, space = "BOTTOMLEFT", "TOPLEFT", 20, 1
+      aligna, alignb, offs, space = "BOTTOMLEFT", "TOPLEFT", debuffoffset, 1
     end
 
     nameplate.debuffs[i].stacks:SetFont(font, font_size, font_style)
@@ -1032,7 +1033,8 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
 
       local parent = self
       local nameplate = self.nameplate
-      local plate = C.nameplates["overlap"] == "1" and nameplate or parent
+      local plate = (C.nameplates["overlap"] == "1" or C.nameplates["vertical_offset"] ~= "0") and nameplate or parent
+      local clickable = C.nameplates["clickthrough"] ~= "1" and true or false
 
       if C.nameplates["vertical_offset"] ~= "0" then
         nameplate:SetPoint("TOP", parent, "TOP", 0, tonumber(C.nameplates["vertical_offset"]))
@@ -1040,14 +1042,7 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
 
       -- replace clickhandler
       if C.nameplates["overlap"] == "1" or C.nameplates["vertical_offset"] ~= "0" then
-        parent:SetFrameLevel(0)
-        nameplate:SetScript("OnClick", function() parent:Click() end)
-
-        parent:EnableMouse(false)
-        nameplate:EnableMouse(true)
-      else
-        parent:EnableMouse(true)
-        nameplate:EnableMouse(false)
+        plate:SetScript("OnClick", function() parent:Click() end)
       end
 
       -- enable mouselook on rightbutton down
@@ -1057,12 +1052,21 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
         plate:SetScript("OnMouseDown", nil)
       end
 
-      -- disable click event on frames
-      if C.nameplates["clickthrough"] == "1" then
-        nameplate:EnableMouse(false)
-        plate:EnableMouse(false)
-      else
-        plate:EnableMouse(true)
+      -- disable all click events
+      parent:EnableMouse(false)
+      nameplate:EnableMouse(false)
+
+      -- make the actual plate clickable
+      plate:EnableMouse(clickable)
+    end
+
+    local hookOnDataChanged = nameplates.OnDataChanged
+    nameplates.OnDataChanged = function(self, nameplate)
+      hookOnDataChanged(self, nameplate)
+
+      -- make sure to keep mouse events disabled on parent nameplate
+      if (C.nameplates["overlap"] == "1" or C.nameplates["vertical_offset"] ~= "0") then
+        nameplate.parent:EnableMouse(false)
       end
     end
 
