@@ -32,6 +32,57 @@ ShaguPlates:RegisterModule("superwow", "vanilla", function ()
     DEFAULT_CHAT_FRAME:AddMessage("-> https://github.com/balakethelock/SuperWoW/releases/")
   end
 
+  -- Add support for guid based focus frame
+  if SUPERWOW_VERSION and ShaguPlates.uf and ShaguPlates.uf.focus then
+    local focus = function(unitstr)
+      -- try to read target's unit guid
+      local _, guid = UnitExists(unitstr)
+
+      if guid and ShaguPlates.uf.focus then
+        -- update focus frame
+        ShaguPlates.uf.focus.unitname = nil
+        ShaguPlates.uf.focus.label = guid
+        ShaguPlates.uf.focus.id = ""
+
+        -- update focustarget frame
+        ShaguPlates.uf.focustarget.unitname = nil
+        ShaguPlates.uf.focustarget.label = guid .. "target"
+        ShaguPlates.uf.focustarget.id = ""
+      end
+
+      return guid
+    end
+
+    -- extend the builtin /focus slash command
+    local legacyfocus = SlashCmdList.PFFOCUS
+    function SlashCmdList.PFFOCUS(msg)
+      -- try to perform guid based focus
+      local guid = focus("target")
+
+      -- run old focus emulation
+      if not guid then legacyfocus(msg) end
+    end
+
+    -- extend the builtin /swapfocus slash command
+    local legacyswapfocus = SlashCmdList.PFSWAPFOCUS
+    function SlashCmdList.PFSWAPFOCUS(msg)
+      -- save previous focus values
+      local oldlabel = ShaguPlates.uf.focus.label or ""
+      local oldid = ShaguPlates.uf.focus.id or ""
+
+      -- try to perform guid based focus
+      local guid = focus("target")
+
+      -- target old focus
+      if guid and oldlabel and oldid then
+        TargetUnit(oldlabel..oldid)
+      end
+
+      -- run old focus emulation
+      if not guid then legacyswapfocus(msg) end
+    end
+  end
+
   local unitcast = CreateFrame("Frame")
   unitcast:RegisterEvent("UNIT_CASTEVENT")
   unitcast:SetScript("OnEvent", function()

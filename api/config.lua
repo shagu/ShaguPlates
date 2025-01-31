@@ -171,7 +171,8 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("appearance", "bags",        "bagrowlength",     "10")
   ShaguPlates:UpdateConfig("appearance", "bags",        "bankrowlength",    "10")
   ShaguPlates:UpdateConfig("appearance", "minimap",     "size",            "140")
-  ShaguPlates:UpdateConfig("appearance", "minimap",     "mouseoverzone",    "0")
+  ShaguPlates:UpdateConfig("appearance", "minimap",     "zonetext",         "off")
+  ShaguPlates:UpdateConfig("appearance", "minimap",     "coordstext",       "mouseover")
   ShaguPlates:UpdateConfig("appearance", "minimap",     "coordsloc",        "bottomleft")
   ShaguPlates:UpdateConfig("appearance", "minimap",     "tracking_size",    "16")
   ShaguPlates:UpdateConfig("appearance", "minimap",     "tracking_pulse",   "1")
@@ -691,6 +692,7 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("nameplates", nil,           "use_unitfonts", "1")
   ShaguPlates:UpdateConfig("nameplates", nil,           "legacy",           "0")
   ShaguPlates:UpdateConfig("nameplates", nil,           "overlap",          "0")
+  ShaguPlates:UpdateConfig("nameplates", nil,           "verticalhealth",   "0")
   ShaguPlates:UpdateConfig("nameplates", nil,           "vertical_offset",  "0")
   ShaguPlates:UpdateConfig("nameplates", nil,           "showcastbar",      "1")
   ShaguPlates:UpdateConfig("nameplates", nil,           "targetcastbar",    "0")
@@ -1183,6 +1185,22 @@ function ShaguPlates:MigrateConfig()
     local unitframes = { "player", "target", "focus", "group", "grouptarget", "grouppet", "raid", "ttarget", "pet", "ptarget", "fallback", "tttarget" }
     for _, unitframe in pairs(unitframes) do
       ShaguPlates_config.unitframes[unitframe].pbartexture = ShaguPlates_config.unitframes[unitframe].bartexture
+    end
+  end
+
+  -- migrate minimap zone and coords changes
+  if checkversion(5, 4, 11) then
+    if ShaguPlates_config.appearance.minimap.mouseoverzone and not ShaguPlates_config.appearance.minimap.zonetext then
+      ShaguPlates_config.appearance.minimap.zonetext = (ShaguPlates_config.appearance.minimap.mouseoverzone == "0") and "off" or "mouseover"
+      ShaguPlates_config.appearance.minimap.mouseoverzone = nil
+    end
+    if ShaguPlates_config.appearance.minimap.coordsloc and not ShaguPlates_config.appearance.minimap.coordstext then
+      if ShaguPlates_config.appearance.minimap.coordsloc == "off" then
+        ShaguPlates_config.appearance.minimap.coordsloc = "bottomleft"
+        ShaguPlates_config.appearance.minimap.coordstext = "off"
+      else
+        ShaguPlates_config.appearance.minimap.coordstext = "mouseover"
+      end
     end
   end
 
