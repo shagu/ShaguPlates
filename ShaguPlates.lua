@@ -251,8 +251,6 @@ function ShaguPlates:LoadSkin(s)
 end
 
 ShaguPlates:SetScript("OnEvent", function()
-  -- enforce color updates on each event
-  ShaguPlates:UpdateColors()
 
   -- make sure to initialize and set our fonts
   -- each time an addon got loaded but only
