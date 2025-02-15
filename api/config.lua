@@ -164,6 +164,7 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("appearance", "bags",        "unusable_color",   ".9,.2,.2,1")
   ShaguPlates:UpdateConfig("appearance", "bags",        "borderlimit",      "1")
   ShaguPlates:UpdateConfig("appearance", "bags",        "borderonlygear",   "0")
+  ShaguPlates:UpdateConfig("appearance", "bags",        "fulltext",         "1")
   ShaguPlates:UpdateConfig("appearance", "bags",        "movable",          "0")
   ShaguPlates:UpdateConfig("appearance", "bags",        "abovechat",        "0")
   ShaguPlates:UpdateConfig("appearance", "bags",        "hidechat",         "0")
@@ -176,6 +177,7 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("appearance", "minimap",     "coordsloc",        "bottomleft")
   ShaguPlates:UpdateConfig("appearance", "minimap",     "tracking_size",    "16")
   ShaguPlates:UpdateConfig("appearance", "minimap",     "tracking_pulse",   "1")
+  ShaguPlates:UpdateConfig("appearance", "minimap",     "addon_buttons",    "0")
   ShaguPlates:UpdateConfig("appearance", "worldmap",    "tooltipsize",      "0")
   ShaguPlates:UpdateConfig("appearance", "worldmap",    "mapreveal",        "0")
   ShaguPlates:UpdateConfig("appearance", "worldmap",    "mapreveal_color",  ".4,.4,.4,1")
@@ -539,7 +541,9 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("bars",       nil,           "macroscan",        "1")
   ShaguPlates:UpdateConfig("bars",       nil,           "reagents",         "1")
   ShaguPlates:UpdateConfig("bars",       nil,           "hunterbar",        "0")
-  ShaguPlates:UpdateConfig("bars",       nil,           "pagemaster",       "0")
+  ShaguPlates:UpdateConfig("bars",       nil,           "pagemasteralt",    "0")
+  ShaguPlates:UpdateConfig("bars",       nil,           "pagemastershift",  "0")
+  ShaguPlates:UpdateConfig("bars",       nil,           "pagemasterctrl",   "0")
   ShaguPlates:UpdateConfig("bars",       nil,           "druidstealth",     "0")
   ShaguPlates:UpdateConfig("bars",       nil,           "showcastable",     "1")
   ShaguPlates:UpdateConfig("bars",       nil,           "glowrange",        "1")
@@ -572,6 +576,7 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("panel",      nil,           "hide_rightchat",   "0")
   ShaguPlates:UpdateConfig("panel",      nil,           "hide_minimap",     "0")
   ShaguPlates:UpdateConfig("panel",      nil,           "hide_microbar",    "0")
+  ShaguPlates:UpdateConfig("panel",      nil,           "seconds",          "1")
   ShaguPlates:UpdateConfig("panel",      "left",        "left",             "guild")
   ShaguPlates:UpdateConfig("panel",      "left",        "center",           "durability")
   ShaguPlates:UpdateConfig("panel",      "left",        "right",            "friends")
@@ -593,6 +598,7 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("panel",      "xp",          "xp_position",      "RIGHT")
   ShaguPlates:UpdateConfig("panel",      "xp",          "xp_color",         ".25,.25,1,1")
   ShaguPlates:UpdateConfig("panel",      "xp",          "rest_color",       "1,.25,1,.5")
+  ShaguPlates:UpdateConfig("panel",      "xp",          "texture",       "Interface\\AddOns\\ShaguPlates\\img\\bar")
 
   ShaguPlates:UpdateConfig("panel",      "xp",          "rep_always",       "0")
   ShaguPlates:UpdateConfig("panel",      "xp",          "rep_display",      "REP")
@@ -1201,6 +1207,16 @@ function ShaguPlates:MigrateConfig()
       else
         ShaguPlates_config.appearance.minimap.coordstext = "mouseover"
       end
+    end
+  end
+
+  -- migrate pagemaster to separate settings
+  if checkversion(5, 4, 15) then
+    if ShaguPlates_config.bars.pagemaster == "1" then
+      ShaguPlates_config.bars.pagemaster = nil
+      ShaguPlates_config.bars.pagemasteralt = "1"
+      ShaguPlates_config.bars.pagemastershift = "1"
+      ShaguPlates_config.bars.pagemasterctrl = "1"
     end
   end
 
