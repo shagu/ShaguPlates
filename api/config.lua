@@ -729,6 +729,17 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("nameplates", nil,           "showguildname",    "0")
 
   ShaguPlates:UpdateConfig("nameplates", nil,           "outcombatstate",   "1")
+  ShaguPlates:UpdateConfig("nameplates", nil,           "barcombatstate",   "0")
+
+  ShaguPlates:UpdateConfig("nameplates", nil,           "ccombatthreat",    "1")
+  ShaguPlates:UpdateConfig("nameplates", nil,           "ccombatnothreat",  "1")
+  ShaguPlates:UpdateConfig("nameplates", nil,           "ccombatstun",      "1")
+  ShaguPlates:UpdateConfig("nameplates", nil,           "ccombatcasting",   "0")
+  ShaguPlates:UpdateConfig("nameplates", nil,           "combatthreat",     ".7,.2,.2,1")
+  ShaguPlates:UpdateConfig("nameplates", nil,           "combatnothreat",   ".7,.7,.2,1")
+  ShaguPlates:UpdateConfig("nameplates", nil,           "combatstun",       ".2,.7,.7,1")
+  ShaguPlates:UpdateConfig("nameplates", nil,           "combatcasting",    ".7,.2,.7,1")
+
   ShaguPlates:UpdateConfig("nameplates", nil,           "outfriendly",      "0")
   ShaguPlates:UpdateConfig("nameplates", nil,           "outfriendlynpc",   "1")
   ShaguPlates:UpdateConfig("nameplates", nil,           "outneutral",       "1")
