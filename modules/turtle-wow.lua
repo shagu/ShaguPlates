@@ -61,6 +61,30 @@ ShaguPlates:RegisterModule("turtle-wow", "vanilla", function ()
   delay:SetScript("OnUpdate", function()
     this:Hide()
 
+    -- correct positions of new game menu layout
+    if GameMenuButtonShop then
+      -- calculate new offset for the shop button
+      local offset = 0
+      local offset = GameMenuButtonSHAGUPLATES and offset + 22 or offset
+      local offset = GameMenuButtonSHAGUPLATESAddOns and offset + 22 or offset
+      local offset = offset > 0 and offset + 22 or offset
+
+      -- move ShaguPlates and addons to top position
+      GameMenuButtonShop:ClearAllPoints()
+      GameMenuButtonShop:SetPoint("TOP", 0, -offset)
+
+      -- restore turtle wow's custom menu layout
+      GameMenuButtonOptions:ClearAllPoints()
+      GameMenuButtonOptions:SetPoint("TOP", GameMenuButtonShop, "BOTTOM", 0, -16)
+
+      -- apply ShaguPlates skin to the new shop button
+      if ShaguPlates.skin["Game Menu"] and ShaguPlates_config["disabled"]["skin_Game Menu"] ~= "1" then
+        local font = GameMenuButtonShop:GetFontString()
+        font:SetTextColor(1,1,1,1)
+        SkinButton(GameMenuButtonShop)
+      end
+    end
+
     -- add tree of life druid form to autoshift
     if ShaguPlates.autoshift then
       table.insert(ShaguPlates.autoshift.shapeshifts, "ability_druid_treeoflife")
