@@ -194,7 +194,7 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
 
     for id = 1, 16 do
       local effect, _, texture, stacks, _, duration, timeleft = libdebuff:UnitDebuff(unitstr, id)
-      if effect and timeleft then
+      if effect and timeleft and timeleft > 0 then
         local start = GetTime() - ( (duration or 0) - ( timeleft or 0) )
         local stop = GetTime() + ( timeleft or 0 )
         self.debuffcache[id] = self.debuffcache[id] or {}
@@ -887,12 +887,6 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
       nameplate:SetAlpha(tonumber(C.nameplates.notargalpha))
     end
 
-    -- use timer based updates
-    if not nameplate.tick or nameplate.tick < GetTime() then
-      nameplate.tick = GetTime() + .25
-      update = true
-    end
-
     -- queue update on visual target update
     if nameplate.cache.target ~= target then
       nameplate.cache.target = target
@@ -942,9 +936,15 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
       end
     end
 
+    -- use timer based updates
+    if not nameplate.tick or nameplate.tick < GetTime() then
+      update = true
+    end
+
     -- run full updates if required
     if update then
       nameplates:OnDataChanged(nameplate)
+      nameplate.tick = GetTime() + .5
     end
 
     -- target zoom
