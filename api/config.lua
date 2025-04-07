@@ -717,7 +717,7 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("nameplates", nil,           "raidiconoffy",     "-5")
   ShaguPlates:UpdateConfig("nameplates", nil,           "fullhealth",       "1")
   ShaguPlates:UpdateConfig("nameplates", nil,           "target",           "1")
-
+  ShaguPlates:UpdateConfig("nameplates", nil,           "namefightcolor",   "1")
   ShaguPlates:UpdateConfig("nameplates", nil,           "enemynpc",         "0")
   ShaguPlates:UpdateConfig("nameplates", nil,           "enemyplayer",      "0")
   ShaguPlates:UpdateConfig("nameplates", nil,           "neutralnpc",       "0")

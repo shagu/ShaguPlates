@@ -62,7 +62,7 @@ ShaguPlates:RegisterModule("turtle-wow", "vanilla", function ()
     this:Hide()
 
     -- correct positions of new game menu layout
-    if GameMenuButtonShop then
+    if GameMenuButtonShop and (GameMenuButtonSHAGUPLATES or GameMenuButtonSHAGUPLATESAddOns) then
       -- calculate new offset for the shop button
       local offset = 0
       local offset = GameMenuButtonSHAGUPLATES and offset + 22 or offset
@@ -85,9 +85,10 @@ ShaguPlates:RegisterModule("turtle-wow", "vanilla", function ()
       end
     end
 
-    -- add tree of life druid form to autoshift
+    -- add druids tree of life and fast travel form to autoshift
     if ShaguPlates.autoshift then
       table.insert(ShaguPlates.autoshift.shapeshifts, "ability_druid_treeoflife")
+      table.insert(ShaguPlates.autoshift.shapeshifts, "ability_druid_stagform")
     end
 
     -- apply chat styles to hardcore chat
