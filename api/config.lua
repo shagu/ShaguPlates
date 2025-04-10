@@ -739,6 +739,7 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("nameplates", nil,           "combatnothreat",   ".7,.7,.2,1")
   ShaguPlates:UpdateConfig("nameplates", nil,           "combatstun",       ".2,.7,.7,1")
   ShaguPlates:UpdateConfig("nameplates", nil,           "combatcasting",    ".7,.2,.7,1")
+	ShaguPlates:UpdateConfig("nameplates", nil,           "combattarget",     ".9,.9,.9,1")
 
   ShaguPlates:UpdateConfig("nameplates", nil,           "outfriendly",      "0")
   ShaguPlates:UpdateConfig("nameplates", nil,           "outfriendlynpc",   "1")
