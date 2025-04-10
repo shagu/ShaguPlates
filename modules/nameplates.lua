@@ -506,6 +506,7 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     local orientation = C.nameplates.verticalhealth == "1" and "VERTICAL" or "HORIZONTAL"
 
     local c = combatstate -- load combat state colors
+    c.TARGET.r, c.TARGET.g, c.TARGET.b, c.TARGET.a = GetStringColor(C.nameplates.combattarget)
     c.CASTING.r, c.CASTING.g, c.CASTING.b, c.CASTING.a = GetStringColor(C.nameplates.combatcasting)
     c.THREAT.r, c.THREAT.g, c.THREAT.b, c.THREAT.a = GetStringColor(C.nameplates.combatthreat)
     c.NOTHREAT.r, c.NOTHREAT.g, c.NOTHREAT.b, c.NOTHREAT.a = GetStringColor(C.nameplates.combatnothreat)
