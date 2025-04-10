@@ -731,6 +731,7 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("nameplates", nil,           "outcombatstate",   "1")
   ShaguPlates:UpdateConfig("nameplates", nil,           "barcombatstate",   "0")
 
+  ShaguPlates:UpdateConfig("nameplates", nil,           "ccombattarget",    "1")
   ShaguPlates:UpdateConfig("nameplates", nil,           "ccombatthreat",    "1")
   ShaguPlates:UpdateConfig("nameplates", nil,           "ccombatnothreat",  "1")
   ShaguPlates:UpdateConfig("nameplates", nil,           "ccombatstun",      "1")
