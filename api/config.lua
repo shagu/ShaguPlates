@@ -152,6 +152,7 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("appearance", "cd",          "foreign",          "0")
   ShaguPlates:UpdateConfig("appearance", "cd",          "milliseconds",     "1")
   ShaguPlates:UpdateConfig("appearance", "cd",          "hideanim",         "0")
+  ShaguPlates:UpdateConfig("appearance", "cd",          "font",             "Interface\\AddOns\\ShaguPlates\\fonts\\BigNoodleTitling.ttf")
   ShaguPlates:UpdateConfig("appearance", "cd",          "dynamicsize",      "1")
   ShaguPlates:UpdateConfig("appearance", "castbar",     "castbarcolor",     ".7,.7,.9,.8")
   ShaguPlates:UpdateConfig("appearance", "castbar",     "channelcolor",     ".9,.9,.7,.8")
@@ -215,8 +216,12 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("unitframes", nil,           "layout",           "default")
   ShaguPlates:UpdateConfig("unitframes", nil,           "rangecheck",       "0")
   ShaguPlates:UpdateConfig("unitframes", nil,           "buffdetect",       "0")
+  ShaguPlates:UpdateConfig("unitframes", nil,           "druidmanabar",     "1")
+  ShaguPlates:UpdateConfig("unitframes", nil,           "druidmanaheight",  "2")
+  ShaguPlates:UpdateConfig("unitframes", nil,           "druidmanatext",    "0")
   ShaguPlates:UpdateConfig("unitframes", nil,           "rangechecki",      "4")
-  ShaguPlates:UpdateConfig("unitframes", nil,           "combosize",        "6")
+  ShaguPlates:UpdateConfig("unitframes", nil,           "combowidth",       "6")
+  ShaguPlates:UpdateConfig("unitframes", nil,           "comboheight",      "6")
   ShaguPlates:UpdateConfig("unitframes", nil,           "abbrevnum",        "1")
   ShaguPlates:UpdateConfig("unitframes", nil,           "abbrevname",       "1")
 
@@ -412,6 +417,7 @@ function ShaguPlates:LoadConfig()
     ShaguPlates:UpdateConfig("unitframes", unit,      "debuffsize",       "20")
     ShaguPlates:UpdateConfig("unitframes", unit,      "debufflimit",      "32")
     ShaguPlates:UpdateConfig("unitframes", unit,      "debuffperrow",     "8")
+    ShaguPlates:UpdateConfig("unitframes", unit,      "selfdebuff",       "0")
     ShaguPlates:UpdateConfig("unitframes", unit,      "invert_healthbar", "0")
     ShaguPlates:UpdateConfig("unitframes", unit,      "verticalbar",      "0")
     ShaguPlates:UpdateConfig("unitframes", unit,      "buff_indicator",   "0")
@@ -566,6 +572,14 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("bars",       nil,           "bind_color",       "1,1,0,1")
   ShaguPlates:UpdateConfig("bars",       nil,           "cd_size",          "12")
 
+  ShaguPlates:UpdateConfig("bars",       "gryphons",    "texture",          "None")
+  ShaguPlates:UpdateConfig("bars",       "gryphons",    "color",            ".6,.6,.6,1")
+  ShaguPlates:UpdateConfig("bars",       "gryphons",    "size",             "64")
+  ShaguPlates:UpdateConfig("bars",       "gryphons",    "anchor_left",      "pfActionBarLeft")
+  ShaguPlates:UpdateConfig("bars",       "gryphons",    "anchor_right",     "pfActionBarRight")
+  ShaguPlates:UpdateConfig("bars",       "gryphons",    "offset_h",         "-48")
+  ShaguPlates:UpdateConfig("bars",       "gryphons",    "offset_v",         "-4")
+
   ShaguPlates:UpdateConfig("totems",     nil,           "direction",        "HORIZONTAL")
   ShaguPlates:UpdateConfig("totems",     nil,           "iconsize",         "26")
   ShaguPlates:UpdateConfig("totems",     nil,           "spacing",          "3")
@@ -596,9 +610,12 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("panel",      "xp",          "xp_mode",          "VERTICAL")
   ShaguPlates:UpdateConfig("panel",      "xp",          "xp_anchor",        "pfChatLeft")
   ShaguPlates:UpdateConfig("panel",      "xp",          "xp_position",      "RIGHT")
+  ShaguPlates:UpdateConfig("panel",      "xp",          "xp_text",          "0")
+  ShaguPlates:UpdateConfig("panel",      "xp",          "xp_text_off_y",    "0")
+  ShaguPlates:UpdateConfig("panel",      "xp",          "xp_text_mouse",    "0")
   ShaguPlates:UpdateConfig("panel",      "xp",          "xp_color",         ".25,.25,1,1")
   ShaguPlates:UpdateConfig("panel",      "xp",          "rest_color",       "1,.25,1,.5")
-  ShaguPlates:UpdateConfig("panel",      "xp",          "texture",       "Interface\\AddOns\\ShaguPlates\\img\\bar")
+  ShaguPlates:UpdateConfig("panel",      "xp",          "texture",          "Interface\\AddOns\\ShaguPlates\\img\\bar")
 
   ShaguPlates:UpdateConfig("panel",      "xp",          "rep_always",       "0")
   ShaguPlates:UpdateConfig("panel",      "xp",          "rep_display",      "REP")
@@ -608,6 +625,9 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("panel",      "xp",          "rep_mode",         "VERTICAL")
   ShaguPlates:UpdateConfig("panel",      "xp",          "rep_anchor",       "pfChatRight")
   ShaguPlates:UpdateConfig("panel",      "xp",          "rep_position",     "LEFT")
+  ShaguPlates:UpdateConfig("panel",      "xp",          "rep_text",         "0")
+  ShaguPlates:UpdateConfig("panel",      "xp",          "rep_text_off_y",   "0")
+  ShaguPlates:UpdateConfig("panel",      "xp",          "rep_text_mouse",   "0")
   ShaguPlates:UpdateConfig("panel",      "xp",          "dont_overlap",     "0")
 
   ShaguPlates:UpdateConfig("castbar",    "player",      "hide_blizz",       "1")
@@ -617,24 +637,36 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("castbar",    "player",      "showicon",         "0")
   ShaguPlates:UpdateConfig("castbar",    "player",      "showname",         "1")
   ShaguPlates:UpdateConfig("castbar",    "player",      "showtimer",        "1")
+  ShaguPlates:UpdateConfig("castbar",    "player",      "txtleftoffx",      "0")
+  ShaguPlates:UpdateConfig("castbar",    "player",      "txtleftoffy",      "0")
   ShaguPlates:UpdateConfig("castbar",    "player",      "showlag",          "0")
   ShaguPlates:UpdateConfig("castbar",    "player",      "showrank",         "0")
+  ShaguPlates:UpdateConfig("castbar",    "player",      "txtrightoffx",     "0")
+  ShaguPlates:UpdateConfig("castbar",    "player",      "txtrightoffy",     "0")
   ShaguPlates:UpdateConfig("castbar",    "target",      "hide_shaguplates",        "0")
   ShaguPlates:UpdateConfig("castbar",    "target",      "width",            "-1")
   ShaguPlates:UpdateConfig("castbar",    "target",      "height",           "-1")
   ShaguPlates:UpdateConfig("castbar",    "target",      "showicon",         "0")
   ShaguPlates:UpdateConfig("castbar",    "target",      "showname",         "1")
   ShaguPlates:UpdateConfig("castbar",    "target",      "showtimer",        "1")
+  ShaguPlates:UpdateConfig("castbar",    "target",      "txtleftoffx",      "0")
+  ShaguPlates:UpdateConfig("castbar",    "target",      "txtleftoffy",      "0")
   ShaguPlates:UpdateConfig("castbar",    "target",      "showlag",          "0")
   ShaguPlates:UpdateConfig("castbar",    "target",      "showrank",         "0")
+  ShaguPlates:UpdateConfig("castbar",    "target",      "txtrightoffx",     "0")
+  ShaguPlates:UpdateConfig("castbar",    "target",      "txtrightoffy",     "0")
   ShaguPlates:UpdateConfig("castbar",    "focus",       "hide_shaguplates",        "0")
   ShaguPlates:UpdateConfig("castbar",    "focus",       "width",            "-1")
   ShaguPlates:UpdateConfig("castbar",    "focus",       "height",           "-1")
   ShaguPlates:UpdateConfig("castbar",    "focus",       "showicon",         "0")
   ShaguPlates:UpdateConfig("castbar",    "focus",       "showname",         "1")
   ShaguPlates:UpdateConfig("castbar",    "focus",       "showtimer",        "1")
+  ShaguPlates:UpdateConfig("castbar",    "focus",       "txtleftoffx",      "0")
+  ShaguPlates:UpdateConfig("castbar",    "focus",       "txtleftoffy",      "0")
   ShaguPlates:UpdateConfig("castbar",    "focus",       "showlag",          "0")
   ShaguPlates:UpdateConfig("castbar",    "focus",       "showrank",         "0")
+  ShaguPlates:UpdateConfig("castbar",    "focus",       "txtrightoffx",     "0")
+  ShaguPlates:UpdateConfig("castbar",    "focus",       "txtrightoffy",     "0")
   ShaguPlates:UpdateConfig("castbar",    nil,           "use_unitfonts", "1")
 
   ShaguPlates:UpdateConfig("tooltip",    nil,           "position",         "chat")
@@ -704,6 +736,7 @@ function ShaguPlates:LoadConfig()
   ShaguPlates:UpdateConfig("nameplates", nil,           "targetcastbar",    "0")
   ShaguPlates:UpdateConfig("nameplates", nil,           "spellname",        "0")
   ShaguPlates:UpdateConfig("nameplates", nil,           "showdebuffs",      "1")
+  ShaguPlates:UpdateConfig("nameplates", nil,           "selfdebuff",       "0")
   ShaguPlates:UpdateConfig("nameplates", nil,           "guessdebuffs",     "1")
   ShaguPlates:UpdateConfig("nameplates", nil,           "clickthrough",     "0")
   ShaguPlates:UpdateConfig("nameplates", nil,           "rightclick",       "1")
@@ -1230,6 +1263,21 @@ function ShaguPlates:MigrateConfig()
       ShaguPlates_config.bars.pagemasterctrl = "1"
     end
   end
+
+  -- migrate cooldown font from unit_font to separate setting
+  if checkversion(5, 4, 18) then
+    ShaguPlates_config.appearance.cd.font = ShaguPlates_config.global.font_unit
+  end
+
+  -- migrate combopoint size to separate settings
+  if checkversion(5, 4, 18) then
+    if ShaguPlates_config.unitframes.combosize then
+      ShaguPlates_config.unitframes.combowidth = ShaguPlates_config.unitframes.combosize
+      ShaguPlates_config.unitframes.comboheight = ShaguPlates_config.unitframes.combosize
+      ShaguPlates_config.unitframes.combosize = nil
+    end
+  end
+
 
   ShaguPlates_config.version = ShaguPlates.version.string
 end

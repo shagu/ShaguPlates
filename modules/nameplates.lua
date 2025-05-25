@@ -193,7 +193,14 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     if not self.debuffcache then self.debuffcache = {} end
 
     for id = 1, 16 do
-      local effect, _, texture, stacks, _, duration, timeleft = libdebuff:UnitDebuff(unitstr, id)
+      local effect, _, texture, stacks, _, duration, timeleft
+
+      if unitstr and C.nameplates.selfdebuff == "1" then
+        effect, rank, texture, stacks, dtype, duration, timeleft = libdebuff:UnitOwnDebuff(unitstr, i)
+      else
+        effect, _, texture, stacks, _, duration, timeleft = libdebuff:UnitDebuff(unitstr, id)
+      end
+
       if effect and timeleft and timeleft > 0 then
         local start = GetTime() - ( (duration or 0) - ( timeleft or 0) )
         local stop = GetTime() + ( timeleft or 0 )
@@ -552,7 +559,7 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     nameplate.castbar:SetPoint("TOPLEFT", nameplate.health, "BOTTOMLEFT", 0, -default_border*3)
     nameplate.castbar:SetPoint("TOPRIGHT", nameplate.health, "BOTTOMRIGHT", 0, -default_border*3)
     nameplate.castbar:SetHeight(C.nameplates.heightcast)
-    nameplate.castbar:SetStatusBarTexture(ShaguPlates.media["img:bar"])
+    nameplate.castbar:SetStatusBarTexture(hptexture)
     nameplate.castbar:SetStatusBarColor(.9,.8,0,1)
     CreateBackdrop(nameplate.castbar, default_border)
 
@@ -647,13 +654,13 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     elseif target and C.nameplates.targethighlight == "1" then
       plate.health.backdrop:SetBackdropBorderColor(plate.health.hlr, plate.health.hlg, plate.health.hlb, plate.health.hla)
     elseif C.nameplates.outfriendlynpc == "1" and unittype == "FRIENDLY_NPC" then
-      plate.health.backdrop:SetBackdropBorderColor(.2,.7,.3,1)
+      plate.health.backdrop:SetBackdropBorderColor(unpack(unitcolors[unittype]))
     elseif C.nameplates.outfriendly == "1" and unittype == "FRIENDLY_PLAYER" then
-      plate.health.backdrop:SetBackdropBorderColor(.2,.3,.7,1)
+      plate.health.backdrop:SetBackdropBorderColor(unpack(unitcolors[unittype]))
     elseif C.nameplates.outneutral == "1" and strfind(unittype, "NEUTRAL") then
-      plate.health.backdrop:SetBackdropBorderColor(.7,.7,.2,1)
+      plate.health.backdrop:SetBackdropBorderColor(unpack(unitcolors[unittype]))
     elseif C.nameplates.outenemy == "1" and strfind(unittype, "ENEMY") then
-      plate.health.backdrop:SetBackdropBorderColor(.7,.2,.3,1)
+      plate.health.backdrop:SetBackdropBorderColor(unpack(unitcolors[unittype]))
     else
       plate.health.backdrop:SetBackdropBorderColor(er,eg,eb,ea)
     end
@@ -798,7 +805,10 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
       -- update all debuff icons
       for i = 1, 16 do
         local effect, rank, texture, stacks, dtype, duration, timeleft
-        if unitstr then
+
+        if unitstr and C.nameplates.selfdebuff == "1" then
+          effect, rank, texture, stacks, dtype, duration, timeleft = libdebuff:UnitOwnDebuff(unitstr, i)
+        elseif unitstr then
           effect, rank, texture, stacks, dtype, duration, timeleft = libdebuff:UnitDebuff(unitstr, i)
         elseif plate.verify == verify then
           effect, rank, texture, stacks, dtype, duration, timeleft = plate:UnitDebuff(i)

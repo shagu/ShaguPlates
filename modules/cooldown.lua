@@ -77,7 +77,7 @@ ShaguPlates:RegisterModule("cooldown", "vanilla:tbc", function ()
       size = math.max((height > 0 and height * .64 or 16), size)
     end
 
-    cooldown.pfCooldownText.text:SetFont(ShaguPlates.font_unit, size, "OUTLINE")
+    cooldown.pfCooldownText.text:SetFont(C.appearance.cd.font, size, "OUTLINE")
     cooldown.pfCooldownText.text:SetPoint("CENTER", cooldown.pfCooldownText, "CENTER", 0, 0)
     cooldown.pfCooldownText:SetScript("OnUpdate", pfCooldownOnUpdate)
   end
@@ -104,12 +104,12 @@ ShaguPlates:RegisterModule("cooldown", "vanilla:tbc", function ()
 
     -- don't draw global cooldowns
     if this.pfCooldownType == "NOGCD" and duration < tonumber(C.appearance.cd.threshold) then
-      return
+      start, duration = 0, 0
     end
 
     -- disable GCDs on non ShaguPlates frames
     if not this.pfCooldownType and duration < tonumber(C.appearance.cd.threshold) then
-      return
+      start, duration = 0, 0
     end
 
     -- hide animation
