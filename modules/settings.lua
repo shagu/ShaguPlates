@@ -661,8 +661,8 @@ ShaguPlates:RegisterModule("gui", "vanilla:tbc", function ()
         "frFR:French",
         "koKR:Korean",
         "ruRU:Russian",
-        "zhCN:Chinese (simplified; China)",
-        "zhTW:Chinese (traditional; Taiwan)",
+        "zhCN:Chinese (Simplified)",
+        "zhTW:Chinese (Traditional)",
         -- http://wowprogramming.com/docs/api/GetLocale
       },
       ["fonts"] = {
