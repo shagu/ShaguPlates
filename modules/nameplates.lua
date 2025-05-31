@@ -12,6 +12,7 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
 
   local combatstate = {
     -- gets overwritten by user config
+    ["TARGET"]   = { r = .9, g = .9, b = .9, a = 1 },
     ["NOTHREAT"] = { r = .7, g = .7, b = .2, a = 1 },
     ["THREAT"]   = { r = .7, g = .2, b = .2, a = 1 },
     ["CASTING"]  = { r = .7, g = .2, b = .7, a = 1 },
@@ -42,7 +43,9 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     local color = false
 
     if UnitAffectingCombat("player") and UnitAffectingCombat(guid) and not UnitCanAssist("player", guid) then
-      if C.nameplates.ccombatcasting == "1" and (UnitCastingInfo(guid) or UnitChannelInfo(guid)) then
+      if C.nameplates.ccombattarget == "1" and (guid == select(2,UnitExists("target"))) then
+        color = combatstate.TARGET
+      elseif C.nameplates.ccombatcasting == "1" and (UnitCastingInfo(guid) or UnitChannelInfo(guid)) then
         color = combatstate.CASTING
       elseif C.nameplates.ccombatthreat == "1" and UnitIsUnit(target, "player") then
         color = combatstate.THREAT
@@ -510,6 +513,7 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
     local orientation = C.nameplates.verticalhealth == "1" and "VERTICAL" or "HORIZONTAL"
 
     local c = combatstate -- load combat state colors
+    c.TARGET.r, c.TARGET.g, c.TARGET.b, c.TARGET.a = GetStringColor(C.nameplates.combattarget)
     c.CASTING.r, c.CASTING.g, c.CASTING.b, c.CASTING.a = GetStringColor(C.nameplates.combatcasting)
     c.THREAT.r, c.THREAT.g, c.THREAT.b, c.THREAT.a = GetStringColor(C.nameplates.combatthreat)
     c.NOTHREAT.r, c.NOTHREAT.g, c.NOTHREAT.b, c.NOTHREAT.a = GetStringColor(C.nameplates.combatnothreat)
