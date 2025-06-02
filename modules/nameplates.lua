@@ -1,4 +1,7 @@
+
+
 ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
+
   -- disable original castbars
   pcall(SetCVar, "ShowVKeyCastbar", 0)
 
@@ -127,24 +130,55 @@ ShaguPlates:RegisterModule("nameplates", "vanilla:tbc", function ()
   end
 
   local function abbrevname(t)
-    return string.sub(t,1,1)..". "
+    return utf8.sub(t,1,1)..". "
   end
 
   local function GetNameString(name)
-    local abbrev = ShaguPlates_config.unitframes.abbrevname == "1" or nil
-    local size = 20
+      local abbrev = ShaguPlates_config.unitframes.abbrevname == "1"  -- Проверка, нужно ли сокращать
+      local size = 20  -- Максимальная длина строки
 
-    -- first try to only abbreviate the first word
-    if abbrev and name and strlen(name) > size then
-      name = string.gsub(name, "^(%S+) ", abbrevname)
-    end
+      -- Если строка длинная, начинаем сокращать
+      if abbrev and name and utf8.len(name) > size then
+          local words = {}
+          local word_start = 1
+          local word_end
+          local total_words = 0
 
-    -- abbreviate all if it still doesn't fit
-    if abbrev and name and strlen(name) > size then
-      name = string.gsub(name, "(%S+) ", abbrevname)
-    end
+          -- Считаем количество слов в строке
+          while true do
+              word_start, word_end = string.find(name, "%S+", word_start)
+              if not word_start then break end  -- Если слов больше нет, выходим
+              total_words = total_words + 1
+              word_start = word_end + 1
+          end
 
-    return name
+          -- Разбиваем строку на слова и сокращаем их
+          local current_word = 0
+          word_start = 1  -- Сбросим word_start для второго прохода по строке
+          while true do
+              word_start, word_end = string.find(name, "%S+", word_start)  -- Ищем следующее слово
+              if not word_start then break end  -- Если слов больше нет, выходим
+
+              local word = string.sub(name, word_start, word_end)  -- Извлекаем слово
+              current_word = current_word + 1
+
+              -- Если первое слово короче 4 символов, не сокращаем его
+              if current_word == 1 and utf8.len(word) < 4 then
+                  table.insert(words, word)  -- Добавляем первое слово без изменений
+              elseif current_word < total_words and utf8.len(word) >= 4 then
+                  table.insert(words, abbrevname(word))  -- Сокращаем длинные слова, кроме последнего
+              else
+                  table.insert(words, word)  -- Короткие слова и последнее слово оставляем без изменений
+              end
+
+              word_start = word_end + 1  -- Переходим к следующей позиции после текущего слова
+          end
+
+          -- Собираем строку обратно
+          name = table.concat(words, " ")
+      end
+
+      return name
   end
 
 

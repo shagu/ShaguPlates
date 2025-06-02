@@ -1368,3 +1368,87 @@ function ShaguPlates.api.GetNoNameObject(frame, objtype, layer, arg1, arg2)
     end
   end
 end
+
+
+-- [ isUtf8StartByte ] --
+-- 'byte'      [byte]
+-- return boolean
+local function isUtf8StartByte(byte)
+    return byte >= 192  -- Проверка на начало многобайтовых символов
+end
+if not utf8 then
+  ShaguPlates.api.utf8 = {}
+  function ShaguPlates.api.utf8.len(s)
+      local count = 0
+      local byteIndex = 1
+      local len = string.len(s)
+
+      while byteIndex <= len do
+          local byte = string.byte(s, byteIndex)
+          
+          if byte < 128 then
+              -- Однобайтовый символ
+              count = count + 1
+              byteIndex = byteIndex + 1
+          elseif isUtf8StartByte(byte) then
+              -- Многобайтовый символ
+              local charLength = 1
+              if byte >= 192 and byte <= 223 then
+                  charLength = 2
+              elseif byte >= 224 and byte <= 239 then
+                  charLength = 3
+              elseif byte >= 240 and byte <= 244 then
+                  charLength = 4
+              end
+              count = count + 1
+              byteIndex = byteIndex + charLength
+          else
+              byteIndex = byteIndex + 1
+          end
+      end
+      return count
+  end
+
+  -- Функция для извлечения подстроки по индексу в UTF-8 строках
+  function ShaguPlates.api.utf8.sub(s, i, j)
+      local byteIndex = 1
+      local len = string.len(s)  -- Получаем длину строки в байтах
+      local result = ""
+      local charCount = 0
+
+      -- Модифицируем индексы
+      if i < 1 then i = 1 end
+      if j > len then j = len end
+      if i > j then return "" end
+
+      while byteIndex <= len do
+          local byte = string.byte(s, byteIndex)
+          local charLength = 1  -- По умолчанию считаем, что символ состоит из одного байта
+
+          if byte >= 128 then
+              if byte >= 192 and byte <= 223 then
+                  charLength = 2
+              elseif byte >= 224 and byte <= 239 then
+                  charLength = 3
+              elseif byte >= 240 and byte <= 244 then
+                  charLength = 4
+              end
+          end
+          
+          local char = string.sub(s, byteIndex, byteIndex + charLength - 1)
+
+          -- Увеличиваем счётчик символов
+          charCount = charCount + 1
+
+          -- Если текущий символ в диапазоне от i до j, добавляем его в результат
+          if charCount >= i and charCount <= j then
+              result = result .. char
+          end
+
+          -- Переходим к следующему символу
+          byteIndex = byteIndex + charLength
+      end
+
+      return result
+  end
+end
