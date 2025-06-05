@@ -322,13 +322,13 @@ ShaguPlates.backdrop_blizz_bg = {
 }
 
 ShaguPlates.backdrop_blizz_border = {
-  edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 12,
+  edgeFile = ShaguPlates.media["img:border_blizz"], edgeSize = 6,
   insets = { left = 3, right = 3, top = 3, bottom = 3 }
 }
 
 ShaguPlates.backdrop_blizz_full = {
   bgFile =  "Interface\\BUTTONS\\WHITE8X8", tile = true, tileSize = 8,
-  edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 12,
+  edgeFile = ShaguPlates.media["img:border_blizz"], edgeSize = 6,
   insets = { left = 3, right = 3, top = 3, bottom = 3 }
 }
 
