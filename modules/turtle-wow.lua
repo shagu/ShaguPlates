@@ -247,7 +247,7 @@ ShaguPlates:RegisterModule("turtle-wow", "vanilla", function ()
   end
 
   -- add skin to twow's talent inspect frame
-  if not (ShaguPlates_config["disabled"] and ShaguPlates_config["disabled"]["skin_Inspect"]  == "1") then
+  if ShaguPlates.skin["Inspect"] and ShaguPlates_config["disabled"]["skin_Inspect"] ~= "1" then
     local initialized = false
 
     HookAddonOrVariable("Blizzard_InspectUI", function()
